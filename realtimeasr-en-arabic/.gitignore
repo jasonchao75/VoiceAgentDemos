@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+pytest.ini
+run_tests.sh
+
+# Temporary files
+*.tmp
+*.bak
+
+# SQLite Database & Storage
+backend/database/
+backend/storage/
+*.db
+*.wav
+*.raw
+.venv/
+
+# Development files
+ACCEPTANCE_CHECKLIST.md
+LOCAL_TESTING_GUIDE.md
+QUICKSTART.md
+frontend/DEVELOPMENT_REPORT.md
+backend/README.md
+frontend/README.md
+frontend/assets/README.md
+start.bat
+start.sh
+frontend/logo.jpg

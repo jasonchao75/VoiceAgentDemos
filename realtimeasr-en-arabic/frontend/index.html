@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyna.Ai - Speech to Text</title>
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo-container">
+                <!-- Fallback to text if image fails -->
+                <img src="assets/logo.jpg" alt="Dyna.Ai Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo-text" style="display: none;">Dyna.Ai</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Demo</a>
+                <a href="history.html" class="nav-link">History Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="bento-grid">
+            <!-- Left Panel: Controls & Settings -->
+            <div class="bento-panel control-panel">
+                <div class="panel-header">
+                    <h2>Configuration</h2>
+                    <p class="subtitle">Set up your transcription environment</p>
+                </div>
+
+                <div class="control-group">
+                    <label for="language-select" class="control-label">Model Language</label>
+                    <div class="custom-select-wrapper">
+                        <select id="language-select" class="language-select">
+                            <option value="ar" selected>Arabic (Standard)</option>
+                            <option value="en">English</option>
+                            <option value="ar_en">Arabic-English (Mixed)</option>
+                        </select>
+                        <i class="ph ph-caret-down select-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Visual Hotwords Configuration -->
+                <div class="control-group hotwords-group">
+                    <div class="label-with-help">
+                        <label class="control-label">Additional Vocabulary</label>
+                        <i class="ph ph-info tooltip-trigger" title="Add custom domain words or phrases to improve recognition accuracy."></i>
+                    </div>
+                    
+                    <div class="hotword-input-container">
+                        <input type="text" id="hw-word" class="hw-input" placeholder="Word / Phrase (e.g. Dyna)">
+                        <input type="text" id="hw-sounds" class="hw-input" placeholder="Sounds like (optional, comma separated)">
+                        <button id="hw-add-btn" class="icon-button">
+                            <i class="ph ph-plus"></i>
+                        </button>
+                    </div>
+
+                    <div id="hotwords-list" class="hotwords-list">
+                        <!-- Tags injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Action Area -->
+                <div class="action-area">
+                    <button id="control-button" class="primary-button">
+                        <i class="ph ph-microphone button-icon"></i>
+                        <span class="button-text">Start Session</span>
+                    </button>
+
+                    <div id="recording-indicator" class="recording-indicator" style="display: none;">
+                        <div class="pulse-ring"></div>
+                        <span id="timer-text">00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Live Transcript -->
+            <div class="bento-panel transcript-panel">
+                <div class="panel-header transcript-header">
+                    <h2>Live Transcript</h2>
+                    <div class="header-actions">
+                        <button id="clear-history-button" class="text-button">
+                            <i class="ph ph-trash"></i> Clear
+                        </button>
+                    </div>
+                </div>
+
+                <div id="transcript-area" class="transcript-area">
+                    <div id="transcript-content" class="transcript-content">
+                        <div class="empty-state">
+                            <i class="ph ph-waveform empty-icon"></i>
+                            <p>Ready to transcribe. Click "Start Session" to begin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="ph ph-info toast-icon"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Download Modal (Shown after recording ends) -->
+    <div id="download-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <i class="ph ph-check-circle modal-icon success"></i>
+            <h3>Session Saved</h3>
+            <p>Your transcription has been securely saved to the database.</p>
+            <div class="modal-actions">
+                <a id="modal-download-btn" href="#" target="_blank" class="primary-button">
+                    <i class="ph ph-download-simple"></i> Download Audio
+                </a>
+                <button id="modal-close-btn" class="secondary-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js?v=9"></script>
+</body>
+</html>
