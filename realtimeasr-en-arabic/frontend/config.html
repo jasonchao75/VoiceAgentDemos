@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyna.Ai - Dictionary Configuration</title>
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .config-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .config-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .profile-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-surface-hover);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .profile-item:hover {
+            border-color: var(--brand-primary);
+        }
+        .profile-item.active {
+            border-color: var(--brand-primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        .profile-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .profile-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .icon-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: color 0.2s;
+        }
+        .icon-btn:hover {
+            color: var(--brand-danger);
+            background: var(--bg-surface);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo-container">
+                <img src="assets/logo.jpg" alt="Dyna.Ai Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo-text" style="display: none;">Dyna.Ai</div>
+            </div>
+            <div class="nav-links">
+                <a href="history.html" class="nav-link">History Dashboard</a>
+                <a href="config.html" class="nav-link active">Dictionary Config</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="dashboard-header" style="margin-bottom: 2rem;">
+            <h1>Dictionary Configuration</h1>
+            <p class="subtitle" style="color: var(--text-secondary); margin-top: 0.5rem;">Create and manage custom dictionaries and replacement rules for transcription.</p>
+        </div>
+
+        <div class="config-grid">
+            <!-- Left Panel: Saved Profiles -->
+            <div class="bento-panel">
+                <div class="panel-header">
+                    <h2>Saved Profiles</h2>
+                </div>
+                <div id="profile-list" class="profile-list">
+                    <!-- Loaded via JS -->
+                    <div style="text-align: center; padding: 2rem; color: var(--text-tertiary);">Loading...</div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Edit Profile -->
+            <div class="bento-panel" id="edit-panel">
+                <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2 id="editor-title">Create New Profile</h2>
+                    <button id="save-profile-btn" class="primary-button" style="padding: 0.5rem 1rem;">
+                        <i class="ph ph-floppy-disk"></i> Save Profile
+                    </button>
+                </div>
+
+                <div class="control-group" style="margin-top: 1.5rem;">
+                    <label class="control-label">Profile Name</label>
+                    <input type="text" id="profile-name" class="hw-input" placeholder="e.g. Healthcare Domain">
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 2rem 0;">
+
+                <!-- Hotwords -->
+                <div class="control-group hotwords-group">
+                    <div class="label-with-help">
+                        <label class="control-label">Additional Vocabulary</label>
+                        <i class="ph ph-info tooltip-trigger" title="Add custom domain words or phrases to improve recognition accuracy."></i>
+                    </div>
+                    
+                    <div class="hotword-input-container">
+                        <input type="text" id="hw-word" class="hw-input" placeholder="Word / Phrase">
+                        <input type="text" id="hw-sounds" class="hw-input" placeholder="Sounds like (comma separated)">
+                        <button id="hw-add-btn" class="icon-button">
+                            <i class="ph ph-plus"></i>
+                        </button>
+                    </div>
+
+                    <div id="hotwords-list" class="hotwords-list">
+                        <!-- Tags injected via JS -->
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 2rem 0;">
+
+                <!-- Replacements -->
+                <div class="control-group replacements-group">
+                    <div class="label-with-help">
+                        <label class="control-label">Hard Rewrite (Replacements)</label>
+                        <i class="ph ph-info tooltip-trigger" title="Force replace specific recognized words with another word."></i>
+                    </div>
+                    
+                    <div class="hotword-input-container">
+                        <input type="text" id="rep-find" class="hw-input" placeholder="Find">
+                        <input type="text" id="rep-replace" class="hw-input" placeholder="Replace with">
+                        <button id="rep-add-btn" class="icon-button">
+                            <i class="ph ph-plus"></i>
+                        </button>
+                    </div>
+
+                    <div id="replacements-list" class="hotwords-list">
+                        <!-- Tags injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="ph ph-info toast-icon"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="js/config.js?v=1"></script>
+</body>
+</html>

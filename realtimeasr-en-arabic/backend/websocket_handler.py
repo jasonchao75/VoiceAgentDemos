@@ -5,6 +5,7 @@ import json
 import asyncio
 import logging
 import wave
+import datetime
 from pathlib import Path
 from typing import Optional
 from fastapi import WebSocket
@@ -38,6 +39,7 @@ class WebSocketHandler:
         self.raw_file = None
         self.raw_path = None
         self.final_transcript = []
+        self.log_buffer = []
 
     async def handle(self):
         """Accept client, wait for start, connect upstream, relay until close."""
@@ -62,13 +64,20 @@ class WebSocketHandler:
                 if start_data.get("action") != "start":
                     raise ValueError("Not a start action")
                 hotwords = start_data.get("hotwords", [])
+                replacements = start_data.get("replacements", [])
             except Exception as e:
                 logger.error(f"Failed to parse start message: {e}")
                 await self._send_error(ErrorCode.INTERNAL_ERROR)
                 return
 
-            logger.info(f"Attempting to connect to Speechmatics with hotwords={hotwords}")
-            self.speechmatics_client = SpeechmaticsClient(language=self.language, hotwords=hotwords)
+            logger.info(f"Attempting to connect to Speechmatics with hotwords={hotwords}, replacements={replacements}")
+            
+            def session_logger(msg):
+                now = datetime.datetime.now()
+                formatted = f"{now.strftime('%Y-%m-%d %H:%M:%S')},{now.strftime('%f')[:3]} - INFO - {msg}\n"
+                self.log_buffer.append(formatted)
+
+            self.speechmatics_client = SpeechmaticsClient(language=self.language, hotwords=hotwords, replacements=replacements, log_callback=session_logger)
 
             try:
                 self.session_id = await self.speechmatics_client.connect(self._send_to_client)
@@ -135,6 +144,9 @@ class WebSocketHandler:
                 logger.info("Received end action")
                 if self.speechmatics_client:
                     await self.speechmatics_client.end_stream()
+                    received_end = await self.speechmatics_client.wait_for_end_of_transcript()
+                    if not received_end:
+                        logger.warning("Proceeding without EndOfTranscript confirmation")
                 self.is_active = False
 
             else:
@@ -183,7 +195,7 @@ class WebSocketHandler:
         except asyncio.CancelledError:
             pass
 
-    def _convert_and_save(self):
+    async def _convert_and_save(self):
         """Convert raw PCM to WAV and save transcript to DB."""
         if not self.session_id or not self.raw_path or not self.raw_path.exists():
             return
@@ -201,6 +213,12 @@ class WebSocketHandler:
             # Clean up raw file
             self.raw_path.unlink()
             
+            # Save logs to file
+            if self.session_id and self.log_buffer:
+                log_path = STORAGE_DIR / f"{self.session_id}.log"
+                with open(log_path, "w", encoding="utf-8") as f_log:
+                    f_log.writelines(self.log_buffer)
+
             final_text = " ".join(self.final_transcript)
             save_transcription(
                 session_id=self.session_id,
@@ -210,19 +228,11 @@ class WebSocketHandler:
             )
             logger.info(f"Saved transcription to DB for {self.session_id}")
             
-            # Optionally send a final save confirmation to the client before socket closes
-            try:
-                msg = {
-                    "type": "saved",
-                    "session_id": self.session_id,
-                    "download_url": f"/api/download/{self.session_id}"
-                }
-                # Attempt to send synchronously, might fail if loop is closing
-                # But typically cleanup is async so we can use create_task
-                loop = asyncio.get_event_loop()
-                loop.create_task(self.websocket.send_text(json.dumps(msg)))
-            except Exception:
-                pass
+            await self._send_to_client({
+                "type": "saved",
+                "session_id": self.session_id,
+                "download_url": f"/api/download/{self.session_id}"
+            })
                 
         except Exception as e:
             logger.error(f"Failed to convert/save audio: {e}")
@@ -233,7 +243,7 @@ class WebSocketHandler:
 
         if self.raw_file:
             self.raw_file.close()
-            self._convert_and_save()
+            await self._convert_and_save()
 
         if self.timeout_task and not self.timeout_task.done():
             self.timeout_task.cancel()

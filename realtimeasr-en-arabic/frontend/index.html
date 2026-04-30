@@ -26,7 +26,6 @@
             </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Demo</a>
-                <a href="history.html" class="nav-link">History Dashboard</a>
             </div>
         </div>
     </nav>
@@ -53,23 +52,17 @@
                     </div>
                 </div>
 
-                <!-- Visual Hotwords Configuration -->
-                <div class="control-group hotwords-group">
+                <!-- Dictionary Profile Selection -->
+                <div class="control-group">
                     <div class="label-with-help">
-                        <label class="control-label">Additional Vocabulary</label>
-                        <i class="ph ph-info tooltip-trigger" title="Add custom domain words or phrases to improve recognition accuracy."></i>
+                        <label for="profile-select" class="control-label">Dictionary Profile</label>
+                        <i class="ph ph-info tooltip-trigger" title="Select a configured dictionary profile for custom vocabulary and replacements. Manage these in the Dictionary Config page."></i>
                     </div>
-                    
-                    <div class="hotword-input-container">
-                        <input type="text" id="hw-word" class="hw-input" placeholder="Word / Phrase (e.g. Dyna)">
-                        <input type="text" id="hw-sounds" class="hw-input" placeholder="Sounds like (optional, comma separated)">
-                        <button id="hw-add-btn" class="icon-button">
-                            <i class="ph ph-plus"></i>
-                        </button>
-                    </div>
-
-                    <div id="hotwords-list" class="hotwords-list">
-                        <!-- Tags injected via JS -->
+                    <div class="custom-select-wrapper">
+                        <select id="profile-select" class="language-select">
+                            <option value="">None</option>
+                        </select>
+                        <i class="ph ph-caret-down select-icon"></i>
                     </div>
                 </div>
 
@@ -131,6 +124,6 @@
         </div>
     </div>
 
-    <script src="js/app.js?v=9"></script>
+    <script src="js/app.js?v=13"></script>
 </body>
 </html>

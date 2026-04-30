@@ -10,7 +10,8 @@ let recordingStartTime = null;
 let timerInterval = null;
 let transcriptCounter = 0;
 let currentLanguage = 'ar';
-let hotwordsData = []; // Array of hotwords
+let profiles = [];
+let currentProfile = null;
 
 let partialBuffer = null;
 let rafScheduled = false;
@@ -45,6 +46,7 @@ const languageDirectionMap = {
 
 // DOM references
 const languageSelect = document.getElementById('language-select');
+const profileSelect = document.getElementById('profile-select');
 const controlButton = document.getElementById('control-button');
 const buttonText = controlButton.querySelector('.button-text');
 const buttonIcon = controlButton.querySelector('.button-icon');
@@ -53,12 +55,6 @@ const timerText = document.getElementById('timer-text');
 const transcriptArea = document.getElementById('transcript-area');
 const transcriptContent = document.getElementById('transcript-content');
 const clearHistoryButton = document.getElementById('clear-history-button');
-
-// Hotwords DOM
-const hwWordInput = document.getElementById('hw-word');
-const hwSoundsInput = document.getElementById('hw-sounds');
-const hwAddBtn = document.getElementById('hw-add-btn');
-const hwListContainer = document.getElementById('hotwords-list');
 
 // Toast & Modal
 const toastNotification = document.getElementById('toast-notification');
@@ -72,62 +68,46 @@ languageSelect.addEventListener('change', (e) => {
     currentLanguage = e.target.value;
     transcriptArea.setAttribute('dir', languageDirectionMap[currentLanguage]);
 });
+profileSelect.addEventListener('change', (e) => {
+    const profileId = parseInt(e.target.value, 10);
+    currentProfile = profiles.find(p => p.id === profileId) || null;
+});
 controlButton.addEventListener('click', handleControlButtonClick);
 clearHistoryButton.addEventListener('click', handleClearHistory);
-
-hwAddBtn.addEventListener('click', addHotword);
-hwWordInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') addHotword(); });
-hwSoundsInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') addHotword(); });
 
 modalCloseBtn.addEventListener('click', () => {
     downloadModal.style.display = 'none';
 });
 
-// Hotwords Logic
-function addHotword() {
-    const word = hwWordInput.value.trim();
-    const sounds = hwSoundsInput.value.trim();
-    if (!word) return;
-
-    let hwObj = word;
-    if (sounds) {
-        hwObj = {
-            content: word,
-            sounds_like: sounds.split(',').map(s => s.trim()).filter(s => s)
-        };
-    }
-    hotwordsData.push(hwObj);
-    renderHotwords();
-    hwWordInput.value = '';
-    hwSoundsInput.value = '';
-    hwWordInput.focus();
-}
-
-function removeHotword(index) {
-    hotwordsData.splice(index, 1);
-    renderHotwords();
-}
-
-function renderHotwords() {
-    hwListContainer.innerHTML = '';
-    hotwordsData.forEach((hw, i) => {
-        const isObj = typeof hw === 'object';
-        const displayWord = isObj ? hw.content : hw;
-        
-        const tag = document.createElement('div');
-        tag.className = `hw-tag ${isObj ? 'has-sounds-like' : ''}`;
-        
-        let html = `<span>${displayWord}</span>`;
-        html += `<button class="remove-btn" onclick="removeHotword(${i})"><i class="ph ph-x"></i></button>`;
-        
-        if (isObj && hw.sounds_like.length > 0) {
-            html += `<div class="hw-tooltip">Sounds like: ${hw.sounds_like.join(', ')}</div>`;
+// Load Profiles
+async function loadProfiles() {
+    try {
+        let apiUrl = '/api/profiles';
+        if (window.location.protocol === 'file:') {
+            apiUrl = 'http://127.0.0.1:8010/api/profiles';
+        } else {
+            apiUrl = `http://${window.location.hostname}:8010/api/profiles`;
         }
+
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        profiles = data.profiles || [];
         
-        tag.innerHTML = html;
-        hwListContainer.appendChild(tag);
-    });
+        // Populate select
+        profileSelect.innerHTML = '<option value="">None</option>';
+        profiles.forEach(p => {
+            const opt = document.createElement('option');
+            opt.value = p.id;
+            opt.textContent = p.name;
+            profileSelect.appendChild(opt);
+        });
+    } catch (e) {
+        console.error('Failed to load profiles:', e);
+    }
 }
+
+// Call load on init
+document.addEventListener("DOMContentLoaded", loadProfiles);
 
 async function handleControlButtonClick() {
     if (!isRecording) await startRecording();
@@ -136,6 +116,14 @@ async function handleControlButtonClick() {
 
 async function startRecording() {
     try {
+        let activeHotwords = [];
+        let activeReplacements = [];
+
+        if (currentProfile) {
+            activeHotwords = currentProfile.hotwords || [];
+            activeReplacements = currentProfile.replacements || [];
+        }
+
         mediaStream = await navigator.mediaDevices.getUserMedia({
             audio: { sampleRate: 16000, channelCount: 1, echoCancellation: true, noiseSuppression: true }
         });
@@ -159,10 +147,11 @@ async function startRecording() {
         ws = new WebSocket(wsUrl);
 
         ws.onopen = () => {
-            // Send start action with hotwords array
+            // Send start action with hotwords array and replacements
             ws.send(JSON.stringify({ 
                 action: 'start',
-                hotwords: hotwordsData
+                hotwords: activeHotwords,
+                replacements: activeReplacements
             }));
             
             isRecording = true;
@@ -386,6 +375,8 @@ function showDownloadModal(url) {
         let fullUrl = url;
         if (window.location.protocol === 'file:') {
             fullUrl = `http://127.0.0.1:8010${url}`;
+        } else {
+            fullUrl = `http://${window.location.hostname}:8010${url}`;
         }
         modalDownloadBtn.href = fullUrl;
         downloadModal.style.display = 'flex';

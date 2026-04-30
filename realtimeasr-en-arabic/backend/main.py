@@ -5,14 +5,21 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, WebSocket, Query
+from fastapi import FastAPI, WebSocket, Query, HTTPException
+from pydantic import BaseModel
+from typing import List, Dict, Any
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from .websocket_handler import WebSocketHandler, STORAGE_DIR
 from .config import config
-from .database import init_db, get_all_transcriptions
+from .database import init_db, get_all_transcriptions, save_dictionary_profile, get_dictionary_profiles, delete_dictionary_profile
+
+class ProfileCreate(BaseModel):
+    name: str
+    hotwords: List[Dict[str, Any]]
+    replacements: List[Dict[str, str]]
 
 # Logging
 logging.basicConfig(
@@ -81,6 +88,42 @@ async def download_audio(session_id: str):
         filename=f"recording_{session_id}.wav",
         media_type="audio/wav"
     )
+
+@app.get("/api/download_log/{session_id}")
+async def download_log(session_id: str):
+    """Download the saved log file for a given session."""
+    file_path = STORAGE_DIR / f"{session_id}.log"
+    if not file_path.exists():
+        return JSONResponse(status_code=404, content={"error": "Log file not found"})
+    return FileResponse(
+        path=file_path, 
+        filename=f"recording_{session_id}.log",
+        media_type="text/plain"
+    )
+
+@app.get("/api/profiles")
+async def list_profiles():
+    """Retrieve all dictionary profiles."""
+    profiles = get_dictionary_profiles()
+    return JSONResponse(content={"profiles": profiles})
+
+@app.post("/api/profiles")
+async def create_profile(profile: ProfileCreate):
+    """Create or update a dictionary profile."""
+    try:
+        save_dictionary_profile(profile.name, profile.hotwords, profile.replacements)
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/api/profiles/{profile_id}")
+async def delete_profile(profile_id: int):
+    """Delete a dictionary profile."""
+    try:
+        delete_dictionary_profile(profile_id)
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.websocket("/ws/transcribe")
 async def websocket_endpoint(

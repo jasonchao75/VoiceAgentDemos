@@ -4,7 +4,7 @@ Speechmatics Realtime API WebSocket client.
 import json
 import asyncio
 import logging
-import re
+import ssl
 from typing import Optional, Callable
 import websockets
 from websockets.client import WebSocketClientProtocol
@@ -16,41 +16,42 @@ logger = logging.getLogger(__name__)
 
 
 def _speechmatics_transcription_language(language: str) -> str:
-    """Map app codes to Speechmatics language; must match the /v2/{lang} URL segment."""
+    """Map app language codes to Speechmatics transcription_config.language."""
     # ar_en is the bilingual Arabic-English realtime model (not plain "ar").
     return {"ar": "ar", "en": "en", "ar_en": "ar_en"}.get(language, language)
 
 
-def _speechmatics_connect_url(base_url: str, language: str) -> str:
-    """
-    Speechmatics requires the language in the WebSocket path to match
-    transcription_config.language in StartRecognition.
-    """
+def _speechmatics_connect_url(base_url: str) -> str:
+    """Normalize the configured Speechmatics Realtime /v2 WebSocket URL."""
     base = (base_url or "").strip().rstrip("/")
-    url_lang = _speechmatics_transcription_language(language)
-    m = re.search(r"^(.*)/v2/([^/]+)$", base, flags=re.IGNORECASE)
-    if m:
-        prefix = m.group(1).rstrip("/")
-        return f"{prefix}/v2/{url_lang}"
-    if base.lower().endswith("/v2"):
-        return f"{base}/{url_lang}"
     return base
 
 
 class SpeechmaticsClient:
     """Upstream realtime transcription session."""
 
-    def __init__(self, language: str = "ar", hotwords: list = None):
+    def __init__(self, language: str = "ar", hotwords: list = None, replacements: list = None, log_callback: Callable = None):
         """
         Args:
             language: ar, en, or ar_en.
             hotwords: additional_vocab list for Speechmatics
+            replacements: custom transcript replacements
+            log_callback: callback for custom session logging
         """
         self.language = language
         self.hotwords = hotwords or []
+        self.replacements = replacements or []
         self.ws: Optional[WebSocketClientProtocol] = None
         self.session_id: Optional[str] = None
         self._message_handler: Optional[Callable] = None
+        self.log_callback = log_callback
+        self.audio_seq_no = 0
+        self.end_of_transcript_received = False
+        self._end_of_transcript_event = asyncio.Event()
+
+    def _write_log(self, msg: str):
+        if self.log_callback:
+            self.log_callback(msg)
 
     async def connect(self, message_handler: Callable) -> str:
         """
@@ -68,12 +69,18 @@ class SpeechmaticsClient:
         self._message_handler = message_handler
 
         try:
-            connect_uri = _speechmatics_connect_url(config.SPEECHMATICS_URL, self.language)
+            ssl_context = ssl.create_default_context()
+            ssl_context.check_hostname = False
+            ssl_context.verify_mode = ssl.CERT_NONE
+
+            connect_uri = _speechmatics_connect_url(config.SPEECHMATICS_URL)
             logger.info("Speechmatics WebSocket URI: %s", connect_uri)
+            self._write_log(f"Connecting to {connect_uri}")
             self.ws = await asyncio.wait_for(
                 websockets.connect(
                     connect_uri,
-                    extra_headers={"Authorization": f"Bearer {config.SPEECHMATICS_API_KEY}"},
+                    additional_headers={"Authorization": f"Bearer {config.SPEECHMATICS_API_KEY}"},
+                    ssl=ssl_context,
                 ),
                 timeout=10.0,
             )
@@ -97,7 +104,15 @@ class SpeechmaticsClient:
             if self.hotwords and len(self.hotwords) > 0:
                 start_recognition["transcription_config"]["additional_vocab"] = self.hotwords
 
-            await self.ws.send(json.dumps(start_recognition))
+            if self.replacements and len(self.replacements) > 0:
+                start_recognition["transcription_config"]["transcript_filtering_config"] = {
+                    "remove_disfluencies": False,
+                    "replacements": self.replacements
+                }
+
+            start_json_str = json.dumps(start_recognition)
+            self._write_log(f"Sending StartRecognition: {start_json_str}")
+            await self.ws.send(start_json_str)
             logger.info(f"Sent StartRecognition with hotwords: {self.hotwords}")
 
             max_attempts = 3
@@ -109,6 +124,8 @@ class SpeechmaticsClient:
                 if message_type == "RecognitionStarted":
                     self.session_id = response_data.get("id", "unknown")
                     logger.info(f"Recognition started, session_id={self.session_id}")
+                    self._write_log("Received RecognitionStarted from server.")
+                    self._write_log("Starting to send audio data...")
                     return self.session_id
                 elif message_type == "Info":
                     logger.info(f"Received Info message: {response_data.get('type')}")
@@ -142,6 +159,7 @@ class SpeechmaticsClient:
 
         try:
             await self.ws.send(audio_data)
+            self.audio_seq_no += 1
         except Exception as e:
             logger.error(f"Failed to send audio: {e}")
             raise
@@ -152,11 +170,24 @@ class SpeechmaticsClient:
             return
 
         try:
-            end_of_stream = {"message": "EndOfStream"}
+            end_of_stream = {
+                "message": "EndOfStream",
+                "last_seq_no": self.audio_seq_no,
+            }
             await self.ws.send(json.dumps(end_of_stream))
-            logger.info("Sent EndOfStream")
+            logger.info("Sent EndOfStream with last_seq_no=%s", self.audio_seq_no)
         except Exception as e:
             logger.error(f"Failed to send EndOfStream: {e}")
+            self._end_of_transcript_event.set()
+
+    async def wait_for_end_of_transcript(self, timeout: float = 10.0) -> bool:
+        """Wait until Speechmatics confirms all final transcripts were emitted."""
+        try:
+            await asyncio.wait_for(self._end_of_transcript_event.wait(), timeout=timeout)
+            return self.end_of_transcript_received
+        except asyncio.TimeoutError:
+            logger.warning("Timed out waiting for EndOfTranscript")
+            return False
 
     async def listen(self):
         """Pump Speechmatics messages until the connection closes."""
@@ -176,6 +207,8 @@ class SpeechmaticsClient:
             logger.info("Speechmatics connection closed")
         except Exception as e:
             logger.error(f"Listen error: {e}")
+        finally:
+            self._end_of_transcript_event.set()
 
     async def _handle_speechmatics_message(self, data: dict):
         """
@@ -196,6 +229,8 @@ class SpeechmaticsClient:
 
             if not transcript:
                 return
+
+            self._write_log(f"[Partial]: {transcript}")
 
             results = data.get("results", [])
             speaker = "S1"
@@ -220,6 +255,8 @@ class SpeechmaticsClient:
             if not transcript:
                 return
 
+            self._write_log(f"[Final]: {transcript}")
+
             results = data.get("results", [])
             speaker = "S1"
             if results and len(results) > 0:
@@ -238,12 +275,16 @@ class SpeechmaticsClient:
 
         elif message_type == "EndOfTranscript":
             logger.info("Received EndOfTranscript")
+            self.end_of_transcript_received = True
+            self._write_log("Received EndOfTranscript from server.")
+            self._end_of_transcript_event.set()
 
         elif message_type == "Error":
             error_type = data.get("type", "unknown")
             logger.error(f"Speechmatics error: {error_type}")
             error_message = create_error_message(ErrorCode.INTERNAL_ERROR)
             await self._message_handler(error_message)
+            self._end_of_transcript_event.set()
 
     async def close(self):
         """Close upstream WebSocket."""

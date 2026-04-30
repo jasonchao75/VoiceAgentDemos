@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let apiUrl = '/api/history';
     if (window.location.protocol === 'file:') {
         apiUrl = 'http://127.0.0.1:8010/api/history';
+    } else {
+        apiUrl = `http://${window.location.hostname}:8010/api/history`;
     }
 
     try {
@@ -23,9 +25,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const dateStr = dateObj.toLocaleString();
                 
                 // Construct download URL
-                let downloadUrl = record.audio_file_path;
+                let downloadUrl = `/api/download/${record.session_id}`;
+                let downloadLogUrl = `/api/download_log/${record.session_id}`;
                 if (window.location.protocol === 'file:') {
                     downloadUrl = `http://127.0.0.1:8010${downloadUrl}`;
+                    downloadLogUrl = `http://127.0.0.1:8010${downloadLogUrl}`;
+                } else {
+                    downloadUrl = `http://${window.location.hostname}:8010${downloadUrl}`;
+                    downloadLogUrl = `http://${window.location.hostname}:8010${downloadLogUrl}`;
                 }
 
                 // Truncate text for snippet
@@ -46,9 +53,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <td class="col-date" style="font-size: 0.875rem; color: var(--text-secondary);">
                         ${dateStr}
                     </td>
-                    <td class="col-action">
+                    <td class="col-action" style="display: flex; gap: 0.5rem;">
                         <a href="${downloadUrl}" target="_blank" class="action-btn">
                             <i class="ph ph-download-simple"></i> Audio
+                        </a>
+                        <a href="${downloadLogUrl}" target="_blank" class="action-btn">
+                            <i class="ph ph-file-text"></i> Log
                         </a>
                     </td>
                 `;
