@@ -61,13 +61,29 @@ window.REALTIME_WS_BASE = 'wss://your-backend-domain.com';
 
 ## Production checklist
 
-- [ ] HTTPS enabled (required for microphone access in the browser)
-- [ ] Secrets in environment variables (no API keys in the repo)
-- [ ] Nginx (or similar) reverse proxy configured
-- [ ] systemd (or similar) for automatic backend restarts
+- [x] HTTPS enabled via Let's Encrypt (required for microphone access in the browser)
+- [x] Secrets in environment variables (no API keys in the repo)
+- [x] Nginx (or similar) reverse proxy configured with HTTP to HTTPS redirect
+- [x] systemd (or similar) for automatic backend restarts
 - [ ] Firewall rules reviewed
 - [ ] Log rotation configured
 - [ ] Monitoring and alerting as needed
+
+### Certificate Renewal
+
+Let's Encrypt certificates are automatically renewed by a systemd timer created by Certbot. To verify the renewal timer is active, run:
+
+```bash
+systemctl list-timers | grep certbot
+# OR
+sudo systemctl status certbot.timer
+```
+
+To perform a dry run of the renewal process, run:
+
+```bash
+sudo certbot renew --dry-run
+```
 
 ## Automated Deployment (CD)
 
