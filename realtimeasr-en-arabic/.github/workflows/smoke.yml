@@ -1,0 +1,97 @@
+name: Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_live_asr:
+        description: 'Test live Speechmatics transcription (requires valid API key)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    env:
+      SPEECHMATICS_API_KEY: ${{ secrets.SPEECHMATICS_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+
+      - name: Check API Key exists
+        run: |
+          if [ -z "${SPEECHMATICS_API_KEY}" ]; then
+            echo "Error: SPEECHMATICS_API_KEY secret is not set!"
+            exit 1
+          fi
+          echo "SPEECHMATICS_API_KEY secret is present."
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Python syntax check
+        run: |
+          find backend -name "*.py" -print0 | xargs -0 python -m py_compile
+
+      - name: FastAPI app import check
+        run: |
+          # Use a fake key for import check if the environment variable is not populated locally in PRs from forks
+          SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY:-"fake_key_for_import"} \
+          python -c "from backend.main import app; print('App imported successfully')"
+
+      - name: Backend health check
+        run: |
+          # Start uvicorn in the background
+          # Pass the key so config validation passes
+          SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY} uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
+          UVICORN_PID=$!
+          trap 'kill $UVICORN_PID 2>/dev/null || true' EXIT
+          
+          # Wait a few seconds for the server to start
+          sleep 5
+          
+          # Test the /health endpoint
+          response=$(curl -s --fail http://127.0.0.1:8010/health)
+          echo "Health check response: $response"
+          if [[ "$response" != '{"status":"healthy"}' && "$response" != '{"status": "healthy"}' ]]; then
+            echo "Health check failed! Response was: $response"
+            exit 1
+          fi
+
+      - name: Frontend static file check
+        run: |
+          test -f frontend/index.html || { echo "frontend/index.html not found"; exit 1; }
+          test -f frontend/history.html || { echo "frontend/history.html not found"; exit 1; }
+
+      - name: Frontend static server check
+        run: |
+          # Start a python simple http server in the frontend directory
+          cd frontend
+          python -m http.server 8080 &
+          HTTP_PID=$!
+          trap 'kill $HTTP_PID 2>/dev/null || true' EXIT
+          
+          sleep 3
+          
+          # Test if we can fetch index.html
+          if curl -s --fail http://127.0.0.1:8080/index.html | grep -q "<html"; then
+            echo "Frontend static server is healthy and served index.html"
+          else
+            echo "Frontend static server failed to serve index.html"
+            exit 1
+          fi
+
+      - name: Live ASR Smoke Test (Optional)
+        if: ${{ inputs.test_live_asr == true }}
+        run: |
+          echo "NOTE: test_live_asr is currently just a reserved toggle switch."
+          echo "It DOES NOT actually call the Speechmatics API or perform real transcription tests yet."
+          echo "This step is kept empty intentionally to avoid misleading logs."

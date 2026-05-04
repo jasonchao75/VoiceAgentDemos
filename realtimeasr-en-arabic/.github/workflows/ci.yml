@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Python syntax check
+        run: |
+          find backend -name "*.py" -print0 | xargs -0 python -m py_compile
+
+      - name: FastAPI app import check
+        run: |
+          python -c "from backend.main import app; print('App imported successfully')"
+
+      - name: Backend health check
+        run: |
+          # Start uvicorn in the background using python module execution
+          python -m uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
+          UVICORN_PID=$!
+          
+          # Add trap to ensure uvicorn is killed on exit (success or failure)
+          trap 'kill $UVICORN_PID 2>/dev/null || true' EXIT
+          
+          # Wait a few seconds for the server to start
+          sleep 5
+          
+          # Test the /health endpoint
+          response=$(curl -s --fail http://127.0.0.1:8010/health)
+          echo "Health check response: $response"
+          
+          if [[ "$response" != '{"status":"healthy"}' && "$response" != '{"status": "healthy"}' ]]; then
+            echo "Health check failed!"
+            exit 1
+          fi
+
+      - name: Frontend static file check
+        run: |
+          test -f frontend/index.html || { echo "frontend/index.html not found"; exit 1; }
+          test -f frontend/history.html || { echo "frontend/history.html not found"; exit 1; }
+
+      - name: Secret scanning (.env and hardcoded keys)
+        run: |
+          if [ -f .env ]; then
+            echo "Error: .env file should not be committed to the repository!"
+            exit 1
+          fi
+          # Basic scan for hardcoded Speechmatics keys
+          if grep -riE "SPEECHMATICS_API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" backend/ frontend/ || \
+             grep -riE "API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" backend/ frontend/; then
+            echo "Error: Potential hardcoded API key found!"
+            exit 1
+          fi

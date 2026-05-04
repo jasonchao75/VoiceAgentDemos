@@ -39,8 +39,8 @@ cd demos/realtimeasr-en-arabic
 pip install -r backend/requirements.txt
 ```
 
-### 3. 环境变量配置
-在 `demos/realtimeasr-en-arabic` 或项目根目录创建一个 `.env` 文件，包含以下内容：
+### 3. 环境变量与 API Key 配置
+对于本地开发，请在 `demos/realtimeasr-en-arabic` 或项目根目录创建一个 `.env` 文件：
 ```env
 # Speechmatics
 SPEECHMATICS_API_KEY=你的_API_KEY_填写在这里
@@ -50,6 +50,8 @@ SPEECHMATICS_URL=wss://eu2.rt.speechmatics.com/v2
 HOST=0.0.0.0
 PORT=8010
 ```
+对于 GitHub Actions 的 CI/Smoke Test 流程，请前往 GitHub 仓库配置 Secrets：
+进入 **Settings > Secrets and variables > Actions > New repository secret**，名称填写 `SPEECHMATICS_API_KEY`，值为真实的 API Key。
 
 ### 4. 本地运行
 
@@ -108,3 +110,33 @@ realtime-en-arabic/
 1. **麦克风无权限**: 浏览器安全策略要求必须在 `localhost` 或 `HTTPS` 环境下才能调起麦克风。
 2. **WebSocket 连接失败**: 请检查 `backend/main.py` 是否正常运行，并且控制台没有报错。
 3. **转录结果不准**: 可以尝试在“Additional Vocabulary”配置中添加拼音/发音相近的热词以纠正模型识别。
+
+---
+
+## 🧪 CI/CD 与测试指南 (Smoke Test)
+
+本仓库包含用于验证基础连通性的自动化 CI 和 Smoke Test 工作流，位于 `.github/workflows/` 下。
+
+### 自动化 Smoke Test (手动触发)
+自动化 Smoke Test 仅用于确认服务能够正常构建、启动并进行基础的健康检查，**不包含**真实音频的识别准确率（WER/CER）或延迟等高级性能评测。字准率、WER/CER、延迟评测等效果评测属于后续高级 CI 流程。
+
+覆盖内容：
+- 后端 Python 依赖安装与语法检查
+- FastAPI 应用启动与 `/health` 端点检查
+- `SPEECHMATICS_API_KEY` Secret 存在性验证（防泄漏）
+- 前端静态文件可用性检查
+
+**触发方式**：
+在 GitHub Actions 页面选择 `Smoke Test` workflow，点击 `Run workflow` 手动触发。
+*(注：触发时虽然有 `test_live_asr` 开关，但当前它仅是一个预留参数，不会实际调用真实的 Speechmatics API，不会产生计费。)*
+
+### 人工验收清单 (Manual Smoke Test)
+在部署或重大更新后，请按以下步骤进行人工验收：
+1. 打开 Demo 页面（`index.html`）。
+2. 允许浏览器的麦克风权限。
+3. 点击左下角的 **Start Session**。
+4. 对着麦克风说一句测试语音（如 "Hello, testing Speechmatics API" 或阿拉伯语测试句）。
+5. 确认页面中实时出现 Partial (临时) / Final (最终) 的转录文本。
+6. 点击 **Stop Session**。
+7. 确认页面没有明显的前端或后端报错。
+8. 前往 `History Dashboard` 确认录音和转录记录成功落盘。
