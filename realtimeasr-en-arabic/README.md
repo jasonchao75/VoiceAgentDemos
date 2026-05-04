@@ -27,7 +27,9 @@
 
 ---
 
-## 🚀 部署与运行
+## 🚀 部署与运行 (包含自动部署)
+
+本项目支持通过 GitHub Actions 进行轻量自动化部署到 DigitalOcean。详细的服务器配置前提、免密重启配置、以及触发方式等请参阅 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
 ### 1. 环境准备
 - 确保已安装 Python 3.8 或更高版本。

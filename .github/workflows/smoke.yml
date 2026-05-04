@@ -35,23 +35,23 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r backend/requirements.txt
+          pip install -r realtimeasr-en-arabic/backend/requirements.txt
 
       - name: Python syntax check
         run: |
-          find backend -name "*.py" -print0 | xargs -0 python -m py_compile
+          find realtimeasr-en-arabic/backend -name "*.py" -print0 | xargs -0 python -m py_compile
 
       - name: FastAPI app import check
         run: |
           # Use a fake key for import check if the environment variable is not populated locally in PRs from forks
-          SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY:-"fake_key_for_import"} \
+          cd realtimeasr-en-arabic && SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY:-"fake_key_for_import"} \
           python -c "from backend.main import app; print('App imported successfully')"
 
       - name: Backend health check
         run: |
           # Start uvicorn in the background
           # Pass the key so config validation passes
-          SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY} uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
+          cd realtimeasr-en-arabic && SPEECHMATICS_API_KEY=${SPEECHMATICS_API_KEY} uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
           UVICORN_PID=$!
           trap 'kill $UVICORN_PID 2>/dev/null || true' EXIT
           
@@ -68,13 +68,13 @@ jobs:
 
       - name: Frontend static file check
         run: |
-          test -f frontend/index.html || { echo "frontend/index.html not found"; exit 1; }
-          test -f frontend/history.html || { echo "frontend/history.html not found"; exit 1; }
+          test -f realtimeasr-en-arabic/frontend/index.html || { echo "realtimeasr-en-arabic/frontend/index.html not found"; exit 1; }
+          test -f realtimeasr-en-arabic/frontend/history.html || { echo "realtimeasr-en-arabic/frontend/history.html not found"; exit 1; }
 
       - name: Frontend static server check
         run: |
           # Start a python simple http server in the frontend directory
-          cd frontend
+          cd realtimeasr-en-arabic/frontend
           python -m http.server 8080 &
           HTTP_PID=$!
           trap 'kill $HTTP_PID 2>/dev/null || true' EXIT

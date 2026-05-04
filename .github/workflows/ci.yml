@@ -22,20 +22,20 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r backend/requirements.txt
+          pip install -r realtimeasr-en-arabic/backend/requirements.txt
 
       - name: Python syntax check
         run: |
-          find backend -name "*.py" -print0 | xargs -0 python -m py_compile
+          find realtimeasr-en-arabic/backend -name "*.py" -print0 | xargs -0 python -m py_compile
 
       - name: FastAPI app import check
         run: |
-          python -c "from backend.main import app; print('App imported successfully')"
+          cd realtimeasr-en-arabic && python -c "from backend.main import app; print('App imported successfully')"
 
       - name: Backend health check
         run: |
           # Start uvicorn in the background using python module execution
-          python -m uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
+          cd realtimeasr-en-arabic && python -m uvicorn backend.main:app --host 127.0.0.1 --port 8010 &
           UVICORN_PID=$!
           
           # Add trap to ensure uvicorn is killed on exit (success or failure)
@@ -55,18 +55,18 @@ jobs:
 
       - name: Frontend static file check
         run: |
-          test -f frontend/index.html || { echo "frontend/index.html not found"; exit 1; }
-          test -f frontend/history.html || { echo "frontend/history.html not found"; exit 1; }
+          test -f realtimeasr-en-arabic/frontend/index.html || { echo "realtimeasr-en-arabic/frontend/index.html not found"; exit 1; }
+          test -f realtimeasr-en-arabic/frontend/history.html || { echo "realtimeasr-en-arabic/frontend/history.html not found"; exit 1; }
 
       - name: Secret scanning (.env and hardcoded keys)
         run: |
-          if [ -f .env ]; then
+          if [ -f realtimeasr-en-arabic/.env ]; then
             echo "Error: .env file should not be committed to the repository!"
             exit 1
           fi
           # Basic scan for hardcoded Speechmatics keys
-          if grep -riE "SPEECHMATICS_API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" backend/ frontend/ || \
-             grep -riE "API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" backend/ frontend/; then
+          if grep -riE "SPEECHMATICS_API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" realtimeasr-en-arabic/backend/ realtimeasr-en-arabic/frontend/ || \
+             grep -riE "API_KEY\s*=\s*[\"']?[A-Za-z0-9_]{10,}" realtimeasr-en-arabic/backend/ realtimeasr-en-arabic/frontend/; then
             echo "Error: Potential hardcoded API key found!"
             exit 1
           fi

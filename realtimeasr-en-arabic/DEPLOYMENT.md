@@ -69,6 +69,49 @@ window.REALTIME_WS_BASE = 'wss://your-backend-domain.com';
 - [ ] Log rotation configured
 - [ ] Monitoring and alerting as needed
 
+## Automated Deployment (CD)
+
+This repository includes a lightweight Continuous Deployment (CD) workflow (`.github/workflows/deploy.yml`) to deploy the `main` branch to our DigitalOcean server.
+
+### Prerequisites
+
+The server must be pre-configured with:
+- The repository cloned at `/opt/VoiceAgentDemos`.
+- The `.env` file configured at `/opt/VoiceAgentDemos/realtimeasr-en-arabic/.env` (or repo root).
+- A Python virtual environment at `/opt/VoiceAgentDemos/realtimeasr-en-arabic/.venv`.
+- A systemd service named `realtimeasr` configured to run the FastAPI backend.
+- Nginx and HTTPS set up (this CD does not handle web server config or domain updates).
+- **Sudoers rule**: The `deploy` user must have passwordless `sudo` access to restart the `realtimeasr` service. You can configure this by running `sudo visudo` on the server and adding:
+  `deploy ALL=(ALL) NOPASSWD: /bin/systemctl restart realtimeasr`
+
+### GitHub Secrets Configuration
+
+To enable the deployment workflow, configure the following secrets in GitHub (**Settings > Secrets and variables > Actions > New repository secret**):
+- `SERVER_HOST`: The public IP of the server (e.g., `104.248.46.112`).
+- `SERVER_USER`: The SSH user (e.g., `deploy`).
+- `SSH_PRIVATE_KEY`: The private SSH key for the `deploy` user.
+
+### Triggering the Deployment
+
+1. Go to the **Actions** tab in the GitHub repository.
+2. Select the **Deploy to DigitalOcean** workflow on the left.
+3. Click the **Run workflow** dropdown and click **Run workflow**.
+
+*Note: Deployment is strictly manual via `workflow_dispatch` to minimize the risk of unintended disruptions, ensuring a human is always monitoring the deployment process.*
+
+### Verifying the Deployment
+
+The deployment workflow automatically runs a `/health` check. You can also manually verify by:
+1. Opening the frontend URL in your browser.
+2. Checking the backend status on the server: `systemctl status realtimeasr`.
+
+### Rollback Procedure
+
+If a deployment fails or introduces a critical bug:
+1. Revert the problematic commit(s) on the `main` branch locally and push to GitHub.
+2. Trigger the **Deploy to DigitalOcean** workflow again.
+3. Alternatively, SSH into the server, `git checkout <previous-commit-hash>`, restart the service (`sudo systemctl restart realtimeasr`), and verify.
+
 ## Testing
 
 ### Health check
