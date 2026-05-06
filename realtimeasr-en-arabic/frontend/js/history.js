@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let apiUrl = '/api/history';
     if (window.location.protocol === 'file:') {
         apiUrl = 'http://127.0.0.1:8010/api/history';
-    } else {
+    } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         apiUrl = `http://${window.location.hostname}:8010/api/history`;
     }
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (window.location.protocol === 'file:') {
                     downloadUrl = `http://127.0.0.1:8010${downloadUrl}`;
                     downloadLogUrl = `http://127.0.0.1:8010${downloadLogUrl}`;
-                } else {
+                } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
                     downloadUrl = `http://${window.location.hostname}:8010${downloadUrl}`;
                     downloadLogUrl = `http://${window.location.hostname}:8010${downloadLogUrl}`;
                 }

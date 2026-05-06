@@ -11,6 +11,7 @@ from typing import List, Dict, Any
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+import os
 
 from .websocket_handler import WebSocketHandler, STORAGE_DIR
 from .config import config
@@ -145,6 +146,10 @@ async def websocket_endpoint(
 
     handler = WebSocketHandler(websocket, language)
     await handler.handle()
+
+# Mount frontend statically
+frontend_dir = Path(__file__).parent.parent / "frontend"
+app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
 
 if __name__ == "__main__":

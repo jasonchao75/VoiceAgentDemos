@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // API URL Helper
     function getApiUrl(path) {
         if (window.location.protocol === 'file:') return `http://127.0.0.1:8010${path}`;
-        return `http://${window.location.hostname}:8010${path}`;
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return `http://${window.location.hostname}:8010${path}`;
+        return path;
     }
 
     function showNotification(message, type = 'info') {
