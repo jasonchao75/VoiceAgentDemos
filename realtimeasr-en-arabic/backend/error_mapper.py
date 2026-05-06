@@ -22,9 +22,7 @@ ERROR_MESSAGES = {
     ErrorCode.MAX_DURATION_EXCEEDED: "Maximum duration of 2 minutes exceeded. Session ended.",
     ErrorCode.TRANSCRIPTION_SERVICE: (
         "Cannot connect to the transcription service. "
-        "Confirm SPEECHMATICS_URL (e.g. .../v2) and API key in the repository root .env; "
-        "if the key is set but still fails, remove any empty SPEECHMATICS_API_KEY from your IDE or system environment so .env can take effect. "
-        "Also ensure outbound access to Speechmatics is allowed."
+        "Please check your network connection and server configuration."
     ),
     ErrorCode.INTERNAL_ERROR: "An internal error occurred. Please try again later.",
 }
