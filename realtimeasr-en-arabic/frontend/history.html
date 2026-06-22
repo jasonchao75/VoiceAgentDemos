@@ -24,6 +24,8 @@
                 <div class="logo-text" style="display: none;">Dyna.Ai</div>
             </div>
             <div class="nav-links">
+                <a href="index.html" class="nav-link">Demo</a>
+                <a href="benchmark.html" class="nav-link">Benchmark</a>
                 <a href="history.html" class="nav-link active">History Dashboard</a>
                 <a href="config.html" class="nav-link">Dictionary Config</a>
             </div>
@@ -37,7 +39,12 @@
             <p class="subtitle" style="color: var(--text-secondary); margin-top: 0.5rem;">Review and download past session recordings and transcripts.</p>
         </div>
 
-        <div class="table-container">
+        <div class="tabs" style="margin-bottom: 1.5rem; display: flex; gap: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+            <button class="tab-btn active" onclick="switchTab('demo')" style="background:none; border:none; font-size:1rem; font-weight:600; cursor:pointer; color:var(--brand-primary);">Live Demo Sessions</button>
+            <button class="tab-btn" onclick="switchTab('benchmark')" style="background:none; border:none; font-size:1rem; font-weight:600; cursor:pointer; color:var(--text-secondary);">Benchmark Runs</button>
+        </div>
+
+        <div id="demo-section" class="table-container">
             <table class="history-table">
                 <thead>
                     <tr>
@@ -58,7 +65,56 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="benchmark-section" class="table-container" style="display: none;">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th class="col-id">Run Name</th>
+                        <th class="col-lang">Language</th>
+                        <th class="col-lang">Status</th>
+                        <th class="col-date">Date</th>
+                        <th class="col-action">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="benchmark-tbody">
+                    <!-- Loaded via JS -->
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 3rem;">
+                            <i class="ph ph-spinner-gap" style="animation: spin 1s linear infinite; font-size: 2rem; color: var(--text-tertiary);"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
+
+    <!-- Modal for showing benchmark results -->
+    <div id="benchmark-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card" style="max-width: 800px; width: 90%;">
+            <div class="panel-header transcript-header">
+                <h3>Benchmark Run Results</h3>
+                <div class="header-actions">
+                    <button class="text-button" onclick="document.getElementById('benchmark-modal').style.display='none'">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div style="max-height: 400px; overflow-y: auto; margin-top: 1rem;">
+                <table class="benchmark-results" style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 0.5rem; border-bottom: 1px solid var(--border-subtle);">File</th>
+                            <th style="padding: 0.5rem; border-bottom: 1px solid var(--border-subtle);">Status</th>
+                            <th style="padding: 0.5rem; border-bottom: 1px solid var(--border-subtle);">Transcript</th>
+                        </tr>
+                    </thead>
+                    <tbody id="benchmark-modal-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <style>
         @keyframes spin { 100% { transform: rotate(360deg); } }

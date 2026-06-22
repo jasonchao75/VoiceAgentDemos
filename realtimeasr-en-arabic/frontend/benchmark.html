@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyna.Ai - Benchmark Library</title>
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .benchmark-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .benchmark-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tree-view {
+            margin-top: 1rem;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 0.5rem;
+            background: var(--bg-surface-hover);
+        }
+        .tree-node {
+            margin-left: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0;
+        }
+        .tree-node.root {
+            margin-left: 0;
+        }
+        .tree-node i {
+            color: var(--text-secondary);
+        }
+        .tree-label {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            user-select: none;
+        }
+        .benchmark-results {
+            margin-top: 1rem;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .benchmark-results th, .benchmark-results td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .benchmark-results th {
+            background: var(--bg-surface-hover);
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .benchmark-results td {
+            color: var(--text-primary);
+            font-size: 0.875rem;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .status-pending { background: #f3f4f6; color: #4b5563; }
+        .status-running { background: #dbeafe; color: #1d4ed8; }
+        .status-completed { background: #dcfce7; color: #15803d; }
+        .status-error { background: #fee2e2; color: #b91c1c; }
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo-container">
+                <img src="assets/logo.jpg" alt="Dyna.Ai Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo-text" style="display: none;">Dyna.Ai</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Demo</a>
+                <a href="benchmark.html" class="nav-link active">Benchmark</a>
+                <a href="history.html" class="nav-link">History Dashboard</a>
+                <a href="config.html" class="nav-link">Dictionary Config</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="dashboard-header">
+            <h1>Benchmark Library</h1>
+            <p class="subtitle" style="color: var(--text-secondary); margin-top: 0.5rem;">Upload audio folders and run batch transcription tests.</p>
+        </div>
+
+        <div class="benchmark-grid">
+            <!-- Left Panel: Configuration and Library -->
+            <div class="bento-panel control-panel">
+                <div class="panel-header">
+                    <h2>Configuration & Library</h2>
+                </div>
+
+                <div class="upload-section">
+                    <label class="control-label">Upload Audio Folder (8k/16k WAV)</label>
+                    <input type="file" id="folder-upload" webkitdirectory multiple style="display: none;">
+                    <button class="secondary-button" onclick="document.getElementById('folder-upload').click()">
+                        <i class="ph ph-upload-simple"></i> Choose Folder
+                    </button>
+                    <div id="upload-progress" style="font-size: 0.8rem; color: var(--text-secondary); display: none;">Uploading...</div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Library Selection</label>
+                    <div id="library-tree" class="tree-view">
+                        <!-- Tree nodes will be injected here -->
+                    </div>
+                </div>
+
+                <div class="control-group" style="margin-top: 1rem;">
+                    <label for="language-select" class="control-label">Model Language</label>
+                    <div class="custom-select-wrapper">
+                        <select id="language-select" class="language-select">
+                            <option value="ar" selected>Arabic (Standard)</option>
+                            <option value="en">English</option>
+                            <option value="ar_en">Arabic-English (Mixed)</option>
+                        </select>
+                        <i class="ph ph-caret-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="label-with-help">
+                        <label for="profile-select" class="control-label">Dictionary Profile</label>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select id="profile-select" class="language-select">
+                            <option value="">None</option>
+                        </select>
+                        <i class="ph ph-caret-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="run-name" class="control-label">Run Name</label>
+                    <input type="text" id="run-name" placeholder="e.g. Test 2023-10-27" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-subtle); border-radius: 8px;">
+                </div>
+
+                <div class="action-area" style="margin-top: 1.5rem;">
+                    <button id="start-benchmark-btn" class="primary-button">
+                        <i class="ph ph-play button-icon"></i>
+                        <span class="button-text">Start Benchmark</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel: Results -->
+            <div class="bento-panel">
+                <div class="panel-header">
+                    <h2>Live Results</h2>
+                    <span id="current-run-status" class="status-badge" style="display: none;"></span>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table class="benchmark-results">
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Status</th>
+                                <th>Transcript</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                            <tr>
+                                <td colspan="3" style="text-align: center; color: var(--text-secondary);">No active benchmark run</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="ph ph-info toast-icon"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="js/benchmark.js"></script>
+</body>
+</html>

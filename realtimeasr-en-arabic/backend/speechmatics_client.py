@@ -1,6 +1,7 @@
 """
 Speechmatics Realtime API WebSocket client.
 """
+
 import json
 import asyncio
 import logging
@@ -30,21 +31,27 @@ def _speechmatics_connect_url(base_url: str) -> str:
 class SpeechmaticsClient:
     """Upstream realtime transcription session."""
 
-    def __init__(self, language: str = "ar", hotwords: list = None, replacements: list = None, log_callback: Callable = None):
+    def __init__(
+        self,
+        language: str = "ar",
+        hotwords: list = None,
+        replacements: list = None,
+        log_callback: Callable = None,
+        sample_rate: int = 16000,
+    ):
         """
         Args:
             language: ar, en, or ar_en.
             hotwords: additional_vocab list for Speechmatics
             replacements: custom transcript replacements
             log_callback: callback for custom session logging
+            sample_rate: 8000 or 16000
         """
         self.language = language
         self.hotwords = hotwords or []
         self.replacements = replacements or []
-        self.ws: Optional[WebSocketClientProtocol] = None
-        self.session_id: Optional[str] = None
-        self._message_handler: Optional[Callable] = None
         self.log_callback = log_callback
+        self.sample_rate = sample_rate
         self.audio_seq_no = 0
         self.end_of_transcript_received = False
         self._end_of_transcript_event = asyncio.Event()
@@ -79,7 +86,9 @@ class SpeechmaticsClient:
             self.ws = await asyncio.wait_for(
                 websockets.connect(
                     connect_uri,
-                    additional_headers={"Authorization": f"Bearer {config.SPEECHMATICS_API_KEY}"},
+                    additional_headers={
+                        "Authorization": f"Bearer {config.SPEECHMATICS_API_KEY}"
+                    },
                     ssl=ssl_context,
                 ),
                 timeout=10.0,
@@ -92,7 +101,7 @@ class SpeechmaticsClient:
                 "audio_format": {
                     "type": "raw",
                     "encoding": "pcm_s16le",
-                    "sample_rate": 16000
+                    "sample_rate": self.sample_rate,
                 },
                 "transcription_config": {
                     "language": _speechmatics_transcription_language(self.language),
@@ -102,13 +111,14 @@ class SpeechmaticsClient:
             }
 
             if self.hotwords and len(self.hotwords) > 0:
-                start_recognition["transcription_config"]["additional_vocab"] = self.hotwords
+                start_recognition["transcription_config"]["additional_vocab"] = (
+                    self.hotwords
+                )
 
             if self.replacements and len(self.replacements) > 0:
-                start_recognition["transcription_config"]["transcript_filtering_config"] = {
-                    "remove_disfluencies": False,
-                    "replacements": self.replacements
-                }
+                start_recognition["transcription_config"][
+                    "transcript_filtering_config"
+                ] = {"remove_disfluencies": False, "replacements": self.replacements}
 
             start_json_str = json.dumps(start_recognition)
             self._write_log(f"Sending StartRecognition: {start_json_str}")
@@ -183,7 +193,9 @@ class SpeechmaticsClient:
     async def wait_for_end_of_transcript(self, timeout: float = 10.0) -> bool:
         """Wait until Speechmatics confirms all final transcripts were emitted."""
         try:
-            await asyncio.wait_for(self._end_of_transcript_event.wait(), timeout=timeout)
+            await asyncio.wait_for(
+                self._end_of_transcript_event.wait(), timeout=timeout
+            )
             return self.end_of_transcript_received
         except asyncio.TimeoutError:
             logger.warning("Timed out waiting for EndOfTranscript")
@@ -241,11 +253,7 @@ class SpeechmaticsClient:
                     if items and len(items) > 0:
                         speaker = items[0].get("speaker", "S1")
 
-            client_message = {
-                "type": "partial",
-                "text": transcript,
-                "speaker": speaker
-            }
+            client_message = {"type": "partial", "text": transcript, "speaker": speaker}
             await self._message_handler(client_message)
 
         elif message_type == "AddTranscript":
@@ -266,11 +274,7 @@ class SpeechmaticsClient:
                     if items and len(items) > 0:
                         speaker = items[0].get("speaker", "S1")
 
-            client_message = {
-                "type": "final",
-                "text": transcript,
-                "speaker": speaker
-            }
+            client_message = {"type": "final", "text": transcript, "speaker": speaker}
             await self._message_handler(client_message)
 
         elif message_type == "EndOfTranscript":

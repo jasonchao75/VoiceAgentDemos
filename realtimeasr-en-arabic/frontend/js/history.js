@@ -1,16 +1,114 @@
 // History Dashboard Logic
 
+let apiBaseUrl = '/api';
+if (window.location.protocol === 'file:') {
+    apiBaseUrl = 'http://127.0.0.1:8010/api';
+} else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    apiBaseUrl = `http://${window.location.hostname}:8010/api`;
+}
+
+function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.color = 'var(--text-secondary)';
+    });
+    const activeBtn = document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`);
+    if(activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.style.color = 'var(--brand-primary)';
+    }
+
+    document.getElementById('demo-section').style.display = tab === 'demo' ? 'block' : 'none';
+    document.getElementById('benchmark-section').style.display = tab === 'benchmark' ? 'block' : 'none';
+
+    if (tab === 'benchmark') {
+        loadBenchmarkRuns();
+    }
+}
+
+async function loadBenchmarkRuns() {
+    const tbody = document.getElementById('benchmark-tbody');
+    try {
+        const response = await fetch(`${apiBaseUrl}/benchmark/runs`);
+        const data = await response.json();
+        
+        if (data.runs && data.runs.length > 0) {
+            tbody.innerHTML = '';
+            data.runs.forEach(run => {
+                const tr = document.createElement('tr');
+                const dateObj = new Date(run.created_at + "Z");
+                
+                tr.innerHTML = `
+                    <td class="col-id" style="font-weight:500;">${run.run_name}</td>
+                    <td class="col-lang"><span style="background: var(--bg-surface-hover); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; border: 1px solid var(--border-subtle);">${run.language.toUpperCase()}</span></td>
+                    <td><span class="status-badge status-${run.status}">${run.status}</span></td>
+                    <td class="col-date" style="font-size: 0.875rem; color: var(--text-secondary);">${dateObj.toLocaleString()}</td>
+                    <td class="col-action">
+                        <button class="action-btn" onclick="showBenchmarkResults(${run.id})">
+                            <i class="ph ph-eye"></i> View Results
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        } else {
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 4rem; color: var(--text-tertiary);">No benchmark runs found.</td></tr>`;
+        }
+    } catch (error) {
+        console.error('Failed to load benchmark runs:', error);
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 3rem; color: var(--brand-danger);">Failed to load data.</td></tr>`;
+    }
+}
+
+async function showBenchmarkResults(runId) {
+    const modal = document.getElementById('benchmark-modal');
+    const tbody = document.getElementById('benchmark-modal-tbody');
+    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">Loading...</td></tr>';
+    modal.style.display = 'flex';
+    
+    try {
+        const response = await fetch(`${apiBaseUrl}/benchmark/status/${runId}`);
+        const data = await response.json();
+        
+        tbody.innerHTML = '';
+        data.results.forEach(res => {
+            const tr = document.createElement('tr');
+            
+            const tdFile = document.createElement('td');
+            tdFile.textContent = res.file_path;
+            tdFile.style.padding = '0.5rem';
+            tdFile.style.borderBottom = '1px solid var(--border-subtle)';
+            
+            const tdStatus = document.createElement('td');
+            tdStatus.style.padding = '0.5rem';
+            tdStatus.style.borderBottom = '1px solid var(--border-subtle)';
+            tdStatus.innerHTML = `<span class="status-badge status-${res.status}">${res.status}</span>`;
+            
+            const tdTranscript = document.createElement('td');
+            tdTranscript.style.padding = '0.5rem';
+            tdTranscript.style.borderBottom = '1px solid var(--border-subtle)';
+            if (res.status === 'error') {
+                tdTranscript.textContent = res.error_message || 'Error';
+                tdTranscript.style.color = 'var(--brand-danger)';
+            } else {
+                tdTranscript.textContent = res.final_transcript || '';
+            }
+            
+            tr.appendChild(tdFile);
+            tr.appendChild(tdStatus);
+            tr.appendChild(tdTranscript);
+            tbody.appendChild(tr);
+        });
+    } catch (e) {
+        tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:red;">Error loading results</td></tr>';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const tbody = document.getElementById('history-tbody');
     
-    // Construct API URL
-    let apiUrl = '/api/history';
-    if (window.location.protocol === 'file:') {
-        apiUrl = 'http://127.0.0.1:8010/api/history';
-    } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        apiUrl = `http://${window.location.hostname}:8010/api/history`;
-    }
-
+    let apiUrl = `${apiBaseUrl}/history`;
+    
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
