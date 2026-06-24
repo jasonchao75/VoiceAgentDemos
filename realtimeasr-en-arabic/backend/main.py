@@ -113,12 +113,42 @@ async def get_history():
     return JSONResponse(content={"records": records})
 
 
+import io
+import wave
+from fastapi.responses import Response, FileResponse, JSONResponse
+
 @app.get("/api/download/{session_id}")
 async def download_audio(session_id: str):
-    """Download the saved wav file for a given session."""
+    """Download the saved wav file for a given session. Converts 16k to 8k automatically."""
     file_path = STORAGE_DIR / f"{session_id}.wav"
     if not file_path.exists():
         return JSONResponse(status_code=404, content={"error": "File not found"})
+
+    with wave.open(str(file_path), "rb") as f_in:
+        framerate = f_in.getframerate()
+        nchannels = f_in.getnchannels()
+        sampwidth = f_in.getsampwidth()
+        frames = f_in.readframes(f_in.getnframes())
+
+    if framerate == 16000 and sampwidth == 2:
+        # Downsample to 8000 by taking every 2nd sample
+        samples = memoryview(frames).cast('h')
+        downsampled = samples[::2].tobytes()
+
+        out_buf = io.BytesIO()
+        with wave.open(out_buf, "wb") as f_out:
+            f_out.setnchannels(nchannels)
+            f_out.setsampwidth(sampwidth)
+            f_out.setframerate(8000)
+            f_out.writeframes(downsampled)
+
+        out_buf.seek(0)
+        return Response(
+            content=out_buf.read(),
+            media_type="audio/wav",
+            headers={"Content-Disposition": f"attachment; filename=recording_{session_id}.wav"}
+        )
+
     return FileResponse(
         path=file_path, filename=f"recording_{session_id}.wav", media_type="audio/wav"
     )

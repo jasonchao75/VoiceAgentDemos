@@ -1,6 +1,7 @@
 """
 WebSocket handler: client session lifecycle and Speechmatics bridge.
 """
+
 import json
 import asyncio
 import logging
@@ -58,7 +59,7 @@ class WebSocketHandler:
                 logger.error("First message must be JSON action='start'")
                 await self._send_error(ErrorCode.INTERNAL_ERROR)
                 return
-            
+
             try:
                 start_data = json.loads(start_msg["text"])
                 if start_data.get("action") != "start":
@@ -70,20 +71,34 @@ class WebSocketHandler:
                 await self._send_error(ErrorCode.INTERNAL_ERROR)
                 return
 
-            logger.info(f"Attempting to connect to Speechmatics with hotwords={hotwords}, replacements={replacements}")
-            
+            logger.info(
+                f"Attempting to connect to Speechmatics with hotwords={hotwords}, replacements={replacements}"
+            )
+
             def session_logger(msg):
                 now = datetime.datetime.now()
                 formatted = f"{now.strftime('%Y-%m-%d %H:%M:%S')},{now.strftime('%f')[:3]} - INFO - {msg}\n"
                 self.log_buffer.append(formatted)
 
-            self.speechmatics_client = SpeechmaticsClient(language=self.language, hotwords=hotwords, replacements=replacements, log_callback=session_logger)
+            self.speechmatics_client = SpeechmaticsClient(
+                language=self.language,
+                hotwords=hotwords,
+                replacements=replacements,
+                log_callback=session_logger,
+                sample_rate=8000,
+            )
 
             try:
-                self.session_id = await self.speechmatics_client.connect(self._send_to_client)
-                logger.info(f"Successfully connected to Speechmatics, session_id={self.session_id}")
+                self.session_id = await self.speechmatics_client.connect(
+                    self._send_to_client
+                )
+                logger.info(
+                    f"Successfully connected to Speechmatics, session_id={self.session_id}"
+                )
             except Exception as conn_error:
-                logger.error(f"Failed to connect to Speechmatics: {conn_error}", exc_info=True)
+                logger.error(
+                    f"Failed to connect to Speechmatics: {conn_error}", exc_info=True
+                )
                 if "TIMEOUT" in str(conn_error):
                     await self._send_error(ErrorCode.TIMEOUT)
                 else:
@@ -94,11 +109,13 @@ class WebSocketHandler:
             self.raw_path = STORAGE_DIR / f"{self.session_id}.raw"
             self.raw_file = open(self.raw_path, "wb")
 
-            await self._send_to_client({
-                "type": "session_started",
-                "session_id": self.session_id,
-                "language": self.language
-            })
+            await self._send_to_client(
+                {
+                    "type": "session_started",
+                    "session_id": self.session_id,
+                    "language": self.language,
+                }
+            )
 
             self.is_active = True
             self.listen_task = asyncio.create_task(self.speechmatics_client.listen())
@@ -144,9 +161,13 @@ class WebSocketHandler:
                 logger.info("Received end action")
                 if self.speechmatics_client:
                     await self.speechmatics_client.end_stream()
-                    received_end = await self.speechmatics_client.wait_for_end_of_transcript()
+                    received_end = (
+                        await self.speechmatics_client.wait_for_end_of_transcript()
+                    )
                     if not received_end:
-                        logger.warning("Proceeding without EndOfTranscript confirmation")
+                        logger.warning(
+                            "Proceeding without EndOfTranscript confirmation"
+                        )
                 self.is_active = False
 
             else:
@@ -174,7 +195,7 @@ class WebSocketHandler:
             text = message.get("text", "").strip()
             if text:
                 self.final_transcript.append(text)
-        
+
         try:
             await self.websocket.send_text(json.dumps(message))
         except Exception as e:
@@ -199,7 +220,7 @@ class WebSocketHandler:
         """Convert raw PCM to WAV and save transcript to DB."""
         if not self.session_id or not self.raw_path or not self.raw_path.exists():
             return
-        
+
         try:
             wav_path = STORAGE_DIR / f"{self.session_id}.wav"
             with open(self.raw_path, "rb") as f_raw:
@@ -207,12 +228,12 @@ class WebSocketHandler:
             with wave.open(str(wav_path), "wb") as f_wav:
                 f_wav.setnchannels(1)
                 f_wav.setsampwidth(2)
-                f_wav.setframerate(16000)
+                f_wav.setframerate(8000)
                 f_wav.writeframes(pcm_data)
-            
+
             # Clean up raw file
             self.raw_path.unlink()
-            
+
             # Save logs to file
             if self.session_id and self.log_buffer:
                 log_path = STORAGE_DIR / f"{self.session_id}.log"
@@ -224,16 +245,18 @@ class WebSocketHandler:
                 session_id=self.session_id,
                 language=self.language,
                 final_transcript=final_text,
-                audio_file_path=str(wav_path)
+                audio_file_path=str(wav_path),
             )
             logger.info(f"Saved transcription to DB for {self.session_id}")
-            
-            await self._send_to_client({
-                "type": "saved",
-                "session_id": self.session_id,
-                "download_url": f"/api/download/{self.session_id}"
-            })
-                
+
+            await self._send_to_client(
+                {
+                    "type": "saved",
+                    "session_id": self.session_id,
+                    "download_url": f"/api/download/{self.session_id}",
+                }
+            )
+
         except Exception as e:
             logger.error(f"Failed to convert/save audio: {e}")
 

@@ -125,10 +125,10 @@ async function startRecording() {
         }
 
         mediaStream = await navigator.mediaDevices.getUserMedia({
-            audio: { sampleRate: 16000, channelCount: 1, echoCancellation: true, noiseSuppression: true }
+            audio: { sampleRate: 8000, channelCount: 1, echoCancellation: true, noiseSuppression: true }
         });
 
-        audioContext = new AudioContext({ sampleRate: 16000 });
+        audioContext = new AudioContext({ sampleRate: 8000 });
         const source = audioContext.createMediaStreamSource(mediaStream);
 
         await audioContext.audioWorklet.addModule('js/audio-worklet-processor.js');
