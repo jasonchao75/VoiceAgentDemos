@@ -1,7 +1,9 @@
 let API_BASE = '/api';
 if (window.location.protocol === 'file:') {
     API_BASE = 'http://127.0.0.1:8010/api';
-} else if (window.location.port === '8765' || window.location.port === '5500' || window.location.port === '3000') {
+} else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    API_BASE = `http://${window.location.hostname}:8010/api`;
+} else if (window.location.port && window.location.port !== '80' && window.location.port !== '443') {
     API_BASE = `http://${window.location.hostname}:8010/api`;
 } else {
     API_BASE = '/api';

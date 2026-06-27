@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // API URL Helper
     function getApiUrl(path) {
         if (window.location.protocol === 'file:') return `http://127.0.0.1:8010${path}`;
-        if (window.location.port === '8765' || window.location.port === '5500' || window.location.port === '3000') return `http://${window.location.hostname}:8010${path}`;
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return `http://${window.location.hostname}:8010${path}`;
+        if (window.location.port && window.location.port !== '80' && window.location.port !== '443') return `http://${window.location.hostname}:8010${path}`;
         return path;
     }
 
