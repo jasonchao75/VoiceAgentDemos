@@ -34,7 +34,9 @@ from .database import (
     get_dictionary_profiles,
     delete_dictionary_profile,
     create_benchmark_run,
+    update_benchmark_run_status,
     add_benchmark_result,
+    update_benchmark_result,
     get_benchmark_runs,
     get_benchmark_results,
     save_ground_truth,
@@ -523,6 +525,94 @@ async def get_benchmark_status(run_id: int):
 
     results = get_benchmark_results(run_id)
     return {"run": run, "results": results}
+
+
+@app.post("/api/benchmark/stop/{run_id}")
+async def stop_benchmark(run_id: int):
+    # Get the run
+    runs = get_benchmark_runs()
+    run = next((r for r in runs if r["id"] == run_id), None)
+    if not run:
+        raise HTTPException(status_code=404, detail="Run not found")
+
+    if run["status"] != "running":
+        return {"status": "ignored", "message": f"Run is already {run['status']}"}
+
+    # 1. Update run status to 'cancelled'
+    update_benchmark_run_status(run_id, "cancelled")
+
+    # 2. Update any pending or running results to 'interrupted'
+    results = get_benchmark_results(run_id)
+    for res in results:
+        if res["status"] in ("pending", "running"):
+            update_benchmark_result(
+                res["id"], status="interrupted", error_message="Cancelled by user"
+            )
+
+    return {"status": "success", "message": "Benchmark run stopping gracefully."}
+
+
+@app.post("/api/benchmark/resume/{run_id}")
+async def resume_benchmark(run_id: int, background_tasks: BackgroundTasks):
+    runs = get_benchmark_runs()
+    run = next((r for r in runs if r["id"] == run_id), None)
+    if not run:
+        raise HTTPException(status_code=404, detail="Run not found")
+
+    if run["status"] == "running":
+        return {"status": "ignored", "message": "Run is already running."}
+
+    results = get_benchmark_results(run_id)
+
+    # Filter files that need to be re-run
+    # Statuses that are not 'completed' should be run again
+    file_tasks = []
+    for res in results:
+        if res["status"] != "completed":
+            # Update status to pending in DB so user sees it as ready to run
+            update_benchmark_result(res["id"], status="pending", error_message="")
+            file_tasks.append((res["id"], res["file_path"]))
+
+    if not file_tasks:
+        # If everything is already completed, just make sure run status is completed
+        update_benchmark_run_status(run_id, "completed")
+        return {
+            "status": "success",
+            "message": "All files are already completed.",
+            "run_id": run_id,
+        }
+
+    # Mark the run as running again
+    update_benchmark_run_status(run_id, "running")
+
+    # Load hotwords and replacements
+    profile_id = run["profile_id"]
+    hotwords = []
+    replacements = []
+    if profile_id and profile_id != -1:
+        profiles = get_dictionary_profiles()
+        profile = next((p for p in profiles if p["id"] == profile_id), None)
+        if profile:
+            hotwords = profile["hotwords"]
+            replacements = profile["replacements"]
+
+    # Trigger background runner again with the subset of files!
+    background_tasks.add_task(
+        run_benchmark,
+        run_id=run_id,
+        language=run["language"],
+        hotwords=hotwords,
+        replacements=replacements,
+        files=file_tasks,
+        benchmark_dir=BENCHMARK_DIR,
+        concurrency=3,  # Safe default for resume to prevent rate limiting
+    )
+
+    return {
+        "status": "success",
+        "run_id": run_id,
+        "message": f"Resumed benchmark run with {len(file_tasks)} files.",
+    }
 
 
 @app.get("/api/benchmark/runs")

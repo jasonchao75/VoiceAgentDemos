@@ -42,15 +42,31 @@ async function loadBenchmarkRuns() {
                 const tr = document.createElement('tr');
                 const dateObj = new Date(run.created_at + "Z");
                 
+                let extra_actions = '';
+                if (run.status === 'running') {
+                    extra_actions = `
+                        <button class="action-btn" style="color: var(--brand-danger); border-color: rgba(225,29,72,0.3); background: rgba(225,29,72,0.02);" onclick="stopBenchmarkRun(${run.id}, event)">
+                            <i class="ph ph-stop"></i> Stop
+                        </button>
+                    `;
+                } else if (['cancelled', 'interrupted', 'failed'].includes(run.status)) {
+                    extra_actions = `
+                        <button class="action-btn" style="color: var(--brand-success); border-color: rgba(46,204,113,0.3); background: rgba(46,204,113,0.02);" onclick="resumeBenchmarkRun(${run.id}, event)">
+                            <i class="ph ph-play"></i> Continue
+                        </button>
+                    `;
+                }
+
                 tr.innerHTML = `
                     <td class="col-id" style="font-weight:500;">${run.run_name}</td>
                     <td class="col-lang"><span style="background: var(--bg-surface-hover); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; border: 1px solid var(--border-subtle);">${run.language.toUpperCase()}</span></td>
                     <td><span class="status-badge status-${run.status}">${run.status}</span></td>
                     <td class="col-date" style="font-size: 0.875rem; color: var(--text-secondary);">${dateObj.toLocaleString()}</td>
-                    <td class="col-action">
+                    <td class="col-action" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                         <button class="action-btn" onclick="showBenchmarkResults(${run.id})">
                             <i class="ph ph-eye"></i> View Results
                         </button>
+                        ${extra_actions}
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -61,6 +77,44 @@ async function loadBenchmarkRuns() {
     } catch (error) {
         console.error('Failed to load benchmark runs:', error);
         tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 3rem; color: var(--brand-danger);">Failed to load data.</td></tr>`;
+    }
+}
+
+async function stopBenchmarkRun(runId, event) {
+    if (event) event.stopPropagation();
+    if (!confirm("Are you sure you want to stop this benchmark run?")) return;
+    
+    try {
+        const response = await fetch(`${apiBaseUrl}/benchmark/stop/${runId}`, {
+            method: 'POST'
+        });
+        if (response.ok) {
+            await loadBenchmarkRuns();
+        } else {
+            const err = await response.json();
+            alert("Error: " + (err.detail || "Failed to stop run"));
+        }
+    } catch (error) {
+        console.error('Failed to stop benchmark run:', error);
+    }
+}
+
+async function resumeBenchmarkRun(runId, event) {
+    if (event) event.stopPropagation();
+    if (!confirm("Do you want to continue this benchmark run? Already completed files will be skipped.")) return;
+    
+    try {
+        const response = await fetch(`${apiBaseUrl}/benchmark/resume/${runId}`, {
+            method: 'POST'
+        });
+        if (response.ok) {
+            await loadBenchmarkRuns();
+        } else {
+            const err = await response.json();
+            alert("Error: " + (err.detail || "Failed to resume run"));
+        }
+    } catch (error) {
+        console.error('Failed to resume benchmark:', error);
     }
 }
 

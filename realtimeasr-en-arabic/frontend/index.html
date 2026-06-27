@@ -24,6 +24,11 @@
                 <img src="assets/logo.jpg" alt="Dyna.Ai Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="logo-text" style="display: none;">Dyna.Ai</div>
             </div>
+            <!-- Global Floating Status Indicator -->
+            <div id="global-benchmark-indicator" class="global-status-indicator" style="display: none; align-items: center; gap: 0.5rem; background: var(--bg-surface-hover); border: 1px solid var(--border-subtle); padding: 0.35rem 0.75rem; border-radius: 99px; font-size: 0.85rem; font-weight: 500; cursor: pointer; margin-right: 1rem; margin-left: auto;" onclick="window.location.href='history.html'">
+                <span class="pulse-green"></span>
+                <span id="global-benchmark-text" style="color: var(--text-primary); font-family: var(--font-sans);">Benchmark Running...</span>
+            </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Demo</a>
                 <a href="benchmark.html" class="nav-link">Benchmark</a>
@@ -127,6 +132,7 @@
         </div>
     </div>
 
+    <script src="js/global-tracker.js"></script>
     <script src="js/app.js?v=14"></script>
 </body>
 </html>

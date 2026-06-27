@@ -8,6 +8,7 @@ from .database import (
     update_benchmark_result,
     update_benchmark_run_status,
     get_ground_truth,
+    get_benchmark_run_status,
 )
 
 # Dynamically import the evaluation engine from scripts/vendor/soniox
@@ -48,6 +49,14 @@ async def run_benchmark(
 
     async def process_file(result_id: int, rel_path: str):
         async with semaphore:
+            # Check if run has been cancelled before starting this file
+            current_status = get_benchmark_run_status(run_id)
+            if current_status == "cancelled":
+                update_benchmark_result(
+                    result_id, "interrupted", error_message="Cancelled by user"
+                )
+                return
+
             file_path = benchmark_dir / rel_path
 
             if not file_path.exists():
@@ -158,7 +167,17 @@ async def run_benchmark(
         tasks = [process_file(result_id, rel_path) for result_id, rel_path in files]
         await asyncio.gather(*tasks)
 
-        update_benchmark_run_status(run_id, "completed")
+        # Only set status to completed if it hasn't been cancelled/interrupted
+        final_status = get_benchmark_run_status(run_id)
+        if final_status == "cancelled":
+            pass  # Keep it as cancelled
+        else:
+            update_benchmark_run_status(run_id, "completed")
     except Exception as e:
         logger.error(f"Benchmark run failed: {e}")
-        update_benchmark_run_status(run_id, "failed")
+        # Only set status to failed if it hasn't been cancelled
+        final_status = get_benchmark_run_status(run_id)
+        if final_status == "cancelled":
+            pass
+        else:
+            update_benchmark_run_status(run_id, "failed")

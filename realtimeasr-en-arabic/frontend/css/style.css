@@ -717,3 +717,30 @@ span.interim {
     background: var(--brand-dark);
     color: white;
 }
+
+/* Global status indicator styles */
+.global-status-indicator {
+    transition: all 0.3s ease;
+}
+.global-status-indicator:hover {
+    background: var(--border-subtle) !important;
+    transform: scale(1.02);
+}
+
+.pulse-green {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--brand-success);
+    position: relative;
+    display: inline-block;
+}
+
+.pulse-green::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--brand-success);
+    animation: ringPulse 1.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}

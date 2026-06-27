@@ -130,6 +130,15 @@ def update_benchmark_run_status(run_id: int, status: str):
     conn.close()
 
 
+def get_benchmark_run_status(run_id: int) -> str | None:
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT status FROM benchmark_runs WHERE id = ?", (run_id,))
+    row = cursor.fetchone()
+    conn.close()
+    return row[0] if row else None
+
+
 def get_benchmark_runs():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
