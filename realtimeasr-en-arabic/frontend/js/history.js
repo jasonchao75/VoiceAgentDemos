@@ -3,6 +3,8 @@
 let apiBaseUrl = '/api';
 if (window.location.protocol === 'file:') {
     apiBaseUrl = 'http://127.0.0.1:8010/api';
+} else if (window.location.port && window.location.port !== '80' && window.location.port !== '443') {
+    apiBaseUrl = `http://${window.location.hostname}:8010/api`;
 } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     apiBaseUrl = `http://${window.location.hostname}:8010/api`;
 }
@@ -128,6 +130,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (window.location.protocol === 'file:') {
                     downloadUrl = `http://127.0.0.1:8010${downloadUrl}`;
                     downloadLogUrl = `http://127.0.0.1:8010${downloadLogUrl}`;
+                } else if (window.location.port && window.location.port !== '80' && window.location.port !== '443') {
+                    downloadUrl = `http://${window.location.hostname}:8010${downloadUrl}`;
+                    downloadLogUrl = `http://${window.location.hostname}:8010${downloadLogUrl}`;
                 } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
                     downloadUrl = `http://${window.location.hostname}:8010${downloadUrl}`;
                     downloadLogUrl = `http://${window.location.hostname}:8010${downloadLogUrl}`;
