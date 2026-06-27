@@ -177,21 +177,20 @@ function renderTree(nodes, container, isRoot = true) {
                 }
             };
             
-            // Delete folder (if empty)
-            const btnDelete = document.createElement('button');
-            btnDelete.className = 'tree-action-btn';
-            btnDelete.innerHTML = '<i class="ph ph-trash"></i>';
-            btnDelete.title = 'Delete folder (if empty)';
-            btnDelete.onclick = async (e) => {
-                if (confirm(`Delete folder ${node.name}?`)) {
-                    await deleteFolder(node.path);
-                }
-            };
-            
             actions.appendChild(btnUpload);
             actions.appendChild(btnNewFolder);
-            actions.appendChild(btnDelete);
         }
+        
+        // Delete (for both)
+        const btnDelete = document.createElement('button');
+        btnDelete.className = 'tree-action-btn';
+        btnDelete.innerHTML = '<i class="ph ph-trash"></i>';
+        btnDelete.title = node.type === 'directory' ? 'Delete folder (if empty)' : 'Delete file';
+        btnDelete.onclick = async (e) => {
+            if (confirm(`Delete ${node.type === 'directory' ? 'folder' : 'file'} ${node.name}?`)) {
+                await deleteItem(node.path);
+            }
+        };
         
         // Rename (for both)
         const btnRename = document.createElement('button');
@@ -218,6 +217,7 @@ function renderTree(nodes, container, isRoot = true) {
         
         actions.appendChild(btnRename);
         actions.appendChild(btnMove);
+        actions.appendChild(btnDelete);
         
         div.appendChild(checkbox);
         div.appendChild(icon);
@@ -372,13 +372,13 @@ async function createFolder(path) {
     }
 }
 
-async function deleteFolder(path) {
+async function deleteItem(path) {
     try {
-        const response = await fetch(`${API_BASE}/benchmark/folder?path=${encodeURIComponent(path)}`, {
+        const response = await fetch(`${API_BASE}/benchmark/item?path=${encodeURIComponent(path)}`, {
             method: 'DELETE'
         });
         if (response.ok) {
-            showToast('Folder deleted');
+            showToast('Deleted successfully');
             await loadLibrary();
         } else {
             const err = await response.json();

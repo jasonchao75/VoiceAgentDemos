@@ -293,16 +293,19 @@ async def create_benchmark_folder(req: FolderRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.delete("/api/benchmark/folder")
-async def delete_benchmark_folder(path: str = Query(...)):
-    folder_path = BENCHMARK_DIR / path.lstrip("/")
-    if not folder_path.exists() or not folder_path.is_dir():
-        raise HTTPException(status_code=404, detail="Directory not found")
+@app.delete("/api/benchmark/item")
+async def delete_benchmark_item(path: str = Query(...)):
+    item_path = BENCHMARK_DIR / path.lstrip("/")
+    if not item_path.exists():
+        raise HTTPException(status_code=404, detail="Item not found")
     try:
-        # Only delete if empty
-        if any(folder_path.iterdir()):
-            raise HTTPException(status_code=400, detail="Directory is not empty")
-        folder_path.rmdir()
+        if item_path.is_dir():
+            # Only delete if empty
+            if any(item_path.iterdir()):
+                raise HTTPException(status_code=400, detail="Directory is not empty")
+            item_path.rmdir()
+        else:
+            item_path.unlink()
         return {"status": "success"}
     except HTTPException:
         raise
