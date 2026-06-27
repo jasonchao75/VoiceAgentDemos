@@ -281,11 +281,11 @@ def normalize_arabic_text(text: str) -> str:
         return ""
     text = text.strip()
     text = remove_diacritics(text)
+    text = clean_symbols(text)
     text = normalize_alif(text)
     text = normalize_ya(text)
     text = normalize_ta_marbuta(text)
     text = normalize_digits(text)
-    text = clean_symbols(text)
     # Collapse multiple whitespaces
     text = re.sub(r"\s+", " ", text)
     # Apply number word to digit normalization
