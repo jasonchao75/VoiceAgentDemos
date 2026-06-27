@@ -65,6 +65,22 @@ def init_db():
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
+    # Auto-migration for existing benchmark_results table
+    cursor.execute("PRAGMA table_info(benchmark_results)")
+    existing_columns = {row[1] for row in cursor.fetchall()}
+    if existing_columns:
+        migrations = {
+            "ground_truth": "TEXT",
+            "wer": "REAL",
+            "wer_errors": "INTEGER",
+            "wer_words": "INTEGER",
+            "completed_at": "TIMESTAMP",
+        }
+        for col_name, col_type in migrations.items():
+            if col_name not in existing_columns:
+                cursor.execute(
+                    f"ALTER TABLE benchmark_results ADD COLUMN {col_name} {col_type}"
+                )
     conn.commit()
     conn.close()
 
