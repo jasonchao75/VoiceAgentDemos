@@ -182,6 +182,16 @@ def get_all_transcriptions():
     return [dict(row) for row in rows]
 
 
+def get_transcription_by_id(session_id: str):
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM transcriptions WHERE session_id = ?", (session_id,))
+    row = cursor.fetchone()
+    conn.close()
+    return dict(row) if row else None
+
+
 def save_dictionary_profile(name: str, hotwords: list, replacements: list):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()

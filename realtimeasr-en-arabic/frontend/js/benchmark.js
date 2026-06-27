@@ -230,14 +230,17 @@ function renderTree(nodes, container, isRoot = true) {
         checkbox.addEventListener('change', (e) => {
             const isChecked = e.target.checked;
             if (node.type === 'directory') {
-                const childCheckboxes = childrenContainer.querySelectorAll('input[type="checkbox"]');
-                childCheckboxes.forEach(cb => cb.checked = isChecked);
+                if (childrenContainer) {
+                    const childCheckboxes = childrenContainer.querySelectorAll('input[type="checkbox"]');
+                    childCheckboxes.forEach(cb => cb.checked = isChecked);
+                }
             }
         });
         
         let childrenContainer = null;
         if (node.type === 'directory' && node.children) {
             childrenContainer = document.createElement('div');
+            childrenContainer.className = 'tree-children';
             // By default, open roots, collapse deep folders. For simplicity, just render all
             renderTree(node.children, childrenContainer, false);
             container.appendChild(childrenContainer);

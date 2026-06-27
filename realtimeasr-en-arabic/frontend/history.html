@@ -45,6 +45,33 @@
         </div>
 
         <div id="demo-section">
+            <!-- Filter Section -->
+            <div class="filters-container" style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; flex-wrap: wrap;">
+                <div class="control-group" style="margin-bottom: 0;">
+                    <input type="date" id="filter-date" class="hw-input" style="padding: 0.5rem; border: 1px solid var(--border-subtle); border-radius: 6px;">
+                </div>
+                <div class="control-group" style="margin-bottom: 0;">
+                    <div class="custom-select-wrapper" style="min-width: 150px;">
+                        <select id="filter-language" class="language-select" style="padding: 0.5rem;">
+                            <option value="">All Languages</option>
+                            <option value="ar">Arabic</option>
+                            <option value="en">English</option>
+                            <option value="ar_en">Arabic-English</option>
+                        </select>
+                        <i class="ph ph-caret-down select-icon"></i>
+                    </div>
+                </div>
+                <div class="control-group" style="margin-bottom: 0; flex-grow: 1;">
+                    <div style="position: relative;">
+                        <i class="ph ph-magnifying-glass" style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary);"></i>
+                        <input type="text" id="filter-transcript" placeholder="Search in transcript..." style="width: 100%; padding: 0.5rem 0.5rem 0.5rem 2.25rem; border: 1px solid var(--border-subtle); border-radius: 6px;">
+                    </div>
+                </div>
+                <button id="clear-filters-btn" class="secondary-button" style="padding: 0.5rem 1rem;">
+                    <i class="ph ph-x-circle"></i> Clear Filters
+                </button>
+            </div>
+
             <div id="bulk-actions" style="display: none; padding: 1rem; background: var(--bg-surface-hover); border-radius: 8px; margin-bottom: 1rem; align-items: center; justify-content: space-between; border: 1px solid var(--border-subtle);">
                 <span id="selected-count" style="font-weight: 500; font-size: 0.875rem;">0 selected</span>
                 <button id="export-benchmark-btn" class="primary-button" style="padding: 0.5rem 1rem;">

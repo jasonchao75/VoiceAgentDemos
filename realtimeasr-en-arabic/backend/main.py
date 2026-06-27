@@ -29,6 +29,7 @@ from .config import config
 from .database import (
     init_db,
     get_all_transcriptions,
+    get_transcription_by_id,
     save_dictionary_profile,
     get_dictionary_profiles,
     delete_dictionary_profile,
@@ -129,16 +130,39 @@ async def get_history():
 
 @app.post("/api/history/export_to_benchmark")
 async def export_history_to_benchmark(req: ExportHistoryRequest):
-    """Copy selected history audio files to benchmark folder."""
+    """Copy selected history audio files to benchmark folder with YYYYMMDD_HHMMSS naming."""
     target_dir = BENCHMARK_DIR / req.target_folder
     target_dir.mkdir(parents=True, exist_ok=True)
+    import shutil
+    import datetime
 
     exported_count = 0
     for session_id in req.session_ids:
         src_path = STORAGE_DIR / f"{session_id}.wav"
         if src_path.exists():
-            dest_path = target_dir / f"{session_id}.wav"
-            import shutil
+            # Get transcription record to get the date
+            record = get_transcription_by_id(session_id)
+            if record and record.get("created_at"):
+                # Parse the date and format it
+                try:
+                    # SQLite CURRENT_TIMESTAMP is usually 'YYYY-MM-DD HH:MM:SS'
+                    dt = datetime.datetime.strptime(
+                        record["created_at"], "%Y-%m-%d %H:%M:%S"
+                    )
+                    base_name = dt.strftime("%Y%m%d_%H%M%S")
+                except Exception:
+                    base_name = session_id
+            else:
+                base_name = session_id
+
+            # Handle collision
+            dest_name = f"{base_name}.wav"
+            dest_path = target_dir / dest_name
+            counter = 1
+            while dest_path.exists():
+                dest_name = f"{base_name}_{counter}.wav"
+                dest_path = target_dir / dest_name
+                counter += 1
 
             shutil.copy2(src_path, dest_path)
             exported_count += 1
