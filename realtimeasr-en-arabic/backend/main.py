@@ -37,6 +37,9 @@ from .database import (
     add_benchmark_result,
     get_benchmark_runs,
     get_benchmark_results,
+    save_ground_truth,
+    get_ground_truth,
+    get_all_ground_truths,
 )
 from .benchmark_runner import run_benchmark
 
@@ -60,6 +63,7 @@ class BenchmarkRunRequest(BaseModel):
     language: str
     profile_id: Optional[int]
     files: List[str]
+    concurrency: int = 5
 
 
 class FolderRequest(BaseModel):
@@ -69,6 +73,11 @@ class FolderRequest(BaseModel):
 class MoveRequest(BaseModel):
     source: str
     target: str
+
+
+class GroundTruthRequest(BaseModel):
+    file_path: str
+    text: str
 
 
 # Logging
@@ -316,10 +325,27 @@ async def upload_benchmark_files(
 
     saved_count = 0
     for file, rel_path in zip(files, paths):
-        if not file.filename or not file.filename.lower().endswith(".wav"):
+        if not file.filename:
+            continue
+
+        is_wav = file.filename.lower().endswith(".wav")
+        is_txt = file.filename.lower().endswith(".txt")
+
+        if not (is_wav or is_txt):
             continue
 
         rel_path = rel_path.lstrip("/")
+
+        if is_txt:
+            # Save ground truth to DB instead of file system
+            content = await file.read()
+            text = content.decode("utf-8").strip()
+            # Corresponding wav path
+            wav_rel_path = rel_path.rsplit(".", 1)[0] + ".wav"
+            save_ground_truth(wav_rel_path, text)
+            saved_count += 1
+            continue
+
         file_path = BENCHMARK_DIR / rel_path
 
         file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -334,6 +360,8 @@ async def upload_benchmark_files(
 @app.get("/api/benchmark/library")
 async def get_benchmark_library():
     """Get the directory tree of uploaded benchmark files."""
+
+    labeled_files = get_all_ground_truths()
 
     def scan_dir(path: Path):
         result = []
@@ -363,12 +391,14 @@ async def get_benchmark_library():
                 except Exception:
                     pass
 
+                rel_path = str(item.relative_to(BENCHMARK_DIR)).replace("\\", "/")
                 result.append(
                     {
                         "name": item.name,
                         "type": "file",
-                        "path": str(item.relative_to(BENCHMARK_DIR)).replace("\\", "/"),
+                        "path": rel_path,
                         "sample_rate": sr_label,
+                        "has_ground_truth": rel_path in labeled_files,
                     }
                 )
         return result
@@ -422,6 +452,29 @@ async def move_benchmark_item(req: MoveRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/api/benchmark/audio")
+async def get_benchmark_audio(path: str = Query(...)):
+    file_path = BENCHMARK_DIR / path.lstrip("/")
+    if not file_path.exists() or not file_path.is_file():
+        raise HTTPException(status_code=404, detail="Audio file not found")
+    return FileResponse(path=file_path, media_type="audio/wav")
+
+
+@app.get("/api/benchmark/ground_truth")
+async def fetch_ground_truth(path: str = Query(...)):
+    text = get_ground_truth(path.lstrip("/"))
+    return {"text": text or ""}
+
+
+@app.post("/api/benchmark/ground_truth")
+async def update_ground_truth(req: GroundTruthRequest):
+    try:
+        save_ground_truth(req.file_path.lstrip("/"), req.text)
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.post("/api/benchmark/run")
 async def start_benchmark(req: BenchmarkRunRequest, background_tasks: BackgroundTasks):
     profile_id = req.profile_id
@@ -449,6 +502,7 @@ async def start_benchmark(req: BenchmarkRunRequest, background_tasks: Background
         replacements=replacements,
         files=file_tasks,
         benchmark_dir=BENCHMARK_DIR,
+        concurrency=req.concurrency,
     )
 
     return {"status": "success", "run_id": run_id}

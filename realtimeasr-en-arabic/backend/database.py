@@ -53,6 +53,13 @@ def init_db():
             FOREIGN KEY(run_id) REFERENCES benchmark_runs(id)
         )
     """)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS benchmark_ground_truths (
+            file_path TEXT PRIMARY KEY,
+            ground_truth TEXT,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
     conn.commit()
     conn.close()
 
@@ -232,3 +239,42 @@ def delete_dictionary_profile(profile_id: int):
     cursor.execute("DELETE FROM dictionary_profiles WHERE id = ?", (profile_id,))
     conn.commit()
     conn.close()
+
+
+def save_ground_truth(file_path: str, text: str):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        INSERT INTO benchmark_ground_truths (file_path, ground_truth)
+        VALUES (?, ?)
+        ON CONFLICT(file_path) DO UPDATE SET
+            ground_truth=excluded.ground_truth,
+            updated_at=CURRENT_TIMESTAMP
+    """,
+        (file_path, text),
+    )
+    conn.commit()
+    conn.close()
+
+
+def get_ground_truth(file_path: str) -> str | None:
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT ground_truth FROM benchmark_ground_truths WHERE file_path = ?",
+        (file_path,),
+    )
+    row = cursor.fetchone()
+    conn.close()
+    return row["ground_truth"] if row else None
+
+
+def get_all_ground_truths() -> set[str]:
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT file_path FROM benchmark_ground_truths")
+    rows = cursor.fetchall()
+    conn.close()
+    return {row[0] for row in rows}

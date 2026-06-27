@@ -15,19 +15,22 @@ async def run_benchmark(
     replacements: list,
     files: list,
     benchmark_dir: Path,
+    concurrency: int = 5,
 ):
     """
     files is a list of tuples: (result_id, rel_path)
     """
-    try:
-        for result_id, rel_path in files:
+    semaphore = asyncio.Semaphore(concurrency)
+
+    async def process_file(result_id: int, rel_path: str):
+        async with semaphore:
             file_path = benchmark_dir / rel_path
 
             if not file_path.exists():
                 update_benchmark_result(
                     result_id, "error", error_message="File not found"
                 )
-                continue
+                return
 
             update_benchmark_result(result_id, "running")
 
@@ -43,14 +46,14 @@ async def run_benchmark(
                             "error",
                             error_message=f"Unsupported format: channels={n_channels}, width={sampwidth}",
                         )
-                        continue
+                        return
 
                     pcm_data = wf.readframes(wf.getnframes())
             except Exception as e:
                 update_benchmark_result(
                     result_id, "error", error_message=f"WAV parse error: {str(e)}"
                 )
-                continue
+                return
 
             client = SpeechmaticsClient(
                 language=language,
@@ -105,6 +108,10 @@ async def run_benchmark(
                 if listen_task and not listen_task.done():
                     listen_task.cancel()
                 await client.close()
+
+    try:
+        tasks = [process_file(result_id, rel_path) for result_id, rel_path in files]
+        await asyncio.gather(*tasks)
 
         update_benchmark_run_status(run_id, "completed")
     except Exception as e:

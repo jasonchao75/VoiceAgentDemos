@@ -151,8 +151,18 @@ function renderTree(nodes, container, isRoot = true) {
         label.className = 'tree-label';
         
         let labelText = node.name;
-        if (node.type === 'file' && node.sample_rate) {
-            labelText = `<span style="color: var(--text-tertiary); font-size: 0.75rem; margin-right: 0.25rem;">[${node.sample_rate}]</span>${node.name}`;
+        let badges = [];
+        if (node.type === 'file') {
+            if (node.sample_rate) {
+                badges.push(`<span style="color: var(--text-tertiary); font-size: 0.75rem;">[${node.sample_rate}]</span>`);
+            }
+            if (node.has_ground_truth) {
+                badges.push(`<span style="color: var(--brand-success); font-size: 0.75rem; font-weight: 500;">[✓ Labeled]</span>`);
+            }
+        }
+        
+        if (badges.length > 0) {
+            labelText = `${badges.join(' ')} <span style="margin-left: 0.25rem;">${node.name}</span>`;
         }
         label.innerHTML = labelText;
         
@@ -220,6 +230,17 @@ function renderTree(nodes, container, isRoot = true) {
             openMoveModal(node.path, node.type);
         };
         
+        if (node.type === 'file') {
+            const btnAnnotate = document.createElement('button');
+            btnAnnotate.className = 'tree-action-btn';
+            btnAnnotate.innerHTML = '<i class="ph ph-headphones"></i>';
+            btnAnnotate.title = 'Annotate / Listen';
+            btnAnnotate.onclick = (e) => {
+                openAnnotateModal(node.path);
+            };
+            actions.appendChild(btnAnnotate);
+        }
+
         actions.appendChild(btnRename);
         actions.appendChild(btnMove);
         actions.appendChild(btnDelete);
@@ -269,6 +290,8 @@ startBtn.addEventListener('click', async () => {
     const runName = runNameInput.value.trim() || 'Untitled Run';
     const language = document.getElementById('language-select').value;
     const profileId = profileSelect.value ? parseInt(profileSelect.value) : null;
+    const concurrencySelect = document.getElementById('concurrency-select');
+    const concurrency = concurrencySelect ? parseInt(concurrencySelect.value) : 5;
 
     try {
         startBtn.disabled = true;
@@ -281,7 +304,8 @@ startBtn.addEventListener('click', async () => {
                 run_name: runName,
                 language: language,
                 profile_id: profileId,
-                files: selectedFiles
+                files: selectedFiles,
+                concurrency: concurrency
             })
         });
 
@@ -477,4 +501,84 @@ moveConfirmBtn.addEventListener('click', async () => {
     
     moveModal.style.display = 'none';
     await moveItem(currentMoveSource, targetPath);
+});
+
+// --- Annotate Modal Logic ---
+const annotateModal = document.getElementById('annotate-modal');
+const annotateAudioPlayer = document.getElementById('annotate-audio-player');
+const annotateTextInput = document.getElementById('annotate-text');
+const annotateCancelBtn = document.getElementById('annotate-cancel-btn');
+const annotateSaveBtn = document.getElementById('annotate-save-btn');
+let currentAnnotatePath = '';
+
+async function openAnnotateModal(filePath) {
+    currentAnnotatePath = filePath;
+    const itemName = filePath.substring(filePath.lastIndexOf('/') + 1);
+    document.getElementById('annotate-modal-title').textContent = `Annotate ${itemName}`;
+    
+    annotateTextInput.value = 'Loading...';
+    annotateAudioPlayer.src = '';
+    annotateSaveBtn.disabled = true;
+    
+    annotateModal.style.display = 'flex';
+    
+    try {
+        // Load text
+        const response = await fetch(`${API_BASE}/benchmark/ground_truth?path=${encodeURIComponent(filePath)}`);
+        if (response.ok) {
+            const data = await response.json();
+            annotateTextInput.value = data.text || '';
+        } else {
+            annotateTextInput.value = '';
+        }
+        
+        // Load audio
+        annotateAudioPlayer.src = `${API_BASE}/benchmark/audio?path=${encodeURIComponent(filePath)}`;
+        
+    } catch (e) {
+        annotateTextInput.value = 'Error loading text.';
+        console.error(e);
+    } finally {
+        annotateSaveBtn.disabled = false;
+    }
+}
+
+annotateCancelBtn.addEventListener('click', () => {
+    annotateAudioPlayer.pause();
+    annotateModal.style.display = 'none';
+    currentAnnotatePath = '';
+});
+
+annotateSaveBtn.addEventListener('click', async () => {
+    if (!currentAnnotatePath) return;
+    
+    const text = annotateTextInput.value.trim();
+    annotateSaveBtn.disabled = true;
+    annotateSaveBtn.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Saving...';
+    
+    try {
+        const response = await fetch(`${API_BASE}/benchmark/ground_truth`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                file_path: currentAnnotatePath,
+                text: text
+            })
+        });
+        
+        if (response.ok) {
+            showToast('Ground truth saved!');
+            annotateModal.style.display = 'none';
+            annotateAudioPlayer.pause();
+            await loadLibrary(); // Refresh library to update badge
+        } else {
+            const err = await response.json();
+            showToast('Error: ' + (err.detail || 'Unknown'));
+        }
+    } catch (e) {
+        showToast('Error: ' + e.message);
+    } finally {
+        annotateSaveBtn.disabled = false;
+        annotateSaveBtn.textContent = 'Save';
+    }
 });
