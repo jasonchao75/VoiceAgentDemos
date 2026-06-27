@@ -61,6 +61,15 @@ class BenchmarkRunRequest(BaseModel):
     files: List[str]
 
 
+class FolderRequest(BaseModel):
+    path: str
+
+
+class MoveRequest(BaseModel):
+    source: str
+    target: str
+
+
 # Logging
 logging.basicConfig(
     level=logging.DEBUG,
@@ -253,17 +262,14 @@ async def get_benchmark_library():
         for item in sorted(path.iterdir(), key=lambda x: (not x.is_dir(), x.name)):
             if item.is_dir():
                 children = scan_dir(item)
-                if children:
-                    result.append(
-                        {
-                            "name": item.name,
-                            "type": "directory",
-                            "path": str(item.relative_to(BENCHMARK_DIR)).replace(
-                                "\\", "/"
-                            ),
-                            "children": children,
-                        }
-                    )
+                result.append(
+                    {
+                        "name": item.name,
+                        "type": "directory",
+                        "path": str(item.relative_to(BENCHMARK_DIR)).replace("\\", "/"),
+                        "children": children,
+                    }
+                )
             elif item.name.lower().endswith(".wav"):
                 result.append(
                     {
@@ -275,6 +281,49 @@ async def get_benchmark_library():
         return result
 
     return {"library": scan_dir(BENCHMARK_DIR)}
+
+
+@app.post("/api/benchmark/folder")
+async def create_benchmark_folder(req: FolderRequest):
+    folder_path = BENCHMARK_DIR / req.path.lstrip("/")
+    try:
+        folder_path.mkdir(parents=True, exist_ok=True)
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.delete("/api/benchmark/folder")
+async def delete_benchmark_folder(path: str = Query(...)):
+    folder_path = BENCHMARK_DIR / path.lstrip("/")
+    if not folder_path.exists() or not folder_path.is_dir():
+        raise HTTPException(status_code=404, detail="Directory not found")
+    try:
+        # Only delete if empty
+        if any(folder_path.iterdir()):
+            raise HTTPException(status_code=400, detail="Directory is not empty")
+        folder_path.rmdir()
+        return {"status": "success"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/benchmark/move")
+async def move_benchmark_item(req: MoveRequest):
+    source_path = BENCHMARK_DIR / req.source.lstrip("/")
+    target_path = BENCHMARK_DIR / req.target.lstrip("/")
+
+    if not source_path.exists():
+        raise HTTPException(status_code=404, detail="Source not found")
+
+    try:
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(source_path), str(target_path))
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/api/benchmark/run")

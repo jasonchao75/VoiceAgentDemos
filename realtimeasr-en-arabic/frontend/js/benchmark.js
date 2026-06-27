@@ -1,4 +1,5 @@
 let API_BASE = '/api';
+// In production (https://demo.dyna.ai), use relative paths to route through Nginx
 if (window.location.protocol === 'file:') {
     API_BASE = 'http://127.0.0.1:8010/api';
 } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
@@ -11,6 +12,8 @@ if (window.location.protocol === 'file:') {
 
 let activeRunId = null;
 let pollInterval = null;
+let targetUploadFolder = '';
+let currentLibraryData = [];
 
 // UI Elements
 const folderUpload = document.getElementById('folder-upload');
@@ -72,7 +75,13 @@ async function handleUpload(files) {
     const formData = new FormData();
     for (let i = 0; i < files.length; i++) {
         // webkitRelativePath contains the full relative path
-        const path = files[i].webkitRelativePath || files[i].name;
+        let path = files[i].webkitRelativePath || files[i].name;
+        if (targetUploadFolder && !files[i].webkitRelativePath) {
+            path = targetUploadFolder + '/' + files[i].name;
+        } else if (targetUploadFolder && files[i].webkitRelativePath) {
+            path = targetUploadFolder + '/' + files[i].webkitRelativePath;
+        }
+        
         formData.append('files', files[i]);
         formData.append('paths', path);
     }
@@ -97,6 +106,7 @@ async function handleUpload(files) {
         uploadProgress.style.display = 'none';
         folderUpload.value = '';
         if (fileUpload) fileUpload.value = '';
+        targetUploadFolder = ''; // Reset target folder after upload
     }
 }
 
@@ -117,6 +127,7 @@ async function loadLibrary() {
             return;
         }
         
+        currentLibraryData = data.library;
         renderTree(data.library, libraryTree);
     } catch (error) {
         console.error('Failed to load library:', error);
@@ -140,9 +151,78 @@ function renderTree(nodes, container, isRoot = true) {
         label.className = 'tree-label';
         label.textContent = node.name;
         
+        const actions = document.createElement('div');
+        actions.className = 'tree-actions';
+        
+        if (node.type === 'directory') {
+            // Upload to this folder
+            const btnUpload = document.createElement('button');
+            btnUpload.className = 'tree-action-btn';
+            btnUpload.innerHTML = '<i class="ph ph-upload"></i>';
+            btnUpload.title = 'Upload files here';
+            btnUpload.onclick = (e) => {
+                targetUploadFolder = node.path;
+                document.getElementById('file-upload').click();
+            };
+            
+            // New folder
+            const btnNewFolder = document.createElement('button');
+            btnNewFolder.className = 'tree-action-btn';
+            btnNewFolder.innerHTML = '<i class="ph ph-folder-plus"></i>';
+            btnNewFolder.title = 'New folder';
+            btnNewFolder.onclick = async (e) => {
+                const name = prompt('Enter new folder name:');
+                if (name) {
+                    await createFolder(node.path + '/' + name);
+                }
+            };
+            
+            // Delete folder (if empty)
+            const btnDelete = document.createElement('button');
+            btnDelete.className = 'tree-action-btn';
+            btnDelete.innerHTML = '<i class="ph ph-trash"></i>';
+            btnDelete.title = 'Delete folder (if empty)';
+            btnDelete.onclick = async (e) => {
+                if (confirm(`Delete folder ${node.name}?`)) {
+                    await deleteFolder(node.path);
+                }
+            };
+            
+            actions.appendChild(btnUpload);
+            actions.appendChild(btnNewFolder);
+            actions.appendChild(btnDelete);
+        }
+        
+        // Rename (for both)
+        const btnRename = document.createElement('button');
+        btnRename.className = 'tree-action-btn';
+        btnRename.innerHTML = '<i class="ph ph-pencil-simple"></i>';
+        btnRename.title = 'Rename';
+        btnRename.onclick = async (e) => {
+            const newName = prompt('Enter new name:', node.name);
+            if (newName && newName !== node.name) {
+                const parentPath = node.path.substring(0, node.path.lastIndexOf('/'));
+                const newPath = parentPath ? `${parentPath}/${newName}` : newName;
+                await moveItem(node.path, newPath);
+            }
+        };
+        
+        // Move (for both)
+        const btnMove = document.createElement('button');
+        btnMove.className = 'tree-action-btn';
+        btnMove.innerHTML = '<i class="ph ph-arrows-out-line-horizontal"></i>';
+        btnMove.title = 'Move';
+        btnMove.onclick = (e) => {
+            openMoveModal(node.path, node.type);
+        };
+        
+        actions.appendChild(btnRename);
+        actions.appendChild(btnMove);
+        
         div.appendChild(checkbox);
         div.appendChild(icon);
         div.appendChild(label);
+        div.appendChild(actions);
         
         container.appendChild(div);
         
@@ -270,3 +350,123 @@ async function fetchStatus() {
         console.error('Failed to fetch status:', error);
     }
 }
+
+// --- Folder & File Management ---
+
+async function createFolder(path) {
+    try {
+        const response = await fetch(`${API_BASE}/benchmark/folder`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ path: path })
+        });
+        if (response.ok) {
+            showToast('Folder created');
+            await loadLibrary();
+        } else {
+            const err = await response.json();
+            showToast('Error: ' + (err.detail || 'Unknown'));
+        }
+    } catch (error) {
+        showToast('Error: ' + error.message);
+    }
+}
+
+async function deleteFolder(path) {
+    try {
+        const response = await fetch(`${API_BASE}/benchmark/folder?path=${encodeURIComponent(path)}`, {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            showToast('Folder deleted');
+            await loadLibrary();
+        } else {
+            const err = await response.json();
+            showToast('Error: ' + (err.detail || 'Unknown'));
+        }
+    } catch (error) {
+        showToast('Error: ' + error.message);
+    }
+}
+
+async function moveItem(sourcePath, targetPath) {
+    try {
+        const response = await fetch(`${API_BASE}/benchmark/move`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ source: sourcePath, target: targetPath })
+        });
+        if (response.ok) {
+            showToast('Moved/Renamed successfully');
+            await loadLibrary();
+        } else {
+            const err = await response.json();
+            showToast('Error: ' + (err.detail || 'Unknown'));
+        }
+    } catch (error) {
+        showToast('Error: ' + error.message);
+    }
+}
+
+// Move Modal Logic
+const moveModal = document.getElementById('move-modal');
+const moveTargetSelect = document.getElementById('move-target-select');
+const moveCancelBtn = document.getElementById('move-cancel-btn');
+const moveConfirmBtn = document.getElementById('move-confirm-btn');
+let currentMoveSource = '';
+
+function getAllDirectories(nodes, prefix = '') {
+    let dirs = [];
+    nodes.forEach(node => {
+        if (node.type === 'directory') {
+            dirs.push(node.path);
+            if (node.children) {
+                dirs = dirs.concat(getAllDirectories(node.children));
+            }
+        }
+    });
+    return dirs;
+}
+
+function openMoveModal(sourcePath, type) {
+    currentMoveSource = sourcePath;
+    const itemName = sourcePath.substring(sourcePath.lastIndexOf('/') + 1);
+    document.getElementById('move-modal-title').textContent = `Move ${itemName}`;
+    
+    // Populate select
+    const allDirs = getAllDirectories(currentLibraryData);
+    moveTargetSelect.innerHTML = '<option value="">(Root)</option>';
+    allDirs.forEach(dir => {
+        // Prevent moving a folder into itself or its own subfolders
+        if (type === 'directory' && (dir === sourcePath || dir.startsWith(sourcePath + '/'))) {
+            return; 
+        }
+        const option = document.createElement('option');
+        option.value = dir;
+        option.textContent = dir;
+        moveTargetSelect.appendChild(option);
+    });
+    
+    moveModal.style.display = 'flex';
+}
+
+moveCancelBtn.addEventListener('click', () => {
+    moveModal.style.display = 'none';
+    currentMoveSource = '';
+});
+
+moveConfirmBtn.addEventListener('click', async () => {
+    if (!currentMoveSource) return;
+    const targetDir = moveTargetSelect.value;
+    const itemName = currentMoveSource.substring(currentMoveSource.lastIndexOf('/') + 1);
+    const targetPath = targetDir ? `${targetDir}/${itemName}` : itemName;
+    
+    if (targetPath === currentMoveSource) {
+        showToast('Source and target are the same.');
+        moveModal.style.display = 'none';
+        return;
+    }
+    
+    moveModal.style.display = 'none';
+    await moveItem(currentMoveSource, targetPath);
+});
