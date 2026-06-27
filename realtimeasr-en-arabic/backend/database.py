@@ -317,8 +317,26 @@ def get_ground_truth(file_path: str) -> str | None:
         (file_path,),
     )
     row = cursor.fetchone()
+    if row:
+        conn.close()
+        return row["ground_truth"]
+
+    # Fallback: match by subpath if top-level folder name was renamed or differs
+    cursor.execute("SELECT file_path, ground_truth FROM benchmark_ground_truths")
+    rows = cursor.fetchall()
     conn.close()
-    return row["ground_truth"] if row else None
+
+    def get_subpath(p: str) -> str:
+        p = p.replace("\\", "/").lstrip("/")
+        parts = p.split("/")
+        return "/".join(parts[1:]) if len(parts) > 1 else p
+
+    target_subpath = get_subpath(file_path)
+    for r in rows:
+        if get_subpath(r["file_path"]) == target_subpath:
+            return r["ground_truth"]
+
+    return None
 
 
 def get_all_ground_truths() -> set[str]:

@@ -371,6 +371,13 @@ async def get_benchmark_library():
 
     labeled_files = get_all_ground_truths()
 
+    def get_subpath(p: str) -> str:
+        p = p.replace("\\", "/").lstrip("/")
+        parts = p.split("/")
+        return "/".join(parts[1:]) if len(parts) > 1 else p
+
+    labeled_subpaths = {get_subpath(p) for p in labeled_files}
+
     def scan_dir(path: Path):
         result = []
         for item in sorted(path.iterdir(), key=lambda x: (not x.is_dir(), x.name)):
@@ -400,13 +407,16 @@ async def get_benchmark_library():
                     pass
 
                 rel_path = str(item.relative_to(BENCHMARK_DIR)).replace("\\", "/")
+                has_gt = (rel_path in labeled_files) or (
+                    get_subpath(rel_path) in labeled_subpaths
+                )
                 result.append(
                     {
                         "name": item.name,
                         "type": "file",
                         "path": rel_path,
                         "sample_rate": sr_label,
-                        "has_ground_truth": rel_path in labeled_files,
+                        "has_ground_truth": has_gt,
                     }
                 )
         return result
