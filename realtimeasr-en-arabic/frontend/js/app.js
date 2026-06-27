@@ -85,9 +85,7 @@ async function loadProfiles() {
         let apiUrl = '/api/profiles';
         if (window.location.protocol === 'file:') {
             apiUrl = 'http://127.0.0.1:8010/api/profiles';
-        } else if (window.location.port && window.location.port !== '80' && window.location.port !== '443') {
-            apiUrl = `http://${window.location.hostname}:8010/api/profiles`;
-        } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        } else if (window.location.port === '8765' || window.location.port === '5500' || window.location.port === '3000') {
             apiUrl = `http://${window.location.hostname}:8010/api/profiles`;
         }
 
@@ -380,9 +378,7 @@ function showDownloadModal(url) {
         let fullUrl = url;
         if (window.location.protocol === 'file:') {
             fullUrl = `http://127.0.0.1:8010${url}`;
-        } else if (window.location.port && window.location.port !== '80' && window.location.port !== '443') {
-            fullUrl = `http://${window.location.hostname}:8010${url}`;
-        } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        } else if (window.location.port === '8765' || window.location.port === '5500' || window.location.port === '3000') {
             fullUrl = `http://${window.location.hostname}:8010${url}`;
         }
         modalDownloadBtn.href = fullUrl;
