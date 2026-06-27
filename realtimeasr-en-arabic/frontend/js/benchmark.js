@@ -431,7 +431,9 @@ async function fetchStatus() {
             
             const tdWer = document.createElement('td');
             if (res.wer !== null && res.wer !== undefined) {
-                const werPct = (res.wer * 100).toFixed(1);
+                // Cap displayed individual WER at 100% for better commercial UI presentation
+                const displayedWer = Math.min(1.0, res.wer);
+                const werPct = (displayedWer * 100).toFixed(1);
                 tdWer.innerHTML = `<span style="font-weight:600; color: ${res.wer > 0 ? 'var(--brand-danger)' : 'var(--brand-success)'}">${werPct}%</span>`;
                 
                 // Accumulate for overall Micro WER
