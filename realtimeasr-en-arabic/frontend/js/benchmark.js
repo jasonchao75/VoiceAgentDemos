@@ -149,7 +149,12 @@ function renderTree(nodes, container, isRoot = true) {
         
         const label = document.createElement('span');
         label.className = 'tree-label';
-        label.textContent = node.name;
+        
+        let labelText = node.name;
+        if (node.type === 'file' && node.sample_rate) {
+            labelText = `<span style="color: var(--text-tertiary); font-size: 0.75rem; margin-right: 0.25rem;">[${node.sample_rate}]</span>${node.name}`;
+        }
+        label.innerHTML = labelText;
         
         const actions = document.createElement('div');
         actions.className = 'tree-actions';

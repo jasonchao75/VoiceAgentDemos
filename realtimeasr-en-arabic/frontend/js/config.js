@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     exportJsonBtn.addEventListener('click', () => {
         if (!currentProfile) return;
         const payload = {
-            name: currentProfile.name,
-            hotwords: hotwordsData,
-            replacements: replacementsData
+            additional_vocab: hotwordsData,
+            transcript_filtering_config: {
+                replacements: replacementsData
+            }
         };
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(payload, null, 2));
         const dlAnchorElem = document.createElement('a');

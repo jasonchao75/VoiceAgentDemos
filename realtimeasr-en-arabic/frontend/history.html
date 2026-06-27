@@ -74,9 +74,14 @@
 
             <div id="bulk-actions" style="display: none; padding: 1rem; background: var(--bg-surface-hover); border-radius: 8px; margin-bottom: 1rem; align-items: center; justify-content: space-between; border: 1px solid var(--border-subtle);">
                 <span id="selected-count" style="font-weight: 500; font-size: 0.875rem;">0 selected</span>
-                <button id="export-benchmark-btn" class="primary-button" style="padding: 0.5rem 1rem;">
-                    <i class="ph ph-export"></i> Export to Benchmark
-                </button>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button id="download-zip-btn" class="secondary-button" style="padding: 0.5rem 1rem;">
+                        <i class="ph ph-file-zip"></i> Download ZIP
+                    </button>
+                    <button id="export-benchmark-btn" class="primary-button" style="padding: 0.5rem 1rem;">
+                        <i class="ph ph-export"></i> Export to Benchmark
+                    </button>
+                </div>
             </div>
             <div class="table-container">
                 <table class="history-table">

@@ -283,6 +283,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const bulkActions = document.getElementById('bulk-actions');
     const selectedCount = document.getElementById('selected-count');
     const exportBtn = document.getElementById('export-benchmark-btn');
+    const downloadZipBtn = document.getElementById('download-zip-btn');
     const exportModal = document.getElementById('export-modal');
     const confirmExportBtn = document.getElementById('confirm-export-btn');
     const folderInput = document.getElementById('export-folder-name');
@@ -313,6 +314,50 @@ document.addEventListener("DOMContentLoaded", async () => {
         tbody.addEventListener('change', (e) => {
             if (e.target.classList.contains('history-checkbox')) {
                 updateBulkActions();
+            }
+        });
+    }
+
+    if (downloadZipBtn) {
+        downloadZipBtn.addEventListener('click', async () => {
+            const checked = Array.from(document.querySelectorAll('.history-checkbox:checked')).map(cb => cb.value);
+            if (checked.length === 0) return;
+
+            downloadZipBtn.disabled = true;
+            downloadZipBtn.innerHTML = '<i class="ph ph-spinner-gap ph-spin"></i> Downloading...';
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/history/download_zip`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_ids: checked,
+                        target_folder: "" // Not used for ZIP
+                    })
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = "transcriptions_history.zip";
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    window.URL.revokeObjectURL(url);
+                    
+                    document.querySelectorAll('.history-checkbox').forEach(cb => cb.checked = false);
+                    updateBulkActions();
+                } else {
+                    alert('Download failed.');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('Download error.');
+            } finally {
+                downloadZipBtn.disabled = false;
+                downloadZipBtn.innerHTML = '<i class="ph ph-file-zip"></i> Download ZIP';
             }
         });
     }

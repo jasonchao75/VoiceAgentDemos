@@ -170,6 +170,60 @@ async def export_history_to_benchmark(req: ExportHistoryRequest):
     return {"status": "success", "exported": exported_count}
 
 
+import zipfile
+import datetime
+
+
+@app.post("/api/history/download_zip")
+async def download_history_zip(req: ExportHistoryRequest):
+    """Download selected history audio and log files as a ZIP archive."""
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        for session_id in req.session_ids:
+            # Determine base name using date
+            record = get_transcription_by_id(session_id)
+            if record and record.get("created_at"):
+                try:
+                    dt = datetime.datetime.strptime(
+                        record["created_at"], "%Y-%m-%d %H:%M:%S"
+                    )
+                    base_name = dt.strftime("%Y%m%d_%H%M%S")
+                except Exception:
+                    base_name = session_id
+            else:
+                base_name = session_id
+
+            # Add WAV file
+            wav_path = STORAGE_DIR / f"{session_id}.wav"
+            if wav_path.exists():
+                # Avoid collisions in zip file
+                dest_name = f"{base_name}.wav"
+                counter = 1
+                while dest_name in zf.namelist():
+                    dest_name = f"{base_name}_{counter}.wav"
+                    counter += 1
+                zf.write(wav_path, dest_name)
+
+            # Add LOG file
+            log_path = STORAGE_DIR / f"{session_id}.log"
+            if log_path.exists():
+                dest_name_log = f"{base_name}.log"
+                counter_log = 1
+                while dest_name_log in zf.namelist():
+                    dest_name_log = f"{base_name}_{counter_log}.log"
+                    counter_log += 1
+                zf.write(log_path, dest_name_log)
+
+    buf.seek(0)
+    return Response(
+        content=buf.read(),
+        media_type="application/zip",
+        headers={
+            "Content-Disposition": "attachment; filename=transcriptions_history.zip"
+        },
+    )
+
+
 import io
 import wave
 from fastapi.responses import Response, FileResponse, JSONResponse
@@ -295,11 +349,26 @@ async def get_benchmark_library():
                     }
                 )
             elif item.name.lower().endswith(".wav"):
+                sr_label = ""
+                try:
+                    with wave.open(str(item), "rb") as wf:
+                        fr = wf.getframerate()
+                        sr_label = (
+                            "16k"
+                            if fr == 16000
+                            else "8k"
+                            if fr == 8000
+                            else f"{fr // 1000}k"
+                        )
+                except Exception:
+                    pass
+
                 result.append(
                     {
                         "name": item.name,
                         "type": "file",
                         "path": str(item.relative_to(BENCHMARK_DIR)).replace("\\", "/"),
+                        "sample_rate": sr_label,
                     }
                 )
         return result
