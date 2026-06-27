@@ -1,9 +1,33 @@
 import asyncio
 import wave
 import logging
+import sys
 from pathlib import Path
 from .speechmatics_client import SpeechmaticsClient
-from .database import update_benchmark_result, update_benchmark_run_status
+from .database import (
+    update_benchmark_result,
+    update_benchmark_run_status,
+    get_ground_truth,
+)
+
+# Dynamically import the evaluation engine from scripts/vendor/soniox
+# We know backend is at VoiceAgent/demos/realtimeasr-en-arabic/backend
+# and scripts is at VoiceAgent/scripts
+BACKEND_DIR = Path(__file__).parent.resolve()
+PROJECT_ROOT = BACKEND_DIR.parent.parent.parent
+VENDOR_SONIOX_DIR = PROJECT_ROOT / "scripts" / "vendor" / "soniox"
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+try:
+    from scripts.vendor.soniox.arabic_normalizer import normalize_arabic_text
+    from scripts.vendor.soniox.wer_calculator import calculate_wer
+except ImportError as e:
+    logger = logging.getLogger(__name__)
+    logger.warning(f"Could not import WER calculator: {e}")
+    normalize_arabic_text = None
+    calculate_wer = None
 
 logger = logging.getLogger(__name__)
 
@@ -98,8 +122,29 @@ async def run_benchmark(
                 await client.close()
 
                 final_text = " ".join(final_transcript_parts).strip()
+
+                # Evaluation logic
+                ground_truth = get_ground_truth(rel_path.replace("\\", "/"))
+                wer_val = None
+                wer_s = None
+                wer_words = None
+
+                if ground_truth and normalize_arabic_text and calculate_wer:
+                    norm_gt = normalize_arabic_text(ground_truth)
+                    norm_hyp = normalize_arabic_text(final_text)
+                    w, s, d, i, ref_count = calculate_wer(norm_gt, norm_hyp)
+                    wer_val = w
+                    wer_s = s + d + i
+                    wer_words = ref_count
+
                 update_benchmark_result(
-                    result_id, "completed", final_transcript=final_text
+                    result_id,
+                    "completed",
+                    final_transcript=final_text,
+                    ground_truth=ground_truth,
+                    wer=wer_val,
+                    wer_errors=wer_s,
+                    wer_words=wer_words,
                 )
 
             except Exception as e:

@@ -352,11 +352,18 @@ async function fetchStatus() {
 
         // Update results table
         resultsBody.innerHTML = '';
+        
+        let totalWerErrors = 0;
+        let totalWerWords = 0;
+        
         data.results.forEach(res => {
             const tr = document.createElement('tr');
             
             const tdFile = document.createElement('td');
             tdFile.textContent = res.file_path;
+            tdFile.style.fontFamily = "'Satoshi', monospace";
+            tdFile.style.fontSize = "0.8rem";
+            tdFile.style.color = "var(--text-secondary)";
             
             const tdStatus = document.createElement('td');
             const statusBadge = document.createElement('span');
@@ -364,19 +371,63 @@ async function fetchStatus() {
             statusBadge.textContent = res.status;
             tdStatus.appendChild(statusBadge);
             
+            const tdWer = document.createElement('td');
+            if (res.wer !== null && res.wer !== undefined) {
+                const werPct = (res.wer * 100).toFixed(1);
+                tdWer.innerHTML = `<span style="font-weight:600; color: ${res.wer > 0 ? 'var(--brand-danger)' : 'var(--brand-success)'}">${werPct}%</span>`;
+                
+                // Accumulate for overall Micro WER
+                if (res.wer_errors !== null && res.wer_words !== null) {
+                    totalWerErrors += res.wer_errors;
+                    totalWerWords += res.wer_words;
+                }
+            } else {
+                tdWer.innerHTML = '<span style="color:var(--text-tertiary)">-</span>';
+            }
+
+            const tdGroundTruth = document.createElement('td');
+            tdGroundTruth.textContent = res.ground_truth || '-';
+            tdGroundTruth.style.color = 'var(--text-secondary)';
+            tdGroundTruth.style.fontSize = "0.9rem";
+            tdGroundTruth.dir = "auto";
+            
             const tdTranscript = document.createElement('td');
             if (res.status === 'error') {
                 tdTranscript.textContent = res.error_message || 'Error';
                 tdTranscript.style.color = 'var(--brand-danger)';
             } else {
                 tdTranscript.textContent = res.final_transcript || '';
+                tdTranscript.style.fontSize = "0.9rem";
+                tdTranscript.dir = "auto";
             }
             
             tr.appendChild(tdFile);
             tr.appendChild(tdStatus);
+            tr.appendChild(tdWer);
+            tr.appendChild(tdGroundTruth);
             tr.appendChild(tdTranscript);
             resultsBody.appendChild(tr);
         });
+
+        // Update overall WER macro
+        const overallWerContainer = document.getElementById('overall-wer-container');
+        const overallWerValue = document.getElementById('overall-wer-value');
+        const overallAccValue = document.getElementById('overall-acc-value');
+        
+        if (overallWerContainer) {
+            if (totalWerWords > 0) {
+                const microWer = totalWerErrors / totalWerWords;
+                const acc = Math.max(0, 1 - microWer);
+                overallWerValue.textContent = (microWer * 100).toFixed(2) + '%';
+                overallAccValue.textContent = (acc * 100).toFixed(2) + '%';
+                overallWerContainer.style.display = 'flex';
+                
+                overallWerValue.style.color = microWer > 0 ? 'var(--brand-danger)' : 'var(--brand-success)';
+                overallAccValue.style.color = acc === 1 ? 'var(--brand-success)' : (acc > 0.9 ? 'var(--text-primary)' : 'var(--brand-danger)');
+            } else {
+                overallWerContainer.style.display = 'none';
+            }
+        }
 
     } catch (error) {
         console.error('Failed to fetch status:', error);

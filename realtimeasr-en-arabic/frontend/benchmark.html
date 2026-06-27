@@ -224,24 +224,39 @@
             </div>
 
             <!-- Right Panel: Results -->
-            <div class="bento-panel">
-                <div class="panel-header">
-                    <h2>Live Results</h2>
-                    <span id="current-run-status" class="status-badge" style="display: none;"></span>
+            <div class="bento-panel" style="display: flex; flex-direction: column;">
+                <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <h2>Live Results</h2>
+                        <span id="current-run-status" class="status-badge" style="display: none;"></span>
+                    </div>
+                    <div id="overall-wer-container" style="display: none; background: var(--bg-body); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 1rem;">
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Overall WER</span>
+                            <span id="overall-wer-value" style="font-size: 1.25rem; font-weight: 700; color: var(--brand-primary); line-height: 1;">--%</span>
+                        </div>
+                        <div style="height: 24px; width: 1px; background: var(--border-subtle);"></div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Accuracy</span>
+                            <span id="overall-acc-value" style="font-size: 1.25rem; font-weight: 700; color: var(--brand-success); line-height: 1;">--%</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div style="overflow-x: auto;">
                     <table class="benchmark-results">
                         <thead>
                             <tr>
-                                <th>File</th>
-                                <th>Status</th>
-                                <th>Transcript</th>
+                                <th style="width: 20%;">File</th>
+                                <th style="width: 10%;">Status</th>
+                                <th style="width: 10%;">WER</th>
+                                <th style="width: 30%;">Ground Truth</th>
+                                <th style="width: 30%;">Transcript</th>
                             </tr>
                         </thead>
                         <tbody id="results-body">
                             <tr>
-                                <td colspan="3" style="text-align: center; color: var(--text-secondary);">No active benchmark run</td>
+                                <td colspan="5" style="text-align: center; color: var(--text-secondary);">No active benchmark run</td>
                             </tr>
                         </tbody>
                     </table>

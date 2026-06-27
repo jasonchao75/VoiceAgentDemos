@@ -2,6 +2,7 @@ import sqlite3
 import os
 import json
 from pathlib import Path
+from typing import Any
 
 DB_DIR = Path(__file__).parent / "database"
 DB_DIR.mkdir(parents=True, exist_ok=True)
@@ -48,6 +49,10 @@ def init_db():
             status TEXT,
             final_transcript TEXT,
             error_message TEXT,
+            ground_truth TEXT,
+            wer REAL,
+            wer_errors INTEGER,
+            wer_words INTEGER,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             completed_at TIMESTAMP,
             FOREIGN KEY(run_id) REFERENCES benchmark_runs(id)
@@ -140,12 +145,16 @@ def update_benchmark_result(
     status: str,
     final_transcript: str | None = None,
     error_message: str | None = None,
+    ground_truth: str | None = None,
+    wer: float | None = None,
+    wer_errors: int | None = None,
+    wer_words: int | None = None,
 ):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
     query = "UPDATE benchmark_results SET status = ?"
-    params: list[str | int] = [status]
+    params: list[Any] = [status]
 
     if final_transcript is not None:
         query += ", final_transcript = ?"
@@ -154,6 +163,22 @@ def update_benchmark_result(
     if error_message is not None:
         query += ", error_message = ?"
         params.append(error_message)
+
+    if ground_truth is not None:
+        query += ", ground_truth = ?"
+        params.append(ground_truth)
+
+    if wer is not None:
+        query += ", wer = ?"
+        params.append(wer)
+
+    if wer_errors is not None:
+        query += ", wer_errors = ?"
+        params.append(wer_errors)
+
+    if wer_words is not None:
+        query += ", wer_words = ?"
+        params.append(wer_words)
 
     if status in ("completed", "error"):
         query += ", completed_at = CURRENT_TIMESTAMP"
