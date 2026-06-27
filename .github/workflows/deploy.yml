@@ -67,7 +67,7 @@ jobs:
             pip install -r backend/requirements.txt
             
             # Import benchmark data automatically
-            python scripts/import_benchmark_data.py --source benchmarks_source/RiyadBank_filter
+            python ../scripts/import_benchmark_data.py --source ../benchmarks_source/RiyadBank_filter
             
             # Restart the systemd service (requires passwordless sudo configured)
             sudo systemctl restart realtimeasr
