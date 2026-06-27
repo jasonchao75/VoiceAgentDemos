@@ -40,6 +40,7 @@ from .database import (
     save_ground_truth,
     get_ground_truth,
     get_all_ground_truths,
+    cleanup_stale_benchmark_runs,
 )
 from .benchmark_runner import run_benchmark
 
@@ -104,6 +105,11 @@ async def lifespan(app: FastAPI):
 
     init_db()
     logger.info("SQLite Database initialized.")
+    try:
+        cleanup_stale_benchmark_runs()
+        logger.info("Stale benchmark runs cleaned up on startup.")
+    except Exception as e:
+        logger.error(f"Failed to clean up stale benchmark runs: {e}")
     yield
 
 

@@ -319,3 +319,21 @@ def get_all_ground_truths() -> set[str]:
     rows = cursor.fetchall()
     conn.close()
     return {row[0] for row in rows}
+
+
+def cleanup_stale_benchmark_runs():
+    """Reset runs still marked as 'running' to 'interrupted' on server start."""
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("""
+        UPDATE benchmark_runs 
+        SET status = 'interrupted' 
+        WHERE status = 'running'
+    """)
+    cursor.execute("""
+        UPDATE benchmark_results 
+        SET status = 'interrupted', error_message = 'Server restarted' 
+        WHERE status IN ('running', 'pending')
+    """)
+    conn.commit()
+    conn.close()
