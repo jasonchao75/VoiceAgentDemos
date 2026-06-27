@@ -55,6 +55,7 @@ run_tests.sh
 # SQLite Database & Storage
 backend/database/
 backend/storage/
+backend/benchmark_data/
 *.db
 *.wav
 *.raw

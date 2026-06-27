@@ -425,16 +425,19 @@ async def create_benchmark_folder(req: FolderRequest):
 
 
 @app.delete("/api/benchmark/item")
-async def delete_benchmark_item(path: str = Query(...)):
+async def delete_benchmark_item(path: str = Query(...), recursive: bool = False):
     item_path = BENCHMARK_DIR / path.lstrip("/")
     if not item_path.exists():
         raise HTTPException(status_code=404, detail="Item not found")
     try:
         if item_path.is_dir():
-            # Only delete if empty
-            if any(item_path.iterdir()):
+            # Only delete if empty unless recursive is True
+            if any(item_path.iterdir()) and not recursive:
                 raise HTTPException(status_code=400, detail="Directory is not empty")
-            item_path.rmdir()
+            if recursive:
+                shutil.rmtree(item_path)
+            else:
+                item_path.rmdir()
         else:
             item_path.unlink()
         return {"status": "success"}

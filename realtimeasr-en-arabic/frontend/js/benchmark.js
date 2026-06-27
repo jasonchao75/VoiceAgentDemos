@@ -251,10 +251,10 @@ function renderTree(nodes, container, isRoot = true) {
         const btnDelete = document.createElement('button');
         btnDelete.className = 'tree-action-btn';
         btnDelete.innerHTML = '<i class="ph ph-trash"></i>';
-        btnDelete.title = node.type === 'directory' ? 'Delete folder (if empty)' : 'Delete file';
+        btnDelete.title = node.type === 'directory' ? 'Delete folder' : 'Delete file';
         btnDelete.onclick = async (e) => {
             e.stopPropagation();
-            if (confirm(`Delete ${node.type === 'directory' ? 'folder' : 'file'} ${node.name}?`)) {
+            if (confirm(`Delete ${node.type === 'directory' ? 'folder' : 'file'} "${node.name}"?`)) {
                 await deleteItem(node.path);
             }
         };
@@ -515,9 +515,13 @@ async function createFolder(path) {
     }
 }
 
-async function deleteItem(path) {
+async function deleteItem(path, recursive = false) {
     try {
-        const response = await fetch(`${API_BASE}/benchmark/item?path=${encodeURIComponent(path)}`, {
+        let url = `${API_BASE}/benchmark/item?path=${encodeURIComponent(path)}`;
+        if (recursive) {
+            url += '&recursive=true';
+        }
+        const response = await fetch(url, {
             method: 'DELETE'
         });
         if (response.ok) {
@@ -525,7 +529,14 @@ async function deleteItem(path) {
             await loadLibrary();
         } else {
             const err = await response.json();
-            showToast('Error: ' + (err.detail || 'Unknown'));
+            if (err.detail === "Directory is not empty" && !recursive) {
+                const nodeName = path.substring(path.lastIndexOf('/') + 1) || path;
+                if (confirm(`Warning: Folder "${nodeName}" is not empty. Deleting it will permanently delete all files and subfolders inside.\n\nAre you absolutely sure you want to delete this folder and all its contents?`)) {
+                    await deleteItem(path, true);
+                }
+            } else {
+                showToast('Error: ' + (err.detail || 'Unknown'));
+            }
         }
     } catch (error) {
         showToast('Error: ' + error.message);
