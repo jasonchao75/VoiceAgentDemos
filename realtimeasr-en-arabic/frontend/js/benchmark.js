@@ -139,6 +139,33 @@ function renderTree(nodes, container, isRoot = true) {
         const div = document.createElement('div');
         div.className = `tree-node ${isRoot ? 'root' : ''}`;
         
+        // Toggle Collapse/Expand Icon for directory, spacer for file
+        const toggleIcon = document.createElement('i');
+        let childrenContainer = null;
+        
+        if (node.type === 'directory') {
+            toggleIcon.className = isRoot ? 'ph ph-caret-down' : 'ph ph-caret-right';
+            toggleIcon.style.cursor = 'pointer';
+            toggleIcon.style.width = '16px';
+            toggleIcon.style.textAlign = 'center';
+            toggleIcon.style.marginRight = '2px';
+            
+            const toggleCollapse = (e) => {
+                if (e) e.stopPropagation();
+                if (childrenContainer) {
+                    const isHidden = childrenContainer.style.display === 'none';
+                    childrenContainer.style.display = isHidden ? 'block' : 'none';
+                    toggleIcon.className = isHidden ? 'ph ph-caret-down' : 'ph ph-caret-right';
+                }
+            };
+            
+            toggleIcon.onclick = toggleCollapse;
+        } else {
+            toggleIcon.style.width = '16px';
+            toggleIcon.style.display = 'inline-block';
+            toggleIcon.style.marginRight = '2px';
+        }
+        
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.value = node.path;
@@ -146,9 +173,31 @@ function renderTree(nodes, container, isRoot = true) {
         
         const icon = document.createElement('i');
         icon.className = node.type === 'directory' ? 'ph ph-folder' : 'ph ph-file-audio';
+        if (node.type === 'directory') {
+            icon.style.cursor = 'pointer';
+            icon.onclick = (e) => {
+                e.stopPropagation();
+                if (childrenContainer) {
+                    const isHidden = childrenContainer.style.display === 'none';
+                    childrenContainer.style.display = isHidden ? 'block' : 'none';
+                    toggleIcon.className = isHidden ? 'ph ph-caret-down' : 'ph ph-caret-right';
+                }
+            };
+        }
         
         const label = document.createElement('span');
         label.className = 'tree-label';
+        if (node.type === 'directory') {
+            label.style.cursor = 'pointer';
+            label.onclick = (e) => {
+                e.stopPropagation();
+                if (childrenContainer) {
+                    const isHidden = childrenContainer.style.display === 'none';
+                    childrenContainer.style.display = isHidden ? 'block' : 'none';
+                    toggleIcon.className = isHidden ? 'ph ph-caret-down' : 'ph ph-caret-right';
+                }
+            };
+        }
         
         let labelText = node.name;
         let badges = [];
@@ -176,6 +225,7 @@ function renderTree(nodes, container, isRoot = true) {
             btnUpload.innerHTML = '<i class="ph ph-upload"></i>';
             btnUpload.title = 'Upload files here';
             btnUpload.onclick = (e) => {
+                e.stopPropagation();
                 targetUploadFolder = node.path;
                 document.getElementById('file-upload').click();
             };
@@ -186,6 +236,7 @@ function renderTree(nodes, container, isRoot = true) {
             btnNewFolder.innerHTML = '<i class="ph ph-folder-plus"></i>';
             btnNewFolder.title = 'New folder';
             btnNewFolder.onclick = async (e) => {
+                e.stopPropagation();
                 const name = prompt('Enter new folder name:');
                 if (name) {
                     await createFolder(node.path + '/' + name);
@@ -202,6 +253,7 @@ function renderTree(nodes, container, isRoot = true) {
         btnDelete.innerHTML = '<i class="ph ph-trash"></i>';
         btnDelete.title = node.type === 'directory' ? 'Delete folder (if empty)' : 'Delete file';
         btnDelete.onclick = async (e) => {
+            e.stopPropagation();
             if (confirm(`Delete ${node.type === 'directory' ? 'folder' : 'file'} ${node.name}?`)) {
                 await deleteItem(node.path);
             }
@@ -213,6 +265,7 @@ function renderTree(nodes, container, isRoot = true) {
         btnRename.innerHTML = '<i class="ph ph-pencil-simple"></i>';
         btnRename.title = 'Rename';
         btnRename.onclick = async (e) => {
+            e.stopPropagation();
             const newName = prompt('Enter new name:', node.name);
             if (newName && newName !== node.name) {
                 const parentPath = node.path.substring(0, node.path.lastIndexOf('/'));
@@ -227,6 +280,7 @@ function renderTree(nodes, container, isRoot = true) {
         btnMove.innerHTML = '<i class="ph ph-arrows-out-line-horizontal"></i>';
         btnMove.title = 'Move';
         btnMove.onclick = (e) => {
+            e.stopPropagation();
             openMoveModal(node.path, node.type);
         };
         
@@ -236,6 +290,7 @@ function renderTree(nodes, container, isRoot = true) {
             btnAnnotate.innerHTML = '<i class="ph ph-headphones"></i>';
             btnAnnotate.title = 'Annotate / Listen';
             btnAnnotate.onclick = (e) => {
+                e.stopPropagation();
                 openAnnotateModal(node.path);
             };
             actions.appendChild(btnAnnotate);
@@ -245,6 +300,7 @@ function renderTree(nodes, container, isRoot = true) {
         actions.appendChild(btnMove);
         actions.appendChild(btnDelete);
         
+        div.appendChild(toggleIcon);
         div.appendChild(checkbox);
         div.appendChild(icon);
         div.appendChild(label);
@@ -263,11 +319,13 @@ function renderTree(nodes, container, isRoot = true) {
             }
         });
         
-        let childrenContainer = null;
         if (node.type === 'directory' && node.children) {
             childrenContainer = document.createElement('div');
             childrenContainer.className = 'tree-children';
-            // By default, open roots, collapse deep folders. For simplicity, just render all
+            // By default, open roots, collapse deep folders.
+            if (!isRoot) {
+                childrenContainer.style.display = 'none';
+            }
             renderTree(node.children, childrenContainer, false);
             container.appendChild(childrenContainer);
         }
