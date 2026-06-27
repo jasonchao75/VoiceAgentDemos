@@ -1,0 +1,39 @@
+2026-04-28 19:08:05,971 - INFO - Connecting to wss://stt-rt.soniox.com/transcribe-websocket
+2026-04-28 19:08:06,779 - INFO - Sending initial config: {"model": "stt-rt-v4", "audio_format": "pcm_s16le", "sample_rate": 8000, "num_channels": 1, "language_hints": ["ar"], "enable_language_identification": true, "enable_speaker_diarization": false, "enable_endpoint_detection": true, "max_endpoint_delay_ms": 2000, "api_key": "***"}
+2026-04-28 19:08:06,881 - INFO - Starting to send audio data...
+2026-04-28 19:08:09,262 - INFO - First partial result delay: 3.291s
+2026-04-28 19:08:09,262 - INFO - [Partial]: آ
+2026-04-28 19:08:09,335 - INFO - [Partial]: ر
+2026-04-28 19:08:09,479 - INFO - [Partial]: رؤ
+2026-04-28 19:08:09,603 - INFO - [Partial]: رؤية
+2026-04-28 19:08:09,769 - INFO - [Partial]: أه، رؤية
+2026-04-28 19:08:10,013 - INFO - [Partial]: أه، رؤية الم
+2026-04-28 19:08:10,288 - INFO - [Partial]: أه، رؤية المملكة
+2026-04-28 19:08:10,771 - INFO - [Partial]: رؤية المملكة 2
+2026-04-28 19:08:10,891 - INFO - [Partial]: رؤية المملكة 20
+2026-04-28 19:08:11,327 - INFO - [Partial]: رؤية المملكة 203
+2026-04-28 19:08:11,503 - INFO - [Partial]: رؤية المملكة 2030
+2026-04-28 19:08:12,391 - INFO - [Partial]: رؤية المملكة 2030 با
+2026-04-28 19:08:12,551 - INFO - [Partial]: رؤية المملكة 2030 باق
+2026-04-28 19:08:12,682 - INFO - [Partial]: رؤية المملكة 2030 باقي
+2026-04-28 19:08:12,823 - INFO - [Partial]: رؤية المملكة 2030 باقيل
+2026-04-28 19:08:12,957 - INFO - [Partial]: رؤية المملكة 2030 باقيلها
+2026-04-28 19:08:13,808 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4
+2026-04-28 19:08:14,096 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سن
+2026-04-28 19:08:14,368 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين
+2026-04-28 19:08:14,463 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين إ
+2026-04-28 19:08:14,578 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين إن ش
+2026-04-28 19:08:14,725 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين إن شاء
+2026-04-28 19:08:14,857 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين إن شاء الله
+2026-04-28 19:08:14,955 - INFO - [Partial]: رؤية المملكة 2030 باقيلها 4 سنين إن شاء الله،
+2026-04-28 19:08:16,320 - INFO - Audio transmission finished. Sending empty string...
+2026-04-28 19:08:16,610 - INFO - [VAD Event]: Endpoint detected <end>
+2026-04-28 19:08:16,611 - INFO - [Final]: رؤية المملكة 2030 باقيلها 4 سنين إن شاء الله،.
+2026-04-28 19:08:16,611 - INFO - Session finished.
+2026-04-28 19:08:16,611 - INFO - 
+==================================================
+2026-04-28 19:08:16,611 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:08:16,611 - INFO - رؤية المملكة 2030 باقيلها 4 سنين إن شاء الله،.
+2026-04-28 19:08:16,611 - INFO - ==================================================
+
+2026-04-28 19:08:16,612 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/soniox/soniox_test_records.csv

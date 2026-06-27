@@ -1,0 +1,11 @@
+2026-04-28 04:39:40,805 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 10.wav
+2026-04-28 04:39:40,805 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:39:42,810 - INFO - Job successfully submitted. Job ID: saac1ufoat
+2026-04-28 04:39:47,148 - INFO - Job status: done
+2026-04-28 04:39:48,461 - INFO - 
+==================================================
+2026-04-28 04:39:48,461 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:39:48,461 - INFO - اشتريت سيارة تيار 2011. قيمة تقريبا 50 الف 100 ريال.
+2026-04-28 04:39:48,461 - INFO - ==================================================
+
+2026-04-28 04:39:48,462 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

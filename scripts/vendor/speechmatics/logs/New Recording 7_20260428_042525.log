@@ -1,0 +1,58 @@
+2026-04-28 04:25:25,179 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:25:26,448 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": false, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:25:26,864 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:25:26,956 - INFO - Starting to send audio data...
+2026-04-28 04:25:27,791 - INFO - [Partial]: 
+2026-04-28 04:25:28,159 - INFO - [Partial]: 
+2026-04-28 04:25:28,524 - INFO - [Partial]: 
+2026-04-28 04:25:28,936 - INFO - [Partial]: 
+2026-04-28 04:25:29,305 - INFO - First partial result delay: 2.850s
+2026-04-28 04:25:29,305 - INFO - [Partial]: اليوم
+2026-04-28 04:25:29,699 - INFO - [Partial]: اليوم عندي
+2026-04-28 04:25:30,082 - INFO - [Partial]: اليوم عندي موعد
+2026-04-28 04:25:30,449 - INFO - [Partial]: اليوم عندي موعد الساعة
+2026-04-28 04:25:30,808 - INFO - [Final]: اليوم 
+2026-04-28 04:25:30,813 - INFO - [Partial]: عندي موعد الساعة 4
+2026-04-28 04:25:31,167 - INFO - [Final]: عندي 
+2026-04-28 04:25:31,170 - INFO - [Partial]: موعد الساعة 4
+2026-04-28 04:25:31,579 - INFO - [Partial]: موعد الساعة 4
+2026-04-28 04:25:31,972 - INFO - [Final]: موعد 
+2026-04-28 04:25:31,972 - INFO - [Partial]: الساعة 4
+2026-04-28 04:25:32,293 - INFO - [Final]: الساعة 
+2026-04-28 04:25:32,297 - INFO - [Partial]: 4
+2026-04-28 04:25:32,704 - INFO - [Final]: 4 
+2026-04-28 04:25:32,704 - INFO - [Partial]: دقيقة
+2026-04-28 04:25:33,072 - INFO - [Partial]: دقيقة
+2026-04-28 04:25:33,476 - INFO - [Partial]: دقيقة بتاريخ
+2026-04-28 04:25:33,801 - INFO - [Partial]: دقيقة بتاريخ
+2026-04-28 04:25:34,177 - INFO - [Partial]: دقيقة بتاريخ
+2026-04-28 04:25:34,589 - INFO - [Final]: دقيقة 
+2026-04-28 04:25:34,590 - INFO - [Partial]: بتاريخ 16
+2026-04-28 04:25:34,962 - INFO - [Partial]: بتاريخ 16
+2026-04-28 04:25:35,344 - INFO - [Final]: بتاريخ 
+2026-04-28 04:25:35,344 - INFO - [Partial]: 16 ثلاثة
+2026-04-28 04:25:35,737 - INFO - [Partial]: 16 ثلاثة
+2026-04-28 04:25:36,250 - INFO - [Partial]: 16 ثلاثة
+2026-04-28 04:25:36,495 - INFO - [Final]: 16 
+2026-04-28 04:25:36,496 - INFO - [Partial]: ثلاثة عشر
+2026-04-28 04:25:36,855 - INFO - [Partial]: ثلاثة 20. 26
+2026-04-28 04:25:37,328 - INFO - [Final]: 3 
+2026-04-28 04:25:37,329 - INFO - [Partial]: 20. 26
+2026-04-28 04:25:37,602 - INFO - [Partial]: 20. 26
+2026-04-28 04:25:38,159 - INFO - [Partial]: و6
+2026-04-28 04:25:38,381 - INFO - [Partial]: و6
+2026-04-28 04:25:38,759 - INFO - [Final]: و6 
+2026-04-28 04:25:38,759 - INFO - [Partial]: 
+2026-04-28 04:25:38,784 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:25:39,114 - INFO - [Final]: 
+2026-04-28 04:25:39,114 - INFO - [Partial]: 
+2026-04-28 04:25:39,410 - INFO - [Final]: . 
+2026-04-28 04:25:39,410 - INFO - [Partial]: 
+2026-04-28 04:25:39,415 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:25:39,415 - INFO - 
+==================================================
+2026-04-28 04:25:39,415 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:25:39,415 - INFO - اليوم عندي موعد الساعة 4 دقيقة بتاريخ 16 3 و6 .
+2026-04-28 04:25:39,415 - INFO - ==================================================
+
+2026-04-28 04:25:39,423 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

@@ -1,0 +1,36 @@
+2026-04-28 19:07:48,842 - INFO - Starting continuous recognition...
+2026-04-28 19:07:48,842 - INFO - Session started
+2026-04-28 19:07:48,842 - INFO - Starting to push audio data...
+2026-04-28 19:07:51,602 - INFO - First partial result delay: 2.759s
+2026-04-28 19:07:51,602 - INFO - [Partial]: تأمين
+2026-04-28 19:07:51,816 - INFO - [Partial]: تأمين سيارتي
+2026-04-28 19:07:52,518 - INFO - [Partial]: تأمين سيارتي بيخلص
+2026-04-28 19:07:53,321 - INFO - [Partial]: تأمين سيارتي بيخلص تاريخ
+2026-04-28 19:07:54,833 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:54,834 - INFO - [Final]: تأمين سيارتي بيخلص تاريخ.
+2026-04-28 19:07:55,606 - INFO - [Partial]: 20
+2026-04-28 19:07:56,335 - INFO - [Partial]: 20 خمسة
+2026-04-28 19:07:58,142 - INFO - [Partial]: 20-5-2000م
+2026-04-28 19:07:58,657 - INFO - [Partial]: 20-5-2000م وث
+2026-04-28 19:07:59,068 - INFO - [Partial]: 20-5-2008م
+2026-04-28 19:07:59,387 - INFO - [Partial]: 20-5-2028م
+2026-04-28 19:08:01,194 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:08:01,194 - INFO - [Final]: 20-5-2028م.
+2026-04-28 19:08:01,549 - INFO - [Partial]: بت
+2026-04-28 19:08:01,844 - INFO - [Partial]: بس إني ما
+2026-04-28 19:08:02,370 - INFO - [Partial]: بس إني ما أعرف
+2026-04-28 19:08:02,669 - INFO - [Partial]: بس إني ما أعرف كيف
+2026-04-28 19:08:03,079 - INFO - [Partial]: بس إني ما أعرف كيف طريقة
+2026-04-28 19:08:03,782 - INFO - [Partial]: بس إني ما أعرف كيف طريقة تجديد
+2026-04-28 19:08:04,237 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:08:04,237 - INFO - [Final]: بس إني ما أعرف كيف طريقة تجديد.
+2026-04-28 19:08:04,421 - INFO - Audio transmission finished. Closing stream...
+2026-04-28 19:08:04,831 - INFO - Canceled: CancellationReason.EndOfStream
+2026-04-28 19:08:04,832 - INFO - Session stopped
+2026-04-28 19:08:04,832 - INFO - 
+==================================================
+2026-04-28 19:08:04,832 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:08:04,832 - INFO - تأمين سيارتي بيخلص تاريخ. 20-5-2028م. بس إني ما أعرف كيف طريقة تجديد.
+2026-04-28 19:08:04,832 - INFO - ==================================================
+
+2026-04-28 19:08:04,833 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/azure/azure_test_records.csv

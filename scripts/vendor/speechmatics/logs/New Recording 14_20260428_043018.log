@@ -1,0 +1,96 @@
+2026-04-28 04:30:18,587 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:30:19,716 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:30:20,109 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:30:20,224 - INFO - Starting to send audio data...
+2026-04-28 04:30:21,081 - INFO - [Partial]: 
+2026-04-28 04:30:21,414 - INFO - [Partial]: 
+2026-04-28 04:30:21,801 - INFO - [Partial]: 
+2026-04-28 04:30:22,216 - INFO - [Partial]: 
+2026-04-28 04:30:22,589 - INFO - [Partial]: 
+2026-04-28 04:30:22,953 - INFO - First partial result delay: 3.230s
+2026-04-28 04:30:22,953 - INFO - [Partial]: العيادة
+2026-04-28 04:30:23,341 - INFO - [Partial]: العيادة. التحمل
+2026-04-28 04:30:23,782 - INFO - [Partial]: العيادة تفتح من الساعة
+2026-04-28 04:30:24,083 - INFO - [Partial]: العيادة تفتح من الساعة 9 صباحا
+2026-04-28 04:30:24,463 - INFO - [Final]: العيادة 
+2026-04-28 04:30:24,463 - INFO - [Partial]: تفتح من الساعة 9 صباحا
+2026-04-28 04:30:24,850 - INFO - [Final]: تفتح 
+2026-04-28 04:30:24,854 - INFO - [Partial]: من الساعة 9 الصباح إلى
+2026-04-28 04:30:25,218 - INFO - [Final]: من 
+2026-04-28 04:30:25,218 - INFO - [Partial]: الساعة 9 الصباح إلى الساعة
+2026-04-28 04:30:25,620 - INFO - [Final]: الساعة 
+2026-04-28 04:30:25,620 - INFO - [Partial]: 9 الصباح إلى الساعة 10
+2026-04-28 04:30:26,042 - INFO - [Final]: 9 
+2026-04-28 04:30:26,043 - INFO - [Partial]: الصباح إلى الساعة 10
+2026-04-28 04:30:26,369 - INFO - [Final]: الصباح 
+2026-04-28 04:30:26,369 - INFO - [Partial]: إلى الساعة 10 المساء.
+2026-04-28 04:30:26,752 - INFO - [Final]: إلى 
+2026-04-28 04:30:26,752 - INFO - [Partial]: الساعة 10 المساء.
+2026-04-28 04:30:27,113 - INFO - [Final]: الساعة 
+2026-04-28 04:30:27,116 - INFO - [Partial]: 10 المساء.
+2026-04-28 04:30:27,516 - INFO - [Final]: 10 
+2026-04-28 04:30:27,516 - INFO - [Partial]: المساء. والمواعيد
+2026-04-28 04:30:27,843 - INFO - [Final]: المساء. 
+2026-04-28 04:30:27,844 - INFO - [Partial]: والمواعيد
+2026-04-28 04:30:28,271 - INFO - [Partial]: والمواعيد المتاحة عند
+2026-04-28 04:30:28,602 - INFO - [Partial]: والمواعيد المتاحة عندك
+2026-04-28 04:30:29,021 - INFO - [Partial]: والمواعيد المتاحة عندك. الساعة
+2026-04-28 04:30:29,384 - INFO - [Final]: والمواعيد 
+2026-04-28 04:30:29,384 - INFO - [Partial]: المتاحة عندك. الساعة
+2026-04-28 04:30:29,731 - INFO - [Final]: المتاحة 
+2026-04-28 04:30:29,732 - INFO - [Partial]: عندك. الساعة
+2026-04-28 04:30:30,106 - INFO - [Final]: عندك 
+2026-04-28 04:30:30,109 - INFO - [Partial]: الساعة 7
+2026-04-28 04:30:30,476 - INFO - [Partial]: الساعة 7
+2026-04-28 04:30:31,063 - INFO - [Final]: الساعة 
+2026-04-28 04:30:31,063 - INFO - [Partial]: 7
+2026-04-28 04:30:31,266 - INFO - [Partial]: 7
+2026-04-28 04:30:31,636 - INFO - [Partial]: 7 و37 دقيقة
+2026-04-28 04:30:32,032 - INFO - [Final]: 7 
+2026-04-28 04:30:32,032 - INFO - [Partial]: و37 دقيقة
+2026-04-28 04:30:32,436 - INFO - [Partial]: و30 دقيقة
+2026-04-28 04:30:32,761 - INFO - [Partial]: و30 دقيقة. 7
+2026-04-28 04:30:33,133 - INFO - [Final]: و30 
+2026-04-28 04:30:33,133 - INFO - [Partial]: دقيقة. 7.
+2026-04-28 04:30:33,523 - INFO - [Partial]: دقيقة. 7.
+2026-04-28 04:30:34,031 - INFO - [Final]: دقيقة. 
+2026-04-28 04:30:34,033 - INFO - [Partial]: 7 و7
+2026-04-28 04:30:34,266 - INFO - [Partial]: 7 و47 دقيقة
+2026-04-28 04:30:34,724 - INFO - [Final]: 7 
+2026-04-28 04:30:34,725 - INFO - [Partial]: و47 دقيقة
+2026-04-28 04:30:35,073 - INFO - [Partial]: و47 دقيقة
+2026-04-28 04:30:35,431 - INFO - [Partial]: و47 دقيقة. 7
+2026-04-28 04:30:35,809 - INFO - [Final]: و47 
+2026-04-28 04:30:35,813 - INFO - [Partial]: دقيقة. 7.
+2026-04-28 04:30:36,221 - INFO - [Partial]: دقيقة. 7.
+2026-04-28 04:30:36,580 - INFO - [Final]: دقيقة. 
+2026-04-28 04:30:36,580 - INFO - [Partial]: 7
+2026-04-28 04:30:36,916 - INFO - [Partial]: 7
+2026-04-28 04:30:37,294 - INFO - [Final]: 7 
+2026-04-28 04:30:37,294 - INFO - [Partial]: 
+2026-04-28 04:30:37,678 - INFO - [Partial]: .
+2026-04-28 04:30:38,071 - INFO - [Partial]: .
+2026-04-28 04:30:38,430 - INFO - [Partial]: . و50
+2026-04-28 04:30:38,821 - INFO - [Partial]: . و45 دقيقة
+2026-04-28 04:30:39,238 - INFO - [Partial]: . و50 دقيقة
+2026-04-28 04:30:39,526 - INFO - [Final]: . 
+2026-04-28 04:30:39,526 - INFO - [Partial]: و50 دقيقة.
+2026-04-28 04:30:39,961 - INFO - [Partial]: و50 دقيقة. أي وقت يناسبك
+2026-04-28 04:30:40,433 - INFO - [Final]: و50 
+2026-04-28 04:30:40,433 - INFO - [Partial]: دقيقة. أي وقت يناسبك
+2026-04-28 04:30:40,746 - INFO - [Final]: دقيقة. 
+2026-04-28 04:30:40,751 - INFO - [Partial]: أي وقت يناسبك.
+2026-04-28 04:30:41,114 - INFO - [Partial]: أي وقت يناسبك.
+2026-04-28 04:30:41,351 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:30:41,442 - INFO - [Final]: أي وقت 
+2026-04-28 04:30:41,447 - INFO - [Partial]: يناسبك
+2026-04-28 04:30:42,052 - INFO - [Final]: يناسبك. 
+2026-04-28 04:30:42,053 - INFO - [Partial]: 
+2026-04-28 04:30:42,053 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:30:42,053 - INFO - 
+==================================================
+2026-04-28 04:30:42,053 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:30:42,053 - INFO - العيادة تفتح من الساعة 9 الصباح إلى الساعة 10 المساء. والمواعيد المتاحة عندك الساعة 7 و30 دقيقة. 7 و47 دقيقة. 7 . و50 دقيقة. أي وقت يناسبك.
+2026-04-28 04:30:42,053 - INFO - ==================================================
+
+2026-04-28 04:30:42,054 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

@@ -1,0 +1,60 @@
+2026-04-28 04:30:03,554 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:30:04,776 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:30:05,175 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:30:05,285 - INFO - Starting to send audio data...
+2026-04-28 04:30:06,124 - INFO - [Partial]: 
+2026-04-28 04:30:06,501 - INFO - [Partial]: 
+2026-04-28 04:30:06,872 - INFO - [Partial]: 
+2026-04-28 04:30:07,225 - INFO - First partial result delay: 2.440s
+2026-04-28 04:30:07,225 - INFO - [Partial]: موعد
+2026-04-28 04:30:07,631 - INFO - [Partial]: موعد اليوم
+2026-04-28 04:30:08,013 - INFO - [Partial]: موعد اليوم
+2026-04-28 04:30:08,395 - INFO - [Partial]: موعد اليوم
+2026-04-28 04:30:08,809 - INFO - [Partial]: موعد اليوم الساعة 8
+2026-04-28 04:30:09,129 - INFO - [Final]: موعد 
+2026-04-28 04:30:09,133 - INFO - [Partial]: اليوم الساعة 8
+2026-04-28 04:30:09,506 - INFO - [Partial]: اليوم الساعة 8
+2026-04-28 04:30:09,942 - INFO - [Final]: اليوم 
+2026-04-28 04:30:09,942 - INFO - [Partial]: الساعة 8
+2026-04-28 04:30:10,324 - INFO - [Final]: الساعة 
+2026-04-28 04:30:10,324 - INFO - [Partial]: 8
+2026-04-28 04:30:10,665 - INFO - [Partial]: 8 ربع
+2026-04-28 04:30:11,061 - INFO - [Final]: 8 
+2026-04-28 04:30:11,061 - INFO - [Partial]: وربع
+2026-04-28 04:30:11,451 - INFO - [Partial]: وربع بس
+2026-04-28 04:30:11,786 - INFO - [Partial]: وربع. لكنني أود
+2026-04-28 04:30:12,303 - INFO - [Partial]: وربع. بس إني ودي اغير
+2026-04-28 04:30:12,617 - INFO - [Final]: وربع. 
+2026-04-28 04:30:12,617 - INFO - [Partial]: بس إني ودي اغيره
+2026-04-28 04:30:13,002 - INFO - [Partial]: بس اني ودي اغيره اخليه
+2026-04-28 04:30:13,356 - INFO - [Final]: بس اني 
+2026-04-28 04:30:13,363 - INFO - [Partial]: ودي اغيره اخليه
+2026-04-28 04:30:13,666 - INFO - [Final]: ودي 
+2026-04-28 04:30:13,666 - INFO - [Partial]: اغيره اخليه 8
+2026-04-28 04:30:14,046 - INFO - [Partial]: اغيره اخليه 8
+2026-04-28 04:30:14,481 - INFO - [Final]: اغيره 
+2026-04-28 04:30:14,485 - INFO - [Partial]: اخليه 8
+2026-04-28 04:30:14,809 - INFO - [Final]: اخليه 
+2026-04-28 04:30:14,809 - INFO - [Partial]: 8 45
+2026-04-28 04:30:15,193 - INFO - [Final]: 8 
+2026-04-28 04:30:15,193 - INFO - [Partial]: 45 دقيقة
+2026-04-28 04:30:15,608 - INFO - [Partial]: دقيقه
+2026-04-28 04:30:15,991 - INFO - [Partial]: دقيقه. إذا
+2026-04-28 04:30:16,331 - INFO - [Partial]: دقيقه. اذا في
+2026-04-28 04:30:16,752 - INFO - [Partial]: دقيقه. اذا في امكانية
+2026-04-28 04:30:17,089 - INFO - [Final]: دقيقه. 
+2026-04-28 04:30:17,089 - INFO - [Partial]: اذا في امكانية
+2026-04-28 04:30:17,471 - INFO - [Partial]: اذا في امكانية
+2026-04-28 04:30:17,568 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:30:17,811 - INFO - [Final]: اذا 
+2026-04-28 04:30:17,811 - INFO - [Partial]: في امكانية
+2026-04-28 04:30:18,159 - INFO - [Final]: في امكانية. 
+2026-04-28 04:30:18,159 - INFO - [Partial]: 
+2026-04-28 04:30:18,163 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:30:18,163 - INFO - 
+==================================================
+2026-04-28 04:30:18,163 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:30:18,163 - INFO - موعد اليوم الساعة 8 وربع. بس اني ودي اغيره اخليه 8 دقيقه. اذا في امكانية.
+2026-04-28 04:30:18,163 - INFO - ==================================================
+
+2026-04-28 04:30:18,163 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

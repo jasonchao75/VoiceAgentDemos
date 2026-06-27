@@ -1,0 +1,33 @@
+2026-04-28 19:06:57,299 - INFO - Starting continuous recognition...
+2026-04-28 19:06:57,300 - INFO - Session started
+2026-04-28 19:06:57,300 - INFO - Starting to push audio data...
+2026-04-28 19:07:00,366 - INFO - First partial result delay: 3.066s
+2026-04-28 19:07:00,366 - INFO - [Partial]: ممكن
+2026-04-28 19:07:00,964 - INFO - [Partial]: ممكن تقولي
+2026-04-28 19:07:01,084 - INFO - [Partial]: ممكن تقولي لي
+2026-04-28 19:07:01,635 - INFO - [Partial]: ممكن تقولي لي اليوم
+2026-04-28 19:07:02,293 - INFO - [Partial]: ممكن تقولي لي اليوم كم
+2026-04-28 19:07:02,591 - INFO - [Partial]: ممكن تقولي لي اليوم كم التاريخ
+2026-04-28 19:07:03,132 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:03,133 - INFO - [Final]: ممكن تقولي لي اليوم كم التاريخ؟
+2026-04-28 19:07:05,909 - INFO - [Partial]: أتوقع
+2026-04-28 19:07:06,226 - INFO - [Partial]: أتوقع اليوم
+2026-04-28 19:07:06,921 - INFO - [Partial]: أتوقع اليوم تاريخ
+2026-04-28 19:07:07,745 - INFO - [Partial]: أتوقع اليوم تاريخ ثمانية
+2026-04-28 19:07:08,574 - INFO - [Partial]: أتوقع اليوم تاريخ 28
+2026-04-28 19:07:09,676 - INFO - [Partial]: أتوقع اليوم تاريخ 28 إبريل
+2026-04-28 19:07:11,576 - INFO - [Partial]: أتوقع اليوم تاريخ 28 إبريل 20
+2026-04-28 19:07:12,009 - INFO - [Partial]: أتوقع اليوم تاريخ 28 إبريل 20 ستة
+2026-04-28 19:07:12,381 - INFO - [Partial]: أتوقع اليوم تاريخ 28 إبريل 2026
+2026-04-28 19:07:13,147 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:13,147 - INFO - [Final]: أتوقع اليوم؟ تاريخ 28 إبريل 2026؟
+2026-04-28 19:07:13,696 - INFO - Audio transmission finished. Closing stream...
+2026-04-28 19:07:14,125 - INFO - Canceled: CancellationReason.EndOfStream
+2026-04-28 19:07:14,125 - INFO - Session stopped
+2026-04-28 19:07:14,213 - INFO - 
+==================================================
+2026-04-28 19:07:14,214 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:07:14,214 - INFO - ممكن تقولي لي اليوم كم التاريخ؟ أتوقع اليوم؟ تاريخ 28 إبريل 2026؟
+2026-04-28 19:07:14,214 - INFO - ==================================================
+
+2026-04-28 19:07:14,214 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/azure/azure_test_records.csv

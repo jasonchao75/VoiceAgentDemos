@@ -1,0 +1,79 @@
+2026-04-28 04:31:17,297 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:31:18,421 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:31:18,802 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:31:18,934 - INFO - Starting to send audio data...
+2026-04-28 04:31:19,792 - INFO - [Partial]: 
+2026-04-28 04:31:20,161 - INFO - [Partial]: 
+2026-04-28 04:31:20,550 - INFO - [Partial]: 
+2026-04-28 04:31:20,912 - INFO - First partial result delay: 2.479s
+2026-04-28 04:31:20,912 - INFO - [Partial]: يأذن
+2026-04-28 04:31:21,283 - INFO - [Partial]: يأذن الظهر
+2026-04-28 04:31:21,716 - INFO - [Partial]: يؤذن الظهر
+2026-04-28 04:31:22,089 - INFO - [Partial]: يؤذن الظهر عندنا
+2026-04-28 04:31:22,415 - INFO - [Partial]: يؤذن الظهر عندنا تقريبا
+2026-04-28 04:31:22,801 - INFO - [Final]: يؤذن 
+2026-04-28 04:31:22,809 - INFO - [Partial]: الظهر عندنا تقريبا
+2026-04-28 04:31:23,186 - INFO - [Final]: الظهر 
+2026-04-28 04:31:23,186 - INFO - [Partial]: عندنا تقريبا الساعة
+2026-04-28 04:31:23,612 - INFO - [Final]: عندنا 
+2026-04-28 04:31:23,612 - INFO - [Partial]: تقريبا الساعة
+2026-04-28 04:31:23,962 - INFO - [Partial]: تقريبا الساعة 12
+2026-04-28 04:31:24,296 - INFO - [Final]: تقريبا 
+2026-04-28 04:31:24,296 - INFO - [Partial]: الساعة 12
+2026-04-28 04:31:24,696 - INFO - [Partial]: الساعة 12
+2026-04-28 04:31:25,057 - INFO - [Final]: الساعة 
+2026-04-28 04:31:25,059 - INFO - [Partial]: 12
+2026-04-28 04:31:25,485 - INFO - [Partial]: 12
+2026-04-28 04:31:25,836 - INFO - [Partial]: 12
+2026-04-28 04:31:26,198 - INFO - [Final]: 12 
+2026-04-28 04:31:26,198 - INFO - [Partial]: 
+2026-04-28 04:31:26,581 - INFO - [Partial]: و20
+2026-04-28 04:31:26,976 - INFO - [Partial]: و20 دقيقة
+2026-04-28 04:31:27,363 - INFO - [Partial]: و20 دقيقة
+2026-04-28 04:31:27,721 - INFO - [Partial]: و20 دقيقة
+2026-04-28 04:31:28,105 - INFO - [Final]: و20 
+2026-04-28 04:31:28,105 - INFO - [Partial]: دقيقة
+2026-04-28 04:31:28,458 - INFO - [Partial]: دقيقة. لكن
+2026-04-28 04:31:28,947 - INFO - [Final]: دقيقة. 
+2026-04-28 04:31:28,947 - INFO - [Partial]: لكن في
+2026-04-28 04:31:29,304 - INFO - [Partial]: لكن في الشتاء
+2026-04-28 04:31:29,642 - INFO - [Partial]: لكن في الشتاء يكون
+2026-04-28 04:31:29,999 - INFO - [Partial]: لكن في الشتاء يكون
+2026-04-28 04:31:30,357 - INFO - [Final]: لكن 
+2026-04-28 04:31:30,357 - INFO - [Partial]: في الشتاء يكون ابكر
+2026-04-28 04:31:30,765 - INFO - [Final]: في 
+2026-04-28 04:31:30,765 - INFO - [Partial]: الشتاء يكون أبكر تقريبا
+2026-04-28 04:31:31,103 - INFO - [Final]: الشتاء 
+2026-04-28 04:31:31,104 - INFO - [Partial]: يكون ابكر تقريبا
+2026-04-28 04:31:31,516 - INFO - [Final]: يكون 
+2026-04-28 04:31:31,516 - INFO - [Partial]: ابكر تقريبا يأذن على
+2026-04-28 04:31:31,876 - INFO - [Partial]: ابكر تقريبا يأذن على الساحة
+2026-04-28 04:31:32,302 - INFO - [Final]: ابكر 
+2026-04-28 04:31:32,303 - INFO - [Partial]: تقريبا يؤذن على الساعة 11
+2026-04-28 04:31:32,688 - INFO - [Final]: تقريبا 
+2026-04-28 04:31:32,690 - INFO - [Partial]: يؤذن على الساعة 11
+2026-04-28 04:31:32,989 - INFO - [Final]: يؤذن 
+2026-04-28 04:31:32,993 - INFO - [Partial]: على الساعة 11
+2026-04-28 04:31:33,400 - INFO - [Final]: على 
+2026-04-28 04:31:33,400 - INFO - [Partial]: الساعة 11 ونص
+2026-04-28 04:31:33,922 - INFO - [Final]: الساعة 
+2026-04-28 04:31:33,923 - INFO - [Partial]: 11 50
+2026-04-28 04:31:34,141 - INFO - [Final]: 11 
+2026-04-28 04:31:34,142 - INFO - [Partial]: و50 دقيقة
+2026-04-28 04:31:34,568 - INFO - [Partial]: و50 دقيقة
+2026-04-28 04:31:34,960 - INFO - [Partial]: و50 دقيقة
+2026-04-28 04:31:35,272 - INFO - [Partial]: و50 دقيقة
+2026-04-28 04:31:35,646 - INFO - [Final]: و50 
+2026-04-28 04:31:35,648 - INFO - [Partial]: دقيقة
+2026-04-28 04:31:35,801 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:31:36,003 - INFO - [Partial]: دقيقة
+2026-04-28 04:31:36,445 - INFO - [Final]: دقيقة. 
+2026-04-28 04:31:36,445 - INFO - [Partial]: 
+2026-04-28 04:31:36,445 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:31:36,445 - INFO - 
+==================================================
+2026-04-28 04:31:36,445 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:31:36,445 - INFO - يؤذن الظهر عندنا تقريبا الساعة 12 و20 دقيقة. لكن في الشتاء يكون ابكر تقريبا يؤذن على الساعة 11 و50 دقيقة.
+2026-04-28 04:31:36,445 - INFO - ==================================================
+
+2026-04-28 04:31:36,446 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

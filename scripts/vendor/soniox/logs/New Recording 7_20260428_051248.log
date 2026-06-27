@@ -1,0 +1,2 @@
+2026-04-28 05:12:48,440 - ERROR - SONIOX_API_KEY is missing in .env
+2026-04-28 05:12:48,441 - INFO - Please set SONIOX_API_KEY in the .env file to run this test.

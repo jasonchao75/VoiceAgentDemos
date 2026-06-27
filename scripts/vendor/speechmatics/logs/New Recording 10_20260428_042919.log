@@ -1,0 +1,58 @@
+2026-04-28 04:29:19,269 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:29:20,383 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:29:20,747 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:29:20,891 - INFO - Starting to send audio data...
+2026-04-28 04:29:21,708 - INFO - [Partial]: 
+2026-04-28 04:29:22,083 - INFO - [Partial]: 
+2026-04-28 04:29:22,467 - INFO - [Partial]: 
+2026-04-28 04:29:22,878 - INFO - [Partial]: 
+2026-04-28 04:29:23,287 - INFO - First partial result delay: 2.897s
+2026-04-28 04:29:23,287 - INFO - [Partial]: اشتريت
+2026-04-28 04:29:23,656 - INFO - [Partial]: اشتريت سيارة
+2026-04-28 04:29:24,016 - INFO - [Partial]: اشتريت سيارة
+2026-04-28 04:29:24,432 - INFO - [Partial]: اشتريت سيارة
+2026-04-28 04:29:24,789 - INFO - [Final]: اشتريت 
+2026-04-28 04:29:24,793 - INFO - [Partial]: سيارة
+2026-04-28 04:29:25,203 - INFO - [Partial]: سيارة يارس
+2026-04-28 04:29:25,526 - INFO - [Final]: سيارة 
+2026-04-28 04:29:25,531 - INFO - [Partial]: يارس
+2026-04-28 04:29:25,881 - INFO - [Partial]: يارس
+2026-04-28 04:29:26,263 - INFO - [Final]: يارس 
+2026-04-28 04:29:26,263 - INFO - [Partial]: 2011
+2026-04-28 04:29:26,668 - INFO - [Partial]: 2011.
+2026-04-28 04:29:27,019 - INFO - [Partial]: 2011.
+2026-04-28 04:29:27,410 - INFO - [Partial]: 2011
+2026-04-28 04:29:27,818 - INFO - [Partial]: 2011
+2026-04-28 04:29:28,194 - INFO - [Final]: 2011 
+2026-04-28 04:29:28,198 - INFO - [Partial]: قيمة
+2026-04-28 04:29:28,590 - INFO - [Partial]: قيم تقريبا
+2026-04-28 04:29:29,017 - INFO - [Partial]: قيمة تقريبا
+2026-04-28 04:29:29,345 - INFO - [Partial]: قيمة تقريبا
+2026-04-28 04:29:29,700 - INFO - [Final]: قيمة 
+2026-04-28 04:29:29,704 - INFO - [Partial]: تقريبا 50
+2026-04-28 04:29:30,161 - INFO - [Partial]: تقريبا 50
+2026-04-28 04:29:30,475 - INFO - [Final]: تقريبا 
+2026-04-28 04:29:30,475 - INFO - [Partial]: 50 الف
+2026-04-28 04:29:30,876 - INFO - [Partial]: 50 الف
+2026-04-28 04:29:31,330 - INFO - [Partial]: 50 الف 100
+2026-04-28 04:29:31,652 - INFO - [Final]: 50 
+2026-04-28 04:29:31,652 - INFO - [Partial]: الف 100
+2026-04-28 04:29:32,088 - INFO - [Final]: الف 
+2026-04-28 04:29:32,089 - INFO - [Partial]: 100
+2026-04-28 04:29:32,379 - INFO - [Partial]: 100
+2026-04-28 04:29:32,781 - INFO - [Partial]: 100. فريال
+2026-04-28 04:29:33,133 - INFO - [Final]: 100. 
+2026-04-28 04:29:33,133 - INFO - [Partial]: فريال
+2026-04-28 04:29:33,551 - INFO - [Partial]: فريال
+2026-04-28 04:29:33,720 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:29:33,923 - INFO - [Partial]: ريال
+2026-04-28 04:29:34,330 - INFO - [Final]: ريال. 
+2026-04-28 04:29:34,331 - INFO - [Partial]: 
+2026-04-28 04:29:34,332 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:29:34,332 - INFO - 
+==================================================
+2026-04-28 04:29:34,332 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:29:34,332 - INFO - اشتريت سيارة يارس 2011 قيمة تقريبا 50 الف 100. ريال.
+2026-04-28 04:29:34,332 - INFO - ==================================================
+
+2026-04-28 04:29:34,333 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

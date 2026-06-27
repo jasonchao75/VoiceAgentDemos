@@ -1,0 +1,1370 @@
+2026-06-28 01:18:56,163 - INFO - Starting Soniox Batch Evaluation...
+2026-06-28 01:18:56,163 - INFO - Metadata file path: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank/metadata.csv
+2026-06-28 01:18:56,163 - INFO - Scanning target directory: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank
+2026-06-28 01:18:56,165 - INFO - Found 511 .wav files locally.
+2026-06-28 01:18:56,172 - INFO - Loaded 511 records from metadata.csv.
+2026-06-28 01:18:56,173 - INFO - Matched 511 files for execution.
+2026-06-28 01:18:56,174 - INFO - Spawning 511 parallel worker pipelines (Max concurrency: 8)...
+2026-06-28 01:18:56,179 - INFO - Uploading file: RB_0001.wav
+2026-06-28 01:18:56,179 - INFO - Uploading file: RB_0002.wav
+2026-06-28 01:18:56,180 - INFO - Uploading file: RB_0003.wav
+2026-06-28 01:18:56,180 - INFO - Uploading file: RB_0004.wav
+2026-06-28 01:18:56,181 - INFO - Uploading file: RB_0005.wav
+2026-06-28 01:18:56,181 - INFO - Uploading file: RB_0006.wav
+2026-06-28 01:18:56,181 - INFO - Uploading file: RB_0007.wav
+2026-06-28 01:18:56,182 - INFO - Uploading file: RB_0008.wav
+2026-06-28 01:18:58,004 - INFO - Uploaded successfully. File ID: cc512238-100e-4bac-b4ad-3446e29f6232
+2026-06-28 01:18:58,004 - INFO - Creating job for file_id: cc512238-100e-4bac-b4ad-3446e29f6232
+2026-06-28 01:18:58,335 - INFO - Uploaded successfully. File ID: c5081347-8d1b-4f24-a20b-5cd4fb28bd36
+2026-06-28 01:18:58,336 - INFO - Creating job for file_id: c5081347-8d1b-4f24-a20b-5cd4fb28bd36
+2026-06-28 01:18:58,378 - INFO - Uploaded successfully. File ID: bd85615a-730a-4f8b-a060-be4a34c4e136
+2026-06-28 01:18:58,378 - INFO - Creating job for file_id: bd85615a-730a-4f8b-a060-be4a34c4e136
+2026-06-28 01:18:58,426 - INFO - Uploaded successfully. File ID: c7101491-bd88-4878-89da-ffb5e264db5a
+2026-06-28 01:18:58,426 - INFO - Creating job for file_id: c7101491-bd88-4878-89da-ffb5e264db5a
+2026-06-28 01:18:58,452 - INFO - Created job successfully. Job ID: 2453fa2c-8b1f-4db9-99c6-9dcfd9ab5d3a
+2026-06-28 01:18:58,452 - INFO - Polling job: 2453fa2c-8b1f-4db9-99c6-9dcfd9ab5d3a
+2026-06-28 01:18:58,480 - INFO - Uploaded successfully. File ID: d1c796cd-0d66-498f-9b1f-ab1d7460b152
+2026-06-28 01:18:58,481 - INFO - Creating job for file_id: d1c796cd-0d66-498f-9b1f-ab1d7460b152
+2026-06-28 01:18:58,516 - INFO - Uploaded successfully. File ID: 7f810d49-ef82-4fca-9c07-c7b49bfd74df
+2026-06-28 01:18:58,516 - INFO - Creating job for file_id: 7f810d49-ef82-4fca-9c07-c7b49bfd74df
+2026-06-28 01:18:58,565 - INFO - Uploaded successfully. File ID: e74971c0-0d89-4dc4-9af2-017488a3d6e5
+2026-06-28 01:18:58,566 - INFO - Creating job for file_id: e74971c0-0d89-4dc4-9af2-017488a3d6e5
+2026-06-28 01:18:58,781 - INFO - Created job successfully. Job ID: 35afcfdb-ee7c-4f8b-82f5-1fab0b8a7814
+2026-06-28 01:18:58,782 - INFO - Polling job: 35afcfdb-ee7c-4f8b-82f5-1fab0b8a7814
+2026-06-28 01:18:58,831 - INFO - Created job successfully. Job ID: cbef15cf-6fb1-4561-93df-69c8d4da5971
+2026-06-28 01:18:58,832 - INFO - Polling job: cbef15cf-6fb1-4561-93df-69c8d4da5971
+2026-06-28 01:18:58,853 - INFO - Created job successfully. Job ID: ae889b76-ac98-45fb-955e-a92b6fae368b
+2026-06-28 01:18:58,853 - INFO - Polling job: ae889b76-ac98-45fb-955e-a92b6fae368b
+2026-06-28 01:18:58,907 - INFO - Created job successfully. Job ID: 3b43d92f-c182-469f-8b37-a53453386a99
+2026-06-28 01:18:58,907 - INFO - Polling job: 3b43d92f-c182-469f-8b37-a53453386a99
+2026-06-28 01:18:58,942 - INFO - Created job successfully. Job ID: cc699efb-735d-4b6b-83fe-439ba187d481
+2026-06-28 01:18:58,942 - INFO - Polling job: cc699efb-735d-4b6b-83fe-439ba187d481
+2026-06-28 01:18:59,002 - INFO - Created job successfully. Job ID: e3df22be-531a-49da-8f9d-1111bd2a4b2b
+2026-06-28 01:18:59,002 - INFO - Polling job: e3df22be-531a-49da-8f9d-1111bd2a4b2b
+2026-06-28 01:18:59,260 - INFO - Uploaded successfully. File ID: 2d0e52a3-8303-45bf-b3ab-fe06ba5b6e68
+2026-06-28 01:18:59,260 - INFO - Creating job for file_id: 2d0e52a3-8303-45bf-b3ab-fe06ba5b6e68
+2026-06-28 01:18:59,692 - INFO - Created job successfully. Job ID: d29a5c4b-a5b5-4b25-8135-af88fd8d2742
+2026-06-28 01:18:59,692 - INFO - Polling job: d29a5c4b-a5b5-4b25-8135-af88fd8d2742
+2026-06-28 01:19:01,747 - INFO - Deleting transcription job: 2453fa2c-8b1f-4db9-99c6-9dcfd9ab5d3a
+2026-06-28 01:19:02,043 - INFO - Deleting transcription job: 35afcfdb-ee7c-4f8b-82f5-1fab0b8a7814
+2026-06-28 01:19:02,102 - INFO - Deleting transcription job: cbef15cf-6fb1-4561-93df-69c8d4da5971
+2026-06-28 01:19:02,164 - INFO - Deleting transcription job: 3b43d92f-c182-469f-8b37-a53453386a99
+2026-06-28 01:19:02,171 - INFO - Deleting transcription job: ae889b76-ac98-45fb-955e-a92b6fae368b
+2026-06-28 01:19:02,208 - INFO - Deleting remote file: cc512238-100e-4bac-b4ad-3446e29f6232
+2026-06-28 01:19:02,216 - INFO - Deleting transcription job: cc699efb-735d-4b6b-83fe-439ba187d481
+2026-06-28 01:19:02,280 - INFO - Deleting transcription job: e3df22be-531a-49da-8f9d-1111bd2a4b2b
+2026-06-28 01:19:02,493 - INFO - Deleting remote file: c5081347-8d1b-4f24-a20b-5cd4fb28bd36
+2026-06-28 01:19:02,554 - INFO - Deleting remote file: bd85615a-730a-4f8b-a060-be4a34c4e136
+2026-06-28 01:19:02,633 - INFO - Deleting remote file: d1c796cd-0d66-498f-9b1f-ab1d7460b152
+2026-06-28 01:19:02,643 - INFO - Deleting remote file: c7101491-bd88-4878-89da-ffb5e264db5a
+2026-06-28 01:19:02,664 - INFO - Deleting remote file: 7f810d49-ef82-4fca-9c07-c7b49bfd74df
+2026-06-28 01:19:02,673 - INFO - [SUCCESS] RB_0007 (general_utterance) | Human: 'ايه حوليني' -> ASR: 'إحمداني.' | Normalized Human: 'ايه حوليني' -> Normalized ASR: 'احمداني' | WER: 100.00%
+2026-06-28 01:19:02,673 - INFO - Uploading file: RB_0009.wav
+2026-06-28 01:19:02,747 - INFO - Deleting remote file: e74971c0-0d89-4dc4-9af2-017488a3d6e5
+2026-06-28 01:19:02,937 - INFO - Deleting transcription job: d29a5c4b-a5b5-4b25-8135-af88fd8d2742
+2026-06-28 01:19:02,942 - INFO - [SUCCESS] RB_0005 (branch_name) | Human: 'الفرع الرئيسي' -> ASR: 'الفرع الرئيسي.' | Normalized Human: 'الفرع الرئيسي' -> Normalized ASR: 'الفرع الرئيسي' | WER: 0.00%
+2026-06-28 01:19:02,942 - INFO - Uploading file: RB_0010.wav
+2026-06-28 01:19:02,994 - INFO - [SUCCESS] RB_0008 (branch_name) | Human: 'فرع جدة الرئيسي' -> ASR: 'فرع الشريفة.' | Normalized Human: 'فرع جده الرئيسي' -> Normalized ASR: 'فرع الشريفة' | WER: 66.67%
+2026-06-28 01:19:02,994 - INFO - Uploading file: RB_0011.wav
+2026-06-28 01:19:03,100 - INFO - [SUCCESS] RB_0004 (general_utterance) | Human: 'قلت لك بطاقتي ضاعت فأحتاج مساعدة' -> ASR: 'قالت لي: "بطاقتي ضاعت، فأحتاج مساعدة."' | Normalized Human: 'قلت لك بطاقتي ضاعت فاحتاج مساعده' -> Normalized ASR: 'قالت لي بطاقتي ضاعت، فاحتاج مساعدة' | WER: 66.67%
+2026-06-28 01:19:03,101 - INFO - Uploading file: RB_0012.wav
+2026-06-28 01:19:03,116 - INFO - [SUCCESS] RB_0001 (branch_code) | Human: 'احد سبعة ستة' -> ASR: '176.' | Normalized Human: 'احد سبعه سته' -> Normalized ASR: '176' | WER: 100.00%
+2026-06-28 01:19:03,117 - INFO - [SUCCESS] RB_0003 (branch_code) | Human: 'رع 307' -> ASR: '307.' | Normalized Human: 'رع 307' -> Normalized ASR: '307' | WER: 50.00%
+2026-06-28 01:19:03,117 - INFO - Uploading file: RB_0013.wav
+2026-06-28 01:19:03,117 - INFO - Uploading file: RB_0014.wav
+2026-06-28 01:19:03,202 - INFO - [SUCCESS] RB_0006 (general_utterance) | Human: 'ما يهمني حوليني على أي فرع' -> ASR: 'آه، ما يهمني، حوليني على أي فرع.' | Normalized Human: 'ما يهمني حوليني علي اي فرع' -> Normalized ASR: 'اه، ما يهمني، حوليني علي اي فرع' | WER: 33.33%
+2026-06-28 01:19:03,202 - INFO - Uploading file: RB_0015.wav
+2026-06-28 01:19:03,269 - INFO - Uploaded successfully. File ID: f1e17cb8-4d51-4dad-baf7-60dc92630afd
+2026-06-28 01:19:03,269 - INFO - Creating job for file_id: f1e17cb8-4d51-4dad-baf7-60dc92630afd
+2026-06-28 01:19:03,401 - INFO - Deleting remote file: 2d0e52a3-8303-45bf-b3ab-fe06ba5b6e68
+2026-06-28 01:19:03,563 - INFO - Uploaded successfully. File ID: 23bf0be8-b44b-4926-959f-31d81f1a18ec
+2026-06-28 01:19:03,563 - INFO - Creating job for file_id: 23bf0be8-b44b-4926-959f-31d81f1a18ec
+2026-06-28 01:19:03,600 - INFO - Uploaded successfully. File ID: 00426752-78af-4ea7-ad68-8fe81c83a9d0
+2026-06-28 01:19:03,600 - INFO - Creating job for file_id: 00426752-78af-4ea7-ad68-8fe81c83a9d0
+2026-06-28 01:19:03,625 - INFO - Uploaded successfully. File ID: 2d3448d3-4682-4acd-b5a4-33a36d023ee6
+2026-06-28 01:19:03,625 - INFO - Creating job for file_id: 2d3448d3-4682-4acd-b5a4-33a36d023ee6
+2026-06-28 01:19:03,631 - INFO - Uploaded successfully. File ID: 27e56a87-e792-4716-bae5-e59290961ff9
+2026-06-28 01:19:03,631 - INFO - Creating job for file_id: 27e56a87-e792-4716-bae5-e59290961ff9
+2026-06-28 01:19:03,738 - INFO - Created job successfully. Job ID: a0f73a64-42b5-4d92-a39e-6439f7b3eacb
+2026-06-28 01:19:03,738 - INFO - Polling job: a0f73a64-42b5-4d92-a39e-6439f7b3eacb
+2026-06-28 01:19:03,767 - INFO - Uploaded successfully. File ID: 56e4969f-4c31-416e-bd60-bdaba1c78183
+2026-06-28 01:19:03,767 - INFO - Creating job for file_id: 56e4969f-4c31-416e-bd60-bdaba1c78183
+2026-06-28 01:19:03,858 - INFO - [SUCCESS] RB_0002 (general_utterance) | Human: 'ايه حوليني' -> ASR: 'الحنان.' | Normalized Human: 'ايه حوليني' -> Normalized ASR: 'الحنان' | WER: 100.00%
+2026-06-28 01:19:03,858 - INFO - Uploading file: RB_0016.wav
+2026-06-28 01:19:03,926 - INFO - Uploaded successfully. File ID: 1665c403-4282-4f15-9a22-9f35aa75fbff
+2026-06-28 01:19:03,926 - INFO - Creating job for file_id: 1665c403-4282-4f15-9a22-9f35aa75fbff
+2026-06-28 01:19:03,987 - INFO - Created job successfully. Job ID: 0f061949-a283-4266-8248-17222ce04dd4
+2026-06-28 01:19:03,988 - INFO - Polling job: 0f061949-a283-4266-8248-17222ce04dd4
+2026-06-28 01:19:04,039 - INFO - Created job successfully. Job ID: 241ac60a-5ca7-4c0f-acd1-129e492b6296
+2026-06-28 01:19:04,039 - INFO - Polling job: 241ac60a-5ca7-4c0f-acd1-129e492b6296
+2026-06-28 01:19:04,051 - INFO - Created job successfully. Job ID: 822cea11-5788-4310-92fc-364fb826c789
+2026-06-28 01:19:04,051 - INFO - Polling job: 822cea11-5788-4310-92fc-364fb826c789
+2026-06-28 01:19:04,096 - INFO - Created job successfully. Job ID: 94d7c394-52ad-4852-af6d-067cfee74956
+2026-06-28 01:19:04,096 - INFO - Polling job: 94d7c394-52ad-4852-af6d-067cfee74956
+2026-06-28 01:19:04,207 - INFO - Created job successfully. Job ID: ed0fec67-021f-4da6-aec8-a3681449c05c
+2026-06-28 01:19:04,207 - INFO - Polling job: ed0fec67-021f-4da6-aec8-a3681449c05c
+2026-06-28 01:19:04,361 - INFO - Created job successfully. Job ID: a9e6ae1f-262a-45a1-8330-30ebf2f45d87
+2026-06-28 01:19:04,362 - INFO - Polling job: a9e6ae1f-262a-45a1-8330-30ebf2f45d87
+2026-06-28 01:19:04,403 - INFO - Uploaded successfully. File ID: 2ec51b84-b723-45c9-8fcb-13439aa67733
+2026-06-28 01:19:04,403 - INFO - Creating job for file_id: 2ec51b84-b723-45c9-8fcb-13439aa67733
+2026-06-28 01:19:04,826 - INFO - Created job successfully. Job ID: c0f525e1-e19b-4268-ad07-bac14ba9f198
+2026-06-28 01:19:04,826 - INFO - Polling job: c0f525e1-e19b-4268-ad07-bac14ba9f198
+2026-06-28 01:19:07,067 - INFO - Deleting transcription job: a0f73a64-42b5-4d92-a39e-6439f7b3eacb
+2026-06-28 01:19:07,237 - INFO - Deleting transcription job: 0f061949-a283-4266-8248-17222ce04dd4
+2026-06-28 01:19:07,320 - INFO - Deleting transcription job: 822cea11-5788-4310-92fc-364fb826c789
+2026-06-28 01:19:07,321 - INFO - Deleting transcription job: 241ac60a-5ca7-4c0f-acd1-129e492b6296
+2026-06-28 01:19:07,369 - INFO - Deleting transcription job: 94d7c394-52ad-4852-af6d-067cfee74956
+2026-06-28 01:19:07,485 - INFO - Deleting transcription job: ed0fec67-021f-4da6-aec8-a3681449c05c
+2026-06-28 01:19:07,513 - INFO - Deleting remote file: f1e17cb8-4d51-4dad-baf7-60dc92630afd
+2026-06-28 01:19:07,697 - INFO - Deleting transcription job: a9e6ae1f-262a-45a1-8330-30ebf2f45d87
+2026-06-28 01:19:07,779 - INFO - Deleting remote file: 00426752-78af-4ea7-ad68-8fe81c83a9d0
+2026-06-28 01:19:07,779 - INFO - Deleting remote file: 2d3448d3-4682-4acd-b5a4-33a36d023ee6
+2026-06-28 01:19:07,787 - INFO - Deleting remote file: 23bf0be8-b44b-4926-959f-31d81f1a18ec
+2026-06-28 01:19:07,839 - INFO - Deleting remote file: 27e56a87-e792-4716-bae5-e59290961ff9
+2026-06-28 01:19:07,948 - INFO - Deleting remote file: 56e4969f-4c31-416e-bd60-bdaba1c78183
+2026-06-28 01:19:07,958 - INFO - [SUCCESS] RB_0009 (general_utterance) | Human: 'ممكن تحوليني على قسم المبيعات' -> ASR: 'ممكن تحوليني على قسم المبيعات؟' | Normalized Human: 'ممكن تحوليني علي قسم المبيعات' -> Normalized ASR: 'ممكن تحوليني علي قسم المبيعات؟' | WER: 20.00%
+2026-06-28 01:19:07,959 - INFO - Uploading file: RB_0017.wav
+2026-06-28 01:19:08,106 - INFO - Deleting transcription job: c0f525e1-e19b-4268-ad07-bac14ba9f198
+2026-06-28 01:19:08,144 - INFO - Deleting remote file: 1665c403-4282-4f15-9a22-9f35aa75fbff
+2026-06-28 01:19:08,223 - INFO - [SUCCESS] RB_0013 (general_utterance) | Human: 'حوليني على السيلز' -> ASR: 'أمم، الحوالين على السادس...' | Normalized Human: 'حوليني علي السيلز' -> Normalized ASR: 'امم، الحوالين علي السادس' | WER: 100.00%
+2026-06-28 01:19:08,223 - INFO - Uploading file: RB_0018.wav
+2026-06-28 01:19:08,229 - INFO - [SUCCESS] RB_0010 (general_utterance) | Human: 'أنا أسأل اذا عندكم خدمة مبيعات' -> ASR: 'أنا أسأل إذا عندكم خدمة مبيعات.' | Normalized Human: 'انا اسال اذا عندكم خدمه مبيعات' -> Normalized ASR: 'انا اسال اذا عندكم خدمه مبيعات' | WER: 0.00%
+2026-06-28 01:19:08,229 - INFO - [SUCCESS] RB_0011 (general_utterance) | Human: 'بنك الرياض' -> ASR: 'بنك الرياض.' | Normalized Human: 'بنك الرياض' -> Normalized ASR: 'بنك الرياض' | WER: 0.00%
+2026-06-28 01:19:08,229 - INFO - Uploading file: RB_0019.wav
+2026-06-28 01:19:08,229 - INFO - Uploading file: RB_0020.wav
+2026-06-28 01:19:08,293 - INFO - [SUCCESS] RB_0012 (branch_name) | Human: 'أنا عميل ماسي' -> ASR: 'أنا عمي بنصي.' | Normalized Human: 'انا عميل ماسي' -> Normalized ASR: 'انا عمي بنصي' | WER: 66.67%
+2026-06-28 01:19:08,293 - INFO - Uploading file: RB_0021.wav
+2026-06-28 01:19:08,389 - INFO - [SUCCESS] RB_0015 (general_utterance) | Human: 'ماعرف انتي المفروض تعرفين' -> ASR: 'معك بنك المفروض الترفيه.' | Normalized Human: 'ماعرف انتي المفروض تعرفين' -> Normalized ASR: 'معك بنك المفروض الترفيه' | WER: 75.00%
+2026-06-28 01:19:08,389 - INFO - Uploading file: RB_0022.wav
+2026-06-28 01:19:08,518 - INFO - Uploaded successfully. File ID: 491c287a-090b-4857-b31a-874cfd88f0c3
+2026-06-28 01:19:08,518 - INFO - Creating job for file_id: 491c287a-090b-4857-b31a-874cfd88f0c3
+2026-06-28 01:19:08,567 - INFO - Deleting remote file: 2ec51b84-b723-45c9-8fcb-13439aa67733
+2026-06-28 01:19:08,612 - INFO - [SUCCESS] RB_0014 (general_utterance) | Human: 'أنا ماعرف اسم الفرع فممكن تقوليلي أقرب فرع لي' -> ASR: 'أنا ما أعرف اسم الفرع، فممكن تقولي لي أقرب فرع لي؟' | Normalized Human: 'انا ماعرف اسم الفرع فممكن تقوليلي اقرب فرع لي' -> Normalized ASR: 'انا ما اعرف اسم الفرع، فممكن تقولي لي اقرب فرع لي؟' | WER: 66.67%
+2026-06-28 01:19:08,612 - INFO - Uploading file: RB_0023.wav
+2026-06-28 01:19:08,721 - INFO - Uploaded successfully. File ID: 517ed134-a9f1-4ab4-ba4f-cd1fc0baaba8
+2026-06-28 01:19:08,721 - INFO - Creating job for file_id: 517ed134-a9f1-4ab4-ba4f-cd1fc0baaba8
+2026-06-28 01:19:08,747 - INFO - Uploaded successfully. File ID: 720cc37d-a95a-49f5-ada8-f4fc7e835ab8
+2026-06-28 01:19:08,747 - INFO - Creating job for file_id: 720cc37d-a95a-49f5-ada8-f4fc7e835ab8
+2026-06-28 01:19:08,887 - INFO - Uploaded successfully. File ID: c6242489-0782-4c12-b7a3-5e5dca624006
+2026-06-28 01:19:08,887 - INFO - Creating job for file_id: c6242489-0782-4c12-b7a3-5e5dca624006
+2026-06-28 01:19:08,923 - INFO - Uploaded successfully. File ID: 8143d775-fbc0-407f-abeb-18f7e4634e03
+2026-06-28 01:19:08,923 - INFO - Creating job for file_id: 8143d775-fbc0-407f-abeb-18f7e4634e03
+2026-06-28 01:19:08,939 - INFO - Uploaded successfully. File ID: 1ebc55f2-4ad7-4128-8e59-b384bd923b97
+2026-06-28 01:19:08,939 - INFO - Created job successfully. Job ID: 729bbe0d-d09c-40eb-b284-82ce7f73088b
+2026-06-28 01:19:08,940 - INFO - Creating job for file_id: 1ebc55f2-4ad7-4128-8e59-b384bd923b97
+2026-06-28 01:19:08,940 - INFO - Polling job: 729bbe0d-d09c-40eb-b284-82ce7f73088b
+2026-06-28 01:19:09,019 - INFO - [SUCCESS] RB_0016 (branch_name) | Human: 'فرع كورنيش الدمام' -> ASR: 'فرع كنيس النمام.' | Normalized Human: 'فرع كورنيش الدمام' -> Normalized ASR: 'فرع كنيس النمام' | WER: 66.67%
+2026-06-28 01:19:09,019 - INFO - Uploading file: RB_0024.wav
+2026-06-28 01:19:09,145 - INFO - Created job successfully. Job ID: 089317d6-cc6f-44cc-99c0-1072ccef9953
+2026-06-28 01:19:09,145 - INFO - Polling job: 089317d6-cc6f-44cc-99c0-1072ccef9953
+2026-06-28 01:19:09,175 - INFO - Created job successfully. Job ID: 10373d2b-6618-4971-95a0-5918283fa578
+2026-06-28 01:19:09,175 - INFO - Polling job: 10373d2b-6618-4971-95a0-5918283fa578
+2026-06-28 01:19:09,197 - INFO - Uploaded successfully. File ID: fc32b40b-a915-4e2b-8460-a0451b05963b
+2026-06-28 01:19:09,198 - INFO - Creating job for file_id: fc32b40b-a915-4e2b-8460-a0451b05963b
+2026-06-28 01:19:09,308 - INFO - Created job successfully. Job ID: ddec3e2f-c84d-4f36-b2af-068ed8c588a4
+2026-06-28 01:19:09,308 - INFO - Polling job: ddec3e2f-c84d-4f36-b2af-068ed8c588a4
+2026-06-28 01:19:09,347 - INFO - Created job successfully. Job ID: 93ae6e19-5916-4c20-884f-35c95a604ed7
+2026-06-28 01:19:09,347 - INFO - Polling job: 93ae6e19-5916-4c20-884f-35c95a604ed7
+2026-06-28 01:19:09,368 - INFO - Created job successfully. Job ID: a067d68f-06b7-4dd5-bc75-9c49e077fd02
+2026-06-28 01:19:09,368 - INFO - Polling job: a067d68f-06b7-4dd5-bc75-9c49e077fd02
+2026-06-28 01:19:09,565 - INFO - Uploaded successfully. File ID: 2e5a3e25-8e38-4c48-90cf-10a977c7e0d3
+2026-06-28 01:19:09,566 - INFO - Creating job for file_id: 2e5a3e25-8e38-4c48-90cf-10a977c7e0d3
+2026-06-28 01:19:09,616 - INFO - Created job successfully. Job ID: 17f2a377-2650-45b6-a758-5f65646b1e53
+2026-06-28 01:19:09,616 - INFO - Polling job: 17f2a377-2650-45b6-a758-5f65646b1e53
+2026-06-28 01:19:09,998 - INFO - Created job successfully. Job ID: f23af775-275a-4335-b7ce-fb8f1bf3fc6d
+2026-06-28 01:19:09,998 - INFO - Polling job: f23af775-275a-4335-b7ce-fb8f1bf3fc6d
+2026-06-28 01:19:12,241 - INFO - Deleting transcription job: 729bbe0d-d09c-40eb-b284-82ce7f73088b
+2026-06-28 01:19:12,433 - INFO - Deleting transcription job: 089317d6-cc6f-44cc-99c0-1072ccef9953
+2026-06-28 01:19:12,488 - INFO - Deleting transcription job: 10373d2b-6618-4971-95a0-5918283fa578
+2026-06-28 01:19:12,592 - INFO - Deleting transcription job: ddec3e2f-c84d-4f36-b2af-068ed8c588a4
+2026-06-28 01:19:12,645 - INFO - Deleting transcription job: 93ae6e19-5916-4c20-884f-35c95a604ed7
+2026-06-28 01:19:12,660 - INFO - Deleting transcription job: a067d68f-06b7-4dd5-bc75-9c49e077fd02
+2026-06-28 01:19:12,693 - INFO - Deleting remote file: 491c287a-090b-4857-b31a-874cfd88f0c3
+2026-06-28 01:19:12,880 - INFO - Deleting remote file: 517ed134-a9f1-4ab4-ba4f-cd1fc0baaba8
+2026-06-28 01:19:12,888 - INFO - Deleting transcription job: 17f2a377-2650-45b6-a758-5f65646b1e53
+2026-06-28 01:19:12,941 - INFO - Deleting remote file: 720cc37d-a95a-49f5-ada8-f4fc7e835ab8
+2026-06-28 01:19:13,069 - INFO - Deleting remote file: c6242489-0782-4c12-b7a3-5e5dca624006
+2026-06-28 01:19:13,097 - INFO - Deleting remote file: 8143d775-fbc0-407f-abeb-18f7e4634e03
+2026-06-28 01:19:13,113 - INFO - Deleting remote file: 1ebc55f2-4ad7-4128-8e59-b384bd923b97
+2026-06-28 01:19:13,142 - INFO - [SUCCESS] RB_0017 (branch_name) | Human: 'يه صحيح صحيح' -> ASR: 'إيه، صحيح، صحيح.' | Normalized Human: 'يه صحيح صحيح' -> Normalized ASR: 'ايه، صحيح، صحيح' | WER: 66.67%
+2026-06-28 01:19:13,142 - INFO - Uploading file: RB_0025.wav
+2026-06-28 01:19:13,284 - INFO - Deleting transcription job: f23af775-275a-4335-b7ce-fb8f1bf3fc6d
+2026-06-28 01:19:13,338 - INFO - [SUCCESS] RB_0018 (branch_name) | Human: 'اي قلت لك صحيح' -> ASR: 'أي كليكات؟' | Normalized Human: 'اي قلت لك صحيح' -> Normalized ASR: 'اي كليكات؟' | WER: 75.00%
+2026-06-28 01:19:13,338 - INFO - Uploading file: RB_0026.wav
+2026-06-28 01:19:13,362 - INFO - Deleting remote file: fc32b40b-a915-4e2b-8460-a0451b05963b
+2026-06-28 01:19:13,390 - INFO - [SUCCESS] RB_0019 (branch_name) | Human: 'أعرب' -> ASR: 'العربي.' | Normalized Human: 'اعرب' -> Normalized ASR: 'العربي' | WER: 100.00%
+2026-06-28 01:19:13,390 - INFO - Uploading file: RB_0027.wav
+2026-06-28 01:19:13,510 - INFO - [SUCCESS] RB_0022 (general_utterance) | Human: 'ابي فروع الدمام' -> ASR: 'أبي، سوري، الدمام.' | Normalized Human: 'ابي فروع الدمام' -> Normalized ASR: 'ابي، سوري، الدمام' | WER: 66.67%
+2026-06-28 01:19:13,510 - INFO - Uploading file: RB_0028.wav
+2026-06-28 01:19:13,561 - INFO - [SUCCESS] RB_0021 (general_utterance) | Human: 'طيب انتو كم فرع عندكم في الدمام' -> ASR: 'طيب، أنت كم فتره عندكم في الدمام؟' | Normalized Human: 'طيب انتو كم فرع عندكم في الدمام' -> Normalized ASR: 'طيب، انت كم فتره عندكم في الدمام؟' | WER: 57.14%
+2026-06-28 01:19:13,561 - INFO - Uploading file: RB_0029.wav
+2026-06-28 01:19:13,605 - INFO - [SUCCESS] RB_0020 (general_utterance) | Human: 'ما أعرف الفرع بس فرع الدمام' -> ASR: 'ما أعرف الفرع، بس فرع الدمام.' | Normalized Human: 'ما اعرف الفرع بس فرع الدمام' -> Normalized ASR: 'ما اعرف الفرع، بس فرع الدمام' | WER: 16.67%
+2026-06-28 01:19:13,605 - INFO - Uploading file: RB_0030.wav
+2026-06-28 01:19:13,743 - INFO - Deleting remote file: 2e5a3e25-8e38-4c48-90cf-10a977c7e0d3
+2026-06-28 01:19:13,763 - INFO - Uploaded successfully. File ID: d19db088-ab15-47ce-a558-77639746ede4
+2026-06-28 01:19:13,763 - INFO - Creating job for file_id: d19db088-ab15-47ce-a558-77639746ede4
+2026-06-28 01:19:13,863 - INFO - [SUCCESS] RB_0023 (branch_code) | Human: 'قلت لك ثلاثة أربعة أربعة ثلاثمائة وأربعة وأربعين' -> ASR: 'قلت لك 344، 344!' | Normalized Human: 'قلت لك ثلاثه اربعه اربعه ثلاثمائه واربعه واربعين' -> Normalized ASR: 'قلت لك 344، 344' | WER: 75.00%
+2026-06-28 01:19:13,863 - INFO - Uploading file: RB_0031.wav
+2026-06-28 01:19:13,867 - INFO - Uploaded successfully. File ID: 3b3b4b7d-9b47-46f6-ba3f-3337533ee5c4
+2026-06-28 01:19:13,868 - INFO - Creating job for file_id: 3b3b4b7d-9b47-46f6-ba3f-3337533ee5c4
+2026-06-28 01:19:14,003 - INFO - Uploaded successfully. File ID: 33c115aa-4ecf-42b9-8114-b817a4b18dae
+2026-06-28 01:19:14,003 - INFO - Creating job for file_id: 33c115aa-4ecf-42b9-8114-b817a4b18dae
+2026-06-28 01:19:14,031 - INFO - Uploaded successfully. File ID: 4f82be25-a06c-4149-9a00-0b08c08fe16b
+2026-06-28 01:19:14,031 - INFO - Creating job for file_id: 4f82be25-a06c-4149-9a00-0b08c08fe16b
+2026-06-28 01:19:14,185 - INFO - Created job successfully. Job ID: 37ea4fad-3ebf-4c67-bb0c-c3f2146496d9
+2026-06-28 01:19:14,185 - INFO - Polling job: 37ea4fad-3ebf-4c67-bb0c-c3f2146496d9
+2026-06-28 01:19:14,195 - INFO - Uploaded successfully. File ID: 76c97f3f-696e-4f8a-b91d-9f1ba90b3bed
+2026-06-28 01:19:14,195 - INFO - [SUCCESS] RB_0024 (general_utterance) | Human: 'فرع الريان في الرياض' -> ASR: 'فرع الرياض، الرياض.' | Normalized Human: 'فرع الريان في الرياض' -> Normalized ASR: 'فرع الرياض، الرياض' | WER: 50.00%
+2026-06-28 01:19:14,196 - INFO - Uploading file: RB_0032.wav
+2026-06-28 01:19:14,196 - INFO - Creating job for file_id: 76c97f3f-696e-4f8a-b91d-9f1ba90b3bed
+2026-06-28 01:19:14,207 - INFO - Uploaded successfully. File ID: 1790c87d-b735-456a-b723-0f3f599407e6
+2026-06-28 01:19:14,208 - INFO - Creating job for file_id: 1790c87d-b735-456a-b723-0f3f599407e6
+2026-06-28 01:19:14,312 - INFO - Created job successfully. Job ID: 8bee890b-9c83-456d-a905-e1c91a7f00cb
+2026-06-28 01:19:14,312 - INFO - Polling job: 8bee890b-9c83-456d-a905-e1c91a7f00cb
+2026-06-28 01:19:14,429 - INFO - Created job successfully. Job ID: 04d354ff-dd4e-47a1-873e-72743210285a
+2026-06-28 01:19:14,429 - INFO - Polling job: 04d354ff-dd4e-47a1-873e-72743210285a
+2026-06-28 01:19:14,470 - INFO - Created job successfully. Job ID: 11948314-5c29-4b56-b54f-a6da15eeabb5
+2026-06-28 01:19:14,470 - INFO - Polling job: 11948314-5c29-4b56-b54f-a6da15eeabb5
+2026-06-28 01:19:14,573 - INFO - Uploaded successfully. File ID: ec27445c-bffa-47d5-85ce-71421b1e6338
+2026-06-28 01:19:14,573 - INFO - Creating job for file_id: ec27445c-bffa-47d5-85ce-71421b1e6338
+2026-06-28 01:19:14,629 - INFO - Created job successfully. Job ID: 16ad4850-d877-4faa-9ef8-b4205614af21
+2026-06-28 01:19:14,629 - INFO - Created job successfully. Job ID: 8c343f05-a32b-4014-b54e-7e9b210a440b
+2026-06-28 01:19:14,630 - INFO - Polling job: 16ad4850-d877-4faa-9ef8-b4205614af21
+2026-06-28 01:19:14,630 - INFO - Polling job: 8c343f05-a32b-4014-b54e-7e9b210a440b
+2026-06-28 01:19:14,678 - INFO - Uploaded successfully. File ID: 3a9585e6-fd2f-4c5d-bd90-804523279a4b
+2026-06-28 01:19:14,678 - INFO - Creating job for file_id: 3a9585e6-fd2f-4c5d-bd90-804523279a4b
+2026-06-28 01:19:15,002 - INFO - Created job successfully. Job ID: ebda15d5-e1e6-4fec-8d16-bb448e21e66f
+2026-06-28 01:19:15,002 - INFO - Polling job: ebda15d5-e1e6-4fec-8d16-bb448e21e66f
+2026-06-28 01:19:15,102 - INFO - Created job successfully. Job ID: 2a5385d9-f3c3-41cc-83ef-e08afb30f11d
+2026-06-28 01:19:15,102 - INFO - Polling job: 2a5385d9-f3c3-41cc-83ef-e08afb30f11d
+2026-06-28 01:19:17,452 - INFO - Deleting transcription job: 37ea4fad-3ebf-4c67-bb0c-c3f2146496d9
+2026-06-28 01:19:17,605 - INFO - Deleting transcription job: 8bee890b-9c83-456d-a905-e1c91a7f00cb
+2026-06-28 01:19:17,761 - INFO - Deleting transcription job: 04d354ff-dd4e-47a1-873e-72743210285a
+2026-06-28 01:19:17,778 - INFO - Deleting transcription job: 11948314-5c29-4b56-b54f-a6da15eeabb5
+2026-06-28 01:19:17,882 - INFO - Deleting transcription job: 8c343f05-a32b-4014-b54e-7e9b210a440b
+2026-06-28 01:19:17,915 - INFO - Deleting remote file: d19db088-ab15-47ce-a558-77639746ede4
+2026-06-28 01:19:17,925 - INFO - Deleting transcription job: 16ad4850-d877-4faa-9ef8-b4205614af21
+2026-06-28 01:19:18,057 - INFO - Deleting remote file: 3b3b4b7d-9b47-46f6-ba3f-3337533ee5c4
+2026-06-28 01:19:18,227 - INFO - Deleting remote file: 33c115aa-4ecf-42b9-8114-b817a4b18dae
+2026-06-28 01:19:18,237 - INFO - Deleting remote file: 4f82be25-a06c-4149-9a00-0b08c08fe16b
+2026-06-28 01:19:18,292 - INFO - Deleting transcription job: ebda15d5-e1e6-4fec-8d16-bb448e21e66f
+2026-06-28 01:19:18,368 - INFO - [SUCCESS] RB_0025 (general_utterance) | Human: 'ممكن تحوليني على مدير الفرع' -> ASR: 'ممكن تحوليني على مدير الفرع؟' | Normalized Human: 'ممكن تحوليني علي مدير الفرع' -> Normalized ASR: 'ممكن تحوليني علي مدير الفرع؟' | WER: 20.00%
+2026-06-28 01:19:18,369 - INFO - Deleting remote file: 1790c87d-b735-456a-b723-0f3f599407e6
+2026-06-28 01:19:18,369 - INFO - Uploading file: RB_0033.wav
+2026-06-28 01:19:18,393 - INFO - Deleting transcription job: 2a5385d9-f3c3-41cc-83ef-e08afb30f11d
+2026-06-28 01:19:18,393 - INFO - Deleting remote file: 76c97f3f-696e-4f8a-b91d-9f1ba90b3bed
+2026-06-28 01:19:18,532 - INFO - [SUCCESS] RB_0026 (branch_name) | Human: 'أخوي ولا اختي' -> ASR: 'أخوي ولا أختي؟' | Normalized Human: 'اخوي ولا اختي' -> Normalized ASR: 'اخوي ولا اختي؟' | WER: 33.33%
+2026-06-28 01:19:18,532 - INFO - Uploading file: RB_0034.wav
+2026-06-28 01:19:18,687 - INFO - [SUCCESS] RB_0028 (general_utterance) | Human: 'فرع الرياض الرئيسي وين مكانه بالضبط' -> ASR: 'مرحبًا يا أستاذ رائد، شو يعني مكانك بالضبط؟' | Normalized Human: 'فرع الرياض الرئيسي وين مكانه بالضبط' -> Normalized ASR: 'مرحبا يا استاذ رائد، شو يعني مكانك بالضبط؟' | WER: 133.33%
+2026-06-28 01:19:18,687 - INFO - Uploading file: RB_0035.wav
+2026-06-28 01:19:18,745 - INFO - Deleting remote file: ec27445c-bffa-47d5-85ce-71421b1e6338
+2026-06-28 01:19:18,773 - INFO - [SUCCESS] RB_0027 (general_utterance) | Human: 'أنا حاليا في شرق الرياض ممكن تعلميني اقرب فرع لي' -> ASR: 'أنا حالياً في شارع الرياض، ممكن تسأل مني أقرب صراف آلي؟' | Normalized Human: 'انا حاليا في شرق الرياض ممكن تعلميني اقرب فرع لي' -> Normalized ASR: 'انا حاليا في شارع الرياض، ممكن تسال مني اقرب صراف الي؟' | WER: 60.00%
+2026-06-28 01:19:18,773 - INFO - Uploading file: RB_0036.wav
+2026-06-28 01:19:18,816 - INFO - [SUCCESS] RB_0030 (general_utterance) | Human: 'طيب مافي فرع ثاني غير هذول الفرعين' -> ASR: 'طيب، ما في طرف ثاني غير هذول الفرعين.' | Normalized Human: 'طيب مافي فرع ثاني غير هذول الفرعين' -> Normalized ASR: 'طيب، ما في طرف ثاني غير هذول الفرعين' | WER: 57.14%
+2026-06-28 01:19:18,816 - INFO - Uploading file: RB_0037.wav
+2026-06-28 01:19:18,852 - INFO - [SUCCESS] RB_0029 (general_utterance) | Human: 'وش الفرع القريب مني' -> ASR: 'وش الفرع القريب منه؟' | Normalized Human: 'وش الفرع القريب مني' -> Normalized ASR: 'وش الفرع القريب منه؟' | WER: 25.00%
+2026-06-28 01:19:18,853 - INFO - Uploading file: RB_0038.wav
+2026-06-28 01:19:18,853 - INFO - Deleting remote file: 3a9585e6-fd2f-4c5d-bd90-804523279a4b
+2026-06-28 01:19:18,928 - INFO - Uploaded successfully. File ID: 9142855f-565d-4446-8565-31465b328aa6
+2026-06-28 01:19:18,928 - INFO - Creating job for file_id: 9142855f-565d-4446-8565-31465b328aa6
+2026-06-28 01:19:19,002 - INFO - Uploaded successfully. File ID: ddf7025a-2127-40d3-8b80-ea9f01efe118
+2026-06-28 01:19:19,002 - INFO - Creating job for file_id: ddf7025a-2127-40d3-8b80-ea9f01efe118
+2026-06-28 01:19:19,184 - INFO - Uploaded successfully. File ID: 312539c7-648c-437e-a1e2-58e2c012e985
+2026-06-28 01:19:19,184 - INFO - Creating job for file_id: 312539c7-648c-437e-a1e2-58e2c012e985
+2026-06-28 01:19:19,199 - INFO - [SUCCESS] RB_0031 (general_utterance) | Human: 'مافهمتيني أنا قاعده أسألك ايش الفرع القريب مني' -> ASR: 'مرحبًا، فين؟ أنا قاعدة أسألك عن الفرع القريب مني.' | Normalized Human: 'مافهمتيني انا قاعده اسالك ايش الفرع القريب مني' -> Normalized ASR: 'مرحبا، فين؟ انا قاعده اسالك عن الفرع القريب مني' | WER: 37.50%
+2026-06-28 01:19:19,199 - INFO - Uploading file: RB_0039.wav
+2026-06-28 01:19:19,288 - INFO - Uploaded successfully. File ID: 64706d67-d0c9-4171-a75f-270c85f04638
+2026-06-28 01:19:19,288 - INFO - Creating job for file_id: 64706d67-d0c9-4171-a75f-270c85f04638
+2026-06-28 01:19:19,299 - INFO - [SUCCESS] RB_0032 (branch_name) | Human: 'قتلك فرع العليا' -> ASR: 'فرع العليا.' | Normalized Human: 'قتلك فرع العليا' -> Normalized ASR: 'فرع العليا' | WER: 33.33%
+2026-06-28 01:19:19,299 - INFO - Uploading file: RB_0040.wav
+2026-06-28 01:19:19,304 - INFO - Uploaded successfully. File ID: 09f5bdd4-b824-442a-8239-4c0874218f14
+2026-06-28 01:19:19,304 - INFO - Creating job for file_id: 09f5bdd4-b824-442a-8239-4c0874218f14
+2026-06-28 01:19:19,357 - INFO - Created job successfully. Job ID: be102543-e335-4761-8d4e-f8bd217d3d67
+2026-06-28 01:19:19,357 - INFO - Polling job: be102543-e335-4761-8d4e-f8bd217d3d67
+2026-06-28 01:19:19,358 - INFO - Uploaded successfully. File ID: 718b2ea7-6390-458e-b8aa-4bae7a4a3015
+2026-06-28 01:19:19,359 - INFO - Creating job for file_id: 718b2ea7-6390-458e-b8aa-4bae7a4a3015
+2026-06-28 01:19:19,433 - INFO - Created job successfully. Job ID: 28494450-2661-474b-948a-e5c74d66ae9c
+2026-06-28 01:19:19,433 - INFO - Polling job: 28494450-2661-474b-948a-e5c74d66ae9c
+2026-06-28 01:19:19,607 - INFO - Created job successfully. Job ID: a95b9745-0aa9-46f9-a251-bebeac995a7f
+2026-06-28 01:19:19,607 - INFO - Polling job: a95b9745-0aa9-46f9-a251-bebeac995a7f
+2026-06-28 01:19:19,711 - INFO - Created job successfully. Job ID: a47a7997-c9c5-415c-8b00-daf1c63c5b26
+2026-06-28 01:19:19,712 - INFO - Polling job: a47a7997-c9c5-415c-8b00-daf1c63c5b26
+2026-06-28 01:19:19,721 - INFO - Uploaded successfully. File ID: 92a9c17e-2b8f-45f6-a24a-b84a530cf0ac
+2026-06-28 01:19:19,721 - INFO - Creating job for file_id: 92a9c17e-2b8f-45f6-a24a-b84a530cf0ac
+2026-06-28 01:19:19,726 - INFO - Created job successfully. Job ID: 14b61e98-744e-4bf1-afe8-72699c1d2fbc
+2026-06-28 01:19:19,726 - INFO - Polling job: 14b61e98-744e-4bf1-afe8-72699c1d2fbc
+2026-06-28 01:19:19,783 - INFO - Created job successfully. Job ID: b6ef814a-dc32-4010-bd5a-f0a95063c41c
+2026-06-28 01:19:19,783 - INFO - Uploaded successfully. File ID: 8e04c359-8c80-4f20-91b4-7ad0a48ca29b
+2026-06-28 01:19:19,784 - INFO - Polling job: b6ef814a-dc32-4010-bd5a-f0a95063c41c
+2026-06-28 01:19:19,784 - INFO - Creating job for file_id: 8e04c359-8c80-4f20-91b4-7ad0a48ca29b
+2026-06-28 01:19:20,148 - INFO - Created job successfully. Job ID: e5eb303e-b7e5-47f3-ac00-0e30b3a33da0
+2026-06-28 01:19:20,148 - INFO - Polling job: e5eb303e-b7e5-47f3-ac00-0e30b3a33da0
+2026-06-28 01:19:20,210 - INFO - Created job successfully. Job ID: 525c1ad6-334c-49b0-99c0-498728ee27e4
+2026-06-28 01:19:20,211 - INFO - Polling job: 525c1ad6-334c-49b0-99c0-498728ee27e4
+2026-06-28 01:19:22,628 - INFO - Deleting transcription job: be102543-e335-4761-8d4e-f8bd217d3d67
+2026-06-28 01:19:22,727 - INFO - Deleting transcription job: 28494450-2661-474b-948a-e5c74d66ae9c
+2026-06-28 01:19:22,867 - INFO - Deleting transcription job: a95b9745-0aa9-46f9-a251-bebeac995a7f
+2026-06-28 01:19:22,999 - INFO - Deleting transcription job: 14b61e98-744e-4bf1-afe8-72699c1d2fbc
+2026-06-28 01:19:23,014 - INFO - Deleting transcription job: a47a7997-c9c5-415c-8b00-daf1c63c5b26
+2026-06-28 01:19:23,077 - INFO - Deleting transcription job: b6ef814a-dc32-4010-bd5a-f0a95063c41c
+2026-06-28 01:19:23,086 - INFO - Deleting remote file: 9142855f-565d-4446-8565-31465b328aa6
+2026-06-28 01:19:23,183 - INFO - Deleting remote file: ddf7025a-2127-40d3-8b80-ea9f01efe118
+2026-06-28 01:19:23,324 - INFO - Deleting remote file: 312539c7-648c-437e-a1e2-58e2c012e985
+2026-06-28 01:19:23,427 - INFO - Deleting transcription job: e5eb303e-b7e5-47f3-ac00-0e30b3a33da0
+2026-06-28 01:19:23,453 - INFO - Deleting remote file: 09f5bdd4-b824-442a-8239-4c0874218f14
+2026-06-28 01:19:23,466 - INFO - Deleting remote file: 64706d67-d0c9-4171-a75f-270c85f04638
+2026-06-28 01:19:23,467 - INFO - Deleting transcription job: 525c1ad6-334c-49b0-99c0-498728ee27e4
+2026-06-28 01:19:23,541 - INFO - Deleting remote file: 718b2ea7-6390-458e-b8aa-4bae7a4a3015
+2026-06-28 01:19:23,587 - INFO - [SUCCESS] RB_0033 (general_utterance) | Human: 'ابغا اتأكد من ساعات العمل الله يعافيك' -> ASR: 'أبغى أتأكد من ساعات العمل، الله يعافيك.' | Normalized Human: 'ابغا اتاكد من ساعات العمل الله يعافيك' -> Normalized ASR: 'ابغي اتاكد من ساعات العمل، الله يعافيك' | WER: 28.57%
+2026-06-28 01:19:23,587 - INFO - Uploading file: RB_0041.wav
+2026-06-28 01:19:23,631 - INFO - [SUCCESS] RB_0034 (branch_name) | Human: 'عربي' -> ASR: 'عَرَقي.' | Normalized Human: 'عربي' -> Normalized ASR: 'عرقي' | WER: 100.00%
+2026-06-28 01:19:23,631 - INFO - Uploading file: RB_0042.wav
+2026-06-28 01:19:23,771 - INFO - [SUCCESS] RB_0035 (branch_name) | Human: 'عربي' -> ASR: 'العربي.' | Normalized Human: 'عربي' -> Normalized ASR: 'العربي' | WER: 100.00%
+2026-06-28 01:19:23,771 - INFO - Uploading file: RB_0043.wav
+2026-06-28 01:19:23,884 - INFO - Deleting remote file: 92a9c17e-2b8f-45f6-a24a-b84a530cf0ac
+2026-06-28 01:19:23,894 - INFO - [SUCCESS] RB_0037 (general_utterance) | Human: 'ايش الفروع' -> ASR: 'إيش الفرع؟' | Normalized Human: 'ايش الفروع' -> Normalized ASR: 'ايش الفرع؟' | WER: 50.00%
+2026-06-28 01:19:23,894 - INFO - Uploading file: RB_0044.wav
+2026-06-28 01:19:23,952 - INFO - [SUCCESS] RB_0036 (general_utterance) | Human: 'طيب بتحوليني على اي فرع' -> ASR: 'عبد الحليم العيسى.' | Normalized Human: 'طيب بتحوليني علي اي فرع' -> Normalized ASR: 'عبد الحليم العيسى' | WER: 100.00%
+2026-06-28 01:19:23,952 - INFO - Uploading file: RB_0045.wav
+2026-06-28 01:19:23,962 - INFO - Deleting remote file: 8e04c359-8c80-4f20-91b4-7ad0a48ca29b
+2026-06-28 01:19:23,988 - INFO - [SUCCESS] RB_0038 (general_utterance) | Human: 'فرع الرياض' -> ASR: 'فرع الرياض.' | Normalized Human: 'فرع الرياض' -> Normalized ASR: 'فرع الرياض' | WER: 0.00%
+2026-06-28 01:19:23,988 - INFO - Uploading file: RB_0046.wav
+2026-06-28 01:19:24,102 - INFO - Uploaded successfully. File ID: 5f48efd5-c2e9-474f-9222-28ad55949d81
+2026-06-28 01:19:24,102 - INFO - Creating job for file_id: 5f48efd5-c2e9-474f-9222-28ad55949d81
+2026-06-28 01:19:24,141 - INFO - Uploaded successfully. File ID: 69c3cbb3-34ae-4a2a-a7dd-db61c9ab438d
+2026-06-28 01:19:24,141 - INFO - Creating job for file_id: 69c3cbb3-34ae-4a2a-a7dd-db61c9ab438d
+2026-06-28 01:19:24,272 - INFO - Uploaded successfully. File ID: b5cc8248-66ec-4451-b439-b3a8414c762a
+2026-06-28 01:19:24,273 - INFO - Creating job for file_id: b5cc8248-66ec-4451-b439-b3a8414c762a
+2026-06-28 01:19:24,329 - INFO - [SUCCESS] RB_0039 (general_utterance) | Human: 'اي حوليني' -> ASR: 'الحولاني.' | Normalized Human: 'اي حوليني' -> Normalized ASR: 'الحولاني' | WER: 100.00%
+2026-06-28 01:19:24,330 - INFO - Uploading file: RB_0047.wav
+2026-06-28 01:19:24,374 - INFO - Uploaded successfully. File ID: 10628263-0a86-4f8f-a377-91c0d40c018a
+2026-06-28 01:19:24,374 - INFO - Creating job for file_id: 10628263-0a86-4f8f-a377-91c0d40c018a
+2026-06-28 01:19:24,453 - INFO - [SUCCESS] RB_0040 (branch_code) | Human: 'ثلاثمائة وثلاثة' -> ASR: '303.' | Normalized Human: 'ثلاثمائه وثلاثه' -> Normalized ASR: '303' | WER: 100.00%
+2026-06-28 01:19:24,453 - INFO - Uploading file: RB_0048.wav
+2026-06-28 01:19:24,529 - INFO - Created job successfully. Job ID: a1bf8ade-3671-47c5-9157-37274bfc94b9
+2026-06-28 01:19:24,529 - INFO - Polling job: a1bf8ade-3671-47c5-9157-37274bfc94b9
+2026-06-28 01:19:24,549 - INFO - Uploaded successfully. File ID: 0b3d3254-7fc6-4d9d-b765-9a06accecdfe
+2026-06-28 01:19:24,549 - INFO - Creating job for file_id: 0b3d3254-7fc6-4d9d-b765-9a06accecdfe
+2026-06-28 01:19:24,562 - INFO - Created job successfully. Job ID: b7eaa21d-0a67-4286-ba72-4dae5678c432
+2026-06-28 01:19:24,562 - INFO - Polling job: b7eaa21d-0a67-4286-ba72-4dae5678c432
+2026-06-28 01:19:24,567 - INFO - Uploaded successfully. File ID: e4940da8-13fb-4481-ab68-2d5cc3305577
+2026-06-28 01:19:24,568 - INFO - Creating job for file_id: e4940da8-13fb-4481-ab68-2d5cc3305577
+2026-06-28 01:19:24,692 - INFO - Created job successfully. Job ID: efaa15f9-99a3-494d-8506-f48dee988d4a
+2026-06-28 01:19:24,692 - INFO - Polling job: efaa15f9-99a3-494d-8506-f48dee988d4a
+2026-06-28 01:19:24,793 - INFO - Created job successfully. Job ID: 5fcb4512-c78c-496a-be18-53ca0ee1d909
+2026-06-28 01:19:24,793 - INFO - Polling job: 5fcb4512-c78c-496a-be18-53ca0ee1d909
+2026-06-28 01:19:24,833 - INFO - Uploaded successfully. File ID: fe025cce-7c3d-4406-aa3e-ac114db30669
+2026-06-28 01:19:24,833 - INFO - Creating job for file_id: fe025cce-7c3d-4406-aa3e-ac114db30669
+2026-06-28 01:19:24,970 - INFO - Created job successfully. Job ID: 90563f73-d4e6-4715-a2b2-bf76df4a8534
+2026-06-28 01:19:24,971 - INFO - Polling job: 90563f73-d4e6-4715-a2b2-bf76df4a8534
+2026-06-28 01:19:24,987 - INFO - Uploaded successfully. File ID: b1a9eaf7-aab7-45df-a257-c5ae3182dd3c
+2026-06-28 01:19:24,988 - INFO - Creating job for file_id: b1a9eaf7-aab7-45df-a257-c5ae3182dd3c
+2026-06-28 01:19:24,996 - INFO - Created job successfully. Job ID: 60e41609-583a-4e3d-aac8-146bbb7bedcb
+2026-06-28 01:19:24,997 - INFO - Polling job: 60e41609-583a-4e3d-aac8-146bbb7bedcb
+2026-06-28 01:19:25,257 - INFO - Created job successfully. Job ID: b4fcbb84-6c4a-4ea9-ade4-8ccf89f3d07c
+2026-06-28 01:19:25,258 - INFO - Polling job: b4fcbb84-6c4a-4ea9-ade4-8ccf89f3d07c
+2026-06-28 01:19:25,413 - INFO - Created job successfully. Job ID: 8ca7033a-1a4d-480d-bf92-5dda02f6544f
+2026-06-28 01:19:25,414 - INFO - Polling job: 8ca7033a-1a4d-480d-bf92-5dda02f6544f
+2026-06-28 01:19:27,805 - INFO - Deleting transcription job: a1bf8ade-3671-47c5-9157-37274bfc94b9
+2026-06-28 01:19:27,832 - INFO - Deleting transcription job: b7eaa21d-0a67-4286-ba72-4dae5678c432
+2026-06-28 01:19:27,968 - INFO - Deleting transcription job: efaa15f9-99a3-494d-8506-f48dee988d4a
+2026-06-28 01:19:28,066 - INFO - Deleting transcription job: 5fcb4512-c78c-496a-be18-53ca0ee1d909
+2026-06-28 01:19:28,248 - INFO - Deleting remote file: 5f48efd5-c2e9-474f-9222-28ad55949d81
+2026-06-28 01:19:28,258 - INFO - Deleting transcription job: 90563f73-d4e6-4715-a2b2-bf76df4a8534
+2026-06-28 01:19:28,258 - INFO - Deleting transcription job: 60e41609-583a-4e3d-aac8-146bbb7bedcb
+2026-06-28 01:19:28,302 - INFO - Deleting remote file: 69c3cbb3-34ae-4a2a-a7dd-db61c9ab438d
+2026-06-28 01:19:28,434 - INFO - Deleting remote file: b5cc8248-66ec-4451-b439-b3a8414c762a
+2026-06-28 01:19:28,531 - INFO - Deleting remote file: 10628263-0a86-4f8f-a377-91c0d40c018a
+2026-06-28 01:19:28,531 - INFO - Deleting transcription job: b4fcbb84-6c4a-4ea9-ade4-8ccf89f3d07c
+2026-06-28 01:19:28,704 - INFO - Deleting remote file: 0b3d3254-7fc6-4d9d-b765-9a06accecdfe
+2026-06-28 01:19:28,705 - INFO - Deleting transcription job: 8ca7033a-1a4d-480d-bf92-5dda02f6544f
+2026-06-28 01:19:28,742 - INFO - [SUCCESS] RB_0041 (branch_code) | Human: 'فرع 303' -> ASR: 'فرع 310.' | Normalized Human: 'فرع 303' -> Normalized ASR: 'فرع 310' | WER: 50.00%
+2026-06-28 01:19:28,742 - INFO - Deleting remote file: e4940da8-13fb-4481-ab68-2d5cc3305577
+2026-06-28 01:19:28,742 - INFO - Uploading file: RB_0049.wav
+2026-06-28 01:19:28,781 - INFO - [SUCCESS] RB_0042 (branch_code) | Human: 'مئة وأربعة' -> ASR: 'آه، 104.' | Normalized Human: 'مئه واربعه' -> Normalized ASR: 'اه، 104' | WER: 100.00%
+2026-06-28 01:19:28,781 - INFO - Uploading file: RB_0050.wav
+2026-06-28 01:19:28,885 - INFO - [SUCCESS] RB_0043 (branch_name) | Human: 'فرع مكة' -> ASR: 'مطار مكة.' | Normalized Human: 'فرع مكه' -> Normalized ASR: 'مطار مكة' | WER: 100.00%
+2026-06-28 01:19:28,886 - INFO - Uploading file: RB_0051.wav
+2026-06-28 01:19:28,975 - INFO - [SUCCESS] RB_0044 (branch_name) | Human: 'عربي عربي' -> ASR: 'عربي، عربي.' | Normalized Human: 'عربي عربي' -> Normalized ASR: 'عربي، عربي' | WER: 50.00%
+2026-06-28 01:19:28,975 - INFO - Uploading file: RB_0052.wav
+2026-06-28 01:19:28,984 - INFO - Deleting remote file: fe025cce-7c3d-4406-aa3e-ac114db30669
+2026-06-28 01:19:29,149 - INFO - [SUCCESS] RB_0045 (general_utterance) | Human: 'أنا عند فرع جده الرئيسي وأبي اتكلم مع المدير الحين' -> ASR: 'أنا عند فرع جدة الرئيسي، وبتكلم مع المدير الحين.' | Normalized Human: 'انا عند فرع جده الرئيسي وابي اتكلم مع المدير الحين' -> Normalized ASR: 'انا عند فرع جده الرئيسي، وبتكلم مع المدير الحين' | WER: 30.00%
+2026-06-28 01:19:29,149 - INFO - Uploading file: RB_0053.wav
+2026-06-28 01:19:29,163 - INFO - Deleting remote file: b1a9eaf7-aab7-45df-a257-c5ae3182dd3c
+2026-06-28 01:19:29,196 - INFO - [SUCCESS] RB_0046 (general_utterance) | Human: 'ليش تحوليني على الأوبريتر' -> ASR: 'ليش تحوليني على أوبريتر؟' | Normalized Human: 'ليش تحوليني علي الاوبريتر' -> Normalized ASR: 'ليش تحوليني علي اوبريتر؟' | WER: 25.00%
+2026-06-28 01:19:29,196 - INFO - Uploading file: RB_0054.wav
+2026-06-28 01:19:29,211 - INFO - Uploaded successfully. File ID: c1d4869c-f6c8-4243-a48a-8db81c04c35b
+2026-06-28 01:19:29,212 - INFO - Creating job for file_id: c1d4869c-f6c8-4243-a48a-8db81c04c35b
+2026-06-28 01:19:29,310 - INFO - Uploaded successfully. File ID: 4b83efff-81df-4a66-bace-63100ae73098
+2026-06-28 01:19:29,311 - INFO - Creating job for file_id: 4b83efff-81df-4a66-bace-63100ae73098
+2026-06-28 01:19:29,426 - INFO - [SUCCESS] RB_0047 (branch_name) | Human: 'بس هذا الفرعين' -> ASR: 'أسامة الفرعان.' | Normalized Human: 'بس هذا الفرعين' -> Normalized ASR: 'اسامه الفرعان' | WER: 100.00%
+2026-06-28 01:19:29,426 - INFO - Uploading file: RB_0055.wav
+2026-06-28 01:19:29,602 - INFO - [SUCCESS] RB_0048 (general_utterance) | Human: 'كيف اكتب لك وأنا قاعدة أكلمك' -> ASR: 'كيف أكتب لك وردة على كلمة؟' | Normalized Human: 'كيف اكتب لك وانا قاعده اكلمك' -> Normalized ASR: 'كيف اكتب لك ورده علي كلمة؟' | WER: 50.00%
+2026-06-28 01:19:29,602 - INFO - Uploading file: RB_0056.wav
+2026-06-28 01:19:29,629 - INFO - Uploaded successfully. File ID: c24006ce-043a-4409-bed4-14a3a944fca4
+2026-06-28 01:19:29,629 - INFO - Creating job for file_id: c24006ce-043a-4409-bed4-14a3a944fca4
+2026-06-28 01:19:29,643 - INFO - Uploaded successfully. File ID: 5394d6e0-2685-4c7e-abfb-99d7f56a4ef2
+2026-06-28 01:19:29,643 - INFO - Creating job for file_id: 5394d6e0-2685-4c7e-abfb-99d7f56a4ef2
+2026-06-28 01:19:29,658 - INFO - Created job successfully. Job ID: ea0270b9-78ad-45e2-8666-d15b2ade0dbe
+2026-06-28 01:19:29,658 - INFO - Polling job: ea0270b9-78ad-45e2-8666-d15b2ade0dbe
+2026-06-28 01:19:29,699 - INFO - Uploaded successfully. File ID: 32815d11-55a3-4a34-a640-511eb3b671d5
+2026-06-28 01:19:29,699 - INFO - Creating job for file_id: 32815d11-55a3-4a34-a640-511eb3b671d5
+2026-06-28 01:19:29,723 - INFO - Uploaded successfully. File ID: 0499a527-0730-4a43-8128-32cd22d698bf
+2026-06-28 01:19:29,723 - INFO - Creating job for file_id: 0499a527-0730-4a43-8128-32cd22d698bf
+2026-06-28 01:19:29,763 - INFO - Created job successfully. Job ID: c2c20a5b-27a4-4f08-af4d-b1d08c792b65
+2026-06-28 01:19:29,764 - INFO - Polling job: c2c20a5b-27a4-4f08-af4d-b1d08c792b65
+2026-06-28 01:19:29,892 - INFO - Uploaded successfully. File ID: 8c3b4749-4220-4f97-96b4-9ea7bc4cdc41
+2026-06-28 01:19:29,892 - INFO - Creating job for file_id: 8c3b4749-4220-4f97-96b4-9ea7bc4cdc41
+2026-06-28 01:19:30,048 - INFO - Created job successfully. Job ID: 7acbea55-1732-48c2-bf93-ef535fe26072
+2026-06-28 01:19:30,048 - INFO - Polling job: 7acbea55-1732-48c2-bf93-ef535fe26072
+2026-06-28 01:19:30,079 - INFO - Created job successfully. Job ID: 5ae384be-4521-4ab3-a8a4-07c039b3878a
+2026-06-28 01:19:30,079 - INFO - Polling job: 5ae384be-4521-4ab3-a8a4-07c039b3878a
+2026-06-28 01:19:30,131 - INFO - Created job successfully. Job ID: 23e8edf0-3b17-40a3-832a-0e6fd49735de
+2026-06-28 01:19:30,132 - INFO - Polling job: 23e8edf0-3b17-40a3-832a-0e6fd49735de
+2026-06-28 01:19:30,136 - INFO - Uploaded successfully. File ID: 7ffdc02f-0012-4ca2-9ea9-0bf869ff25e6
+2026-06-28 01:19:30,136 - INFO - Creating job for file_id: 7ffdc02f-0012-4ca2-9ea9-0bf869ff25e6
+2026-06-28 01:19:30,148 - INFO - Created job successfully. Job ID: 47ea10ed-3efc-48d1-bd91-07592e5dbdcf
+2026-06-28 01:19:30,149 - INFO - Polling job: 47ea10ed-3efc-48d1-bd91-07592e5dbdcf
+2026-06-28 01:19:30,318 - INFO - Created job successfully. Job ID: f606f182-c526-4662-86c6-ace754f3efc0
+2026-06-28 01:19:30,318 - INFO - Polling job: f606f182-c526-4662-86c6-ace754f3efc0
+2026-06-28 01:19:30,571 - INFO - Created job successfully. Job ID: eb9e3559-cb50-41b7-9e51-58a52d7b31c8
+2026-06-28 01:19:30,572 - INFO - Polling job: eb9e3559-cb50-41b7-9e51-58a52d7b31c8
+2026-06-28 01:19:32,914 - INFO - Deleting transcription job: ea0270b9-78ad-45e2-8666-d15b2ade0dbe
+2026-06-28 01:19:33,026 - INFO - Deleting transcription job: c2c20a5b-27a4-4f08-af4d-b1d08c792b65
+2026-06-28 01:19:33,359 - INFO - Deleting remote file: c1d4869c-f6c8-4243-a48a-8db81c04c35b
+2026-06-28 01:19:33,506 - INFO - Deleting remote file: 4b83efff-81df-4a66-bace-63100ae73098
+2026-06-28 01:19:33,866 - INFO - [SUCCESS] RB_0049 (general_utterance) | Human: 'فرع ايش' -> ASR: 'فرع الإيش؟' | Normalized Human: 'فرع ايش' -> Normalized ASR: 'فرع الايش؟' | WER: 50.00%
+2026-06-28 01:19:33,866 - INFO - Uploading file: RB_0057.wav
+2026-06-28 01:19:33,892 - INFO - Deleting transcription job: eb9e3559-cb50-41b7-9e51-58a52d7b31c8
+2026-06-28 01:19:34,063 - INFO - [SUCCESS] RB_0050 (general_utterance) | Human: 'ما اعرف' -> ASR: 'رقم واحد.' | Normalized Human: 'ما اعرف' -> Normalized ASR: 'رقم واحد' | WER: 100.00%
+2026-06-28 01:19:34,063 - INFO - Uploading file: RB_0058.wav
+2026-06-28 01:19:34,394 - INFO - Deleting remote file: 7ffdc02f-0012-4ca2-9ea9-0bf869ff25e6
+2026-06-28 01:19:34,535 - INFO - Uploaded successfully. File ID: e997a6ba-15c5-412c-bd83-20768ce18bb5
+2026-06-28 01:19:34,535 - INFO - Creating job for file_id: e997a6ba-15c5-412c-bd83-20768ce18bb5
+2026-06-28 01:19:34,647 - INFO - Uploaded successfully. File ID: 9c509a62-14e8-4735-9d0f-bb50df34057a
+2026-06-28 01:19:34,647 - INFO - Creating job for file_id: 9c509a62-14e8-4735-9d0f-bb50df34057a
+2026-06-28 01:19:34,922 - INFO - [SUCCESS] RB_0056 (general_utterance) | Human: 'معليش ممكن تعيدينهم' -> ASR: 'ما عنديش من كم ساعة جاي هون.' | Normalized Human: 'معليش ممكن تعيدينهم' -> Normalized ASR: 'ما عنديش من كم ساعه جاي هون' | WER: 233.33%
+2026-06-28 01:19:34,922 - INFO - Uploading file: RB_0059.wav
+2026-06-28 01:19:35,013 - INFO - Created job successfully. Job ID: 7acdf167-e69d-4f64-b470-45a6a1ed64c4
+2026-06-28 01:19:35,013 - INFO - Polling job: 7acdf167-e69d-4f64-b470-45a6a1ed64c4
+2026-06-28 01:19:35,124 - INFO - Created job successfully. Job ID: 082084de-96f6-437d-818b-b7352c7dfb9e
+2026-06-28 01:19:35,124 - INFO - Polling job: 082084de-96f6-437d-818b-b7352c7dfb9e
+2026-06-28 01:19:35,490 - INFO - Uploaded successfully. File ID: 15595bb9-96fc-472b-b0dd-38b4362b468a
+2026-06-28 01:19:35,490 - INFO - Creating job for file_id: 15595bb9-96fc-472b-b0dd-38b4362b468a
+2026-06-28 01:19:35,750 - INFO - Deleting transcription job: 7acbea55-1732-48c2-bf93-ef535fe26072
+2026-06-28 01:19:35,791 - INFO - Deleting transcription job: 5ae384be-4521-4ab3-a8a4-07c039b3878a
+2026-06-28 01:19:35,868 - INFO - Deleting transcription job: 23e8edf0-3b17-40a3-832a-0e6fd49735de
+2026-06-28 01:19:35,889 - INFO - Deleting transcription job: 47ea10ed-3efc-48d1-bd91-07592e5dbdcf
+2026-06-28 01:19:35,929 - INFO - Created job successfully. Job ID: 892f0473-e107-4ad6-aad9-9a01e0d98aeb
+2026-06-28 01:19:35,929 - INFO - Polling job: 892f0473-e107-4ad6-aad9-9a01e0d98aeb
+2026-06-28 01:19:36,024 - INFO - Deleting transcription job: f606f182-c526-4662-86c6-ace754f3efc0
+2026-06-28 01:19:36,207 - INFO - Deleting remote file: c24006ce-043a-4409-bed4-14a3a944fca4
+2026-06-28 01:19:36,265 - INFO - Deleting remote file: 5394d6e0-2685-4c7e-abfb-99d7f56a4ef2
+2026-06-28 01:19:36,334 - INFO - Deleting remote file: 32815d11-55a3-4a34-a640-511eb3b671d5
+2026-06-28 01:19:36,370 - INFO - Deleting remote file: 0499a527-0730-4a43-8128-32cd22d698bf
+2026-06-28 01:19:36,490 - INFO - Deleting remote file: 8c3b4749-4220-4f97-96b4-9ea7bc4cdc41
+2026-06-28 01:19:36,661 - INFO - [SUCCESS] RB_0052 (general_utterance) | Human: 'ممكن تحوليني على خدمة العملاء' -> ASR: 'ممكن تهويني على خدمة العملاء؟' | Normalized Human: 'ممكن تحوليني علي خدمه العملاء' -> Normalized ASR: 'ممكن تهويني علي خدمه العملاء؟' | WER: 40.00%
+2026-06-28 01:19:36,662 - INFO - Uploading file: RB_0060.wav
+2026-06-28 01:19:36,736 - INFO - [SUCCESS] RB_0051 (general_utterance) | Human: 'ما احتاج اروح أنا كلمتك عشان ما أبغى أروح الفرع ف ليش يهمك اسم الفرع وش بيفرق' -> ASR: 'المفصل يروح، أنا كلمتك وما أبغى أروح الفرع. طيب إيش يهمك اسم الفرع، وش بيفرق؟' | Normalized Human: 'ما احتاج اروح انا كلمتك عشان ما ابغي اروح الفرع ف ليش يهمك اسم الفرع وش بيفرق' -> Normalized ASR: 'المفصل يروح، انا كلمتك وما ابغي اروح الفرع طيب ايش يهمك اسم الفرع، وش بيفرق؟' | WER: 52.94%
+2026-06-28 01:19:36,736 - INFO - Uploading file: RB_0061.wav
+2026-06-28 01:19:36,797 - INFO - [SUCCESS] RB_0053 (branch_name) | Human: 'أنا عميل ماسي' -> ASR: 'أنا عميل، ما في—' | Normalized Human: 'انا عميل ماسي' -> Normalized ASR: 'انا عميل، ما في' | WER: 100.00%
+2026-06-28 01:19:36,797 - INFO - Uploading file: RB_0062.wav
+2026-06-28 01:19:36,839 - INFO - [SUCCESS] RB_0054 (general_utterance) | Human: 'كم فرع اسمه فرع العزيزية' -> ASR: 'كم فرع اسمه فرع العزيزي؟' | Normalized Human: 'كم فرع اسمه فرع العزيزيه' -> Normalized ASR: 'كم فرع اسمه فرع العزيزي؟' | WER: 20.00%
+2026-06-28 01:19:36,839 - INFO - Uploading file: RB_0063.wav
+2026-06-28 01:19:36,938 - INFO - [SUCCESS] RB_0055 (general_utterance) | Human: 'ايه حوليني' -> ASR: 'الحليب.' | Normalized Human: 'ايه حوليني' -> Normalized ASR: 'الحليب' | WER: 100.00%
+2026-06-28 01:19:36,938 - INFO - Uploading file: RB_0064.wav
+2026-06-28 01:19:37,180 - INFO - Uploaded successfully. File ID: 644ed267-ad46-4dc2-b5be-40712dcf509f
+2026-06-28 01:19:37,180 - INFO - Creating job for file_id: 644ed267-ad46-4dc2-b5be-40712dcf509f
+2026-06-28 01:19:37,209 - INFO - Uploaded successfully. File ID: 9de2c1e6-4954-4c14-858e-02e12765c91d
+2026-06-28 01:19:37,209 - INFO - Creating job for file_id: 9de2c1e6-4954-4c14-858e-02e12765c91d
+2026-06-28 01:19:37,268 - INFO - Uploaded successfully. File ID: c8f4d2f0-b1b3-4a21-805d-38dd4ad3c9af
+2026-06-28 01:19:37,268 - INFO - Creating job for file_id: c8f4d2f0-b1b3-4a21-805d-38dd4ad3c9af
+2026-06-28 01:19:37,343 - INFO - Uploaded successfully. File ID: 19331ad5-9215-4b4a-87e4-1bde357f181c
+2026-06-28 01:19:37,344 - INFO - Creating job for file_id: 19331ad5-9215-4b4a-87e4-1bde357f181c
+2026-06-28 01:19:37,467 - INFO - Uploaded successfully. File ID: 585f1611-dc8a-47e2-bdb9-7f2f5f1089fd
+2026-06-28 01:19:37,467 - INFO - Creating job for file_id: 585f1611-dc8a-47e2-bdb9-7f2f5f1089fd
+2026-06-28 01:19:37,608 - INFO - Created job successfully. Job ID: bcbe884c-13cd-4c15-bc33-87e17b920874
+2026-06-28 01:19:37,608 - INFO - Polling job: bcbe884c-13cd-4c15-bc33-87e17b920874
+2026-06-28 01:19:37,634 - INFO - Created job successfully. Job ID: 47168c98-34ca-4f5c-b069-e8288b392134
+2026-06-28 01:19:37,634 - INFO - Polling job: 47168c98-34ca-4f5c-b069-e8288b392134
+2026-06-28 01:19:37,706 - INFO - Created job successfully. Job ID: 6381af91-8292-4280-9057-d8e8c28b8e48
+2026-06-28 01:19:37,706 - INFO - Polling job: 6381af91-8292-4280-9057-d8e8c28b8e48
+2026-06-28 01:19:37,767 - INFO - Created job successfully. Job ID: 8b609d74-3aa6-44aa-ba6e-2347b1c171e7
+2026-06-28 01:19:37,767 - INFO - Polling job: 8b609d74-3aa6-44aa-ba6e-2347b1c171e7
+2026-06-28 01:19:37,895 - INFO - Created job successfully. Job ID: db37f5dd-c4fc-401a-a9ca-f20fb996a592
+2026-06-28 01:19:37,895 - INFO - Polling job: db37f5dd-c4fc-401a-a9ca-f20fb996a592
+2026-06-28 01:19:38,315 - INFO - Deleting transcription job: 7acdf167-e69d-4f64-b470-45a6a1ed64c4
+2026-06-28 01:19:38,402 - INFO - Deleting transcription job: 082084de-96f6-437d-818b-b7352c7dfb9e
+2026-06-28 01:19:38,784 - INFO - Deleting remote file: e997a6ba-15c5-412c-bd83-20768ce18bb5
+2026-06-28 01:19:38,849 - INFO - Deleting remote file: 9c509a62-14e8-4735-9d0f-bb50df34057a
+2026-06-28 01:19:39,189 - INFO - Deleting transcription job: 892f0473-e107-4ad6-aad9-9a01e0d98aeb
+2026-06-28 01:19:39,230 - INFO - [SUCCESS] RB_0057 (general_utterance) | Human: 'ودي أقدم بلاغ بصراحة الخدمة كانت سيئة' -> ASR: 'آه، ودي أقدم بلاغ، بصراحة، الخدمة كانت مرة سيئة.' | Normalized Human: 'ودي اقدم بلاغ بصراحه الخدمه كانت سيئه' -> Normalized ASR: 'اه، ودي اقدم بلاغ، بصراحة، الخدمه كانت مره سيئة' | WER: 71.43%
+2026-06-28 01:19:39,230 - INFO - Uploading file: RB_0065.wav
+2026-06-28 01:19:39,287 - INFO - [SUCCESS] RB_0058 (general_utterance) | Human: 'طيب عندكم فرع بالنخيل يعني' -> ASR: 'طيب، عندكم فرع في النخيل يعني؟' | Normalized Human: 'طيب عندكم فرع بالنخيل يعني' -> Normalized ASR: 'طيب، عندكم فرع في النخيل يعني؟' | WER: 80.00%
+2026-06-28 01:19:39,287 - INFO - Uploading file: RB_0066.wav
+2026-06-28 01:19:39,646 - INFO - Deleting remote file: 15595bb9-96fc-472b-b0dd-38b4362b468a
+2026-06-28 01:19:39,789 - INFO - Uploaded successfully. File ID: 37aaeb2b-3444-44d6-829f-6daa9703d02f
+2026-06-28 01:19:39,789 - INFO - Creating job for file_id: 37aaeb2b-3444-44d6-829f-6daa9703d02f
+2026-06-28 01:19:39,793 - INFO - Uploaded successfully. File ID: 4ea042a7-422d-488f-a4b3-13036166f3fd
+2026-06-28 01:19:39,793 - INFO - Creating job for file_id: 4ea042a7-422d-488f-a4b3-13036166f3fd
+2026-06-28 01:19:40,087 - INFO - [SUCCESS] RB_0059 (general_utterance) | Human: 'لا معليش جدة' -> ASR: 'جامعة الجدة.' | Normalized Human: 'لا معليش جده' -> Normalized ASR: 'جامعه الجدة' | WER: 100.00%
+2026-06-28 01:19:40,087 - INFO - Uploading file: RB_0067.wav
+2026-06-28 01:19:40,213 - INFO - Created job successfully. Job ID: 47ba1abf-0988-439d-a27f-002a7057416a
+2026-06-28 01:19:40,213 - INFO - Polling job: 47ba1abf-0988-439d-a27f-002a7057416a
+2026-06-28 01:19:40,219 - INFO - Created job successfully. Job ID: 50fbb9b9-90e6-4f71-a619-0a5d0e065b3a
+2026-06-28 01:19:40,220 - INFO - Polling job: 50fbb9b9-90e6-4f71-a619-0a5d0e065b3a
+2026-06-28 01:19:40,628 - INFO - Uploaded successfully. File ID: 278194f9-3447-4ca8-8eef-f7c724f21120
+2026-06-28 01:19:40,628 - INFO - Creating job for file_id: 278194f9-3447-4ca8-8eef-f7c724f21120
+2026-06-28 01:19:40,876 - INFO - Deleting transcription job: bcbe884c-13cd-4c15-bc33-87e17b920874
+2026-06-28 01:19:40,962 - INFO - Deleting transcription job: 6381af91-8292-4280-9057-d8e8c28b8e48
+2026-06-28 01:19:40,964 - INFO - Deleting transcription job: 47168c98-34ca-4f5c-b069-e8288b392134
+2026-06-28 01:19:41,030 - INFO - Deleting transcription job: 8b609d74-3aa6-44aa-ba6e-2347b1c171e7
+2026-06-28 01:19:41,053 - INFO - Created job successfully. Job ID: 4eae7ddf-0c44-4292-9dbf-9b8fb07725b8
+2026-06-28 01:19:41,053 - INFO - Polling job: 4eae7ddf-0c44-4292-9dbf-9b8fb07725b8
+2026-06-28 01:19:41,183 - INFO - Deleting transcription job: db37f5dd-c4fc-401a-a9ca-f20fb996a592
+2026-06-28 01:19:41,327 - INFO - Deleting remote file: 644ed267-ad46-4dc2-b5be-40712dcf509f
+2026-06-28 01:19:41,409 - INFO - Deleting remote file: c8f4d2f0-b1b3-4a21-805d-38dd4ad3c9af
+2026-06-28 01:19:41,424 - INFO - Deleting remote file: 9de2c1e6-4954-4c14-858e-02e12765c91d
+2026-06-28 01:19:41,482 - INFO - Deleting remote file: 19331ad5-9215-4b4a-87e4-1bde357f181c
+2026-06-28 01:19:41,656 - INFO - Deleting remote file: 585f1611-dc8a-47e2-bdb9-7f2f5f1089fd
+2026-06-28 01:19:41,793 - INFO - [SUCCESS] RB_0060 (general_utterance) | Human: 'ما ادري كيف ممكن تخدميني' -> ASR: 'ما أدري كيف ممكن تقلبيني.' | Normalized Human: 'ما ادري كيف ممكن تخدميني' -> Normalized ASR: 'ما ادري كيف ممكن تقلبيني' | WER: 20.00%
+2026-06-28 01:19:41,793 - INFO - Uploading file: RB_0068.wav
+2026-06-28 01:19:41,863 - INFO - [SUCCESS] RB_0062 (branch_name) | Human: 'عربي' -> ASR: 'عربي.' | Normalized Human: 'عربي' -> Normalized ASR: 'عربي' | WER: 0.00%
+2026-06-28 01:19:41,863 - INFO - Uploading file: RB_0069.wav
+2026-06-28 01:19:41,879 - INFO - [SUCCESS] RB_0061 (branch_name) | Human: 'ايه صحيح' -> ASR: 'إيه، صحيح.' | Normalized Human: 'ايه صحيح' -> Normalized ASR: 'ايه، صحيح' | WER: 50.00%
+2026-06-28 01:19:41,879 - INFO - Uploading file: RB_0070.wav
+2026-06-28 01:19:41,928 - INFO - [SUCCESS] RB_0063 (branch_code) | Human: 'فرع الندى 250' -> ASR: 'آه، فرع الندى 250.' | Normalized Human: 'فرع الندي 250' -> Normalized ASR: 'اه، فرع الندي 250' | WER: 33.33%
+2026-06-28 01:19:41,928 - INFO - Uploading file: RB_0071.wav
+2026-06-28 01:19:42,101 - INFO - [SUCCESS] RB_0064 (branch_code) | Human: 'لا 250' -> ASR: 'آه، لا، 250.' | Normalized Human: 'لا 250' -> Normalized ASR: 'اه، لا، 250' | WER: 100.00%
+2026-06-28 01:19:42,101 - INFO - Uploading file: RB_0072.wav
+2026-06-28 01:19:42,303 - INFO - Uploaded successfully. File ID: 37597cc6-2cc7-4728-a3ae-7dd99e991fde
+2026-06-28 01:19:42,304 - INFO - Creating job for file_id: 37597cc6-2cc7-4728-a3ae-7dd99e991fde
+2026-06-28 01:19:42,372 - INFO - Uploaded successfully. File ID: 97a87bcc-8020-40d0-b459-b3e2bf4ff093
+2026-06-28 01:19:42,373 - INFO - Creating job for file_id: 97a87bcc-8020-40d0-b459-b3e2bf4ff093
+2026-06-28 01:19:42,410 - INFO - Uploaded successfully. File ID: 5a43c433-cf94-488d-82af-be696707af8d
+2026-06-28 01:19:42,410 - INFO - Creating job for file_id: 5a43c433-cf94-488d-82af-be696707af8d
+2026-06-28 01:19:42,593 - INFO - Uploaded successfully. File ID: 4037c02f-2e0f-439f-b18d-db835fb3dd79
+2026-06-28 01:19:42,593 - INFO - Creating job for file_id: 4037c02f-2e0f-439f-b18d-db835fb3dd79
+2026-06-28 01:19:42,654 - INFO - Uploaded successfully. File ID: 7eeef069-6364-41ac-8aee-6275cffe5285
+2026-06-28 01:19:42,654 - INFO - Creating job for file_id: 7eeef069-6364-41ac-8aee-6275cffe5285
+2026-06-28 01:19:42,828 - INFO - Created job successfully. Job ID: b7139b86-d46d-4536-aebf-af992c6c2081
+2026-06-28 01:19:42,828 - INFO - Polling job: b7139b86-d46d-4536-aebf-af992c6c2081
+2026-06-28 01:19:42,836 - INFO - Created job successfully. Job ID: 41913ba2-3fde-4bc6-a9ca-e78bcc60becf
+2026-06-28 01:19:42,836 - INFO - Polling job: 41913ba2-3fde-4bc6-a9ca-e78bcc60becf
+2026-06-28 01:19:42,997 - INFO - Created job successfully. Job ID: 74c52bb8-b7b9-483f-8463-c864b95dbd27
+2026-06-28 01:19:42,997 - INFO - Polling job: 74c52bb8-b7b9-483f-8463-c864b95dbd27
+2026-06-28 01:19:43,018 - INFO - Created job successfully. Job ID: 8811b2dc-e630-4813-9671-a783772e5946
+2026-06-28 01:19:43,018 - INFO - Polling job: 8811b2dc-e630-4813-9671-a783772e5946
+2026-06-28 01:19:43,072 - INFO - Created job successfully. Job ID: 475f26d0-e386-4d39-bdd8-065a5972c671
+2026-06-28 01:19:43,072 - INFO - Polling job: 475f26d0-e386-4d39-bdd8-065a5972c671
+2026-06-28 01:19:43,489 - INFO - Deleting transcription job: 50fbb9b9-90e6-4f71-a619-0a5d0e065b3a
+2026-06-28 01:19:43,489 - INFO - Deleting transcription job: 47ba1abf-0988-439d-a27f-002a7057416a
+2026-06-28 01:19:43,943 - INFO - Deleting remote file: 37aaeb2b-3444-44d6-829f-6daa9703d02f
+2026-06-28 01:19:43,944 - INFO - Deleting remote file: 4ea042a7-422d-488f-a4b3-13036166f3fd
+2026-06-28 01:19:44,333 - INFO - Deleting transcription job: 4eae7ddf-0c44-4292-9dbf-9b8fb07725b8
+2026-06-28 01:19:44,386 - INFO - [SUCCESS] RB_0065 (branch_code) | Human: 'لا اثنين خمسة صفر' -> ASR: 'لا، 250.' | Normalized Human: 'لا اثنين خمسه صفر' -> Normalized ASR: 'لا، 250' | WER: 100.00%
+2026-06-28 01:19:44,386 - INFO - Uploading file: RB_0073.wav
+2026-06-28 01:19:44,394 - INFO - [SUCCESS] RB_0066 (branch_name) | Human: 'ايه صحيح' -> ASR: 'إيه صحيح.' | Normalized Human: 'ايه صحيح' -> Normalized ASR: 'ايه صحيح' | WER: 0.00%
+2026-06-28 01:19:44,394 - INFO - Uploading file: RB_0074.wav
+2026-06-28 01:19:44,818 - INFO - Deleting remote file: 278194f9-3447-4ca8-8eef-f7c724f21120
+2026-06-28 01:19:44,884 - INFO - Uploaded successfully. File ID: a3507e99-b8be-4d07-84da-ffcbde0c4a48
+2026-06-28 01:19:44,884 - INFO - Creating job for file_id: a3507e99-b8be-4d07-84da-ffcbde0c4a48
+2026-06-28 01:19:44,904 - INFO - Uploaded successfully. File ID: 560675da-eaa9-4e6b-874a-a9c341dcef8a
+2026-06-28 01:19:44,905 - INFO - Creating job for file_id: 560675da-eaa9-4e6b-874a-a9c341dcef8a
+2026-06-28 01:19:45,264 - INFO - [SUCCESS] RB_0067 (branch_name) | Human: 'أنا عميلة ماسية' -> ASR: 'آه، أنا عميلة ناصية.' | Normalized Human: 'انا عميله ماسيه' -> Normalized ASR: 'اه، انا عميله ناصية' | WER: 66.67%
+2026-06-28 01:19:45,264 - INFO - Uploading file: RB_0075.wav
+2026-06-28 01:19:45,308 - INFO - Created job successfully. Job ID: d207d9d5-f4fd-4c28-bc81-12f7d98bfff9
+2026-06-28 01:19:45,308 - INFO - Polling job: d207d9d5-f4fd-4c28-bc81-12f7d98bfff9
+2026-06-28 01:19:45,343 - INFO - Created job successfully. Job ID: 3459e677-d42c-4830-83ef-3be622db9c2f
+2026-06-28 01:19:45,343 - INFO - Polling job: 3459e677-d42c-4830-83ef-3be622db9c2f
+2026-06-28 01:19:45,954 - INFO - Uploaded successfully. File ID: b5e324a3-1492-445a-99d9-8320d31c8382
+2026-06-28 01:19:45,955 - INFO - Creating job for file_id: b5e324a3-1492-445a-99d9-8320d31c8382
+2026-06-28 01:19:46,119 - INFO - Deleting transcription job: 41913ba2-3fde-4bc6-a9ca-e78bcc60becf
+2026-06-28 01:19:46,119 - INFO - Deleting transcription job: b7139b86-d46d-4536-aebf-af992c6c2081
+2026-06-28 01:19:46,275 - INFO - Deleting transcription job: 74c52bb8-b7b9-483f-8463-c864b95dbd27
+2026-06-28 01:19:46,284 - INFO - Deleting transcription job: 8811b2dc-e630-4813-9671-a783772e5946
+2026-06-28 01:19:46,341 - INFO - Deleting transcription job: 475f26d0-e386-4d39-bdd8-065a5972c671
+2026-06-28 01:19:46,385 - INFO - Created job successfully. Job ID: 78fa81c6-f231-4dbf-ab3d-4205e8944f87
+2026-06-28 01:19:46,386 - INFO - Polling job: 78fa81c6-f231-4dbf-ab3d-4205e8944f87
+2026-06-28 01:19:46,572 - INFO - Deleting remote file: 5a43c433-cf94-488d-82af-be696707af8d
+2026-06-28 01:19:46,611 - INFO - Deleting remote file: 97a87bcc-8020-40d0-b459-b3e2bf4ff093
+2026-06-28 01:19:46,733 - INFO - Deleting remote file: 37597cc6-2cc7-4728-a3ae-7dd99e991fde
+2026-06-28 01:19:46,734 - INFO - Deleting remote file: 4037c02f-2e0f-439f-b18d-db835fb3dd79
+2026-06-28 01:19:46,794 - INFO - Deleting remote file: 7eeef069-6364-41ac-8aee-6275cffe5285
+2026-06-28 01:19:47,023 - INFO - [SUCCESS] RB_0069 (general_utterance) | Human: 'صحيح بس ايش اسم الفرع' -> ASR: 'آه، صحيح، بس قلت من الفرع.' | Normalized Human: 'صحيح بس ايش اسم الفرع' -> Normalized ASR: 'اه، صحيح، بس قلت من الفرع' | WER: 80.00%
+2026-06-28 01:19:47,024 - INFO - Uploading file: RB_0076.wav
+2026-06-28 01:19:47,064 - INFO - [SUCCESS] RB_0070 (general_utterance) | Human: 'اي حوليني أنتظرك تحوليني' -> ASR: 'إيه، حولي ليها. انتظر، انتظري.' | Normalized Human: 'اي حوليني انتظرك تحوليني' -> Normalized ASR: 'ايه، حولي ليها انتظر، انتظري' | WER: 125.00%
+2026-06-28 01:19:47,064 - INFO - Uploading file: RB_0077.wav
+2026-06-28 01:19:47,188 - INFO - [SUCCESS] RB_0068 (branch_code) | Human: 'خمسمئة وخمسة خمسة صفر خمسة' -> ASR: '5055.' | Normalized Human: 'خمسمئه وخمسه خمسه صفر خمسه' -> Normalized ASR: '5055' | WER: 100.00%
+2026-06-28 01:19:47,188 - INFO - [SUCCESS] RB_0071 (general_utterance) | Human: 'بس أنا ما قلت 110 قلت 310' -> ASR: 'بس أنا ما قلت 110، قلت 310.' | Normalized Human: 'بس انا ما قلت 110 قلت 310' -> Normalized ASR: 'بس انا ما قلت 110، قلت 310' | WER: 14.29%
+2026-06-28 01:19:47,188 - INFO - Uploading file: RB_0078.wav
+2026-06-28 01:19:47,188 - INFO - Uploading file: RB_0079.wav
+2026-06-28 01:19:47,243 - INFO - [SUCCESS] RB_0072 (branch_code) | Human: 'لا ثلاث مئة وعشره ثلاثة واحد صفر' -> ASR: 'لا، 310، 310.' | Normalized Human: 'لا ثلاث مئه وعشره ثلاثه واحد صفر' -> Normalized ASR: 'لا، 310، 310' | WER: 100.00%
+2026-06-28 01:19:47,243 - INFO - Uploading file: RB_0080.wav
+2026-06-28 01:19:47,548 - INFO - Uploaded successfully. File ID: 461dc8c2-f056-4a9c-8b21-04b2fd56814f
+2026-06-28 01:19:47,548 - INFO - Creating job for file_id: 461dc8c2-f056-4a9c-8b21-04b2fd56814f
+2026-06-28 01:19:47,581 - INFO - Uploaded successfully. File ID: 38444922-70bd-4b17-bdc4-7303fd3231f8
+2026-06-28 01:19:47,581 - INFO - Creating job for file_id: 38444922-70bd-4b17-bdc4-7303fd3231f8
+2026-06-28 01:19:47,704 - INFO - Uploaded successfully. File ID: bd210fa6-5fe0-43d1-b682-eaa8ec76111d
+2026-06-28 01:19:47,704 - INFO - Creating job for file_id: bd210fa6-5fe0-43d1-b682-eaa8ec76111d
+2026-06-28 01:19:47,759 - INFO - Uploaded successfully. File ID: adc98042-05d2-4767-b62f-bd9cc70a8de6
+2026-06-28 01:19:47,759 - INFO - Creating job for file_id: adc98042-05d2-4767-b62f-bd9cc70a8de6
+2026-06-28 01:19:47,771 - INFO - Uploaded successfully. File ID: 341413b2-85a4-44b7-b4e4-1309bc36faf5
+2026-06-28 01:19:47,771 - INFO - Creating job for file_id: 341413b2-85a4-44b7-b4e4-1309bc36faf5
+2026-06-28 01:19:47,979 - INFO - Created job successfully. Job ID: f250a66f-b359-4820-b609-5ba32aa2d0d1
+2026-06-28 01:19:47,979 - INFO - Polling job: f250a66f-b359-4820-b609-5ba32aa2d0d1
+2026-06-28 01:19:48,029 - INFO - Created job successfully. Job ID: 19344b2e-9e29-46a1-af7d-930e374758d0
+2026-06-28 01:19:48,029 - INFO - Polling job: 19344b2e-9e29-46a1-af7d-930e374758d0
+2026-06-28 01:19:48,132 - INFO - Created job successfully. Job ID: f783138d-5321-46c5-a3a4-7ad1dc3555f5
+2026-06-28 01:19:48,132 - INFO - Polling job: f783138d-5321-46c5-a3a4-7ad1dc3555f5
+2026-06-28 01:19:48,178 - INFO - Created job successfully. Job ID: 52be8c76-c218-4ecb-877d-bbe4427ad26e
+2026-06-28 01:19:48,178 - INFO - Polling job: 52be8c76-c218-4ecb-877d-bbe4427ad26e
+2026-06-28 01:19:48,199 - INFO - Created job successfully. Job ID: 9fd107f5-b1d6-418e-ba65-4126fc1bef69
+2026-06-28 01:19:48,199 - INFO - Polling job: 9fd107f5-b1d6-418e-ba65-4126fc1bef69
+2026-06-28 01:19:48,578 - INFO - Deleting transcription job: d207d9d5-f4fd-4c28-bc81-12f7d98bfff9
+2026-06-28 01:19:48,629 - INFO - Deleting transcription job: 3459e677-d42c-4830-83ef-3be622db9c2f
+2026-06-28 01:19:49,024 - INFO - Deleting remote file: a3507e99-b8be-4d07-84da-ffcbde0c4a48
+2026-06-28 01:19:49,079 - INFO - Deleting remote file: 560675da-eaa9-4e6b-874a-a9c341dcef8a
+2026-06-28 01:19:49,488 - INFO - [SUCCESS] RB_0074 (branch_name) | Human: 'فرع جدة' -> ASR: 'صرافة جدة.' | Normalized Human: 'فرع جده' -> Normalized ASR: 'صرافه جدة' | WER: 100.00%
+2026-06-28 01:19:49,489 - INFO - Uploading file: RB_0081.wav
+2026-06-28 01:19:49,530 - INFO - [SUCCESS] RB_0073 (general_utterance) | Human: 'ممكن تحولني على التيلر' -> ASR: 'كم تحويلين على التلف؟' | Normalized Human: 'ممكن تحولني علي التيلر' -> Normalized ASR: 'كم تحويلين علي التلف؟' | WER: 75.00%
+2026-06-28 01:19:49,531 - INFO - Uploading file: RB_0082.wav
+2026-06-28 01:19:49,674 - INFO - Deleting transcription job: 78fa81c6-f231-4dbf-ab3d-4205e8944f87
+2026-06-28 01:19:50,023 - INFO - Uploaded successfully. File ID: 48edce38-c98b-4bda-8558-14214491cfca
+2026-06-28 01:19:50,023 - INFO - Creating job for file_id: 48edce38-c98b-4bda-8558-14214491cfca
+2026-06-28 01:19:50,083 - INFO - Uploaded successfully. File ID: c3815187-28fd-4f16-bb11-845267f355db
+2026-06-28 01:19:50,083 - INFO - Creating job for file_id: c3815187-28fd-4f16-bb11-845267f355db
+2026-06-28 01:19:50,132 - INFO - Deleting remote file: b5e324a3-1492-445a-99d9-8320d31c8382
+2026-06-28 01:19:50,459 - INFO - Created job successfully. Job ID: 92a648ba-b1eb-4900-8e08-06782a76d20f
+2026-06-28 01:19:50,459 - INFO - Polling job: 92a648ba-b1eb-4900-8e08-06782a76d20f
+2026-06-28 01:19:50,509 - INFO - Created job successfully. Job ID: 2b00655e-8cb9-4d62-8c96-00a73fae4459
+2026-06-28 01:19:50,509 - INFO - Polling job: 2b00655e-8cb9-4d62-8c96-00a73fae4459
+2026-06-28 01:19:50,578 - INFO - [SUCCESS] RB_0075 (general_utterance) | Human: 'طيب حوليني على قسم المساعدة' -> ASR: 'طيب، حوليني على قسم المساعدة.' | Normalized Human: 'طيب حوليني علي قسم المساعده' -> Normalized ASR: 'طيب، حوليني علي قسم المساعدة' | WER: 40.00%
+2026-06-28 01:19:50,578 - INFO - Uploading file: RB_0083.wav
+2026-06-28 01:19:51,141 - INFO - Uploaded successfully. File ID: c449165c-5293-4743-8519-b810390bc899
+2026-06-28 01:19:51,141 - INFO - Creating job for file_id: c449165c-5293-4743-8519-b810390bc899
+2026-06-28 01:19:51,247 - INFO - Deleting transcription job: f250a66f-b359-4820-b609-5ba32aa2d0d1
+2026-06-28 01:19:51,295 - INFO - Deleting transcription job: 19344b2e-9e29-46a1-af7d-930e374758d0
+2026-06-28 01:19:51,424 - INFO - Deleting transcription job: f783138d-5321-46c5-a3a4-7ad1dc3555f5
+2026-06-28 01:19:51,491 - INFO - Deleting transcription job: 9fd107f5-b1d6-418e-ba65-4126fc1bef69
+2026-06-28 01:19:51,518 - INFO - Deleting transcription job: 52be8c76-c218-4ecb-877d-bbe4427ad26e
+2026-06-28 01:19:51,588 - INFO - Created job successfully. Job ID: b41c3815-0e85-4a22-8335-ffa4b429c8b4
+2026-06-28 01:19:51,588 - INFO - Polling job: b41c3815-0e85-4a22-8335-ffa4b429c8b4
+2026-06-28 01:19:51,713 - INFO - Deleting remote file: 461dc8c2-f056-4a9c-8b21-04b2fd56814f
+2026-06-28 01:19:51,805 - INFO - Deleting remote file: 38444922-70bd-4b17-bdc4-7303fd3231f8
+2026-06-28 01:19:51,912 - INFO - Deleting remote file: bd210fa6-5fe0-43d1-b682-eaa8ec76111d
+2026-06-28 01:19:51,955 - INFO - Deleting remote file: 341413b2-85a4-44b7-b4e4-1309bc36faf5
+2026-06-28 01:19:51,997 - INFO - Deleting remote file: adc98042-05d2-4767-b62f-bd9cc70a8de6
+2026-06-28 01:19:52,216 - INFO - [SUCCESS] RB_0076 (branch_code) | Human: 'مئة وثلاثة' -> ASR: 'إيه، 103.' | Normalized Human: 'مئه وثلاثه' -> Normalized ASR: 'ايه، 103' | WER: 100.00%
+2026-06-28 01:19:52,216 - INFO - Uploading file: RB_0084.wav
+2026-06-28 01:19:52,259 - INFO - [SUCCESS] RB_0077 (branch_name) | Human: 'مكة الرئيسي مكة الرئيسي' -> ASR: 'آه، بنك الرئيسي، بنك الرياض.' | Normalized Human: 'مكه الرئيسي مكه الرئيسي' -> Normalized ASR: 'اه، بنك الرئيسي، بنك الرياض' | WER: 125.00%
+2026-06-28 01:19:52,259 - INFO - Uploading file: RB_0085.wav
+2026-06-28 01:19:52,368 - INFO - [SUCCESS] RB_0078 (branch_code) | Human: 'فرع 102' -> ASR: 'فرع 102.' | Normalized Human: 'فرع 102' -> Normalized ASR: 'فرع 102' | WER: 0.00%
+2026-06-28 01:19:52,368 - INFO - Uploading file: RB_0086.wav
+2026-06-28 01:19:52,404 - INFO - [SUCCESS] RB_0079 (branch_code) | Human: 'فرع 106' -> ASR: 'فرع 106.' | Normalized Human: 'فرع 106' -> Normalized ASR: 'فرع 106' | WER: 0.00%
+2026-06-28 01:19:52,404 - INFO - Uploading file: RB_0087.wav
+2026-06-28 01:19:52,454 - INFO - [SUCCESS] RB_0080 (branch_code) | Human: 'فرع 102' -> ASR: 'فرع 102.' | Normalized Human: 'فرع 102' -> Normalized ASR: 'فرع 102' | WER: 0.00%
+2026-06-28 01:19:52,454 - INFO - Uploading file: RB_0088.wav
+2026-06-28 01:19:52,741 - INFO - Uploaded successfully. File ID: 956a407c-c2d0-4203-92ca-aa00b09baf8e
+2026-06-28 01:19:52,741 - INFO - Creating job for file_id: 956a407c-c2d0-4203-92ca-aa00b09baf8e
+2026-06-28 01:19:52,762 - INFO - Uploaded successfully. File ID: 209bfe07-da93-4f5b-affe-d6df8c5feaaa
+2026-06-28 01:19:52,762 - INFO - Creating job for file_id: 209bfe07-da93-4f5b-affe-d6df8c5feaaa
+2026-06-28 01:19:52,919 - INFO - Uploaded successfully. File ID: d3c66e44-dae1-4255-82e0-e6d75d2672c2
+2026-06-28 01:19:52,919 - INFO - Creating job for file_id: d3c66e44-dae1-4255-82e0-e6d75d2672c2
+2026-06-28 01:19:52,933 - INFO - Uploaded successfully. File ID: e5cb2556-a2d4-4f38-b23f-04822d654b52
+2026-06-28 01:19:52,933 - INFO - Creating job for file_id: e5cb2556-a2d4-4f38-b23f-04822d654b52
+2026-06-28 01:19:52,944 - INFO - Uploaded successfully. File ID: 970bf1a3-6e12-4fbf-95b1-13a04b1a8198
+2026-06-28 01:19:52,944 - INFO - Creating job for file_id: 970bf1a3-6e12-4fbf-95b1-13a04b1a8198
+2026-06-28 01:19:53,170 - INFO - Created job successfully. Job ID: 805060a5-fa57-432d-91b8-96d682defa5d
+2026-06-28 01:19:53,170 - INFO - Polling job: 805060a5-fa57-432d-91b8-96d682defa5d
+2026-06-28 01:19:53,185 - INFO - Created job successfully. Job ID: 61476092-630d-4b5d-949c-2066673684ee
+2026-06-28 01:19:53,185 - INFO - Polling job: 61476092-630d-4b5d-949c-2066673684ee
+2026-06-28 01:19:53,342 - INFO - Created job successfully. Job ID: 84e48592-51d6-47e7-93bc-dbb556b19153
+2026-06-28 01:19:53,342 - INFO - Polling job: 84e48592-51d6-47e7-93bc-dbb556b19153
+2026-06-28 01:19:53,371 - INFO - Created job successfully. Job ID: 9e1aa7b8-8f1d-4fac-a658-4278734c46d1
+2026-06-28 01:19:53,371 - INFO - Created job successfully. Job ID: 64e57c12-5625-47cc-9ab5-80452d551f1c
+2026-06-28 01:19:53,372 - INFO - Polling job: 9e1aa7b8-8f1d-4fac-a658-4278734c46d1
+2026-06-28 01:19:53,373 - INFO - Polling job: 64e57c12-5625-47cc-9ab5-80452d551f1c
+2026-06-28 01:19:53,744 - INFO - Deleting transcription job: 92a648ba-b1eb-4900-8e08-06782a76d20f
+2026-06-28 01:19:53,797 - INFO - Deleting transcription job: 2b00655e-8cb9-4d62-8c96-00a73fae4459
+2026-06-28 01:19:54,224 - INFO - Deleting remote file: 48edce38-c98b-4bda-8558-14214491cfca
+2026-06-28 01:19:54,245 - INFO - Deleting remote file: c3815187-28fd-4f16-bb11-845267f355db
+2026-06-28 01:19:54,682 - INFO - [SUCCESS] RB_0081 (branch_code) | Human: 'لا قصدي 103' -> ASR: 'لا، قصدي 103.' | Normalized Human: 'لا قصدي 103' -> Normalized ASR: 'لا، قصدي 103' | WER: 33.33%
+2026-06-28 01:19:54,682 - INFO - Uploading file: RB_0089.wav
+2026-06-28 01:19:54,759 - INFO - [SUCCESS] RB_0082 (branch_code) | Human: '101' -> ASR: '101.' | Normalized Human: '101' -> Normalized ASR: '101' | WER: 0.00%
+2026-06-28 01:19:54,759 - INFO - Uploading file: RB_0090.wav
+2026-06-28 01:19:54,872 - INFO - Deleting transcription job: b41c3815-0e85-4a22-8335-ffa4b429c8b4
+2026-06-28 01:19:55,178 - INFO - Uploaded successfully. File ID: c7afb166-cbb1-4bc5-99db-2b6491a70c11
+2026-06-28 01:19:55,179 - INFO - Creating job for file_id: c7afb166-cbb1-4bc5-99db-2b6491a70c11
+2026-06-28 01:19:55,283 - INFO - Uploaded successfully. File ID: 1b411f64-ee6e-415b-9ac1-2b55e6876e78
+2026-06-28 01:19:55,283 - INFO - Creating job for file_id: 1b411f64-ee6e-415b-9ac1-2b55e6876e78
+2026-06-28 01:19:55,322 - INFO - Deleting remote file: c449165c-5293-4743-8519-b810390bc899
+2026-06-28 01:19:55,605 - INFO - Created job successfully. Job ID: 86c511b6-91a7-422a-9a2f-5d85662f0303
+2026-06-28 01:19:55,608 - INFO - Polling job: 86c511b6-91a7-422a-9a2f-5d85662f0303
+2026-06-28 01:19:55,711 - INFO - Created job successfully. Job ID: 284bf037-4bfa-4c8c-9a77-a23e73fc919b
+2026-06-28 01:19:55,712 - INFO - Polling job: 284bf037-4bfa-4c8c-9a77-a23e73fc919b
+2026-06-28 01:19:55,797 - INFO - [SUCCESS] RB_0083 (branch_code) | Human: 'لا 105' -> ASR: 'لا، 105.' | Normalized Human: 'لا 105' -> Normalized ASR: 'لا، 105' | WER: 50.00%
+2026-06-28 01:19:55,797 - INFO - Uploading file: RB_0091.wav
+2026-06-28 01:19:56,328 - INFO - Uploaded successfully. File ID: 9ac2727e-f97e-4683-b8b3-ec86c32b882a
+2026-06-28 01:19:56,329 - INFO - Creating job for file_id: 9ac2727e-f97e-4683-b8b3-ec86c32b882a
+2026-06-28 01:19:56,446 - INFO - Deleting transcription job: 805060a5-fa57-432d-91b8-96d682defa5d
+2026-06-28 01:19:56,454 - INFO - Deleting transcription job: 61476092-630d-4b5d-949c-2066673684ee
+2026-06-28 01:19:56,645 - INFO - Deleting transcription job: 84e48592-51d6-47e7-93bc-dbb556b19153
+2026-06-28 01:19:56,645 - INFO - Deleting transcription job: 9e1aa7b8-8f1d-4fac-a658-4278734c46d1
+2026-06-28 01:19:56,645 - INFO - Deleting transcription job: 64e57c12-5625-47cc-9ab5-80452d551f1c
+2026-06-28 01:19:56,760 - INFO - Created job successfully. Job ID: 0c824429-1e23-41c0-b1f9-3e38a53cb731
+2026-06-28 01:19:56,760 - INFO - Polling job: 0c824429-1e23-41c0-b1f9-3e38a53cb731
+2026-06-28 01:19:56,913 - INFO - Deleting remote file: 956a407c-c2d0-4203-92ca-aa00b09baf8e
+2026-06-28 01:19:56,913 - INFO - Deleting remote file: 209bfe07-da93-4f5b-affe-d6df8c5feaaa
+2026-06-28 01:19:57,100 - INFO - Deleting remote file: e5cb2556-a2d4-4f38-b23f-04822d654b52
+2026-06-28 01:19:57,104 - INFO - Deleting remote file: d3c66e44-dae1-4255-82e0-e6d75d2672c2
+2026-06-28 01:19:57,104 - INFO - Deleting remote file: 970bf1a3-6e12-4fbf-95b1-13a04b1a8198
+2026-06-28 01:19:57,358 - INFO - [SUCCESS] RB_0084 (branch_code) | Human: 'فرع أحد' -> ASR: 'فرع أحد.' | Normalized Human: 'فرع احد' -> Normalized ASR: 'فرع احد' | WER: 0.00%
+2026-06-28 01:19:57,358 - INFO - Uploading file: RB_0092.wav
+2026-06-28 01:19:57,369 - INFO - [SUCCESS] RB_0085 (branch_code) | Human: 'فرع أحد' -> ASR: 'فرع أحد.' | Normalized Human: 'فرع احد' -> Normalized ASR: 'فرع احد' | WER: 0.00%
+2026-06-28 01:19:57,370 - INFO - Uploading file: RB_0093.wav
+2026-06-28 01:19:57,543 - INFO - [SUCCESS] RB_0088 (branch_name) | Human: 'فرع قباء' -> ASR: 'فرع قطر.' | Normalized Human: 'فرع قباء' -> Normalized ASR: 'فرع قطر' | WER: 50.00%
+2026-06-28 01:19:57,543 - INFO - Uploading file: RB_0094.wav
+2026-06-28 01:19:57,547 - INFO - [SUCCESS] RB_0086 (branch_code) | Human: 'لا فرع مئة وسبعة' -> ASR: 'لا، فرع 107.' | Normalized Human: 'لا فرع مئه وسبعه' -> Normalized ASR: 'لا، فرع 107' | WER: 75.00%
+2026-06-28 01:19:57,547 - INFO - Uploading file: RB_0095.wav
+2026-06-28 01:19:57,552 - INFO - [SUCCESS] RB_0087 (branch_code) | Human: 'فرع 109' -> ASR: '409.' | Normalized Human: 'فرع 109' -> Normalized ASR: '409' | WER: 100.00%
+2026-06-28 01:19:57,552 - INFO - Uploading file: RB_0096.wav
+2026-06-28 01:19:57,882 - INFO - Uploaded successfully. File ID: 422111cf-d870-45d5-9279-03acef543b4d
+2026-06-28 01:19:57,882 - INFO - Creating job for file_id: 422111cf-d870-45d5-9279-03acef543b4d
+2026-06-28 01:19:57,889 - INFO - Uploaded successfully. File ID: c8e86df6-d2da-49f0-9848-0932103bbee6
+2026-06-28 01:19:57,889 - INFO - Creating job for file_id: c8e86df6-d2da-49f0-9848-0932103bbee6
+2026-06-28 01:19:58,034 - INFO - Uploaded successfully. File ID: b105c0f7-775a-4754-b5d8-49ee6aca5558
+2026-06-28 01:19:58,034 - INFO - Creating job for file_id: b105c0f7-775a-4754-b5d8-49ee6aca5558
+2026-06-28 01:19:58,038 - INFO - Uploaded successfully. File ID: 4fc345f8-b6fe-4f02-b0dc-4982fd3b9f44
+2026-06-28 01:19:58,038 - INFO - Creating job for file_id: 4fc345f8-b6fe-4f02-b0dc-4982fd3b9f44
+2026-06-28 01:19:58,090 - INFO - Uploaded successfully. File ID: 175dcf0a-ab43-4dad-a09d-c9d7b4f463d8
+2026-06-28 01:19:58,090 - INFO - Creating job for file_id: 175dcf0a-ab43-4dad-a09d-c9d7b4f463d8
+2026-06-28 01:19:58,310 - INFO - Created job successfully. Job ID: 2c45eb04-7913-4efb-868f-9348b4cc7367
+2026-06-28 01:19:58,310 - INFO - Polling job: 2c45eb04-7913-4efb-868f-9348b4cc7367
+2026-06-28 01:19:58,312 - INFO - Created job successfully. Job ID: 36527bd9-6252-4eff-b01e-d050a2114f04
+2026-06-28 01:19:58,312 - INFO - Polling job: 36527bd9-6252-4eff-b01e-d050a2114f04
+2026-06-28 01:19:58,467 - INFO - Created job successfully. Job ID: fe805349-6c2c-4aa9-85d9-7beed180a642
+2026-06-28 01:19:58,467 - INFO - Polling job: fe805349-6c2c-4aa9-85d9-7beed180a642
+2026-06-28 01:19:58,472 - INFO - Created job successfully. Job ID: 42d175a6-c66d-4eda-ad10-db553bc8da03
+2026-06-28 01:19:58,472 - INFO - Polling job: 42d175a6-c66d-4eda-ad10-db553bc8da03
+2026-06-28 01:19:58,514 - INFO - Created job successfully. Job ID: 36a7cf7e-3f01-4d1e-beca-64e2d5ef4afb
+2026-06-28 01:19:58,514 - INFO - Polling job: 36a7cf7e-3f01-4d1e-beca-64e2d5ef4afb
+2026-06-28 01:19:58,888 - INFO - Deleting transcription job: 86c511b6-91a7-422a-9a2f-5d85662f0303
+2026-06-28 01:19:58,978 - INFO - Deleting transcription job: 284bf037-4bfa-4c8c-9a77-a23e73fc919b
+2026-06-28 01:19:59,349 - INFO - Deleting remote file: c7afb166-cbb1-4bc5-99db-2b6491a70c11
+2026-06-28 01:19:59,428 - INFO - Deleting remote file: 1b411f64-ee6e-415b-9ac1-2b55e6876e78
+2026-06-28 01:19:59,801 - INFO - [SUCCESS] RB_0089 (branch_code) | Human: 'فرع 114' -> ASR: 'فرع 114.' | Normalized Human: 'فرع 114' -> Normalized ASR: 'فرع 114' | WER: 0.00%
+2026-06-28 01:19:59,801 - INFO - Uploading file: RB_0097.wav
+2026-06-28 01:19:59,883 - INFO - [SUCCESS] RB_0090 (branch_code) | Human: 'فرع 115' -> ASR: '715.' | Normalized Human: 'فرع 115' -> Normalized ASR: '715' | WER: 100.00%
+2026-06-28 01:19:59,884 - INFO - Uploading file: RB_0098.wav
+2026-06-28 01:20:00,032 - INFO - Deleting transcription job: 0c824429-1e23-41c0-b1f9-3e38a53cb731
+2026-06-28 01:20:00,338 - INFO - Uploaded successfully. File ID: c219aa42-b462-41a0-b8d4-3653bd1370c2
+2026-06-28 01:20:00,338 - INFO - Creating job for file_id: c219aa42-b462-41a0-b8d4-3653bd1370c2
+2026-06-28 01:20:00,413 - INFO - Uploaded successfully. File ID: f2174a39-2c1e-41e8-8801-464f792dca5e
+2026-06-28 01:20:00,413 - INFO - Creating job for file_id: f2174a39-2c1e-41e8-8801-464f792dca5e
+2026-06-28 01:20:00,479 - INFO - Deleting remote file: 9ac2727e-f97e-4683-b8b3-ec86c32b882a
+2026-06-28 01:20:00,764 - INFO - Created job successfully. Job ID: ab7e387c-b229-4d55-a3a9-7d4325c46353
+2026-06-28 01:20:00,765 - INFO - Polling job: ab7e387c-b229-4d55-a3a9-7d4325c46353
+2026-06-28 01:20:00,857 - INFO - Created job successfully. Job ID: 24ea6af8-2567-49a6-8bfd-6ff35bf530f0
+2026-06-28 01:20:00,857 - INFO - Polling job: 24ea6af8-2567-49a6-8bfd-6ff35bf530f0
+2026-06-28 01:20:00,927 - INFO - [SUCCESS] RB_0091 (branch_code) | Human: 'فرمي 115' -> ASR: '715.' | Normalized Human: 'فرمي 115' -> Normalized ASR: '715' | WER: 100.00%
+2026-06-28 01:20:00,928 - INFO - Uploading file: RB_0099.wav
+2026-06-28 01:20:01,437 - INFO - Uploaded successfully. File ID: 409ba3d3-c3a6-4c39-aef4-f3a8b8e18e0f
+2026-06-28 01:20:01,437 - INFO - Creating job for file_id: 409ba3d3-c3a6-4c39-aef4-f3a8b8e18e0f
+2026-06-28 01:20:01,573 - INFO - Deleting transcription job: 36527bd9-6252-4eff-b01e-d050a2114f04
+2026-06-28 01:20:01,578 - INFO - Deleting transcription job: 2c45eb04-7913-4efb-868f-9348b4cc7367
+2026-06-28 01:20:01,743 - INFO - Deleting transcription job: 42d175a6-c66d-4eda-ad10-db553bc8da03
+2026-06-28 01:20:01,748 - INFO - Deleting transcription job: fe805349-6c2c-4aa9-85d9-7beed180a642
+2026-06-28 01:20:01,763 - INFO - Deleting transcription job: 36a7cf7e-3f01-4d1e-beca-64e2d5ef4afb
+2026-06-28 01:20:01,864 - INFO - Created job successfully. Job ID: f1baca84-2fc3-4ccd-97f6-5a1a820190c8
+2026-06-28 01:20:01,864 - INFO - Polling job: f1baca84-2fc3-4ccd-97f6-5a1a820190c8
+2026-06-28 01:20:02,014 - INFO - Deleting remote file: c8e86df6-d2da-49f0-9848-0932103bbee6
+2026-06-28 01:20:02,036 - INFO - Deleting remote file: 422111cf-d870-45d5-9279-03acef543b4d
+2026-06-28 01:20:02,202 - INFO - Deleting remote file: b105c0f7-775a-4754-b5d8-49ee6aca5558
+2026-06-28 01:20:02,202 - INFO - Deleting remote file: 4fc345f8-b6fe-4f02-b0dc-4982fd3b9f44
+2026-06-28 01:20:02,226 - INFO - Deleting remote file: 175dcf0a-ab43-4dad-a09d-c9d7b4f463d8
+2026-06-28 01:20:02,465 - INFO - [SUCCESS] RB_0092 (branch_code) | Human: 'فرع 117' -> ASR: '817.' | Normalized Human: 'فرع 117' -> Normalized ASR: '817' | WER: 100.00%
+2026-06-28 01:20:02,466 - INFO - Uploading file: RB_0100.wav
+2026-06-28 01:20:02,490 - INFO - [SUCCESS] RB_0093 (branch_code) | Human: 'فرع 119' -> ASR: '719.' | Normalized Human: 'فرع 119' -> Normalized ASR: '719' | WER: 100.00%
+2026-06-28 01:20:02,490 - INFO - Uploading file: RB_0101.wav
+2026-06-28 01:20:02,649 - INFO - [SUCCESS] RB_0095 (branch_code) | Human: '123' -> ASR: '320.' | Normalized Human: '123' -> Normalized ASR: '320' | WER: 100.00%
+2026-06-28 01:20:02,649 - INFO - Uploading file: RB_0102.wav
+2026-06-28 01:20:02,673 - INFO - [SUCCESS] RB_0096 (branch_code) | Human: 'فرع 123' -> ASR: 'فرع 123.' | Normalized Human: 'فرع 123' -> Normalized ASR: 'فرع 123' | WER: 0.00%
+2026-06-28 01:20:02,673 - INFO - Uploading file: RB_0103.wav
+2026-06-28 01:20:02,727 - INFO - [SUCCESS] RB_0094 (branch_code) | Human: '121' -> ASR: '921.' | Normalized Human: '121' -> Normalized ASR: '921' | WER: 100.00%
+2026-06-28 01:20:02,727 - INFO - Uploading file: RB_0104.wav
+2026-06-28 01:20:02,964 - INFO - Uploaded successfully. File ID: 1d336574-c0b4-4eab-a71e-05efb63baccb
+2026-06-28 01:20:02,964 - INFO - Creating job for file_id: 1d336574-c0b4-4eab-a71e-05efb63baccb
+2026-06-28 01:20:03,005 - INFO - Uploaded successfully. File ID: 821b7e91-fc0e-4312-be2d-f3a09c60e51f
+2026-06-28 01:20:03,005 - INFO - Creating job for file_id: 821b7e91-fc0e-4312-be2d-f3a09c60e51f
+2026-06-28 01:20:03,142 - INFO - Uploaded successfully. File ID: efaa52b1-3da9-4fcb-a1f9-a99dfb8e8630
+2026-06-28 01:20:03,143 - INFO - Creating job for file_id: efaa52b1-3da9-4fcb-a1f9-a99dfb8e8630
+2026-06-28 01:20:03,152 - INFO - Uploaded successfully. File ID: aaf3645a-016b-4bd6-ba0d-72530cc10671
+2026-06-28 01:20:03,153 - INFO - Creating job for file_id: aaf3645a-016b-4bd6-ba0d-72530cc10671
+2026-06-28 01:20:03,265 - INFO - Uploaded successfully. File ID: 77645cff-039f-474a-9d46-e962fa218094
+2026-06-28 01:20:03,265 - INFO - Creating job for file_id: 77645cff-039f-474a-9d46-e962fa218094
+2026-06-28 01:20:03,386 - INFO - Created job successfully. Job ID: eff39e96-7f82-4227-8feb-a125482d9e70
+2026-06-28 01:20:03,386 - INFO - Polling job: eff39e96-7f82-4227-8feb-a125482d9e70
+2026-06-28 01:20:03,436 - INFO - Created job successfully. Job ID: e9ce92b8-fab0-459e-8b84-9ea9ab92a6cd
+2026-06-28 01:20:03,436 - INFO - Polling job: e9ce92b8-fab0-459e-8b84-9ea9ab92a6cd
+2026-06-28 01:20:03,577 - INFO - Created job successfully. Job ID: e14d42de-390e-464b-be45-ced3cbbb1b65
+2026-06-28 01:20:03,577 - INFO - Polling job: e14d42de-390e-464b-be45-ced3cbbb1b65
+2026-06-28 01:20:03,582 - INFO - Created job successfully. Job ID: 5ab9c325-11ce-4948-9921-8af30c7d4f41
+2026-06-28 01:20:03,582 - INFO - Polling job: 5ab9c325-11ce-4948-9921-8af30c7d4f41
+2026-06-28 01:20:03,687 - INFO - Created job successfully. Job ID: f0eafba8-ba18-4d1a-92e3-cbfb2d8e3fe0
+2026-06-28 01:20:03,687 - INFO - Polling job: f0eafba8-ba18-4d1a-92e3-cbfb2d8e3fe0
+2026-06-28 01:20:04,029 - INFO - Deleting transcription job: ab7e387c-b229-4d55-a3a9-7d4325c46353
+2026-06-28 01:20:04,132 - INFO - Deleting transcription job: 24ea6af8-2567-49a6-8bfd-6ff35bf530f0
+2026-06-28 01:20:04,480 - INFO - Deleting remote file: c219aa42-b462-41a0-b8d4-3653bd1370c2
+2026-06-28 01:20:04,619 - INFO - Deleting remote file: f2174a39-2c1e-41e8-8801-464f792dca5e
+2026-06-28 01:20:04,941 - INFO - [SUCCESS] RB_0097 (branch_code) | Human: '144' -> ASR: '124.' | Normalized Human: '144' -> Normalized ASR: '124' | WER: 100.00%
+2026-06-28 01:20:04,942 - INFO - Uploading file: RB_0105.wav
+2026-06-28 01:20:05,079 - INFO - [SUCCESS] RB_0098 (branch_code) | Human: 'فرع 128' -> ASR: '228.' | Normalized Human: 'فرع 128' -> Normalized ASR: '228' | WER: 100.00%
+2026-06-28 01:20:05,080 - INFO - Uploading file: RB_0106.wav
+2026-06-28 01:20:05,153 - INFO - Deleting transcription job: f1baca84-2fc3-4ccd-97f6-5a1a820190c8
+2026-06-28 01:20:05,518 - INFO - Uploaded successfully. File ID: b7148743-064e-4e83-a4ea-279c054ecd9b
+2026-06-28 01:20:05,518 - INFO - Creating job for file_id: b7148743-064e-4e83-a4ea-279c054ecd9b
+2026-06-28 01:20:05,580 - INFO - Uploaded successfully. File ID: e5084166-4fc4-44f9-9826-f115079d4f4a
+2026-06-28 01:20:05,580 - INFO - Creating job for file_id: e5084166-4fc4-44f9-9826-f115079d4f4a
+2026-06-28 01:20:05,645 - INFO - Deleting remote file: 409ba3d3-c3a6-4c39-aef4-f3a8b8e18e0f
+2026-06-28 01:20:05,963 - INFO - Created job successfully. Job ID: 1f00ab54-bf0a-44b9-8985-7f077a643859
+2026-06-28 01:20:05,963 - INFO - Polling job: 1f00ab54-bf0a-44b9-8985-7f077a643859
+2026-06-28 01:20:06,020 - INFO - Created job successfully. Job ID: 29b8c1ca-5426-4b14-aced-ae80b94a98da
+2026-06-28 01:20:06,020 - INFO - Polling job: 29b8c1ca-5426-4b14-aced-ae80b94a98da
+2026-06-28 01:20:06,133 - INFO - [SUCCESS] RB_0099 (branch_code) | Human: 'فرع 130' -> ASR: 'فرع 130.' | Normalized Human: 'فرع 130' -> Normalized ASR: 'فرع 130' | WER: 0.00%
+2026-06-28 01:20:06,133 - INFO - Uploading file: RB_0107.wav
+2026-06-28 01:20:06,633 - INFO - Uploaded successfully. File ID: d47a307e-2e48-427a-9974-148322b6ed49
+2026-06-28 01:20:06,634 - INFO - Creating job for file_id: d47a307e-2e48-427a-9974-148322b6ed49
+2026-06-28 01:20:06,634 - INFO - Deleting transcription job: eff39e96-7f82-4227-8feb-a125482d9e70
+2026-06-28 01:20:06,700 - INFO - Deleting transcription job: e9ce92b8-fab0-459e-8b84-9ea9ab92a6cd
+2026-06-28 01:20:06,844 - INFO - Deleting transcription job: 5ab9c325-11ce-4948-9921-8af30c7d4f41
+2026-06-28 01:20:06,874 - INFO - Deleting transcription job: e14d42de-390e-464b-be45-ced3cbbb1b65
+2026-06-28 01:20:06,974 - INFO - Deleting transcription job: f0eafba8-ba18-4d1a-92e3-cbfb2d8e3fe0
+2026-06-28 01:20:07,058 - INFO - Created job successfully. Job ID: 01f1c504-7497-4efe-a9ec-44d234db3a10
+2026-06-28 01:20:07,058 - INFO - Polling job: 01f1c504-7497-4efe-a9ec-44d234db3a10
+2026-06-28 01:20:07,102 - INFO - Deleting remote file: 1d336574-c0b4-4eab-a71e-05efb63baccb
+2026-06-28 01:20:07,156 - INFO - Deleting remote file: 821b7e91-fc0e-4312-be2d-f3a09c60e51f
+2026-06-28 01:20:07,302 - INFO - Deleting remote file: aaf3645a-016b-4bd6-ba0d-72530cc10671
+2026-06-28 01:20:07,402 - INFO - Deleting remote file: efaa52b1-3da9-4fcb-a1f9-a99dfb8e8630
+2026-06-28 01:20:07,447 - INFO - Deleting remote file: 77645cff-039f-474a-9d46-e962fa218094
+2026-06-28 01:20:07,610 - INFO - [SUCCESS] RB_0101 (branch_code) | Human: 'فرع 147' -> ASR: '147.' | Normalized Human: 'فرع 147' -> Normalized ASR: '147' | WER: 50.00%
+2026-06-28 01:20:07,610 - INFO - [SUCCESS] RB_0100 (branch_code) | Human: 'واحد أربعة سبعة' -> ASR: '147.' | Normalized Human: 'واحد اربعه سبعه' -> Normalized ASR: '147' | WER: 100.00%
+2026-06-28 01:20:07,610 - INFO - Uploading file: RB_0108.wav
+2026-06-28 01:20:07,610 - INFO - Uploading file: RB_0109.wav
+2026-06-28 01:20:07,766 - INFO - [SUCCESS] RB_0103 (branch_code) | Human: 'مية وتسعة واربعين' -> ASR: '149.' | Normalized Human: 'ميه وتسعه واربعين' -> Normalized ASR: '149' | WER: 100.00%
+2026-06-28 01:20:07,767 - INFO - Uploading file: RB_0110.wav
+2026-06-28 01:20:07,868 - INFO - [SUCCESS] RB_0102 (branch_code) | Human: '149' -> ASR: '149.' | Normalized Human: '149' -> Normalized ASR: '149' | WER: 0.00%
+2026-06-28 01:20:07,868 - INFO - Uploading file: RB_0111.wav
+2026-06-28 01:20:07,897 - INFO - [SUCCESS] RB_0104 (branch_code) | Human: 'فرع 150' -> ASR: '850.' | Normalized Human: 'فرع 150' -> Normalized ASR: '850' | WER: 100.00%
+2026-06-28 01:20:07,898 - INFO - Uploading file: RB_0112.wav
+2026-06-28 01:20:08,148 - INFO - Uploaded successfully. File ID: 521a9fba-946d-41c6-86fb-280ab8599962
+2026-06-28 01:20:08,148 - INFO - Uploaded successfully. File ID: aa6b2cd2-e40d-4642-be5b-f4b1401bbd02
+2026-06-28 01:20:08,149 - INFO - Creating job for file_id: 521a9fba-946d-41c6-86fb-280ab8599962
+2026-06-28 01:20:08,149 - INFO - Creating job for file_id: aa6b2cd2-e40d-4642-be5b-f4b1401bbd02
+2026-06-28 01:20:08,266 - INFO - Uploaded successfully. File ID: cf0513a7-3707-4f46-961f-3c24377f4150
+2026-06-28 01:20:08,266 - INFO - Creating job for file_id: cf0513a7-3707-4f46-961f-3c24377f4150
+2026-06-28 01:20:08,355 - INFO - Uploaded successfully. File ID: b925e951-8007-48f1-b23b-49bac18b6b88
+2026-06-28 01:20:08,355 - INFO - Creating job for file_id: b925e951-8007-48f1-b23b-49bac18b6b88
+2026-06-28 01:20:08,470 - INFO - Uploaded successfully. File ID: e99089fe-a76d-4b4f-9054-f2b30d49bd70
+2026-06-28 01:20:08,471 - INFO - Creating job for file_id: e99089fe-a76d-4b4f-9054-f2b30d49bd70
+2026-06-28 01:20:08,583 - INFO - Created job successfully. Job ID: e7fffcf9-53dc-48aa-8ecc-263592947515
+2026-06-28 01:20:08,584 - INFO - Polling job: e7fffcf9-53dc-48aa-8ecc-263592947515
+2026-06-28 01:20:08,586 - INFO - Created job successfully. Job ID: 2fbae741-bf04-4dce-b64a-d89eca788e76
+2026-06-28 01:20:08,586 - INFO - Polling job: 2fbae741-bf04-4dce-b64a-d89eca788e76
+2026-06-28 01:20:08,700 - INFO - Created job successfully. Job ID: bcecad90-41b1-4c1a-b838-c529160744aa
+2026-06-28 01:20:08,700 - INFO - Polling job: bcecad90-41b1-4c1a-b838-c529160744aa
+2026-06-28 01:20:08,802 - INFO - Created job successfully. Job ID: 904fe19e-37b8-4ad3-b887-64446f049427
+2026-06-28 01:20:08,802 - INFO - Polling job: 904fe19e-37b8-4ad3-b887-64446f049427
+2026-06-28 01:20:08,904 - INFO - Created job successfully. Job ID: c942d797-3cfc-4105-b49a-a208fbe808c0
+2026-06-28 01:20:08,904 - INFO - Polling job: c942d797-3cfc-4105-b49a-a208fbe808c0
+2026-06-28 01:20:09,269 - INFO - Deleting transcription job: 1f00ab54-bf0a-44b9-8985-7f077a643859
+2026-06-28 01:20:09,291 - INFO - Deleting transcription job: 29b8c1ca-5426-4b14-aced-ae80b94a98da
+2026-06-28 01:20:09,706 - INFO - Deleting remote file: b7148743-064e-4e83-a4ea-279c054ecd9b
+2026-06-28 01:20:09,742 - INFO - Deleting remote file: e5084166-4fc4-44f9-9826-f115079d4f4a
+2026-06-28 01:20:10,192 - INFO - [SUCCESS] RB_0105 (branch_code) | Human: 'فرع مية واثنين وخمسين' -> ASR: 'فرع 152.' | Normalized Human: 'فرع ميه واثنين وخمسين' -> Normalized ASR: 'فرع 152' | WER: 75.00%
+2026-06-28 01:20:10,192 - INFO - Uploading file: RB_0113.wav
+2026-06-28 01:20:10,219 - INFO - [SUCCESS] RB_0106 (branch_code) | Human: '163' -> ASR: 'آه، 163.' | Normalized Human: '163' -> Normalized ASR: 'اه، 163' | WER: 100.00%
+2026-06-28 01:20:10,219 - INFO - Uploading file: RB_0114.wav
+2026-06-28 01:20:10,325 - INFO - Deleting transcription job: 01f1c504-7497-4efe-a9ec-44d234db3a10
+2026-06-28 01:20:10,719 - INFO - Uploaded successfully. File ID: 6a893f0a-e3b0-4a2d-9760-00b921958c08
+2026-06-28 01:20:10,720 - INFO - Creating job for file_id: 6a893f0a-e3b0-4a2d-9760-00b921958c08
+2026-06-28 01:20:10,731 - INFO - Uploaded successfully. File ID: 882cd8ab-a00d-4534-8f4a-44e52cf48c16
+2026-06-28 01:20:10,732 - INFO - Creating job for file_id: 882cd8ab-a00d-4534-8f4a-44e52cf48c16
+2026-06-28 01:20:10,784 - INFO - Deleting remote file: d47a307e-2e48-427a-9974-148322b6ed49
+2026-06-28 01:20:11,146 - INFO - Created job successfully. Job ID: dbaa11d9-73ca-4033-9f80-fdcd7af776b7
+2026-06-28 01:20:11,146 - INFO - Polling job: dbaa11d9-73ca-4033-9f80-fdcd7af776b7
+2026-06-28 01:20:11,161 - INFO - Created job successfully. Job ID: 7b4940f6-4c73-440e-b488-37b221c0cb91
+2026-06-28 01:20:11,161 - INFO - Polling job: 7b4940f6-4c73-440e-b488-37b221c0cb91
+2026-06-28 01:20:11,233 - INFO - [SUCCESS] RB_0107 (branch_code) | Human: '167' -> ASR: '167.' | Normalized Human: '167' -> Normalized ASR: '167' | WER: 0.00%
+2026-06-28 01:20:11,234 - INFO - Uploading file: RB_0115.wav
+2026-06-28 01:20:11,776 - INFO - Uploaded successfully. File ID: 55b57883-8096-4595-a262-707369cb4cea
+2026-06-28 01:20:11,776 - INFO - Creating job for file_id: 55b57883-8096-4595-a262-707369cb4cea
+2026-06-28 01:20:11,911 - INFO - Deleting transcription job: e7fffcf9-53dc-48aa-8ecc-263592947515
+2026-06-28 01:20:11,911 - INFO - Deleting transcription job: 2fbae741-bf04-4dce-b64a-d89eca788e76
+2026-06-28 01:20:11,991 - INFO - Deleting transcription job: bcecad90-41b1-4c1a-b838-c529160744aa
+2026-06-28 01:20:12,076 - INFO - Deleting transcription job: 904fe19e-37b8-4ad3-b887-64446f049427
+2026-06-28 01:20:12,178 - INFO - Deleting transcription job: c942d797-3cfc-4105-b49a-a208fbe808c0
+2026-06-28 01:20:12,206 - INFO - Created job successfully. Job ID: 019a4754-936e-46d3-8aa3-0407ce2116f9
+2026-06-28 01:20:12,207 - INFO - Polling job: 019a4754-936e-46d3-8aa3-0407ce2116f9
+2026-06-28 01:20:12,362 - INFO - Deleting remote file: aa6b2cd2-e40d-4642-be5b-f4b1401bbd02
+2026-06-28 01:20:12,379 - INFO - Deleting remote file: 521a9fba-946d-41c6-86fb-280ab8599962
+2026-06-28 01:20:12,450 - INFO - Deleting remote file: cf0513a7-3707-4f46-961f-3c24377f4150
+2026-06-28 01:20:12,524 - INFO - Deleting remote file: b925e951-8007-48f1-b23b-49bac18b6b88
+2026-06-28 01:20:12,653 - INFO - Deleting remote file: e99089fe-a76d-4b4f-9054-f2b30d49bd70
+2026-06-28 01:20:12,831 - INFO - [SUCCESS] RB_0108 (branch_code) | Human: 'ميه وثمانين' -> ASR: 'آه، 180.' | Normalized Human: 'ميه وثمانين' -> Normalized ASR: 'اه، 180' | WER: 100.00%
+2026-06-28 01:20:12,831 - INFO - Uploading file: RB_0116.wav
+2026-06-28 01:20:12,833 - INFO - [SUCCESS] RB_0109 (branch_code) | Human: '184' -> ASR: '184.' | Normalized Human: '184' -> Normalized ASR: '184' | WER: 0.00%
+2026-06-28 01:20:12,833 - INFO - Uploading file: RB_0117.wav
+2026-06-28 01:20:12,909 - INFO - [SUCCESS] RB_0110 (branch_code) | Human: 'فرع 183' -> ASR: 'فرع 183.' | Normalized Human: 'فرع 183' -> Normalized ASR: 'فرع 183' | WER: 0.00%
+2026-06-28 01:20:12,910 - INFO - Uploading file: RB_0118.wav
+2026-06-28 01:20:12,972 - INFO - [SUCCESS] RB_0111 (branch_code) | Human: '185' -> ASR: '185.' | Normalized Human: '185' -> Normalized ASR: '185' | WER: 0.00%
+2026-06-28 01:20:12,973 - INFO - Uploading file: RB_0119.wav
+2026-06-28 01:20:13,097 - INFO - [SUCCESS] RB_0112 (branch_name) | Human: 'طريق الحرمين' -> ASR: 'طريق الحرمين—' | Normalized Human: 'طريق الحرمين' -> Normalized ASR: 'طريق الحرمين' | WER: 0.00%
+2026-06-28 01:20:13,098 - INFO - Uploading file: RB_0120.wav
+2026-06-28 01:20:13,605 - INFO - Uploaded successfully. File ID: ca3ba745-50b3-4147-9280-66d1eb19603a
+2026-06-28 01:20:13,605 - INFO - Creating job for file_id: ca3ba745-50b3-4147-9280-66d1eb19603a
+2026-06-28 01:20:14,041 - INFO - Created job successfully. Job ID: 113b2fab-eb06-4f1f-81ca-0803bdfb2da2
+2026-06-28 01:20:14,041 - INFO - Polling job: 113b2fab-eb06-4f1f-81ca-0803bdfb2da2
+2026-06-28 01:20:14,611 - INFO - Uploaded successfully. File ID: e0280d24-3b20-4acd-870a-c11b5e9f7ff8
+2026-06-28 01:20:14,611 - INFO - Creating job for file_id: e0280d24-3b20-4acd-870a-c11b5e9f7ff8
+2026-06-28 01:20:14,764 - INFO - Deleting transcription job: dbaa11d9-73ca-4033-9f80-fdcd7af776b7
+2026-06-28 01:20:14,810 - INFO - Deleting transcription job: 7b4940f6-4c73-440e-b488-37b221c0cb91
+2026-06-28 01:20:15,035 - INFO - Created job successfully. Job ID: 811fe1cb-c34b-4aec-b303-aaa6b017b289
+2026-06-28 01:20:15,035 - INFO - Polling job: 811fe1cb-c34b-4aec-b303-aaa6b017b289
+2026-06-28 01:20:15,086 - INFO - Uploaded successfully. File ID: 8d14ca53-45e8-4a91-9b36-115347a2c7be
+2026-06-28 01:20:15,086 - INFO - Creating job for file_id: 8d14ca53-45e8-4a91-9b36-115347a2c7be
+2026-06-28 01:20:15,270 - INFO - Deleting remote file: 882cd8ab-a00d-4534-8f4a-44e52cf48c16
+2026-06-28 01:20:15,478 - INFO - Deleting transcription job: 019a4754-936e-46d3-8aa3-0407ce2116f9
+2026-06-28 01:20:15,726 - INFO - [SUCCESS] RB_0113 (branch_name) | Human: 'فرع الرصيفة' -> ASR: 'فرع الرصيفة.' | Normalized Human: 'فرع الرصيفه' -> Normalized ASR: 'فرع الرصيفة' | WER: 50.00%
+2026-06-28 01:20:15,727 - INFO - Uploading file: RB_0121.wav
+2026-06-28 01:20:15,840 - INFO - Uploaded successfully. File ID: 2a57ee1e-fb47-4684-a31f-136d50798263
+2026-06-28 01:20:15,840 - INFO - Creating job for file_id: 2a57ee1e-fb47-4684-a31f-136d50798263
+2026-06-28 01:20:15,873 - INFO - Deleting remote file: 6a893f0a-e3b0-4a2d-9760-00b921958c08
+2026-06-28 01:20:15,935 - INFO - Deleting remote file: 55b57883-8096-4595-a262-707369cb4cea
+2026-06-28 01:20:16,216 - INFO - Created job successfully. Job ID: a626fcb2-5875-44dd-b30b-53980842bf2c
+2026-06-28 01:20:16,216 - INFO - Polling job: a626fcb2-5875-44dd-b30b-53980842bf2c
+2026-06-28 01:20:16,271 - INFO - Created job successfully. Job ID: b2519325-4624-4881-8a67-03af4778f8fe
+2026-06-28 01:20:16,272 - INFO - Polling job: b2519325-4624-4881-8a67-03af4778f8fe
+2026-06-28 01:20:16,316 - INFO - [SUCCESS] RB_0114 (branch_name) | Human: 'الرصيفة' -> ASR: 'رصيفه.' | Normalized Human: 'الرصيفه' -> Normalized ASR: 'رصيفه' | WER: 100.00%
+2026-06-28 01:20:16,316 - INFO - Uploading file: RB_0122.wav
+2026-06-28 01:20:16,378 - INFO - [SUCCESS] RB_0115 (branch_code) | Human: 'ميتين و واحد' -> ASR: '2001.' | Normalized Human: 'ميتين و واحد' -> Normalized ASR: '2001' | WER: 100.00%
+2026-06-28 01:20:16,378 - INFO - Uploading file: RB_0123.wav
+2026-06-28 01:20:16,398 - INFO - Uploaded successfully. File ID: a8ba191f-d314-46a8-9f35-4533b4b71474
+2026-06-28 01:20:16,399 - INFO - Creating job for file_id: a8ba191f-d314-46a8-9f35-4533b4b71474
+2026-06-28 01:20:16,583 - INFO - Deleting transcription job: 113b2fab-eb06-4f1f-81ca-0803bdfb2da2
+2026-06-28 01:20:17,044 - INFO - Deleting remote file: ca3ba745-50b3-4147-9280-66d1eb19603a
+2026-06-28 01:20:17,451 - INFO - Created job successfully. Job ID: 91f67b35-bc37-4449-813d-59701758a926
+2026-06-28 01:20:17,453 - INFO - Polling job: 91f67b35-bc37-4449-813d-59701758a926
+2026-06-28 01:20:17,489 - INFO - [SUCCESS] RB_0116 (branch_code) | Human: '307. راس تنورة' -> ASR: '307، راس النورة.' | Normalized Human: '307 راس تنوره' -> Normalized ASR: '307، راس النورة' | WER: 66.67%
+2026-06-28 01:20:17,490 - INFO - Uploading file: RB_0124.wav
+2026-06-28 01:20:18,210 - INFO - Uploaded successfully. File ID: fe8464f6-fa2c-4f38-a3a1-7bf2fdd1b286
+2026-06-28 01:20:18,210 - INFO - Creating job for file_id: fe8464f6-fa2c-4f38-a3a1-7bf2fdd1b286
+2026-06-28 01:20:18,310 - INFO - Deleting transcription job: 811fe1cb-c34b-4aec-b303-aaa6b017b289
+2026-06-28 01:20:18,634 - INFO - Created job successfully. Job ID: b7d08cd8-ba96-4623-9512-128fa34302a6
+2026-06-28 01:20:18,634 - INFO - Polling job: b7d08cd8-ba96-4623-9512-128fa34302a6
+2026-06-28 01:20:18,760 - INFO - Deleting remote file: e0280d24-3b20-4acd-870a-c11b5e9f7ff8
+2026-06-28 01:20:19,207 - INFO - [SUCCESS] RB_0118 (branch_name) | Human: 'الجبال' -> ASR: 'ثانية، الجبال—' | Normalized Human: 'الجبال' -> Normalized ASR: 'ثانية، الجبال' | WER: 100.00%
+2026-06-28 01:20:19,207 - INFO - Uploading file: RB_0125.wav
+2026-06-28 01:20:19,573 - INFO - Deleting transcription job: b2519325-4624-4881-8a67-03af4778f8fe
+2026-06-28 01:20:19,707 - INFO - Uploaded successfully. File ID: 5194469e-7a7c-45f0-895e-839329fc4a04
+2026-06-28 01:20:19,707 - INFO - Creating job for file_id: 5194469e-7a7c-45f0-895e-839329fc4a04
+2026-06-28 01:20:19,807 - INFO - Deleting transcription job: a626fcb2-5875-44dd-b30b-53980842bf2c
+2026-06-28 01:20:20,003 - INFO - Uploaded successfully. File ID: 4bc93211-2e85-4b03-8da7-8f6363957c1b
+2026-06-28 01:20:20,003 - INFO - Creating job for file_id: 4bc93211-2e85-4b03-8da7-8f6363957c1b
+2026-06-28 01:20:20,038 - INFO - Deleting remote file: 2a57ee1e-fb47-4684-a31f-136d50798263
+2026-06-28 01:20:20,138 - INFO - Created job successfully. Job ID: c13a716b-3b80-4699-bd18-43621bc7d173
+2026-06-28 01:20:20,139 - INFO - Polling job: c13a716b-3b80-4699-bd18-43621bc7d173
+2026-06-28 01:20:20,259 - INFO - Deleting remote file: 8d14ca53-45e8-4a91-9b36-115347a2c7be
+2026-06-28 01:20:20,433 - INFO - Created job successfully. Job ID: d31663fd-a4c3-43a5-9a74-5b82a7890c44
+2026-06-28 01:20:20,433 - INFO - Polling job: d31663fd-a4c3-43a5-9a74-5b82a7890c44
+2026-06-28 01:20:20,485 - INFO - [SUCCESS] RB_0119 (general_utterance) | Human: 'مائة | وثمانية | الجبال' -> ASR: '108، الكبيل.' | Normalized Human: 'مائه وثمانيه الجبال' -> Normalized ASR: '108، الكبيل' | WER: 100.00%
+2026-06-28 01:20:20,485 - INFO - Uploading file: RB_0126.wav
+2026-06-28 01:20:20,709 - INFO - [SUCCESS] RB_0117 (branch_name) | Human: 'الجبال' -> ASR: 'يا. الجبال.' | Normalized Human: 'الجبال' -> Normalized ASR: 'يا الجبال' | WER: 100.00%
+2026-06-28 01:20:20,709 - INFO - Uploading file: RB_0127.wav
+2026-06-28 01:20:20,753 - INFO - Deleting transcription job: 91f67b35-bc37-4449-813d-59701758a926
+2026-06-28 01:20:21,207 - INFO - Uploaded successfully. File ID: 3d740bfb-4bdd-4e8d-b2b9-cc5fde9428f4
+2026-06-28 01:20:21,207 - INFO - Creating job for file_id: 3d740bfb-4bdd-4e8d-b2b9-cc5fde9428f4
+2026-06-28 01:20:21,522 - INFO - Deleting remote file: a8ba191f-d314-46a8-9f35-4533b4b71474
+2026-06-28 01:20:21,538 - INFO - Uploaded successfully. File ID: b3094757-d88a-4626-8aca-2e865be4ea6a
+2026-06-28 01:20:21,539 - INFO - Creating job for file_id: b3094757-d88a-4626-8aca-2e865be4ea6a
+2026-06-28 01:20:21,901 - INFO - Deleting transcription job: b7d08cd8-ba96-4623-9512-128fa34302a6
+2026-06-28 01:20:21,968 - INFO - [SUCCESS] RB_0120 (branch_code) | Human: 'تسعة' -> ASR: '9 دقائق.' | Normalized Human: 'تسعه' -> Normalized ASR: '9 دقائق' | WER: 200.00%
+2026-06-28 01:20:21,968 - INFO - Created job successfully. Job ID: 3505c237-5347-41bc-a3b1-04967fb636a0
+2026-06-28 01:20:21,969 - INFO - Uploading file: RB_0128.wav
+2026-06-28 01:20:21,969 - INFO - Polling job: 3505c237-5347-41bc-a3b1-04967fb636a0
+2026-06-28 01:20:22,242 - INFO - Created job successfully. Job ID: bcd0f3d5-b09a-4fa3-b079-ad0570768b30
+2026-06-28 01:20:22,242 - INFO - Polling job: bcd0f3d5-b09a-4fa3-b079-ad0570768b30
+2026-06-28 01:20:22,359 - INFO - Deleting remote file: fe8464f6-fa2c-4f38-a3a1-7bf2fdd1b286
+2026-06-28 01:20:22,667 - INFO - Uploaded successfully. File ID: 0de8de0b-b2a5-4743-8833-41b59d7609d7
+2026-06-28 01:20:22,667 - INFO - Creating job for file_id: 0de8de0b-b2a5-4743-8833-41b59d7609d7
+2026-06-28 01:20:22,797 - INFO - [SUCCESS] RB_0121 (branch_code) | Human: 'تسعة' -> ASR: '9 دقيق.' | Normalized Human: 'تسعه' -> Normalized ASR: '9 دقيق' | WER: 200.00%
+2026-06-28 01:20:22,797 - INFO - Uploading file: RB_0129.wav
+2026-06-28 01:20:23,104 - INFO - Created job successfully. Job ID: d1308cc6-87a7-4b59-b789-2fd27df770a4
+2026-06-28 01:20:23,104 - INFO - Polling job: d1308cc6-87a7-4b59-b789-2fd27df770a4
+2026-06-28 01:20:23,453 - INFO - Deleting transcription job: c13a716b-3b80-4699-bd18-43621bc7d173
+2026-06-28 01:20:23,937 - INFO - Deleting remote file: 5194469e-7a7c-45f0-895e-839329fc4a04
+2026-06-28 01:20:24,163 - INFO - Uploaded successfully. File ID: ab99bf21-277e-42e4-95c2-e973250195ac
+2026-06-28 01:20:24,163 - INFO - Uploaded successfully. File ID: db20108b-c27b-420e-8a44-c34ebb829059
+2026-06-28 01:20:24,163 - INFO - Creating job for file_id: ab99bf21-277e-42e4-95c2-e973250195ac
+2026-06-28 01:20:24,163 - INFO - Creating job for file_id: db20108b-c27b-420e-8a44-c34ebb829059
+2026-06-28 01:20:24,203 - INFO - Deleting transcription job: d31663fd-a4c3-43a5-9a74-5b82a7890c44
+2026-06-28 01:20:24,433 - INFO - [SUCCESS] RB_0122 (branch_name) | Human: 'جاك' -> ASR: 'لا.' | Normalized Human: 'جاك' -> Normalized ASR: 'لا' | WER: 100.00%
+2026-06-28 01:20:24,433 - INFO - Uploading file: RB_0130.wav
+2026-06-28 01:20:24,593 - INFO - Created job successfully. Job ID: 62da557d-45c8-46ff-8048-8640d051373a
+2026-06-28 01:20:24,593 - INFO - Polling job: 62da557d-45c8-46ff-8048-8640d051373a
+2026-06-28 01:20:24,598 - INFO - Created job successfully. Job ID: 75dbf845-3645-4530-bd0c-163912a2326e
+2026-06-28 01:20:24,598 - INFO - Polling job: 75dbf845-3645-4530-bd0c-163912a2326e
+2026-06-28 01:20:24,682 - INFO - Deleting remote file: 4bc93211-2e85-4b03-8da7-8f6363957c1b
+2026-06-28 01:20:25,050 - INFO - Uploaded successfully. File ID: aaca84d1-dc9a-42ee-b482-9b93f97c28d1
+2026-06-28 01:20:25,050 - INFO - Creating job for file_id: aaca84d1-dc9a-42ee-b482-9b93f97c28d1
+2026-06-28 01:20:25,172 - INFO - [SUCCESS] RB_0125 (branch_name) | Human: 'وتسعى' -> ASR: 'و9.' | Normalized Human: 'وتسعي' -> Normalized ASR: 'و9' | WER: 100.00%
+2026-06-28 01:20:25,172 - INFO - Uploading file: RB_0131.wav
+2026-06-28 01:20:25,237 - INFO - Deleting transcription job: 3505c237-5347-41bc-a3b1-04967fb636a0
+2026-06-28 01:20:25,508 - INFO - Created job successfully. Job ID: abaee600-203e-45e9-8bda-8e2fc8590705
+2026-06-28 01:20:25,510 - INFO - Polling job: abaee600-203e-45e9-8bda-8e2fc8590705
+2026-06-28 01:20:25,590 - INFO - Deleting transcription job: bcd0f3d5-b09a-4fa3-b079-ad0570768b30
+2026-06-28 01:20:25,872 - INFO - Deleting remote file: b3094757-d88a-4626-8aca-2e865be4ea6a
+2026-06-28 01:20:26,039 - INFO - Deleting remote file: 3d740bfb-4bdd-4e8d-b2b9-cc5fde9428f4
+2026-06-28 01:20:26,349 - INFO - Deleting transcription job: d1308cc6-87a7-4b59-b789-2fd27df770a4
+2026-06-28 01:20:26,501 - INFO - [SUCCESS] RB_0124 (branch_code) | Human: 'ثلاثمئة | وتسعة' -> ASR: '309 دقيق. دقيق.' | Normalized Human: 'ثلاثمئه وتسعه' -> Normalized ASR: '309 دقيق دقيق' | WER: 150.00%
+2026-06-28 01:20:26,501 - INFO - Uploading file: RB_0132.wav
+2026-06-28 01:20:26,506 - INFO - [SUCCESS] RB_0123 (unclear) | Human: '' -> ASR: 'نعم، أكيد.' | Normalized Human: '' -> Normalized ASR: 'نعم، اكيد' | WER: 100.00%
+2026-06-28 01:20:26,507 - INFO - Uploading file: RB_0133.wav
+2026-06-28 01:20:26,523 - INFO - Uploaded successfully. File ID: 08988d37-e3a8-4858-8ca9-2c572d82022a
+2026-06-28 01:20:26,524 - INFO - Creating job for file_id: 08988d37-e3a8-4858-8ca9-2c572d82022a
+2026-06-28 01:20:26,795 - INFO - Deleting remote file: 0de8de0b-b2a5-4743-8833-41b59d7609d7
+2026-06-28 01:20:27,003 - INFO - Created job successfully. Job ID: 8dcd6d20-4f26-4e1e-8300-583089e89ff6
+2026-06-28 01:20:27,004 - INFO - Polling job: 8dcd6d20-4f26-4e1e-8300-583089e89ff6
+2026-06-28 01:20:27,251 - INFO - [SUCCESS] RB_0126 (branch_name) | Human: 'جاك' -> ASR: 'بجيت.' | Normalized Human: 'جاك' -> Normalized ASR: 'بجيت' | WER: 100.00%
+2026-06-28 01:20:27,251 - INFO - Uploading file: RB_0134.wav
+2026-06-28 01:20:27,300 - INFO - Uploaded successfully. File ID: c2227a2f-5ac5-49c4-b6a3-0b3a014bfb7c
+2026-06-28 01:20:27,300 - INFO - Creating job for file_id: c2227a2f-5ac5-49c4-b6a3-0b3a014bfb7c
+2026-06-28 01:20:27,644 - INFO - Uploaded successfully. File ID: cab43cf3-2c33-4f93-9a57-c2c58a975f4f
+2026-06-28 01:20:27,644 - INFO - Creating job for file_id: cab43cf3-2c33-4f93-9a57-c2c58a975f4f
+2026-06-28 01:20:27,771 - INFO - Created job successfully. Job ID: 7b5a1ec2-b70b-42ca-829b-4dc61deb0644
+2026-06-28 01:20:27,771 - INFO - Polling job: 7b5a1ec2-b70b-42ca-829b-4dc61deb0644
+2026-06-28 01:20:27,864 - INFO - Deleting transcription job: 75dbf845-3645-4530-bd0c-163912a2326e
+2026-06-28 01:20:27,970 - INFO - Uploaded successfully. File ID: 1ee7b00d-07df-4741-a5a1-0455ffd3c7b0
+2026-06-28 01:20:27,972 - INFO - Deleting transcription job: 62da557d-45c8-46ff-8048-8640d051373a
+2026-06-28 01:20:27,973 - INFO - Creating job for file_id: 1ee7b00d-07df-4741-a5a1-0455ffd3c7b0
+2026-06-28 01:20:27,991 - INFO - Uploaded successfully. File ID: a9ee97f5-ef17-4c7a-bd5e-7810d2839c06
+2026-06-28 01:20:27,992 - INFO - Creating job for file_id: a9ee97f5-ef17-4c7a-bd5e-7810d2839c06
+2026-06-28 01:20:28,079 - INFO - Created job successfully. Job ID: 70f9d960-b862-4bed-bb4c-89e549d7d697
+2026-06-28 01:20:28,080 - INFO - Polling job: 70f9d960-b862-4bed-bb4c-89e549d7d697
+2026-06-28 01:20:28,325 - INFO - Deleting remote file: db20108b-c27b-420e-8a44-c34ebb829059
+2026-06-28 01:20:28,405 - INFO - Created job successfully. Job ID: ab36644a-2b63-4e21-bd4c-ec4ee8d6e922
+2026-06-28 01:20:28,405 - INFO - Polling job: ab36644a-2b63-4e21-bd4c-ec4ee8d6e922
+2026-06-28 01:20:28,422 - INFO - Created job successfully. Job ID: 1dbc04d4-3bdf-49d4-b6db-00fd50055a36
+2026-06-28 01:20:28,422 - INFO - Polling job: 1dbc04d4-3bdf-49d4-b6db-00fd50055a36
+2026-06-28 01:20:28,425 - INFO - Deleting remote file: ab99bf21-277e-42e4-95c2-e973250195ac
+2026-06-28 01:20:28,776 - INFO - [SUCCESS] RB_0128 (branch_code) | Human: '110. الخفجي' -> ASR: '110، الخفجي.' | Normalized Human: '110 الخفجي' -> Normalized ASR: '110، الخفجي' | WER: 50.00%
+2026-06-28 01:20:28,777 - INFO - Uploading file: RB_0135.wav
+2026-06-28 01:20:28,806 - INFO - Deleting transcription job: abaee600-203e-45e9-8bda-8e2fc8590705
+2026-06-28 01:20:28,876 - INFO - [SUCCESS] RB_0129 (branch_code) | Human: '911. الثقبة' -> ASR: '111، الثقبة.' | Normalized Human: '911 الثقبه' -> Normalized ASR: '111، الثقبة' | WER: 100.00%
+2026-06-28 01:20:28,876 - INFO - Uploading file: RB_0136.wav
+2026-06-28 01:20:29,270 - INFO - Deleting remote file: aaca84d1-dc9a-42ee-b482-9b93f97c28d1
+2026-06-28 01:20:29,442 - INFO - Uploaded successfully. File ID: 661a0e0f-dcd3-4403-b057-4924c16aab98
+2026-06-28 01:20:29,443 - INFO - Creating job for file_id: 661a0e0f-dcd3-4403-b057-4924c16aab98
+2026-06-28 01:20:29,720 - INFO - [SUCCESS] RB_0127 (branch_name) | Human: 'جاك' -> ASR: '' | Normalized Human: 'جاك' -> Normalized ASR: '' | WER: 100.00%
+2026-06-28 01:20:29,720 - INFO - Uploading file: RB_0137.wav
+2026-06-28 01:20:29,872 - INFO - Created job successfully. Job ID: 3bed967b-fc0c-43eb-9995-3da38865d69c
+2026-06-28 01:20:29,872 - INFO - Uploaded successfully. File ID: 756e7738-f8cc-4fdb-bc58-cffe8f78f371
+2026-06-28 01:20:29,873 - INFO - Polling job: 3bed967b-fc0c-43eb-9995-3da38865d69c
+2026-06-28 01:20:29,873 - INFO - Creating job for file_id: 756e7738-f8cc-4fdb-bc58-cffe8f78f371
+2026-06-28 01:20:30,296 - INFO - Deleting transcription job: 8dcd6d20-4f26-4e1e-8300-583089e89ff6
+2026-06-28 01:20:30,307 - INFO - Created job successfully. Job ID: bf3758b9-4985-4968-9847-9108f4f37504
+2026-06-28 01:20:30,308 - INFO - Polling job: bf3758b9-4985-4968-9847-9108f4f37504
+2026-06-28 01:20:30,754 - INFO - Deleting remote file: 08988d37-e3a8-4858-8ca9-2c572d82022a
+2026-06-28 01:20:31,050 - INFO - Deleting transcription job: 7b5a1ec2-b70b-42ca-829b-4dc61deb0644
+2026-06-28 01:20:31,224 - INFO - [SUCCESS] RB_0130 (general_utterance) | Human: 'الثقبة | ثلاثمئة | وأحد | عشر | ثلاثمئة | وعشرة | أبي | فرحة | مئة | وعشرة | الثقبة' -> ASR: 'كاش. الصفوة. 311. 310. أبي فرع 310، الثقبة.' | Normalized Human: 'الثقبه ثلاثمئه واحد عشر ثلاثمئه وعشره ابي فرحه مئه وعشره الثقبه' -> Normalized ASR: 'كاش الصفوة 311 310 ابي فرع 310، الثقبة' | WER: 90.91%
+2026-06-28 01:20:31,225 - INFO - Uploading file: RB_0138.wav
+2026-06-28 01:20:31,381 - INFO - Deleting transcription job: 70f9d960-b862-4bed-bb4c-89e549d7d697
+2026-06-28 01:20:31,436 - INFO - Uploaded successfully. File ID: 063a9ea3-6604-47af-8e91-e53c0a25abd4
+2026-06-28 01:20:31,436 - INFO - Creating job for file_id: 063a9ea3-6604-47af-8e91-e53c0a25abd4
+2026-06-28 01:20:31,496 - INFO - Deleting remote file: c2227a2f-5ac5-49c4-b6a3-0b3a014bfb7c
+2026-06-28 01:20:31,664 - INFO - Deleting transcription job: ab36644a-2b63-4e21-bd4c-ec4ee8d6e922
+2026-06-28 01:20:31,732 - INFO - Deleting transcription job: 1dbc04d4-3bdf-49d4-b6db-00fd50055a36
+2026-06-28 01:20:31,869 - INFO - Created job successfully. Job ID: cc08aec7-ddd5-4d76-8fe3-45de078f270b
+2026-06-28 01:20:31,869 - INFO - Polling job: cc08aec7-ddd5-4d76-8fe3-45de078f270b
+2026-06-28 01:20:31,925 - INFO - Deleting remote file: cab43cf3-2c33-4f93-9a57-c2c58a975f4f
+2026-06-28 01:20:31,945 - INFO - Uploaded successfully. File ID: 259443ae-8be0-4940-9109-1b25b0b13f42
+2026-06-28 01:20:31,945 - INFO - Creating job for file_id: 259443ae-8be0-4940-9109-1b25b0b13f42
+2026-06-28 01:20:31,960 - INFO - [SUCCESS] RB_0133 (general_utterance) | Human: 'رسمية | وسبعة | رأس | تنورة | رسمية | وسبعة رأس تنورة' -> ASR: '307، راست النورة. 307، راست النورة.' | Normalized Human: 'رسميه وسبعه راس تنوره رسميه وسبعه راس تنوره' -> Normalized ASR: '307، راست النورة 307، راست النورة' | WER: 100.00%
+2026-06-28 01:20:31,960 - INFO - Uploading file: RB_0139.wav
+2026-06-28 01:20:32,177 - INFO - Deleting remote file: a9ee97f5-ef17-4c7a-bd5e-7810d2839c06
+2026-06-28 01:20:32,191 - INFO - Deleting remote file: 1ee7b00d-07df-4741-a5a1-0455ffd3c7b0
+2026-06-28 01:20:32,370 - INFO - [SUCCESS] RB_0131 (branch_code) | Human: '321' -> ASR: 'وش؟ 311.' | Normalized Human: '321' -> Normalized ASR: 'وش؟ 311' | WER: 200.00%
+2026-06-28 01:20:32,370 - INFO - Uploading file: RB_0140.wav
+2026-06-28 01:20:32,405 - INFO - Created job successfully. Job ID: 8110667f-b84e-4c52-bf09-9c67cc97d46e
+2026-06-28 01:20:32,405 - INFO - Polling job: 8110667f-b84e-4c52-bf09-9c67cc97d46e
+2026-06-28 01:20:32,623 - INFO - [SUCCESS] RB_0132 (branch_name) | Human: 'ثلاثمائة وعشرة' -> ASR: '310.' | Normalized Human: 'ثلاثمائه وعشره' -> Normalized ASR: '310' | WER: 100.00%
+2026-06-28 01:20:32,623 - INFO - Uploading file: RB_0141.wav
+2026-06-28 01:20:32,661 - INFO - [SUCCESS] RB_0134 (general_utterance) | Human: 'مئة | وسبعة | وستين | دورة' -> ASR: '107، وصفي النورة.' | Normalized Human: 'مئه وسبعه وستين دوره' -> Normalized ASR: '107، وصفي النورة' | WER: 100.00%
+2026-06-28 01:20:32,661 - INFO - Uploading file: RB_0142.wav
+2026-06-28 01:20:32,675 - INFO - Uploaded successfully. File ID: e8742716-c53a-44b5-823e-b3ec2c2aa8ea
+2026-06-28 01:20:32,676 - INFO - Creating job for file_id: e8742716-c53a-44b5-823e-b3ec2c2aa8ea
+2026-06-28 01:20:33,161 - INFO - Deleting transcription job: 3bed967b-fc0c-43eb-9995-3da38865d69c
+2026-06-28 01:20:33,171 - INFO - Created job successfully. Job ID: e66bd2c0-f9b2-445c-817d-86a7a1b5788a
+2026-06-28 01:20:33,171 - INFO - Polling job: e66bd2c0-f9b2-445c-817d-86a7a1b5788a
+2026-06-28 01:20:33,190 - INFO - Uploaded successfully. File ID: 4bf47414-4a33-486c-be10-de4bf3e3a7e8
+2026-06-28 01:20:33,190 - INFO - Creating job for file_id: 4bf47414-4a33-486c-be10-de4bf3e3a7e8
+2026-06-28 01:20:33,323 - INFO - Uploaded successfully. File ID: c1f6a77e-cce7-479d-9cea-90aa48fab647
+2026-06-28 01:20:33,323 - INFO - Creating job for file_id: c1f6a77e-cce7-479d-9cea-90aa48fab647
+2026-06-28 01:20:33,566 - INFO - Deleting transcription job: bf3758b9-4985-4968-9847-9108f4f37504
+2026-06-28 01:20:33,619 - INFO - Created job successfully. Job ID: 6fd93c52-497d-448c-878d-38c256a72e4b
+2026-06-28 01:20:33,620 - INFO - Deleting remote file: 661a0e0f-dcd3-4403-b057-4924c16aab98
+2026-06-28 01:20:33,620 - INFO - Polling job: 6fd93c52-497d-448c-878d-38c256a72e4b
+2026-06-28 01:20:33,757 - INFO - Created job successfully. Job ID: 1309f67f-ff49-4f05-84a7-aec555ac54c9
+2026-06-28 01:20:33,757 - INFO - Polling job: 1309f67f-ff49-4f05-84a7-aec555ac54c9
+2026-06-28 01:20:34,022 - INFO - Deleting remote file: 756e7738-f8cc-4fdb-bc58-cffe8f78f371
+2026-06-28 01:20:34,084 - INFO - [SUCCESS] RB_0136 (general_utterance) | Human: 'الرسمية | وسبعة. رأس تنورة' -> ASR: '307، راس النورة.' | Normalized Human: 'الرسميه وسبعة راس تنوره' -> Normalized ASR: '307، راس النورة' | WER: 75.00%
+2026-06-28 01:20:34,084 - INFO - Uploading file: RB_0143.wav
+2026-06-28 01:20:34,133 - INFO - Uploaded successfully. File ID: 47cb3910-2587-4f2a-9feb-840ee070625f
+2026-06-28 01:20:34,133 - INFO - Creating job for file_id: 47cb3910-2587-4f2a-9feb-840ee070625f
+2026-06-28 01:20:34,480 - INFO - [SUCCESS] RB_0135 (general_utterance) | Human: 'لكن | راس | تنورة' -> ASR: '307، طاقة النورة.' | Normalized Human: 'لكن راس تنوره' -> Normalized ASR: '307، طاقه النورة' | WER: 100.00%
+2026-06-28 01:20:34,480 - INFO - Uploading file: RB_0144.wav
+2026-06-28 01:20:34,569 - INFO - Created job successfully. Job ID: a8df8780-d1d7-485d-9d0d-23e2062d239d
+2026-06-28 01:20:34,570 - INFO - Polling job: a8df8780-d1d7-485d-9d0d-23e2062d239d
+2026-06-28 01:20:34,672 - INFO - Uploaded successfully. File ID: bbf9f66b-5c13-4f45-9547-a53e8f36db75
+2026-06-28 01:20:34,673 - INFO - Creating job for file_id: bbf9f66b-5c13-4f45-9547-a53e8f36db75
+2026-06-28 01:20:35,132 - INFO - Created job successfully. Job ID: a5dbf367-baef-427c-bcd6-8b5376505533
+2026-06-28 01:20:35,132 - INFO - Polling job: a5dbf367-baef-427c-bcd6-8b5376505533
+2026-06-28 01:20:35,152 - INFO - Deleting transcription job: cc08aec7-ddd5-4d76-8fe3-45de078f270b
+2026-06-28 01:20:35,180 - INFO - Uploaded successfully. File ID: ef315b18-c666-4dd6-92ed-36f0bd5d1507
+2026-06-28 01:20:35,180 - INFO - Creating job for file_id: ef315b18-c666-4dd6-92ed-36f0bd5d1507
+2026-06-28 01:20:35,605 - INFO - Created job successfully. Job ID: 55eb8862-2495-463f-a53e-41b249ab4ff6
+2026-06-28 01:20:35,606 - INFO - Polling job: 55eb8862-2495-463f-a53e-41b249ab4ff6
+2026-06-28 01:20:35,612 - INFO - Deleting remote file: 063a9ea3-6604-47af-8e91-e53c0a25abd4
+2026-06-28 01:20:35,667 - INFO - Deleting transcription job: 8110667f-b84e-4c52-bf09-9c67cc97d46e
+2026-06-28 01:20:36,117 - INFO - Deleting remote file: 259443ae-8be0-4940-9109-1b25b0b13f42
+2026-06-28 01:20:36,122 - INFO - [SUCCESS] RB_0137 (branch_code) | Human: '388 | الجبال' -> ASR: '308، الجبال.' | Normalized Human: '388 الجبال' -> Normalized ASR: '308، الجبال' | WER: 50.00%
+2026-06-28 01:20:36,122 - INFO - Uploading file: RB_0145.wav
+2026-06-28 01:20:36,446 - INFO - Deleting transcription job: e66bd2c0-f9b2-445c-817d-86a7a1b5788a
+2026-06-28 01:20:36,631 - INFO - [SUCCESS] RB_0138 (branch_name) | Human: 'رسمية | وتسعى' -> ASR: '309، دقيق.' | Normalized Human: 'رسميه وتسعي' -> Normalized ASR: '309، دقيق' | WER: 100.00%
+2026-06-28 01:20:36,631 - INFO - Uploading file: RB_0146.wav
+2026-06-28 01:20:36,903 - INFO - Deleting transcription job: 6fd93c52-497d-448c-878d-38c256a72e4b
+2026-06-28 01:20:36,966 - INFO - Deleting remote file: e8742716-c53a-44b5-823e-b3ec2c2aa8ea
+2026-06-28 01:20:37,056 - INFO - Deleting transcription job: 1309f67f-ff49-4f05-84a7-aec555ac54c9
+2026-06-28 01:20:37,090 - INFO - Uploaded successfully. File ID: 26a1e066-d485-4c26-b7db-12bb5986684b
+2026-06-28 01:20:37,090 - INFO - Creating job for file_id: 26a1e066-d485-4c26-b7db-12bb5986684b
+2026-06-28 01:20:37,357 - INFO - Deleting remote file: 4bf47414-4a33-486c-be10-de4bf3e3a7e8
+2026-06-28 01:20:37,459 - INFO - [SUCCESS] RB_0139 (general_utterance) | Human: 'ثلاثمائة | وتسعة | دقيق' -> ASR: '9، دقيق. 309، دقيق.' | Normalized Human: 'ثلاثمائه وتسعه دقيق' -> Normalized ASR: '9، دقيق 309، دقيق' | WER: 100.00%
+2026-06-28 01:20:37,460 - INFO - Uploading file: RB_0147.wav
+2026-06-28 01:20:37,501 - INFO - Deleting remote file: c1f6a77e-cce7-479d-9cea-90aa48fab647
+2026-06-28 01:20:37,523 - INFO - Created job successfully. Job ID: 44bb5013-2926-4967-a5c5-21201e17c516
+2026-06-28 01:20:37,524 - INFO - Polling job: 44bb5013-2926-4967-a5c5-21201e17c516
+2026-06-28 01:20:37,817 - INFO - [SUCCESS] RB_0142 (branch_code) | Human: '311 الثقبة' -> ASR: '311، الثقبة.' | Normalized Human: '311 الثقبه' -> Normalized ASR: '311، الثقبة' | WER: 100.00%
+2026-06-28 01:20:37,818 - INFO - Uploading file: RB_0148.wav
+2026-06-28 01:20:37,860 - INFO - Deleting transcription job: a8df8780-d1d7-485d-9d0d-23e2062d239d
+2026-06-28 01:20:38,016 - INFO - Uploaded successfully. File ID: a969b5a0-a4ac-4c5a-b523-c963dbfdcd32
+2026-06-28 01:20:38,017 - INFO - [SUCCESS] RB_0140 (general_utterance) | Human: 'أو | عشرة | الخفجي' -> ASR: '110، الخفجي.' | Normalized Human: 'او عشره الخفجي' -> Normalized ASR: '110، الخفجي' | WER: 66.67%
+2026-06-28 01:20:38,017 - INFO - Uploading file: RB_0149.wav
+2026-06-28 01:20:38,017 - INFO - Creating job for file_id: a969b5a0-a4ac-4c5a-b523-c963dbfdcd32
+2026-06-28 01:20:38,387 - INFO - Deleting remote file: 47cb3910-2587-4f2a-9feb-840ee070625f
+2026-06-28 01:20:38,418 - INFO - Uploaded successfully. File ID: d0505eb9-283d-4db7-aa35-5d1ed66dc7fe
+2026-06-28 01:20:38,418 - INFO - Creating job for file_id: d0505eb9-283d-4db7-aa35-5d1ed66dc7fe
+2026-06-28 01:20:38,446 - INFO - Created job successfully. Job ID: 00d4e1a3-0c73-4661-a303-72a22ef93c4b
+2026-06-28 01:20:38,446 - INFO - Polling job: 00d4e1a3-0c73-4661-a303-72a22ef93c4b
+2026-06-28 01:20:38,451 - INFO - Deleting transcription job: a5dbf367-baef-427c-bcd6-8b5376505533
+2026-06-28 01:20:38,582 - INFO - Uploaded successfully. File ID: f9b57c35-b69e-450d-98e1-c22bbeef317c
+2026-06-28 01:20:38,583 - INFO - Creating job for file_id: f9b57c35-b69e-450d-98e1-c22bbeef317c
+2026-06-28 01:20:38,795 - INFO - Uploaded successfully. File ID: b9b45e1b-bc1d-498f-bbdd-0c76f0c026b5
+2026-06-28 01:20:38,796 - INFO - Creating job for file_id: b9b45e1b-bc1d-498f-bbdd-0c76f0c026b5
+2026-06-28 01:20:38,867 - INFO - Created job successfully. Job ID: 3adbbeed-f7da-4902-838a-7e3f1dcc7181
+2026-06-28 01:20:38,867 - INFO - Deleting transcription job: 55eb8862-2495-463f-a53e-41b249ab4ff6
+2026-06-28 01:20:38,869 - INFO - Polling job: 3adbbeed-f7da-4902-838a-7e3f1dcc7181
+2026-06-28 01:20:38,908 - INFO - [SUCCESS] RB_0141 (branch_name) | Human: 'ثلاثمائة | وعشرة. الخفجي' -> ASR: '310، الخفجي.' | Normalized Human: 'ثلاثمائه وعشرة الخفجي' -> Normalized ASR: '310، الخفجي' | WER: 66.67%
+2026-06-28 01:20:38,909 - INFO - Uploading file: RB_0150.wav
+2026-06-28 01:20:38,910 - INFO - Deleting remote file: bbf9f66b-5c13-4f45-9547-a53e8f36db75
+2026-06-28 01:20:39,008 - INFO - Created job successfully. Job ID: 48043798-9e06-45b4-8430-a86c3f91d3a9
+2026-06-28 01:20:39,008 - INFO - Polling job: 48043798-9e06-45b4-8430-a86c3f91d3a9
+2026-06-28 01:20:39,281 - INFO - Created job successfully. Job ID: 87918ee9-1019-45f1-b7cc-c4f16acb2ee9
+2026-06-28 01:20:39,282 - INFO - Polling job: 87918ee9-1019-45f1-b7cc-c4f16acb2ee9
+2026-06-28 01:20:39,395 - INFO - Deleting remote file: ef315b18-c666-4dd6-92ed-36f0bd5d1507
+2026-06-28 01:20:39,419 - INFO - [SUCCESS] RB_0143 (general_utterance) | Human: 'رسمية | 12 | جامعة | الملك | فهد' -> ASR: '312، جامعة الملك فهد.' | Normalized Human: 'رسميه 12 جامعه الملك فهد' -> Normalized ASR: '312، جامعه الملك فهد' | WER: 40.00%
+2026-06-28 01:20:39,419 - INFO - Uploading file: RB_0151.wav
+2026-06-28 01:20:39,855 - INFO - [SUCCESS] RB_0144 (branch_code) | Human: '300 | سيهات' -> ASR: '313 سيهات.' | Normalized Human: '300 سيهات' -> Normalized ASR: '313 سيهات' | WER: 50.00%
+2026-06-28 01:20:39,856 - INFO - Uploading file: RB_0152.wav
+2026-06-28 01:20:39,993 - INFO - Uploaded successfully. File ID: d8113acd-010b-4a2d-9dd8-746d4d45c4f5
+2026-06-28 01:20:39,993 - INFO - Creating job for file_id: d8113acd-010b-4a2d-9dd8-746d4d45c4f5
+2026-06-28 01:20:40,432 - INFO - Created job successfully. Job ID: 62ae1a84-4bf2-4b99-91fa-8f2340ba7cd1
+2026-06-28 01:20:40,432 - INFO - Polling job: 62ae1a84-4bf2-4b99-91fa-8f2340ba7cd1
+2026-06-28 01:20:40,572 - INFO - Uploaded successfully. File ID: 7e0f4c05-85e3-4b32-86cd-1564bca074f0
+2026-06-28 01:20:40,573 - INFO - Creating job for file_id: 7e0f4c05-85e3-4b32-86cd-1564bca074f0
+2026-06-28 01:20:40,635 - INFO - Uploaded successfully. File ID: 4dd895fd-44fc-42c1-9712-8aa7b6a48ebe
+2026-06-28 01:20:40,635 - INFO - Creating job for file_id: 4dd895fd-44fc-42c1-9712-8aa7b6a48ebe
+2026-06-28 01:20:40,871 - INFO - Deleting transcription job: 44bb5013-2926-4967-a5c5-21201e17c516
+2026-06-28 01:20:41,015 - INFO - Created job successfully. Job ID: 86ed456c-bb6e-4f48-a363-749bf0fad1e8
+2026-06-28 01:20:41,015 - INFO - Polling job: 86ed456c-bb6e-4f48-a363-749bf0fad1e8
+2026-06-28 01:20:41,071 - INFO - Created job successfully. Job ID: cf5523d2-c3d1-4bb7-8c61-c66152524677
+2026-06-28 01:20:41,071 - INFO - Polling job: cf5523d2-c3d1-4bb7-8c61-c66152524677
+2026-06-28 01:20:41,343 - INFO - Deleting remote file: 26a1e066-d485-4c26-b7db-12bb5986684b
+2026-06-28 01:20:41,728 - INFO - Deleting transcription job: 00d4e1a3-0c73-4661-a303-72a22ef93c4b
+2026-06-28 01:20:41,796 - INFO - [SUCCESS] RB_0145 (branch_code) | Human: 'رسمية | 13 | ساعات | ثلاثية' -> ASR: '313 فيهات. 300.' | Normalized Human: 'رسميه 13 ساعات ثلاثيه' -> Normalized ASR: '313 فيهات 300' | WER: 100.00%
+2026-06-28 01:20:41,796 - INFO - Uploading file: RB_0153.wav
+2026-06-28 01:20:42,177 - INFO - Deleting transcription job: 3adbbeed-f7da-4902-838a-7e3f1dcc7181
+2026-06-28 01:20:42,237 - INFO - Deleting remote file: a969b5a0-a4ac-4c5a-b523-c963dbfdcd32
+2026-06-28 01:20:42,281 - INFO - Deleting transcription job: 48043798-9e06-45b4-8430-a86c3f91d3a9
+2026-06-28 01:20:42,551 - INFO - Deleting transcription job: 87918ee9-1019-45f1-b7cc-c4f16acb2ee9
+2026-06-28 01:20:42,638 - INFO - Deleting remote file: d0505eb9-283d-4db7-aa35-5d1ed66dc7fe
+2026-06-28 01:20:42,689 - INFO - [SUCCESS] RB_0147 (general_utterance) | Human: 'ثلاثمائة | وثلاثة | عشر | سيهات' -> ASR: '313 سيهات.' | Normalized Human: 'ثلاثمائه وثلاثه عشر سيهات' -> Normalized ASR: '313 سيهات' | WER: 75.00%
+2026-06-28 01:20:42,690 - INFO - Uploading file: RB_0154.wav
+2026-06-28 01:20:42,755 - INFO - Uploaded successfully. File ID: 185d5d10-6ef1-4432-b9b1-0b96f74c78cb
+2026-06-28 01:20:42,757 - INFO - Creating job for file_id: 185d5d10-6ef1-4432-b9b1-0b96f74c78cb
+2026-06-28 01:20:42,758 - INFO - Deleting remote file: f9b57c35-b69e-450d-98e1-c22bbeef317c
+2026-06-28 01:20:43,006 - INFO - Deleting remote file: b9b45e1b-bc1d-498f-bbdd-0c76f0c026b5
+2026-06-28 01:20:43,094 - INFO - [SUCCESS] RB_0148 (general_utterance) | Human: 'ثلاثة | المنطقة | المحايدة' -> ASR: '314، المنطقة المحايدة.' | Normalized Human: 'ثلاثه المنطقه المحايده' -> Normalized ASR: '314، المنطقه المحايدة' | WER: 66.67%
+2026-06-28 01:20:43,095 - INFO - Uploading file: RB_0155.wav
+2026-06-28 01:20:43,183 - INFO - Created job successfully. Job ID: 46a7d6e9-44fe-4d20-8e1f-7ca0dabff4d5
+2026-06-28 01:20:43,184 - INFO - Polling job: 46a7d6e9-44fe-4d20-8e1f-7ca0dabff4d5
+2026-06-28 01:20:43,215 - INFO - [SUCCESS] RB_0146 (branch_code) | Human: 'ثلاثمائة | وثلاثة | عشر | ساعات | فيها | ساعات' -> ASR: '313 سيهات. سيهات. سيهات.' | Normalized Human: 'ثلاثمائه وثلاثه عشر ساعات فيها ساعات' -> Normalized ASR: '313 سيهات سيهات سيهات' | WER: 100.00%
+2026-06-28 01:20:43,215 - INFO - Uploading file: RB_0156.wav
+2026-06-28 01:20:43,451 - INFO - [SUCCESS] RB_0149 (branch_name) | Human: 'رسمية | المنطقة المحايدة' -> ASR: 'رسمية و14، المنطقة المحايدة.' | Normalized Human: 'رسميه المنطقه المحايده' -> Normalized ASR: 'رسميه و14، المنطقه المحايدة' | WER: 66.67%
+2026-06-28 01:20:43,451 - INFO - Uploading file: RB_0157.wav
+2026-06-28 01:20:43,474 - INFO - Uploaded successfully. File ID: 8faeb25b-a1ae-4b9e-9389-82159b136312
+2026-06-28 01:20:43,474 - INFO - Creating job for file_id: 8faeb25b-a1ae-4b9e-9389-82159b136312
+2026-06-28 01:20:43,716 - INFO - Deleting transcription job: 62ae1a84-4bf2-4b99-91fa-8f2340ba7cd1
+2026-06-28 01:20:43,930 - INFO - Created job successfully. Job ID: 05968dfd-0dda-4381-bc78-1089c3af80a9
+2026-06-28 01:20:43,930 - INFO - Polling job: 05968dfd-0dda-4381-bc78-1089c3af80a9
+2026-06-28 01:20:43,945 - INFO - Uploaded successfully. File ID: ee8aa5c7-e188-4cff-9f03-2a221dad3ca4
+2026-06-28 01:20:43,945 - INFO - Creating job for file_id: ee8aa5c7-e188-4cff-9f03-2a221dad3ca4
+2026-06-28 01:20:44,145 - INFO - Uploaded successfully. File ID: 3cb6c12a-5703-4687-9c5a-d6ebe4e0d5e3
+2026-06-28 01:20:44,145 - INFO - Creating job for file_id: 3cb6c12a-5703-4687-9c5a-d6ebe4e0d5e3
+2026-06-28 01:20:44,186 - INFO - Deleting remote file: d8113acd-010b-4a2d-9dd8-746d4d45c4f5
+2026-06-28 01:20:44,226 - INFO - Uploaded successfully. File ID: b9fa551a-fc54-4a82-9cd7-2f3d2053b5a7
+2026-06-28 01:20:44,226 - INFO - Creating job for file_id: b9fa551a-fc54-4a82-9cd7-2f3d2053b5a7
+2026-06-28 01:20:44,305 - INFO - Deleting transcription job: 86ed456c-bb6e-4f48-a363-749bf0fad1e8
+2026-06-28 01:20:44,347 - INFO - Deleting transcription job: cf5523d2-c3d1-4bb7-8c61-c66152524677
+2026-06-28 01:20:44,375 - INFO - Created job successfully. Job ID: 337aea02-ba4d-4878-a872-20e11ec7a9ce
+2026-06-28 01:20:44,375 - INFO - Polling job: 337aea02-ba4d-4878-a872-20e11ec7a9ce
+2026-06-28 01:20:44,572 - INFO - Created job successfully. Job ID: 0a43717c-f174-4418-9656-78f30a0e43e5
+2026-06-28 01:20:44,572 - INFO - Polling job: 0a43717c-f174-4418-9656-78f30a0e43e5
+2026-06-28 01:20:44,654 - INFO - Created job successfully. Job ID: 740f2708-09d2-41ca-8aef-52b4426981e6
+2026-06-28 01:20:44,654 - INFO - Polling job: 740f2708-09d2-41ca-8aef-52b4426981e6
+2026-06-28 01:20:44,666 - INFO - [SUCCESS] RB_0150 (general_utterance) | Human: 'ثلاثمائة | وخمسة | عشر | سلوى' -> ASR: '315، سلوى.' | Normalized Human: 'ثلاثمائه وخمسه عشر سلوي' -> Normalized ASR: '315، سلوى' | WER: 100.00%
+2026-06-28 01:20:44,666 - INFO - Uploading file: RB_0158.wav
+2026-06-28 01:20:44,781 - INFO - Deleting remote file: 7e0f4c05-85e3-4b32-86cd-1564bca074f0
+2026-06-28 01:20:44,817 - INFO - Deleting remote file: 4dd895fd-44fc-42c1-9712-8aa7b6a48ebe
+2026-06-28 01:20:45,282 - INFO - [SUCCESS] RB_0152 (branch_code) | Human: '316 | الخبر' -> ASR: '316، الخبر.' | Normalized Human: '316 الخبر' -> Normalized ASR: '316، الخبر' | WER: 50.00%
+2026-06-28 01:20:45,283 - INFO - Uploading file: RB_0159.wav
+2026-06-28 01:20:45,294 - INFO - [SUCCESS] RB_0151 (general_utterance) | Human: 'رسمية | وخمسة | عشر | صفوة | رسمية' -> ASR: '315، صفوة. 300.' | Normalized Human: 'رسميه وخمسه عشر صفوه رسميه' -> Normalized ASR: '315، صفوة 300' | WER: 100.00%
+2026-06-28 01:20:45,295 - INFO - Uploading file: RB_0160.wav
+2026-06-28 01:20:45,404 - INFO - Uploaded successfully. File ID: 269da7b8-2844-4f09-b1c3-21b7341feb4a
+2026-06-28 01:20:45,405 - INFO - Creating job for file_id: 269da7b8-2844-4f09-b1c3-21b7341feb4a
+2026-06-28 01:20:45,816 - INFO - Uploaded successfully. File ID: 397118e9-4076-4578-94df-29ac4515a0a7
+2026-06-28 01:20:45,816 - INFO - Creating job for file_id: 397118e9-4076-4578-94df-29ac4515a0a7
+2026-06-28 01:20:45,858 - INFO - Created job successfully. Job ID: 08d12092-94e8-44df-b321-ff73c8736c42
+2026-06-28 01:20:45,858 - INFO - Polling job: 08d12092-94e8-44df-b321-ff73c8736c42
+2026-06-28 01:20:46,244 - INFO - Created job successfully. Job ID: 220fe58e-37bc-4ffb-91ac-22c924a4d6e0
+2026-06-28 01:20:46,244 - INFO - Polling job: 220fe58e-37bc-4ffb-91ac-22c924a4d6e0
+2026-06-28 01:20:46,260 - INFO - Uploaded successfully. File ID: ebaed134-587c-43b8-8c3b-1853ce905eb6
+2026-06-28 01:20:46,260 - INFO - Creating job for file_id: ebaed134-587c-43b8-8c3b-1853ce905eb6
+2026-06-28 01:20:46,459 - INFO - Deleting transcription job: 46a7d6e9-44fe-4d20-8e1f-7ca0dabff4d5
+2026-06-28 01:20:46,686 - INFO - Created job successfully. Job ID: be881c4c-6ae1-44b3-bdcb-9ec37f4b1c5a
+2026-06-28 01:20:46,686 - INFO - Polling job: be881c4c-6ae1-44b3-bdcb-9ec37f4b1c5a
+2026-06-28 01:20:46,924 - INFO - Deleting remote file: 185d5d10-6ef1-4432-b9b1-0b96f74c78cb
+2026-06-28 01:20:47,218 - INFO - Deleting transcription job: 05968dfd-0dda-4381-bc78-1089c3af80a9
+2026-06-28 01:20:47,372 - INFO - [SUCCESS] RB_0153 (general_utterance) | Human: 'رسمية | وسبعة | الجفر' -> ASR: '317، الجفر.' | Normalized Human: 'رسميه وسبعه الجفر' -> Normalized ASR: '317، الجفر' | WER: 66.67%
+2026-06-28 01:20:47,373 - INFO - Uploading file: RB_0161.wav
+2026-06-28 01:20:47,665 - INFO - Deleting remote file: 8faeb25b-a1ae-4b9e-9389-82159b136312
+2026-06-28 01:20:47,868 - INFO - Deleting transcription job: 0a43717c-f174-4418-9656-78f30a0e43e5
+2026-06-28 01:20:47,927 - INFO - Deleting transcription job: 740f2708-09d2-41ca-8aef-52b4426981e6
+2026-06-28 01:20:48,075 - INFO - Uploaded successfully. File ID: 36f2d502-8258-4525-a3b0-7832dd5e2c02
+2026-06-28 01:20:48,075 - INFO - Creating job for file_id: 36f2d502-8258-4525-a3b0-7832dd5e2c02
+2026-06-28 01:20:48,120 - INFO - [SUCCESS] RB_0154 (branch_code) | Human: '300 | الجفر' -> ASR: '317، الجفر.' | Normalized Human: '300 الجفر' -> Normalized ASR: '317، الجفر' | WER: 50.00%
+2026-06-28 01:20:48,120 - INFO - Uploading file: RB_0162.wav
+2026-06-28 01:20:48,342 - INFO - Deleting remote file: 3cb6c12a-5703-4687-9c5a-d6ebe4e0d5e3
+2026-06-28 01:20:48,381 - INFO - Deleting remote file: b9fa551a-fc54-4a82-9cd7-2f3d2053b5a7
+2026-06-28 01:20:48,508 - INFO - Created job successfully. Job ID: bdbedd70-21ec-4bbf-a12a-78cfd5cf59b1
+2026-06-28 01:20:48,508 - INFO - Polling job: bdbedd70-21ec-4bbf-a12a-78cfd5cf59b1
+2026-06-28 01:20:48,790 - INFO - [SUCCESS] RB_0156 (branch_code) | Human: '300 | الجسر' -> ASR: '317، الجفر.' | Normalized Human: '300 الجسر' -> Normalized ASR: '317، الجفر' | WER: 100.00%
+2026-06-28 01:20:48,790 - INFO - Uploading file: RB_0163.wav
+2026-06-28 01:20:48,851 - INFO - [SUCCESS] RB_0155 (branch_code) | Human: '11 | الجسر' -> ASR: '14، الجفر.' | Normalized Human: '11 الجسر' -> Normalized ASR: '14، الجفر' | WER: 100.00%
+2026-06-28 01:20:48,851 - INFO - Uploading file: RB_0164.wav
+2026-06-28 01:20:48,855 - INFO - Uploaded successfully. File ID: e00cab7d-78be-40ff-90b5-7cf410903e67
+2026-06-28 01:20:48,855 - INFO - Creating job for file_id: e00cab7d-78be-40ff-90b5-7cf410903e67
+2026-06-28 01:20:49,125 - INFO - Deleting transcription job: 08d12092-94e8-44df-b321-ff73c8736c42
+2026-06-28 01:20:49,332 - INFO - Created job successfully. Job ID: 9f1891c1-de13-44f3-97bb-52c6a8eec2c8
+2026-06-28 01:20:49,332 - INFO - Polling job: 9f1891c1-de13-44f3-97bb-52c6a8eec2c8
+2026-06-28 01:20:49,386 - INFO - Uploaded successfully. File ID: 5a2a5951-a74c-4dac-b0e1-86fa940ae979
+2026-06-28 01:20:49,386 - INFO - Creating job for file_id: 5a2a5951-a74c-4dac-b0e1-86fa940ae979
+2026-06-28 01:20:49,505 - INFO - Deleting transcription job: 220fe58e-37bc-4ffb-91ac-22c924a4d6e0
+2026-06-28 01:20:49,510 - INFO - Uploaded successfully. File ID: 138547fb-71a2-4bfa-9d7d-5262887a206f
+2026-06-28 01:20:49,510 - INFO - Creating job for file_id: 138547fb-71a2-4bfa-9d7d-5262887a206f
+2026-06-28 01:20:49,577 - INFO - Deleting remote file: 269da7b8-2844-4f09-b1c3-21b7341feb4a
+2026-06-28 01:20:49,816 - INFO - Created job successfully. Job ID: 4ebe0d95-dd7b-48f4-9e87-00a0758547e5
+2026-06-28 01:20:49,816 - INFO - Polling job: 4ebe0d95-dd7b-48f4-9e87-00a0758547e5
+2026-06-28 01:20:49,935 - INFO - Created job successfully. Job ID: 6e67c407-cfae-4dc0-ae30-46be7c93c1bd
+2026-06-28 01:20:49,936 - INFO - Polling job: 6e67c407-cfae-4dc0-ae30-46be7c93c1bd
+2026-06-28 01:20:49,942 - INFO - Deleting transcription job: be881c4c-6ae1-44b3-bdcb-9ec37f4b1c5a
+2026-06-28 01:20:49,958 - INFO - Deleting remote file: 397118e9-4076-4578-94df-29ac4515a0a7
+2026-06-28 01:20:50,015 - INFO - [SUCCESS] RB_0158 (unclear) | Human: '300 | مول أرامكو' -> ASR: '319، مول أرامكو.' | Normalized Human: '300 مول ارامكو' -> Normalized ASR: '319، مول ارامكو' | WER: 33.33%
+2026-06-28 01:20:50,015 - INFO - Uploading file: RB_0165.wav
+2026-06-28 01:20:50,080 - INFO - Deleting transcription job: 337aea02-ba4d-4878-a872-20e11ec7a9ce
+2026-06-28 01:20:50,390 - INFO - Deleting remote file: ebaed134-587c-43b8-8c3b-1853ce905eb6
+2026-06-28 01:20:50,410 - INFO - [SUCCESS] RB_0159 (general_utterance) | Human: 'ثلاثمائة | وتسعة عشر | قاعدة | الجبيل البحرية' -> ASR: '319 قاعدة الجبيل البحرية.' | Normalized Human: 'ثلاثمائه وتسعه عشر قاعده الجبيل البحريه' -> Normalized ASR: '319 قاعده الجبيل البحرية' | WER: 66.67%
+2026-06-28 01:20:50,410 - INFO - Uploading file: RB_0166.wav
+2026-06-28 01:20:50,526 - INFO - Deleting remote file: ee8aa5c7-e188-4cff-9f03-2a221dad3ca4
+2026-06-28 01:20:50,550 - INFO - Uploaded successfully. File ID: e062112b-c357-49d1-9df2-135fcc2b6359
+2026-06-28 01:20:50,550 - INFO - Creating job for file_id: e062112b-c357-49d1-9df2-135fcc2b6359
+2026-06-28 01:20:50,840 - INFO - [SUCCESS] RB_0160 (general_utterance) | Human: '320 | قاعدة | الجبيل البحرية' -> ASR: '320، قاعدة الجبيل البحرية.' | Normalized Human: '320 قاعده الجبيل البحريه' -> Normalized ASR: '320، قاعده الجبيل البحرية' | WER: 50.00%
+2026-06-28 01:20:50,840 - INFO - Uploading file: RB_0167.wav
+2026-06-28 01:20:50,980 - INFO - [SUCCESS] RB_0157 (unclear) | Human: '388 | جامعة الملك فيصل' -> ASR: '318، جامعة الملك فيصل.' | Normalized Human: '388 جامعه الملك فيصل' -> Normalized ASR: '318، جامعه الملك فيصل' | WER: 25.00%
+2026-06-28 01:20:50,980 - INFO - Uploading file: RB_0168.wav
+2026-06-28 01:20:50,983 - INFO - Created job successfully. Job ID: b8b82652-fb6a-4e76-b058-fd572d911cae
+2026-06-28 01:20:50,983 - INFO - Polling job: b8b82652-fb6a-4e76-b058-fd572d911cae
+2026-06-28 01:20:51,375 - INFO - Uploaded successfully. File ID: 4c89b532-aec4-4dff-8445-4faa8753dd4f
+2026-06-28 01:20:51,375 - INFO - Creating job for file_id: 4c89b532-aec4-4dff-8445-4faa8753dd4f
+2026-06-28 01:20:51,778 - INFO - Deleting transcription job: bdbedd70-21ec-4bbf-a12a-78cfd5cf59b1
+2026-06-28 01:20:51,812 - INFO - Created job successfully. Job ID: 3306afb7-1e7b-4415-961b-7d95627081a4
+2026-06-28 01:20:51,812 - INFO - Polling job: 3306afb7-1e7b-4415-961b-7d95627081a4
+2026-06-28 01:20:51,929 - INFO - Uploaded successfully. File ID: cc6baa41-af20-4d4b-ac71-54657f81af00
+2026-06-28 01:20:51,929 - INFO - Creating job for file_id: cc6baa41-af20-4d4b-ac71-54657f81af00
+2026-06-28 01:20:52,173 - INFO - Uploaded successfully. File ID: 9a6fdf63-ed6e-4f3b-af3d-27c33fa2734e
+2026-06-28 01:20:52,174 - INFO - Creating job for file_id: 9a6fdf63-ed6e-4f3b-af3d-27c33fa2734e
+2026-06-28 01:20:52,226 - INFO - Deleting remote file: 36f2d502-8258-4525-a3b0-7832dd5e2c02
+2026-06-28 01:20:52,347 - INFO - Created job successfully. Job ID: fb2e0bd7-8ae2-4d41-ab85-72ce2819305a
+2026-06-28 01:20:52,347 - INFO - Polling job: fb2e0bd7-8ae2-4d41-ab85-72ce2819305a
+2026-06-28 01:20:52,614 - INFO - Created job successfully. Job ID: a89a4dc9-e39c-4f67-b117-443c6915efa6
+2026-06-28 01:20:52,615 - INFO - Polling job: a89a4dc9-e39c-4f67-b117-443c6915efa6
+2026-06-28 01:20:52,635 - INFO - Deleting transcription job: 9f1891c1-de13-44f3-97bb-52c6a8eec2c8
+2026-06-28 01:20:52,686 - INFO - [SUCCESS] RB_0161 (general_utterance) | Human: 'تلتمية | واحد | وعشرين | طريق | الملك عبد | العزيز' -> ASR: '321، طريق الملك عبدالعزيز.' | Normalized Human: 'تلتميه واحد وعشرين طريق الملك عبد العزيز' -> Normalized ASR: '321، طريق الملك عبدالعزيز' | WER: 71.43%
+2026-06-28 01:20:52,686 - INFO - Uploading file: RB_0169.wav
+2026-06-28 01:20:53,077 - INFO - Deleting transcription job: 4ebe0d95-dd7b-48f4-9e87-00a0758547e5
+2026-06-28 01:20:53,123 - INFO - Deleting remote file: e00cab7d-78be-40ff-90b5-7cf410903e67
+2026-06-28 01:20:53,209 - INFO - Deleting transcription job: 6e67c407-cfae-4dc0-ae30-46be7c93c1bd
+2026-06-28 01:20:53,280 - INFO - Uploaded successfully. File ID: 0781c16d-77b0-49e1-9dae-62849048fad5
+2026-06-28 01:20:53,280 - INFO - Creating job for file_id: 0781c16d-77b0-49e1-9dae-62849048fad5
+2026-06-28 01:20:53,567 - INFO - Deleting remote file: 5a2a5951-a74c-4dac-b0e1-86fa940ae979
+2026-06-28 01:20:53,595 - INFO - [SUCCESS] RB_0162 (general_utterance) | Human: 'فرست | 121 | طريق | الملك | عبد العزيز' -> ASR: '321، طريق الملك عبدالعزيز.' | Normalized Human: 'فرست 121 طريق الملك عبد العزيز' -> Normalized ASR: '321، طريق الملك عبدالعزيز' | WER: 66.67%
+2026-06-28 01:20:53,595 - INFO - Uploading file: RB_0170.wav
+2026-06-28 01:20:53,673 - INFO - Deleting remote file: 138547fb-71a2-4bfa-9d7d-5262887a206f
+2026-06-28 01:20:53,736 - INFO - Created job successfully. Job ID: 32d12c94-6836-4449-9977-7ba5cb7d2104
+2026-06-28 01:20:53,736 - INFO - Polling job: 32d12c94-6836-4449-9977-7ba5cb7d2104
+2026-06-28 01:20:54,050 - INFO - [SUCCESS] RB_0164 (general_utterance) | Human: 'ثلاثمئة | واثنين | . الكلوية' -> ASR: '322 ألف لُوية.' | Normalized Human: 'ثلاثمئه واثنين الكلويه' -> Normalized ASR: '322 الف لوية' | WER: 100.00%
+2026-06-28 01:20:54,051 - INFO - Uploading file: RB_0171.wav
+2026-06-28 01:20:54,130 - INFO - Uploaded successfully. File ID: ed48b6d2-a398-4b68-ab25-1b38c3f89fba
+2026-06-28 01:20:54,131 - INFO - [SUCCESS] RB_0163 (general_utterance) | Human: 'تلتمية | واثنين | وعشرين | الكلوية' -> ASR: '322 الجلوية.' | Normalized Human: 'تلتميه واثنين وعشرين الكلويه' -> Normalized ASR: '322 الجلوية' | WER: 100.00%
+2026-06-28 01:20:54,131 - INFO - Creating job for file_id: ed48b6d2-a398-4b68-ab25-1b38c3f89fba
+2026-06-28 01:20:54,131 - INFO - Uploading file: RB_0172.wav
+2026-06-28 01:20:54,279 - INFO - Deleting transcription job: b8b82652-fb6a-4e76-b058-fd572d911cae
+2026-06-28 01:20:54,568 - INFO - Created job successfully. Job ID: 397ac7d1-494d-410f-92bd-f6449aba8073
+2026-06-28 01:20:54,568 - INFO - Polling job: 397ac7d1-494d-410f-92bd-f6449aba8073
+2026-06-28 01:20:54,589 - INFO - Uploaded successfully. File ID: 040ee864-023d-4516-85bc-5aa4912c7570
+2026-06-28 01:20:54,590 - INFO - Creating job for file_id: 040ee864-023d-4516-85bc-5aa4912c7570
+2026-06-28 01:20:54,762 - INFO - Deleting remote file: e062112b-c357-49d1-9df2-135fcc2b6359
+2026-06-28 01:20:54,810 - INFO - Uploaded successfully. File ID: f47a022c-981f-4f46-a6dd-5e792c2a9df3
+2026-06-28 01:20:54,810 - INFO - Creating job for file_id: f47a022c-981f-4f46-a6dd-5e792c2a9df3
+2026-06-28 01:20:55,088 - INFO - Created job successfully. Job ID: a4be19b4-ac4c-4e47-9ade-b7d05289991b
+2026-06-28 01:20:55,089 - INFO - Polling job: a4be19b4-ac4c-4e47-9ade-b7d05289991b
+2026-06-28 01:20:55,089 - INFO - Deleting transcription job: 3306afb7-1e7b-4415-961b-7d95627081a4
+2026-06-28 01:20:55,209 - INFO - [SUCCESS] RB_0165 (general_utterance) | Human: 'ثلاثمائة | وثلاثة | وعشرون | الجبيل الصناعية' -> ASR: '323، الجبيل الصناعية.' | Normalized Human: 'ثلاثمائه وثلاثه وعشرون الجبيل الصناعيه' -> Normalized ASR: '323، الجبيل الصناعية' | WER: 80.00%
+2026-06-28 01:20:55,210 - INFO - Uploading file: RB_0173.wav
+2026-06-28 01:20:55,261 - INFO - Created job successfully. Job ID: 5d76dc0c-9735-40ad-ac33-140e6514e18b
+2026-06-28 01:20:55,261 - INFO - Polling job: 5d76dc0c-9735-40ad-ac33-140e6514e18b
+2026-06-28 01:20:55,545 - INFO - Deleting remote file: 4c89b532-aec4-4dff-8445-4faa8753dd4f
+2026-06-28 01:20:55,636 - INFO - Deleting transcription job: fb2e0bd7-8ae2-4d41-ab85-72ce2819305a
+2026-06-28 01:20:55,950 - INFO - Deleting transcription job: a89a4dc9-e39c-4f67-b117-443c6915efa6
+2026-06-28 01:20:55,990 - INFO - [SUCCESS] RB_0167 (general_utterance) | Human: 'السنية | أسد | تاروت' -> ASR: '326. تاروت.' | Normalized Human: 'السنيه اسد تاروت' -> Normalized ASR: '326 تاروت' | WER: 66.67%
+2026-06-28 01:20:55,990 - INFO - Uploading file: RB_0174.wav
+2026-06-28 01:20:56,101 - INFO - Deleting remote file: cc6baa41-af20-4d4b-ac71-54657f81af00

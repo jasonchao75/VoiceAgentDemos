@@ -1,0 +1,67 @@
+2026-04-29 18:57:32,779 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-29 18:57:34,485 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar_en", "additional_vocab": [{"content": "2026", "sounds_like": ["\u0623\u0644\u0641\u064a\u0646 \u0648\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u06486", "\u0639\u0634\u0631\u064a\u0646 \u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646"]}, {"content": "\u064825", "sounds_like": ["\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u0648\u0646"]}, {"content": "2030", "sounds_like": ["\u0639\u0634\u0631\u064a\u0646 \u062b\u0644\u0627\u062b\u064a\u0646"]}], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0.5}}}
+2026-04-29 18:57:34,960 - INFO - Received RecognitionStarted from server.
+2026-04-29 18:57:34,996 - INFO - Starting to send audio data...
+2026-04-29 18:57:36,066 - INFO - [Partial]: 
+2026-04-29 18:57:36,280 - INFO - [Final]: 
+2026-04-29 18:57:36,280 - INFO - [Partial]: 
+2026-04-29 18:57:36,725 - INFO - [Partial]: 
+2026-04-29 18:57:37,175 - INFO - First partial result delay: 2.680s
+2026-04-29 18:57:37,175 - INFO - [Partial]: تأمين
+2026-04-29 18:57:37,564 - INFO - [Partial]: تأمين
+2026-04-29 18:57:37,874 - INFO - [Partial]: تأمين سيارتي بي
+2026-04-29 18:57:38,304 - INFO - [Partial]: تأمين سيارتي بيخلص
+2026-04-29 18:57:38,642 - INFO - [Partial]: تأمين سيارتي بيخلص.
+2026-04-29 18:57:39,068 - INFO - [Final]: تأمين 
+2026-04-29 18:57:39,068 - INFO - [Partial]: سيارتي بخلص تاريخ
+2026-04-29 18:57:39,404 - INFO - [Final]: سيارتي 
+2026-04-29 18:57:39,404 - INFO - [Partial]: بخلص تاريخ
+2026-04-29 18:57:39,825 - INFO - [Partial]: بخلص تاريخ
+2026-04-29 18:57:40,077 - INFO - [Final]: بخلص 
+2026-04-29 18:57:40,090 - INFO - [Partial]: تاريخ
+2026-04-29 18:57:40,763 - INFO - [Partial]: تاريخ.
+2026-04-29 18:57:40,865 - INFO - [Final]: تاريخ 20. 
+2026-04-29 18:57:40,865 - INFO - [Partial]: 
+2026-04-29 18:57:40,865 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:57:41,422 - INFO - [Partial]: 2 2
+2026-04-29 18:57:41,877 - INFO - [Partial]: 5
+2026-04-29 18:57:42,054 - INFO - [Partial]: خمسة
+2026-04-29 18:57:42,535 - INFO - [Partial]: خمسة
+2026-04-29 18:57:43,000 - INFO - [Partial]: خمسة
+2026-04-29 18:57:43,247 - INFO - [Final]: 5 2000. 
+2026-04-29 18:57:43,247 - INFO - [Partial]: 
+2026-04-29 18:57:43,247 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:57:43,723 - INFO - [Partial]: 
+2026-04-29 18:57:44,145 - INFO - [Final]: 
+2026-04-29 18:57:44,145 - INFO - [Partial]: 
+2026-04-29 18:57:44,361 - INFO - [Partial]: 28
+2026-04-29 18:57:44,733 - INFO - [Partial]: 28.
+2026-04-29 18:57:45,205 - INFO - [Partial]: 28.
+2026-04-29 18:57:45,502 - INFO - [Final]: 28. 
+2026-04-29 18:57:45,502 - INFO - [Partial]: 
+2026-04-29 18:57:45,502 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:57:45,958 - INFO - [Partial]: 
+2026-04-29 18:57:46,410 - INFO - [Final]: 
+2026-04-29 18:57:46,410 - INFO - [Partial]: 
+2026-04-29 18:57:46,622 - INFO - [Partial]: ما
+2026-04-29 18:57:47,064 - INFO - [Partial]: اني ما اعرف.
+2026-04-29 18:57:47,619 - INFO - [Partial]: اني ما اعرف كيف.
+2026-04-29 18:57:48,065 - INFO - [Partial]: اني ما اعرف كيف طريقة
+2026-04-29 18:57:48,263 - INFO - [Final]: اني 
+2026-04-29 18:57:48,282 - INFO - [Partial]: ما اعرف كيف. طريقة جديدة
+2026-04-29 18:57:48,708 - INFO - [Final]: ما 
+2026-04-29 18:57:48,708 - INFO - [Partial]: اعرف كيف. طريقة جديدة
+2026-04-29 18:57:49,162 - INFO - [Final]: اعرف كيف. 
+2026-04-29 18:57:49,162 - INFO - [Partial]: طريقة تجديد.
+2026-04-29 18:57:49,209 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-29 18:57:49,374 - INFO - [Partial]: طريقة تجديد
+2026-04-29 18:57:49,804 - INFO - [Final]: طريقة تجديد. 
+2026-04-29 18:57:49,804 - INFO - [Partial]: 
+2026-04-29 18:57:50,019 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-29 18:57:50,020 - INFO - 
+==================================================
+2026-04-29 18:57:50,020 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-29 18:57:50,020 - INFO - تأمين سيارتي بخلص تاريخ 20. 5 2000. 28. اني ما اعرف كيف. طريقة تجديد.
+2026-04-29 18:57:50,020 - INFO - ==================================================
+
+2026-04-29 18:57:50,021 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

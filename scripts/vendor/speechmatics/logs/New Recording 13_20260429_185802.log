@@ -1,0 +1,62 @@
+2026-04-29 18:58:02,965 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-29 18:58:04,318 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar_en", "additional_vocab": [{"content": "2026", "sounds_like": ["\u0623\u0644\u0641\u064a\u0646 \u0648\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u06486", "\u0639\u0634\u0631\u064a\u0646 \u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646"]}, {"content": "\u064825", "sounds_like": ["\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u0648\u0646"]}, {"content": "2030", "sounds_like": ["\u0639\u0634\u0631\u064a\u0646 \u062b\u0644\u0627\u062b\u064a\u0646"]}], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0.5}}}
+2026-04-29 18:58:04,827 - INFO - Starting to send audio data...
+2026-04-29 18:58:04,851 - INFO - Received RecognitionStarted from server.
+2026-04-29 18:58:05,877 - INFO - [Partial]: 
+2026-04-29 18:58:06,092 - INFO - [Final]: 
+2026-04-29 18:58:06,093 - INFO - [Partial]: 
+2026-04-29 18:58:06,715 - INFO - [Partial]: 
+2026-04-29 18:58:06,917 - INFO - [Partial]: 
+2026-04-29 18:58:07,352 - INFO - First partial result delay: 3.026s
+2026-04-29 18:58:07,352 - INFO - [Partial]: موعد اليوم
+2026-04-29 18:58:07,605 - INFO - [Partial]: موعد اليوم
+2026-04-29 18:58:08,222 - INFO - [Partial]: موعد اليوم
+2026-04-29 18:58:08,487 - INFO - [Partial]: موعد اليوم الساعة
+2026-04-29 18:58:08,743 - INFO - [Final]: موعد 
+2026-04-29 18:58:08,743 - INFO - [Partial]: اليوم الساعة 8
+2026-04-29 18:58:09,232 - INFO - [Partial]: اليوم الساعة 8.
+2026-04-29 18:58:09,630 - INFO - [Final]: اليوم 
+2026-04-29 18:58:09,630 - INFO - [Partial]: الساعة 8.
+2026-04-29 18:58:09,912 - INFO - [Partial]: الساعة 8
+2026-04-29 18:58:10,300 - INFO - [Final]: الساعة 8 وربع. 
+2026-04-29 18:58:10,301 - INFO - [Partial]: 
+2026-04-29 18:58:10,416 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:10,821 - INFO - [Partial]: 
+2026-04-29 18:58:11,253 - INFO - [Partial]: 
+2026-04-29 18:58:11,548 - INFO - [Final]: لكني أود. 
+2026-04-29 18:58:11,548 - INFO - [Partial]: 
+2026-04-29 18:58:12,103 - INFO - [Partial]: 
+2026-04-29 18:58:12,354 - INFO - [Partial]: أغيره
+2026-04-29 18:58:12,788 - INFO - [Partial]: أغيره
+2026-04-29 18:58:12,996 - INFO - [Partial]: أن أغيره. أخليه
+2026-04-29 18:58:13,433 - INFO - [Final]: أن 
+2026-04-29 18:58:13,434 - INFO - [Partial]: أغيره. أخليه 8
+2026-04-29 18:58:13,852 - INFO - [Partial]: أغيره. أخليه. 8.
+2026-04-29 18:58:14,285 - INFO - [Final]: أغيره. أخليه. 8. 
+2026-04-29 18:58:14,285 - INFO - [Partial]: 
+2026-04-29 18:58:14,285 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:14,712 - INFO - [Partial]: 
+2026-04-29 18:58:15,058 - INFO - [Final]: دقيقة. 
+2026-04-29 18:58:15,058 - INFO - [Partial]: 
+2026-04-29 18:58:15,347 - INFO - [Partial]: 
+2026-04-29 18:58:15,782 - INFO - [Partial]: 
+2026-04-29 18:58:16,230 - INFO - [Final]: إذا. في. 
+2026-04-29 18:58:16,231 - INFO - [Partial]: 
+2026-04-29 18:58:16,231 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:16,436 - INFO - [Partial]: 
+2026-04-29 18:58:16,847 - INFO - [Partial]: إمكانية
+2026-04-29 18:58:17,232 - INFO - [Partial]: إمكانية.
+2026-04-29 18:58:17,277 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-29 18:58:17,619 - INFO - [Final]: إمكانية. 
+2026-04-29 18:58:17,619 - INFO - [Partial]: 
+2026-04-29 18:58:17,620 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:17,893 - INFO - [Final]: 
+2026-04-29 18:58:17,894 - INFO - [Partial]: 
+2026-04-29 18:58:17,894 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-29 18:58:17,894 - INFO - 
+==================================================
+2026-04-29 18:58:17,894 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-29 18:58:17,895 - INFO - موعد اليوم الساعة 8 وربع. لكني أود. أن أغيره. أخليه. 8. دقيقة. إذا. في. إمكانية.
+2026-04-29 18:58:17,895 - INFO - ==================================================
+
+2026-04-29 18:58:17,895 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

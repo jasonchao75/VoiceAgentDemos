@@ -1,0 +1,66 @@
+2026-04-28 04:28:43,192 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:28:44,311 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:28:44,675 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:28:44,821 - INFO - Starting to send audio data...
+2026-04-28 04:28:45,616 - INFO - [Partial]: 
+2026-04-28 04:28:45,991 - INFO - [Partial]: 
+2026-04-28 04:28:46,390 - INFO - [Partial]: 
+2026-04-28 04:28:46,772 - INFO - [Partial]: 
+2026-04-28 04:28:47,176 - INFO - [Partial]: 
+2026-04-28 04:28:47,564 - INFO - First partial result delay: 3.244s
+2026-04-28 04:28:47,564 - INFO - [Partial]: ممكن
+2026-04-28 04:28:47,961 - INFO - [Partial]: ممكن تقولي
+2026-04-28 04:28:48,383 - INFO - [Partial]: ممكن تقولي اليوم
+2026-04-28 04:28:48,732 - INFO - [Partial]: ممكن تقولي لي اليوم كم
+2026-04-28 04:28:49,116 - INFO - [Final]: ممكن 
+2026-04-28 04:28:49,121 - INFO - [Partial]: تقولي لي اليوم كم
+2026-04-28 04:28:49,463 - INFO - [Partial]: تقولي لي اليوم كم التاريخ
+2026-04-28 04:28:49,822 - INFO - [Final]: تقولي لي 
+2026-04-28 04:28:49,823 - INFO - [Partial]: اليوم كم التاريخ
+2026-04-28 04:28:50,190 - INFO - [Final]: اليوم 
+2026-04-28 04:28:50,194 - INFO - [Partial]: كم التاريخ
+2026-04-28 04:28:50,569 - INFO - [Final]: كم 
+2026-04-28 04:28:50,569 - INFO - [Partial]: التاريخ
+2026-04-28 04:28:50,951 - INFO - [Partial]: التاريخ
+2026-04-28 04:28:51,343 - INFO - [Final]: التاريخ 
+2026-04-28 04:28:51,343 - INFO - [Partial]: 
+2026-04-28 04:28:51,706 - INFO - [Partial]: .
+2026-04-28 04:28:52,086 - INFO - [Partial]: أتوقع
+2026-04-28 04:28:52,519 - INFO - [Partial]: . أتوقع اليوم
+2026-04-28 04:28:52,912 - INFO - [Partial]: . أتوقع اليوم
+2026-04-28 04:28:53,287 - INFO - [Partial]: . أتوقع اليوم تاريخ
+2026-04-28 04:28:53,657 - INFO - [Final]: . 
+2026-04-28 04:28:53,657 - INFO - [Partial]: اتوقع اليوم تاريخ
+2026-04-28 04:28:54,049 - INFO - [Final]: اتوقع 
+2026-04-28 04:28:54,052 - INFO - [Partial]: اليوم تاريخ 23
+2026-04-28 04:28:54,426 - INFO - [Final]: اليوم 
+2026-04-28 04:28:54,426 - INFO - [Partial]: تاريخ 28
+2026-04-28 04:28:54,753 - INFO - [Partial]: تاريخ 28
+2026-04-28 04:28:55,182 - INFO - [Final]: تاريخ 
+2026-04-28 04:28:55,183 - INFO - [Partial]: 28
+2026-04-28 04:28:55,519 - INFO - [Partial]: 28
+2026-04-28 04:28:55,928 - INFO - [Partial]: 28 ابريل
+2026-04-28 04:28:56,293 - INFO - [Final]: 28 
+2026-04-28 04:28:56,294 - INFO - [Partial]: ابريل
+2026-04-28 04:28:56,651 - INFO - [Partial]: ابريل
+2026-04-28 04:28:57,069 - INFO - [Partial]: ابريل
+2026-04-28 04:28:57,446 - INFO - [Partial]: ابريل
+2026-04-28 04:28:57,776 - INFO - [Final]: ابريل 
+2026-04-28 04:28:57,777 - INFO - [Partial]: 20. 26
+2026-04-28 04:28:58,183 - INFO - [Partial]: 2016.
+2026-04-28 04:28:58,724 - INFO - [Partial]: 2026.
+2026-04-28 04:28:59,052 - INFO - [Partial]: 2026.
+2026-04-28 04:28:59,313 - INFO - [Partial]: 2026.
+2026-04-28 04:28:59,443 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:28:59,689 - INFO - [Final]: 2026. 
+2026-04-28 04:28:59,693 - INFO - [Partial]: 
+2026-04-28 04:29:00,109 - INFO - [Final]: 
+2026-04-28 04:29:00,110 - INFO - [Partial]: 
+2026-04-28 04:29:00,113 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:29:00,113 - INFO - 
+==================================================
+2026-04-28 04:29:00,113 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:29:00,113 - INFO - ممكن تقولي لي اليوم كم التاريخ . اتوقع اليوم تاريخ 28 ابريل 2026.
+2026-04-28 04:29:00,113 - INFO - ==================================================
+
+2026-04-28 04:29:00,114 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

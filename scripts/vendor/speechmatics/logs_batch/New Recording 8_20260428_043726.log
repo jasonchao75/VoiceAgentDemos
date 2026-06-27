@@ -1,0 +1,11 @@
+2026-04-28 04:37:26,158 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 8.wav
+2026-04-28 04:37:26,158 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:37:28,157 - INFO - Job successfully submitted. Job ID: 8h2n1rsu9k
+2026-04-28 04:37:32,454 - INFO - Job status: done
+2026-04-28 04:37:33,782 - INFO - 
+==================================================
+2026-04-28 04:37:33,783 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:37:33,783 - INFO - ÙÙÙÙ ØªÙÙÙÙÙ ÙÙ Ø§ÙÙÙÙ ÙÙ Ø§ÙØªØ§Ø±ÙØ®Ø Ø£ØªÙÙØ¹ Ø§ÙÙÙÙ ØªØ§Ø±ÙØ® 28 Ø£Ø¨Ø±ÙÙ 2026.
+2026-04-28 04:37:33,783 - INFO - ==================================================
+
+2026-04-28 04:37:33,783 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

@@ -1,0 +1,25 @@
+2026-04-28 19:08:05,342 - INFO - Starting continuous recognition...
+2026-04-28 19:08:05,342 - INFO - Session started
+2026-04-28 19:08:05,342 - INFO - Starting to push audio data...
+2026-04-28 19:08:08,584 - INFO - First partial result delay: 3.243s
+2026-04-28 19:08:08,584 - INFO - [Partial]: رؤية
+2026-04-28 19:08:08,896 - INFO - [Partial]: رؤية المملكة
+2026-04-28 19:08:10,107 - INFO - [Partial]: رؤية المملكة 20
+2026-04-28 19:08:10,412 - INFO - [Partial]: رؤية المملكة 2030
+2026-04-28 19:08:12,016 - INFO - [Partial]: رؤية المملكة 2030 باقي
+2026-04-28 19:08:12,320 - INFO - [Partial]: رؤية المملكة 2030 باقي لها
+2026-04-28 19:08:13,578 - INFO - [Partial]: رؤية المملكة 2030 باقي لها أربع سنين
+2026-04-28 19:08:14,001 - INFO - [Partial]: رؤية المملكة 2030 باقي لها أربع سنين إن شاء
+2026-04-28 19:08:14,304 - INFO - [Partial]: رؤية المملكة 2030 باقي لها أربع سنين إن شاء الله
+2026-04-28 19:08:14,831 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:08:14,831 - INFO - [Final]: رؤية المملكة 2030 باقي لها أربع سنين إن شاء الله.
+2026-04-28 19:08:15,786 - INFO - Audio transmission finished. Closing stream...
+2026-04-28 19:08:16,233 - INFO - Canceled: CancellationReason.EndOfStream
+2026-04-28 19:08:16,233 - INFO - Session stopped
+2026-04-28 19:08:16,306 - INFO - 
+==================================================
+2026-04-28 19:08:16,306 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:08:16,306 - INFO - رؤية المملكة 2030 باقي لها أربع سنين إن شاء الله.
+2026-04-28 19:08:16,306 - INFO - ==================================================
+
+2026-04-28 19:08:16,306 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/azure/azure_test_records.csv

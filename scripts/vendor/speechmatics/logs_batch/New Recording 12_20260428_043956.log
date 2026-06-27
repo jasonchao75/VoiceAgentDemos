@@ -1,0 +1,11 @@
+2026-04-28 04:39:56,623 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 12.wav
+2026-04-28 04:39:56,623 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:39:58,748 - INFO - Job successfully submitted. Job ID: 9gd6l1gnxd
+2026-04-28 04:40:03,060 - INFO - Job status: done
+2026-04-28 04:40:04,412 - INFO - 
+==================================================
+2026-04-28 04:40:04,413 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:40:04,413 - INFO - رؤية المملكة 2030 باقي لها اربع سنين ان شاء الله.
+2026-04-28 04:40:04,413 - INFO - ==================================================
+
+2026-04-28 04:40:04,413 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

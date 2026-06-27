@@ -1,0 +1,79 @@
+2026-04-28 04:30:56,646 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:30:57,838 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:30:58,212 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:30:58,344 - INFO - Starting to send audio data...
+2026-04-28 04:30:59,152 - INFO - [Partial]: 
+2026-04-28 04:30:59,597 - INFO - [Partial]: 
+2026-04-28 04:30:59,922 - INFO - [Partial]: 
+2026-04-28 04:31:00,313 - INFO - First partial result delay: 2.469s
+2026-04-28 04:31:00,313 - INFO - [Partial]: عندنا
+2026-04-28 04:31:00,716 - INFO - [Partial]: عند موعد
+2026-04-28 04:31:01,081 - INFO - [Partial]: عندنا موعد
+2026-04-28 04:31:01,471 - INFO - [Partial]: عندنا موعد
+2026-04-28 04:31:01,839 - INFO - [Partial]: عندنا موعد
+2026-04-28 04:31:02,249 - INFO - [Final]: عندنا 
+2026-04-28 04:31:02,250 - INFO - [Partial]: موعد بتاريخ
+2026-04-28 04:31:02,628 - INFO - [Partial]: موعد بتاريخ
+2026-04-28 04:31:02,997 - INFO - [Final]: موعد 
+2026-04-28 04:31:03,001 - INFO - [Partial]: بتاريخ 30
+2026-04-28 04:31:03,376 - INFO - [Partial]: بتاريخ 30 6
+2026-04-28 04:31:03,747 - INFO - [Partial]: بتاريخ 30 6
+2026-04-28 04:31:04,197 - INFO - [Final]: بتاريخ 
+2026-04-28 04:31:04,197 - INFO - [Partial]: 30 6
+2026-04-28 04:31:04,491 - INFO - [Final]: 30 
+2026-04-28 04:31:04,492 - INFO - [Partial]: 6 و6
+2026-04-28 04:31:04,941 - INFO - [Partial]: 6 و6 3
+2026-04-28 04:31:05,326 - INFO - [Final]: 6 
+2026-04-28 04:31:05,326 - INFO - [Partial]: 2016
+2026-04-28 04:31:05,670 - INFO - [Partial]: 2016 29
+2026-04-28 04:31:06,011 - INFO - [Partial]: 2016
+2026-04-28 04:31:06,405 - INFO - [Final]: 2016 
+2026-04-28 04:31:06,405 - INFO - [Partial]: 
+2026-04-28 04:31:06,783 - INFO - [Final]: . 
+2026-04-28 04:31:06,783 - INFO - [Partial]: 29
+2026-04-28 04:31:07,194 - INFO - [Partial]: 29
+2026-04-28 04:31:07,574 - INFO - [Final]: 29 
+2026-04-28 04:31:07,574 - INFO - [Partial]: 
+2026-04-28 04:31:07,928 - INFO - [Partial]: .
+2026-04-28 04:31:08,341 - INFO - [Partial]: .
+2026-04-28 04:31:08,762 - INFO - [Partial]: . على
+2026-04-28 04:31:09,099 - INFO - [Partial]: . على الساعة
+2026-04-28 04:31:09,474 - INFO - [Final]: . 
+2026-04-28 04:31:09,479 - INFO - [Partial]: على الساعة تقريبا
+2026-04-28 04:31:09,923 - INFO - [Partial]: على الساعة تقريبا
+2026-04-28 04:31:10,247 - INFO - [Partial]: على الساعة تقريبا 9
+2026-04-28 04:31:10,588 - INFO - [Final]: على 
+2026-04-28 04:31:10,589 - INFO - [Partial]: الساعة تقريبا 9
+2026-04-28 04:31:11,041 - INFO - [Final]: الساعة 
+2026-04-28 04:31:11,042 - INFO - [Partial]: تقريبا 9
+2026-04-28 04:31:11,341 - INFO - [Partial]: تقريبا 9
+2026-04-28 04:31:11,729 - INFO - [Final]: تقريبا 
+2026-04-28 04:31:11,730 - INFO - [Partial]: 9
+2026-04-28 04:31:12,102 - INFO - [Final]: 9 
+2026-04-28 04:31:12,106 - INFO - [Partial]: 
+2026-04-28 04:31:12,480 - INFO - [Partial]: .
+2026-04-28 04:31:12,891 - INFO - [Partial]: و25
+2026-04-28 04:31:13,250 - INFO - [Partial]: و5
+2026-04-28 04:31:13,676 - INFO - [Partial]: و45
+2026-04-28 04:31:14,150 - INFO - [Partial]: و45 دقيقة
+2026-04-28 04:31:14,512 - INFO - [Partial]: و45 دقيقة. هل
+2026-04-28 04:31:14,819 - INFO - [Final]: و45 
+2026-04-28 04:31:14,823 - INFO - [Partial]: دقيقة. هل هذا الوقت
+2026-04-28 04:31:15,202 - INFO - [Partial]: دقيقة. هل هذا الوقت
+2026-04-28 04:31:15,583 - INFO - [Final]: دقيقة. 
+2026-04-28 04:31:15,583 - INFO - [Partial]: هل هذا الوقت يناسبك
+2026-04-28 04:31:15,932 - INFO - [Final]: هل 
+2026-04-28 04:31:15,932 - INFO - [Partial]: هذا الوقت يناسبك.
+2026-04-28 04:31:16,134 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:31:16,351 - INFO - [Final]: هذا 
+2026-04-28 04:31:16,351 - INFO - [Partial]: الوقت يناسبك.
+2026-04-28 04:31:16,825 - INFO - [Final]: الوقت يناسبك. 
+2026-04-28 04:31:16,826 - INFO - [Partial]: 
+2026-04-28 04:31:16,826 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:31:16,826 - INFO - 
+==================================================
+2026-04-28 04:31:16,826 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:31:16,826 - INFO - عندنا موعد بتاريخ 30 6 2016 . 29 . على الساعة تقريبا 9 و45 دقيقة. هل هذا الوقت يناسبك.
+2026-04-28 04:31:16,826 - INFO - ==================================================
+
+2026-04-28 04:31:16,827 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

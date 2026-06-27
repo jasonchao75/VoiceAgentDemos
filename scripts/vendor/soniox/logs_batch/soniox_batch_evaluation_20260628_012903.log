@@ -1,0 +1,68 @@
+2026-06-28 01:29:03,632 - INFO - Starting Soniox Batch Evaluation...
+2026-06-28 01:29:03,632 - INFO - Metadata file path: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank/metadata.csv
+2026-06-28 01:29:03,632 - INFO - Scanning target directory: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank
+2026-06-28 01:29:03,634 - INFO - Found 511 .wav files locally.
+2026-06-28 01:29:03,639 - INFO - Loaded 511 records from metadata.csv.
+2026-06-28 01:29:03,640 - INFO - Matched 511 files for execution.
+2026-06-28 01:29:03,640 - INFO - Limiting execution to the first 5 matched files.
+2026-06-28 01:29:03,640 - INFO - Spawning 5 parallel worker pipelines (Max concurrency: 8)...
+2026-06-28 01:29:03,642 - INFO - Uploading file: RB_0001.wav
+2026-06-28 01:29:03,643 - INFO - Uploading file: RB_0002.wav
+2026-06-28 01:29:03,643 - INFO - Uploading file: RB_0003.wav
+2026-06-28 01:29:03,644 - INFO - Uploading file: RB_0004.wav
+2026-06-28 01:29:03,644 - INFO - Uploading file: RB_0005.wav
+2026-06-28 01:29:05,147 - INFO - Uploaded successfully. File ID: 57ecb0ee-e502-4a62-b8ae-3cb192b0869b
+2026-06-28 01:29:05,148 - INFO - Creating job for file_id: 57ecb0ee-e502-4a62-b8ae-3cb192b0869b
+2026-06-28 01:29:05,572 - INFO - Created job successfully. Job ID: 8125d4ef-88f0-4a32-97fd-317c7b58df99
+2026-06-28 01:29:05,572 - INFO - Polling job: 8125d4ef-88f0-4a32-97fd-317c7b58df99
+2026-06-28 01:29:05,738 - INFO - Uploaded successfully. File ID: c24f2f7b-80a3-42df-81f6-a049e2ac95e6
+2026-06-28 01:29:05,738 - INFO - Creating job for file_id: c24f2f7b-80a3-42df-81f6-a049e2ac95e6
+2026-06-28 01:29:05,910 - INFO - Uploaded successfully. File ID: 2fdaef99-0a94-41b8-b7bd-a70a12bffc37
+2026-06-28 01:29:05,910 - INFO - Creating job for file_id: 2fdaef99-0a94-41b8-b7bd-a70a12bffc37
+2026-06-28 01:29:06,394 - INFO - Created job successfully. Job ID: 52f7d8a5-4c37-4dc2-a33c-3787f76ee1a1
+2026-06-28 01:29:06,394 - INFO - Polling job: 52f7d8a5-4c37-4dc2-a33c-3787f76ee1a1
+2026-06-28 01:29:06,524 - INFO - Uploaded successfully. File ID: 9a15e668-0362-4d44-8b60-f367a916924d
+2026-06-28 01:29:06,524 - INFO - Creating job for file_id: 9a15e668-0362-4d44-8b60-f367a916924d
+2026-06-28 01:29:06,546 - INFO - Uploaded successfully. File ID: 8c293678-c4f5-492b-a8f1-3bcba24920ee
+2026-06-28 01:29:06,546 - INFO - Creating job for file_id: 8c293678-c4f5-492b-a8f1-3bcba24920ee
+2026-06-28 01:29:06,561 - INFO - Created job successfully. Job ID: 54c1651d-fd21-48ca-840f-5f1bb50ad747
+2026-06-28 01:29:06,561 - INFO - Polling job: 54c1651d-fd21-48ca-840f-5f1bb50ad747
+2026-06-28 01:29:07,178 - INFO - Created job successfully. Job ID: d691075f-09ea-4be4-9940-946c0f075601
+2026-06-28 01:29:07,178 - INFO - Polling job: d691075f-09ea-4be4-9940-946c0f075601
+2026-06-28 01:29:07,212 - INFO - Created job successfully. Job ID: d4dae4d1-f277-4865-bb75-af428a5f887b
+2026-06-28 01:29:07,213 - INFO - Polling job: d4dae4d1-f277-4865-bb75-af428a5f887b
+2026-06-28 01:29:09,330 - INFO - Deleting transcription job: 8125d4ef-88f0-4a32-97fd-317c7b58df99
+2026-06-28 01:29:10,033 - INFO - Deleting remote file: 57ecb0ee-e502-4a62-b8ae-3cb192b0869b
+2026-06-28 01:29:10,386 - INFO - Deleting transcription job: 52f7d8a5-4c37-4dc2-a33c-3787f76ee1a1
+2026-06-28 01:29:10,527 - INFO - Deleting transcription job: 54c1651d-fd21-48ca-840f-5f1bb50ad747
+2026-06-28 01:29:10,708 - INFO - [SUCCESS] RB_0002 (general_utterance) | Human: 'ايه حوليني' -> ASR: 'الحنان.' | Normalized Human: 'ايه حوليني' -> Normalized ASR: 'الحنان' | WER: 100.00%
+2026-06-28 01:29:10,717 - INFO - Deleting transcription job: d691075f-09ea-4be4-9940-946c0f075601
+2026-06-28 01:29:11,048 - INFO - Deleting remote file: c24f2f7b-80a3-42df-81f6-a049e2ac95e6
+2026-06-28 01:29:11,143 - INFO - Deleting transcription job: d4dae4d1-f277-4865-bb75-af428a5f887b
+2026-06-28 01:29:11,187 - INFO - Deleting remote file: 9a15e668-0362-4d44-8b60-f367a916924d
+2026-06-28 01:29:11,212 - INFO - Deleting remote file: 2fdaef99-0a94-41b8-b7bd-a70a12bffc37
+2026-06-28 01:29:11,643 - INFO - [SUCCESS] RB_0003 (branch_code) | Human: 'رع 307' -> ASR: '307.' | Normalized Human: 'رع 307' -> Normalized ASR: '307' | WER: 50.00%
+2026-06-28 01:29:11,722 - INFO - [SUCCESS] RB_0001 (branch_code) | Human: 'احد سبعة ستة' -> ASR: '176.' | Normalized Human: '176' -> Normalized ASR: '176' | WER: 0.00%
+2026-06-28 01:29:11,824 - INFO - Deleting remote file: 8c293678-c4f5-492b-a8f1-3bcba24920ee
+2026-06-28 01:29:11,890 - INFO - [SUCCESS] RB_0004 (general_utterance) | Human: 'قلت لك بطاقتي ضاعت فأحتاج مساعدة' -> ASR: 'قلت لك بطاقتي ضاعت، فأحتاج مساعدة.' | Normalized Human: 'قلت لك بطاقتي ضاعت فاحتاج مساعده' -> Normalized ASR: 'قلت لك بطاقتي ضاعت، فاحتاج مساعدة' | WER: 33.33%
+2026-06-28 01:29:12,494 - INFO - [SUCCESS] RB_0005 (branch_name) | Human: 'الفرع الرئيسي' -> ASR: 'الفرع الرئيسي.' | Normalized Human: 'الفرع الرئيسي' -> Normalized ASR: 'الفرع الرئيسي' | WER: 0.00%
+2026-06-28 01:29:12,494 - INFO - Writing evaluation records to CSV...
+2026-06-28 01:29:12,496 - INFO - Results saved to: D:\1. AI Study\codex\OpenCode\VoiceAgent\scripts\vendor\soniox\soniox_batch_riyadbank_records.csv
+2026-06-28 01:29:12,496 - INFO - 
+============================================================
+2026-06-28 01:29:12,497 - INFO - ================ RIYADBANK BATCH EVALUATION REPORT ================
+2026-06-28 01:29:12,497 - INFO - ============================================================
+2026-06-28 01:29:12,497 - INFO - Timestamp:              2026-06-28 01:29:12
+2026-06-28 01:29:12,497 - INFO - Latest Soniox Model:    stt-async-v5
+2026-06-28 01:29:12,498 - INFO - Total Processed Files:  5
+2026-06-28 01:29:12,498 - INFO -   - Success:            5
+2026-06-28 01:29:12,498 - INFO -   - Failed/Error:       0
+2026-06-28 01:29:12,498 - INFO - Global Word Error Rate: 38.46% (5/13 words)
+2026-06-28 01:29:12,498 - INFO - ------------------------------------------------------------
+2026-06-28 01:29:12,498 - INFO - CATEGORY-WISE EVALUATION DETAIL:
+2026-06-28 01:29:12,499 - INFO - ------------------------------------------------------------
+2026-06-28 01:29:12,499 - INFO - Category: branch_code          | Files: 2    | Global Category WER: 33.33% | Avg File WER: 25.00%
+2026-06-28 01:29:12,499 - INFO - Category: general_utterance    | Files: 2    | Global Category WER: 50.00% | Avg File WER: 66.67%
+2026-06-28 01:29:12,499 - INFO - Category: branch_name          | Files: 1    | Global Category WER: 0.00% | Avg File WER: 0.00%
+2026-06-28 01:29:12,499 - INFO - ============================================================
+

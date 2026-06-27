@@ -1,0 +1,46 @@
+2026-04-28 19:06:57,917 - INFO - Connecting to wss://stt-rt.soniox.com/transcribe-websocket
+2026-04-28 19:06:58,699 - INFO - Sending initial config: {"model": "stt-rt-v4", "audio_format": "pcm_s16le", "sample_rate": 8000, "num_channels": 1, "language_hints": ["ar"], "enable_language_identification": true, "enable_speaker_diarization": false, "enable_endpoint_detection": true, "max_endpoint_delay_ms": 2000, "api_key": "***"}
+2026-04-28 19:06:58,800 - INFO - Starting to send audio data...
+2026-04-28 19:07:01,408 - INFO - First partial result delay: 3.492s
+2026-04-28 19:07:01,408 - INFO - [Partial]: آ
+2026-04-28 19:07:01,515 - INFO - [Partial]: آه، مم
+2026-04-28 19:07:01,679 - INFO - [Partial]: آه، ممكن
+2026-04-28 19:07:01,937 - INFO - [Partial]: آه، ممكن تق
+2026-04-28 19:07:02,040 - INFO - [Partial]: آه، ممكن تقول
+2026-04-28 19:07:02,201 - INFO - [Partial]: آه، ممكن تقولي
+2026-04-28 19:07:02,262 - INFO - [Partial]: آه، ممكن تقولي ل
+2026-04-28 19:07:02,403 - INFO - [Partial]: آه، ممكن تقولي لي
+2026-04-28 19:07:02,536 - INFO - [Partial]: آه، ممكن تقولي لي اليوم
+2026-04-28 19:07:02,795 - INFO - [Partial]: آه، ممكن تقولي لي اليوم ك
+2026-04-28 19:07:02,941 - INFO - [Partial]: آه، ممكن تقولي لي اليوم كم
+2026-04-28 19:07:03,212 - INFO - [Partial]: آه، ممكن تقولي لي اليوم كم الت
+2026-04-28 19:07:03,297 - INFO - [Partial]: آه، ممكن تقولي لي اليوم كم التاريخ
+2026-04-28 19:07:03,562 - INFO - [VAD Event]: Endpoint detected <end>
+2026-04-28 19:07:03,562 - INFO - [Final]: آه، ممكن تقولي لي اليوم كم التاريخ؟
+2026-04-28 19:07:05,988 - INFO - [Partial]:  أت
+2026-04-28 19:07:06,127 - INFO - [Partial]:  أتوقع
+2026-04-28 19:07:06,361 - INFO - [Partial]:  أتوقع الي
+2026-04-28 19:07:06,482 - INFO - [Partial]:  أتوقع اليوم
+2026-04-28 19:07:07,139 - INFO - [Partial]:  أتوقع اليوم تاريخ
+2026-04-28 19:07:08,504 - INFO - [Partial]:  أتوقع اليوم تاريخ 2
+2026-04-28 19:07:08,787 - INFO - [Partial]:  أتوقع اليوم تاريخ 28
+2026-04-28 19:07:09,668 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أب
+2026-04-28 19:07:09,788 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبري
+2026-04-28 19:07:09,931 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل
+2026-04-28 19:07:10,825 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل،
+2026-04-28 19:07:10,949 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل
+2026-04-28 19:07:11,215 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل 2
+2026-04-28 19:07:11,427 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل 20
+2026-04-28 19:07:11,952 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل 202
+2026-04-28 19:07:12,244 - INFO - [Partial]:  أتوقع اليوم تاريخ 28 أبريل 2026
+2026-04-28 19:07:12,393 - INFO - [VAD Event]: Endpoint detected <end>
+2026-04-28 19:07:12,394 - INFO - [Final]:  أتوقع اليوم تاريخ 28 أبريل 2026.
+2026-04-28 19:07:13,477 - INFO - Audio transmission finished. Sending empty string...
+2026-04-28 19:07:13,800 - INFO - Session finished.
+2026-04-28 19:07:13,800 - INFO - 
+==================================================
+2026-04-28 19:07:13,800 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:07:13,800 - INFO - آه، ممكن تقولي لي اليوم كم التاريخ؟ أتوقع اليوم تاريخ 28 أبريل 2026.
+2026-04-28 19:07:13,800 - INFO - ==================================================
+
+2026-04-28 19:07:13,800 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/soniox/soniox_test_records.csv

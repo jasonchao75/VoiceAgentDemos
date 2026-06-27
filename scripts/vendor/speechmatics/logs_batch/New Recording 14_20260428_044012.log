@@ -1,0 +1,11 @@
+2026-04-28 04:40:12,296 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 14.wav
+2026-04-28 04:40:12,296 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:40:14,697 - INFO - Job successfully submitted. Job ID: vzt4d7gvzn
+2026-04-28 04:40:19,074 - INFO - Job status: done
+2026-04-28 04:40:20,425 - INFO - 
+==================================================
+2026-04-28 04:40:20,425 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:40:20,426 - INFO - العيادة تفتح من الساعة 9 الصباح إلى الساعة 10 المساء. والمواعيد المتاحة عندك. الساعة 7 و37 دقيقة. 7 و47 دقيقة. 7 و50 دقيقة. أي وقت يناسبك.
+2026-04-28 04:40:20,426 - INFO - ==================================================
+
+2026-04-28 04:40:20,426 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

@@ -1,0 +1,11 @@
+2026-04-28 04:39:48,568 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 11.wav
+2026-04-28 04:39:48,568 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:39:50,758 - INFO - Job successfully submitted. Job ID: z3frbrk122
+2026-04-28 04:39:55,211 - INFO - Job status: done
+2026-04-28 04:39:56,518 - INFO - 
+==================================================
+2026-04-28 04:39:56,518 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:39:56,519 - INFO - تأمين سيارتي بيخلص تاريخ 20 5 2008م. بس أني ما أعرف كيف طريقة تجديد.
+2026-04-28 04:39:56,519 - INFO - ==================================================
+
+2026-04-28 04:39:56,519 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

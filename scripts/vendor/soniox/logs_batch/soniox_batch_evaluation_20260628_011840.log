@@ -1,0 +1,7 @@
+2026-06-28 01:18:40,498 - INFO - Starting Soniox Batch Evaluation...
+2026-06-28 01:18:40,499 - INFO - Metadata file path: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank/metadata.csv
+2026-06-28 01:18:40,499 - INFO - Scanning target directory: D:\1. AI Study\codex\OpenCode\VoiceAgent\benchmarks/arabic_audio/RiyadBank
+2026-06-28 01:18:40,502 - INFO - Found 511 .wav files locally.
+2026-06-28 01:18:40,506 - INFO - Loaded 511 records from metadata.csv.
+2026-06-28 01:18:40,507 - INFO - Matched 511 files for execution.
+2026-06-28 01:18:40,507 - INFO - Spawning 511 parallel worker pipelines (Max concurrency: 8)...

@@ -1,0 +1,11 @@
+2026-04-28 04:40:28,646 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 16.wav
+2026-04-28 04:40:28,646 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:40:30,680 - INFO - Job successfully submitted. Job ID: 77pkel3tx4
+2026-04-28 04:40:35,007 - INFO - Job status: done
+2026-04-28 04:40:36,335 - INFO - 
+==================================================
+2026-04-28 04:40:36,335 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:40:36,335 - INFO - يؤذن الظهر عندنا تقريبا الساعة 12 و20 دقيقة، لكن في الشتاء يكون ابكر تقريبا يؤذن على الساعة 11 و50 دقيقة.
+2026-04-28 04:40:36,335 - INFO - ==================================================
+
+2026-04-28 04:40:36,335 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

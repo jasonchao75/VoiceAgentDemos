@@ -1,0 +1,2 @@
+2026-04-28 05:12:48,773 - ERROR - AZURE_SPEECH_KEY or AZURE_SPEECH_REGION is missing in .env
+2026-04-28 05:12:48,773 - INFO - Please set AZURE_SPEECH_KEY and AZURE_SPEECH_REGION in the .env file to run this test.

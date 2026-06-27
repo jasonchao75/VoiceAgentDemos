@@ -1,0 +1,51 @@
+2026-04-29 18:57:50,495 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-29 18:57:51,867 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar_en", "additional_vocab": [{"content": "2026", "sounds_like": ["\u0623\u0644\u0641\u064a\u0646 \u0648\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u06486", "\u0639\u0634\u0631\u064a\u0646 \u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646"]}, {"content": "\u064825", "sounds_like": ["\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u0648\u0646"]}, {"content": "2030", "sounds_like": ["\u0639\u0634\u0631\u064a\u0646 \u062b\u0644\u0627\u062b\u064a\u0646"]}], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0.5}}}
+2026-04-29 18:57:52,367 - INFO - Received RecognitionStarted from server.
+2026-04-29 18:57:52,376 - INFO - Starting to send audio data...
+2026-04-29 18:57:53,371 - INFO - [Partial]: 
+2026-04-29 18:57:53,792 - INFO - [Final]: 
+2026-04-29 18:57:53,792 - INFO - [Partial]: 
+2026-04-29 18:57:54,021 - INFO - [Partial]: 
+2026-04-29 18:57:54,652 - INFO - [Final]: 
+2026-04-29 18:57:54,652 - INFO - [Partial]: 
+2026-04-29 18:57:54,859 - INFO - [Partial]: 
+2026-04-29 18:57:55,295 - INFO - First partial result delay: 3.420s
+2026-04-29 18:57:55,296 - INFO - [Partial]: رؤية
+2026-04-29 18:57:55,677 - INFO - [Partial]: رأيت المملكة
+2026-04-29 18:57:55,944 - INFO - [Partial]: رأيت المملكة 2030
+2026-04-29 18:57:56,371 - INFO - [Partial]: رؤية المملكة 2030
+2026-04-29 18:57:56,702 - INFO - [Final]: رؤية 
+2026-04-29 18:57:56,702 - INFO - [Partial]: المملكة 2030
+2026-04-29 18:57:57,207 - INFO - [Partial]: المملكة 2030.
+2026-04-29 18:57:57,529 - INFO - [Final]: المملكة 
+2026-04-29 18:57:57,529 - INFO - [Partial]: 2030.
+2026-04-29 18:57:57,989 - INFO - [Partial]: 2030. باء
+2026-04-29 18:57:58,390 - INFO - [Final]: 2030 باقي لها. 
+2026-04-29 18:57:58,390 - INFO - [Partial]: 
+2026-04-29 18:57:58,390 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:57:58,696 - INFO - [Partial]: 
+2026-04-29 18:57:59,107 - INFO - [Partial]: 
+2026-04-29 18:57:59,472 - INFO - [Partial]: ما. 4
+2026-04-29 18:57:59,825 - INFO - [Final]: 4 سنين. 
+2026-04-29 18:57:59,825 - INFO - [Partial]: 
+2026-04-29 18:57:59,962 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:00,196 - INFO - [Partial]: 
+2026-04-29 18:58:00,582 - INFO - [Partial]: إن شاء الله
+2026-04-29 18:58:01,026 - INFO - [Partial]: إن شاء الله.
+2026-04-29 18:58:01,442 - INFO - [Final]: إن شاء الله. 
+2026-04-29 18:58:01,442 - INFO - [Partial]: 
+2026-04-29 18:58:01,443 - INFO - [VAD Event]: EndOfUtterance detected
+2026-04-29 18:58:01,848 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-29 18:58:01,868 - INFO - [Partial]: 
+2026-04-29 18:58:02,078 - INFO - [Final]: 
+2026-04-29 18:58:02,079 - INFO - [Partial]: 
+2026-04-29 18:58:02,497 - INFO - [Final]: 
+2026-04-29 18:58:02,498 - INFO - [Partial]: 
+2026-04-29 18:58:02,498 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-29 18:58:02,498 - INFO - 
+==================================================
+2026-04-29 18:58:02,498 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-29 18:58:02,498 - INFO - رؤية المملكة 2030 باقي لها. 4 سنين. إن شاء الله.
+2026-04-29 18:58:02,498 - INFO - ==================================================
+
+2026-04-29 18:58:02,499 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

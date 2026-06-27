@@ -1,0 +1,49 @@
+2026-04-28 04:29:51,501 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-04-28 04:29:52,595 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0}}}
+2026-04-28 04:29:52,967 - INFO - Received RecognitionStarted from server.
+2026-04-28 04:29:53,105 - INFO - Starting to send audio data...
+2026-04-28 04:29:53,929 - INFO - [Partial]: 
+2026-04-28 04:29:54,298 - INFO - [Partial]: 
+2026-04-28 04:29:54,677 - INFO - [Partial]: 
+2026-04-28 04:29:55,069 - INFO - [Partial]: 
+2026-04-28 04:29:55,437 - INFO - First partial result delay: 2.833s
+2026-04-28 04:29:55,437 - INFO - [Partial]: رؤية
+2026-04-28 04:29:55,856 - INFO - [Partial]: رأيت
+2026-04-28 04:29:56,199 - INFO - [Partial]: رأيت المملكة
+2026-04-28 04:29:56,602 - INFO - [Partial]: رؤية المملكة
+2026-04-28 04:29:56,991 - INFO - [Partial]: رؤية المملكة عشرين ثلاثين
+2026-04-28 04:29:57,370 - INFO - [Final]: رؤية 
+2026-04-28 04:29:57,370 - INFO - [Partial]: المملكة عشرين ثلاثين
+2026-04-28 04:29:57,738 - INFO - [Partial]: المملكة عشرين ثلاثين
+2026-04-28 04:29:58,128 - INFO - [Final]: المملكة 
+2026-04-28 04:29:58,128 - INFO - [Partial]: عشرين ثلاثين
+2026-04-28 04:29:58,489 - INFO - [Final]: عشرين. 
+2026-04-28 04:29:58,489 - INFO - [Partial]: ثلاثين.
+2026-04-28 04:29:58,875 - INFO - [Partial]: ثلاثين. باقي لها
+2026-04-28 04:29:59,256 - INFO - [Final]: ثلاثين. 
+2026-04-28 04:29:59,256 - INFO - [Partial]: باقي لها
+2026-04-28 04:29:59,711 - INFO - [Partial]: باقي لها. 4
+2026-04-28 04:30:00,044 - INFO - [Partial]: باقي لها أربع
+2026-04-28 04:30:00,429 - INFO - [Final]: باقي 
+2026-04-28 04:30:00,433 - INFO - [Partial]: لها أربع سنين
+2026-04-28 04:30:00,852 - INFO - [Partial]: لها أربع سنين ان شاء الله
+2026-04-28 04:30:01,363 - INFO - [Final]: لها 
+2026-04-28 04:30:01,368 - INFO - [Partial]: أربع سنين إن شاء الله.
+2026-04-28 04:30:01,664 - INFO - [Partial]: أربع سنين إن شاء الله.
+2026-04-28 04:30:01,931 - INFO - [Final]: أربع سنين 
+2026-04-28 04:30:01,931 - INFO - [Partial]: إن شاء الله
+2026-04-28 04:30:02,314 - INFO - [Final]: إن شاء 
+2026-04-28 04:30:02,314 - INFO - [Partial]: الله
+2026-04-28 04:30:02,505 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-04-28 04:30:02,679 - INFO - [Final]: الله 
+2026-04-28 04:30:02,679 - INFO - [Partial]: 
+2026-04-28 04:30:03,128 - INFO - [Final]: . 
+2026-04-28 04:30:03,128 - INFO - [Partial]: 
+2026-04-28 04:30:03,128 - INFO - Received EndOfTranscript. Server has finished processing.
+2026-04-28 04:30:03,129 - INFO - 
+==================================================
+2026-04-28 04:30:03,129 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:30:03,129 - INFO - رؤية المملكة عشرين. ثلاثين. باقي لها أربع سنين إن شاء الله .
+2026-04-28 04:30:03,129 - INFO - ==================================================
+
+2026-04-28 04:30:03,129 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

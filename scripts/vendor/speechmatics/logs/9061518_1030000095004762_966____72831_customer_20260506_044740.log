@@ -1,0 +1,322 @@
+2026-05-06 04:47:40,042 - INFO - Connecting to wss://eu.rt.speechmatics.com/v2/
+2026-05-06 04:47:41,431 - INFO - Sending StartRecognition: {"message": "StartRecognition", "audio_format": {"type": "raw", "encoding": "pcm_s16le", "sample_rate": 8000}, "transcription_config": {"language": "ar", "additional_vocab": [{"content": "2026", "sounds_like": ["\u0623\u0644\u0641\u064a\u0646 \u0648\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u06486", "\u0639\u0634\u0631\u064a\u0646 \u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0633\u062a\u0629 \u0648\u0639\u0634\u0631\u064a\u0646"]}, {"content": "\u064825", "sounds_like": ["\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633 \u0648\u0639\u0634\u0631\u064a\u0646", "\u0648\u062e\u0645\u0633\u0629 \u0648\u0639\u0634\u0631\u0648\u0646"]}, {"content": "2030", "sounds_like": ["\u0639\u0634\u0631\u064a\u0646 \u062b\u0644\u0627\u062b\u064a\u0646"]}], "diarization": "none", "max_delay": 2, "max_delay_mode": "flexible", "audio_filtering_config": {"volume_threshold": 0}, "transcript_filtering_config": {"remove_disfluencies": false, "replacements": []}, "enable_partials": true, "enable_entities": true, "operating_point": "enhanced", "punctuation_overrides": {"permitted_marks": [".", ",", "?", "!"], "sensitivity": 0.5}, "conversation_config": {"end_of_utterance_silence_trigger": 0.5}}}
+2026-05-06 04:47:41,924 - INFO - Received RecognitionStarted from server.
+2026-05-06 04:47:41,936 - INFO - Starting to send audio data...
+2026-05-06 04:47:43,052 - INFO - [Partial]: 
+2026-05-06 04:47:43,276 - INFO - [Final]: 
+2026-05-06 04:47:43,276 - INFO - [Partial]: 
+2026-05-06 04:47:43,699 - INFO - [Partial]: 
+2026-05-06 04:47:44,130 - INFO - [Final]: 
+2026-05-06 04:47:44,130 - INFO - [Partial]: 
+2026-05-06 04:47:44,341 - INFO - [Partial]: 
+2026-05-06 04:47:44,984 - INFO - [Final]: 
+2026-05-06 04:47:44,985 - INFO - [Partial]: 
+2026-05-06 04:47:45,204 - INFO - [Partial]: 
+2026-05-06 04:47:45,652 - INFO - [Final]: 
+2026-05-06 04:47:45,652 - INFO - [Partial]: 
+2026-05-06 04:47:46,089 - INFO - [Partial]: 
+2026-05-06 04:47:46,300 - INFO - [Final]: 
+2026-05-06 04:47:46,300 - INFO - [Partial]: 
+2026-05-06 04:47:46,755 - INFO - [Partial]: 
+2026-05-06 04:47:47,191 - INFO - [Final]: 
+2026-05-06 04:47:47,191 - INFO - [Partial]: 
+2026-05-06 04:47:47,635 - INFO - [Partial]: 
+2026-05-06 04:47:47,845 - INFO - [Final]: 
+2026-05-06 04:47:47,845 - INFO - [Partial]: 
+2026-05-06 04:47:48,284 - INFO - [Partial]: 
+2026-05-06 04:47:48,731 - INFO - [Final]: 
+2026-05-06 04:47:48,731 - INFO - [Partial]: 
+2026-05-06 04:47:49,148 - INFO - [Partial]: 
+2026-05-06 04:47:49,371 - INFO - [Final]: 
+2026-05-06 04:47:49,371 - INFO - [Partial]: 
+2026-05-06 04:47:49,782 - INFO - [Partial]: 
+2026-05-06 04:47:50,206 - INFO - [Final]: 
+2026-05-06 04:47:50,207 - INFO - [Partial]: 
+2026-05-06 04:47:50,639 - INFO - [Partial]: 
+2026-05-06 04:47:50,835 - INFO - [Final]: 
+2026-05-06 04:47:50,835 - INFO - [Partial]: 
+2026-05-06 04:47:51,277 - INFO - [Partial]: 
+2026-05-06 04:47:51,720 - INFO - [Final]: 
+2026-05-06 04:47:51,721 - INFO - [Partial]: 
+2026-05-06 04:47:51,952 - INFO - [Partial]: 
+2026-05-06 04:47:52,380 - INFO - [Final]: 
+2026-05-06 04:47:52,380 - INFO - [Partial]: 
+2026-05-06 04:47:53,015 - INFO - [Partial]: 
+2026-05-06 04:47:53,241 - INFO - [Final]: 
+2026-05-06 04:47:53,241 - INFO - [Partial]: 
+2026-05-06 04:47:53,629 - INFO - [Partial]: 
+2026-05-06 04:47:53,876 - INFO - [Final]: 
+2026-05-06 04:47:53,876 - INFO - [Partial]: 
+2026-05-06 04:47:54,289 - INFO - [Partial]: 
+2026-05-06 04:47:54,940 - INFO - [Final]: 
+2026-05-06 04:47:54,940 - INFO - [Partial]: 
+2026-05-06 04:47:55,150 - INFO - [Partial]: 
+2026-05-06 04:47:55,581 - INFO - [Final]: 
+2026-05-06 04:47:55,581 - INFO - [Partial]: 
+2026-05-06 04:47:55,784 - INFO - [Partial]: 
+2026-05-06 04:47:56,229 - INFO - [Final]: 
+2026-05-06 04:47:56,230 - INFO - [Partial]: 
+2026-05-06 04:47:56,670 - INFO - [Partial]: 
+2026-05-06 04:47:57,106 - INFO - [Final]: 
+2026-05-06 04:47:57,107 - INFO - [Partial]: 
+2026-05-06 04:47:57,551 - INFO - [Partial]: 
+2026-05-06 04:47:57,771 - INFO - [Final]: 
+2026-05-06 04:47:57,771 - INFO - [Partial]: 
+2026-05-06 04:47:58,220 - INFO - [Partial]: 
+2026-05-06 04:47:58,430 - INFO - [Final]: 
+2026-05-06 04:47:58,430 - INFO - [Partial]: 
+2026-05-06 04:47:58,865 - INFO - [Partial]: 
+2026-05-06 04:47:59,299 - INFO - [Final]: 
+2026-05-06 04:47:59,299 - INFO - [Partial]: 
+2026-05-06 04:47:59,754 - INFO - [Partial]: 
+2026-05-06 04:48:00,140 - INFO - First partial result delay: 18.704s
+2026-05-06 04:48:00,140 - INFO - [Partial]: يا هلا
+2026-05-06 04:48:00,401 - INFO - [Final]: يا هلا. 
+2026-05-06 04:48:00,401 - INFO - [Partial]: 
+2026-05-06 04:48:00,401 - INFO - [VAD Event]: EndOfUtterance detected
+2026-05-06 04:48:00,401 - INFO - --- Segment Emitted ---: يا هلا.
+2026-05-06 04:48:00,821 - INFO - [Partial]: 
+2026-05-06 04:48:01,223 - INFO - [Final]: 
+2026-05-06 04:48:01,223 - INFO - [Partial]: 
+2026-05-06 04:48:01,470 - INFO - [Partial]: 
+2026-05-06 04:48:01,892 - INFO - [Final]: 
+2026-05-06 04:48:01,893 - INFO - [Partial]: 
+2026-05-06 04:48:02,319 - INFO - [Partial]: 
+2026-05-06 04:48:02,761 - INFO - [Final]: 
+2026-05-06 04:48:02,761 - INFO - [Partial]: 
+2026-05-06 04:48:02,967 - INFO - [Partial]: 
+2026-05-06 04:48:03,391 - INFO - [Partial]: 
+2026-05-06 04:48:04,027 - INFO - [Final]: يا تفضل. 
+2026-05-06 04:48:04,027 - INFO - [Partial]: 
+2026-05-06 04:48:04,236 - INFO - [Partial]: 
+2026-05-06 04:48:04,599 - INFO - [Final]: 
+2026-05-06 04:48:04,599 - INFO - [Partial]: 
+2026-05-06 04:48:04,600 - INFO - [VAD Event]: EndOfUtterance detected
+2026-05-06 04:48:04,600 - INFO - --- Segment Emitted ---: يا تفضل.
+2026-05-06 04:48:04,874 - INFO - [Partial]: 
+2026-05-06 04:48:05,291 - INFO - [Final]: 
+2026-05-06 04:48:05,291 - INFO - [Partial]: 
+2026-05-06 04:48:05,753 - INFO - [Partial]: 
+2026-05-06 04:48:06,175 - INFO - [Final]: 
+2026-05-06 04:48:06,176 - INFO - [Partial]: 
+2026-05-06 04:48:06,617 - INFO - [Partial]: 
+2026-05-06 04:48:06,809 - INFO - [Final]: 
+2026-05-06 04:48:06,809 - INFO - [Partial]: 
+2026-05-06 04:48:07,249 - INFO - [Partial]: 
+2026-05-06 04:48:07,653 - INFO - [Final]: 
+2026-05-06 04:48:07,691 - INFO - [Partial]: 
+2026-05-06 04:48:07,917 - INFO - [Partial]: 
+2026-05-06 04:48:08,342 - INFO - [Final]: 
+2026-05-06 04:48:08,342 - INFO - [Partial]: 
+2026-05-06 04:48:08,778 - INFO - [Partial]: 
+2026-05-06 04:48:09,309 - INFO - [Final]: 
+2026-05-06 04:48:09,310 - INFO - [Partial]: 
+2026-05-06 04:48:09,525 - INFO - [Partial]: 
+2026-05-06 04:48:09,960 - INFO - [Final]: 
+2026-05-06 04:48:09,961 - INFO - [Partial]: 
+2026-05-06 04:48:10,341 - INFO - [Partial]: 
+2026-05-06 04:48:10,813 - INFO - [Partial]: معاكم
+2026-05-06 04:48:11,221 - INFO - [Partial]: الملك محمد
+2026-05-06 04:48:11,446 - INFO - [Partial]: الملك محمد
+2026-05-06 04:48:11,866 - INFO - [Final]: معاك محمد. 
+2026-05-06 04:48:11,866 - INFO - [Partial]: 
+2026-05-06 04:48:11,867 - INFO - [VAD Event]: EndOfUtterance detected
+2026-05-06 04:48:11,867 - INFO - --- Segment Emitted ---: معاك محمد.
+2026-05-06 04:48:12,287 - INFO - [Partial]: 
+2026-05-06 04:48:12,507 - INFO - [Final]: 
+2026-05-06 04:48:12,507 - INFO - [Partial]: 
+2026-05-06 04:48:12,950 - INFO - [Partial]: 
+2026-05-06 04:48:13,375 - INFO - [Final]: 
+2026-05-06 04:48:13,375 - INFO - [Partial]: 
+2026-05-06 04:48:13,831 - INFO - [Partial]: 
+2026-05-06 04:48:14,046 - INFO - [Final]: 
+2026-05-06 04:48:14,046 - INFO - [Partial]: 
+2026-05-06 04:48:14,479 - INFO - [Partial]: 
+2026-05-06 04:48:14,898 - INFO - [Final]: 
+2026-05-06 04:48:14,898 - INFO - [Partial]: 
+2026-05-06 04:48:15,336 - INFO - [Partial]: 
+2026-05-06 04:48:15,542 - INFO - [Final]: 
+2026-05-06 04:48:15,542 - INFO - [Partial]: 
+2026-05-06 04:48:15,976 - INFO - [Partial]: 
+2026-05-06 04:48:16,398 - INFO - [Final]: 
+2026-05-06 04:48:16,398 - INFO - [Partial]: 
+2026-05-06 04:48:16,821 - INFO - [Partial]: 
+2026-05-06 04:48:17,046 - INFO - [Final]: 
+2026-05-06 04:48:17,046 - INFO - [Partial]: 
+2026-05-06 04:48:17,473 - INFO - [Partial]: 
+2026-05-06 04:48:17,927 - INFO - [Final]: 
+2026-05-06 04:48:17,928 - INFO - [Partial]: 
+2026-05-06 04:48:18,404 - INFO - [Partial]: 
+2026-05-06 04:48:18,636 - INFO - [Final]: 
+2026-05-06 04:48:18,636 - INFO - [Partial]: 
+2026-05-06 04:48:19,117 - INFO - [Partial]: 
+2026-05-06 04:48:19,357 - INFO - [Final]: 
+2026-05-06 04:48:19,357 - INFO - [Partial]: 
+2026-05-06 04:48:19,848 - INFO - [Partial]: 
+2026-05-06 04:48:20,300 - INFO - [Final]: 
+2026-05-06 04:48:20,300 - INFO - [Partial]: 
+2026-05-06 04:48:20,567 - INFO - [Partial]: 
+2026-05-06 04:48:21,046 - INFO - [Final]: 
+2026-05-06 04:48:21,046 - INFO - [Partial]: 
+2026-05-06 04:48:21,243 - INFO - [Partial]: 
+2026-05-06 04:48:21,787 - INFO - [Final]: 
+2026-05-06 04:48:21,787 - INFO - [Partial]: 
+2026-05-06 04:48:22,040 - INFO - [Partial]: 
+2026-05-06 04:48:22,528 - INFO - [Final]: 
+2026-05-06 04:48:22,529 - INFO - [Partial]: 
+2026-05-06 04:48:22,789 - INFO - [Partial]: 
+2026-05-06 04:48:25,658 - INFO - [Final]: 
+2026-05-06 04:48:25,658 - INFO - [Partial]: 
+2026-05-06 04:48:25,670 - INFO - [Partial]: 
+2026-05-06 04:48:25,670 - INFO - [Final]: 
+2026-05-06 04:48:25,670 - INFO - [Partial]: 
+2026-05-06 04:48:25,670 - INFO - [Partial]: 
+2026-05-06 04:48:25,670 - INFO - [Final]: 
+2026-05-06 04:48:25,672 - INFO - [Partial]: 
+2026-05-06 04:48:25,672 - INFO - [Partial]: 
+2026-05-06 04:48:25,854 - INFO - [Final]: 
+2026-05-06 04:48:25,854 - INFO - [Partial]: 
+2026-05-06 04:48:25,915 - INFO - [Partial]: 
+2026-05-06 04:48:26,379 - INFO - [Final]: 
+2026-05-06 04:48:26,379 - INFO - [Partial]: 
+2026-05-06 04:48:26,611 - INFO - [Partial]: 
+2026-05-06 04:48:27,102 - INFO - [Final]: 
+2026-05-06 04:48:27,102 - INFO - [Partial]: 
+2026-05-06 04:48:27,701 - INFO - [Partial]: 
+2026-05-06 04:48:29,265 - INFO - [Final]: 
+2026-05-06 04:48:29,265 - INFO - [Partial]: 
+2026-05-06 04:48:29,265 - INFO - [Partial]: 
+2026-05-06 04:48:29,267 - INFO - [Final]: 
+2026-05-06 04:48:29,267 - INFO - [Partial]: 
+2026-05-06 04:48:29,267 - INFO - [Partial]: 
+2026-05-06 04:48:29,267 - INFO - [Final]: 
+2026-05-06 04:48:29,267 - INFO - [Partial]: 
+2026-05-06 04:48:30,893 - INFO - [Partial]: 
+2026-05-06 04:48:30,893 - INFO - [Final]: 
+2026-05-06 04:48:30,893 - INFO - [Partial]: 
+2026-05-06 04:48:30,894 - INFO - [Partial]: 
+2026-05-06 04:48:30,901 - INFO - [Final]: 
+2026-05-06 04:48:30,901 - INFO - [Partial]: 
+2026-05-06 04:48:32,148 - INFO - [Partial]: 
+2026-05-06 04:48:32,148 - INFO - [Final]: 
+2026-05-06 04:48:32,149 - INFO - [Partial]: 
+2026-05-06 04:48:32,149 - INFO - [Partial]: 
+2026-05-06 04:48:32,395 - INFO - [Final]: 
+2026-05-06 04:48:32,395 - INFO - [Partial]: 
+2026-05-06 04:48:32,892 - INFO - [Partial]: 
+2026-05-06 04:48:33,772 - INFO - [Final]: 
+2026-05-06 04:48:33,772 - INFO - [Partial]: 
+2026-05-06 04:48:33,773 - INFO - [Partial]: 
+2026-05-06 04:48:34,279 - INFO - [Final]: 
+2026-05-06 04:48:34,279 - INFO - [Partial]: 
+2026-05-06 04:48:35,036 - INFO - [Partial]: 
+2026-05-06 04:48:35,037 - INFO - [Final]: 
+2026-05-06 04:48:35,037 - INFO - [Partial]: 
+2026-05-06 04:48:35,281 - INFO - [Partial]: 
+2026-05-06 04:48:35,534 - INFO - [Final]: 
+2026-05-06 04:48:35,534 - INFO - [Partial]: 
+2026-05-06 04:48:35,780 - INFO - [Partial]: 
+2026-05-06 04:48:36,022 - INFO - [Final]: 
+2026-05-06 04:48:36,022 - INFO - [Partial]: 
+2026-05-06 04:48:36,541 - INFO - [Partial]: 
+2026-05-06 04:48:37,298 - INFO - [Final]: 
+2026-05-06 04:48:37,298 - INFO - [Partial]: 
+2026-05-06 04:48:37,484 - INFO - [Partial]: 
+2026-05-06 04:48:37,800 - INFO - [Partial]: 
+2026-05-06 04:48:38,055 - INFO - [Final]: يا هلا. 
+2026-05-06 04:48:38,056 - INFO - [Partial]: 
+2026-05-06 04:48:38,301 - INFO - [Partial]: 
+2026-05-06 04:48:39,113 - INFO - [Final]: 
+2026-05-06 04:48:39,113 - INFO - [Partial]: 
+2026-05-06 04:48:39,113 - INFO - [VAD Event]: EndOfUtterance detected
+2026-05-06 04:48:39,113 - INFO - --- Segment Emitted ---: يا هلا.
+2026-05-06 04:48:39,360 - INFO - [Partial]: 
+2026-05-06 04:48:39,556 - INFO - [Final]: 
+2026-05-06 04:48:39,556 - INFO - [Partial]: 
+2026-05-06 04:48:40,122 - INFO - [Partial]: 
+2026-05-06 04:48:40,331 - INFO - [Final]: 
+2026-05-06 04:48:40,331 - INFO - [Partial]: 
+2026-05-06 04:48:41,698 - INFO - [Partial]: 
+2026-05-06 04:48:41,699 - INFO - [Final]: 
+2026-05-06 04:48:41,699 - INFO - [Partial]: 
+2026-05-06 04:48:41,699 - INFO - [Partial]: 
+2026-05-06 04:48:41,891 - INFO - [Final]: 
+2026-05-06 04:48:41,891 - INFO - [Partial]: 
+2026-05-06 04:48:42,181 - INFO - [Partial]: 
+2026-05-06 04:48:42,692 - INFO - [Final]: 
+2026-05-06 04:48:42,693 - INFO - [Partial]: 
+2026-05-06 04:48:42,949 - INFO - [Partial]: 
+2026-05-06 04:48:43,424 - INFO - [Final]: 
+2026-05-06 04:48:43,424 - INFO - [Partial]: 
+2026-05-06 04:48:44,401 - INFO - [Partial]: 
+2026-05-06 04:48:44,401 - INFO - [Final]: 
+2026-05-06 04:48:44,401 - INFO - [Partial]: 
+2026-05-06 04:48:44,655 - INFO - [Partial]: 
+2026-05-06 04:48:45,151 - INFO - [Final]: 
+2026-05-06 04:48:45,151 - INFO - [Partial]: 
+2026-05-06 04:48:45,411 - INFO - [Partial]: 
+2026-05-06 04:48:45,631 - INFO - [Final]: 
+2026-05-06 04:48:45,631 - INFO - [Partial]: 
+2026-05-06 04:48:46,152 - INFO - [Partial]: 
+2026-05-06 04:48:46,367 - INFO - [Final]: 
+2026-05-06 04:48:46,368 - INFO - [Partial]: 
+2026-05-06 04:48:47,171 - INFO - [Partial]: 
+2026-05-06 04:48:47,231 - INFO - [Final]: 
+2026-05-06 04:48:47,231 - INFO - [Partial]: 
+2026-05-06 04:48:48,521 - INFO - [Partial]: 
+2026-05-06 04:48:48,521 - INFO - [Final]: 
+2026-05-06 04:48:48,522 - INFO - [Partial]: 
+2026-05-06 04:48:48,522 - INFO - [Partial]: 
+2026-05-06 04:48:49,274 - INFO - [Final]: 
+2026-05-06 04:48:49,274 - INFO - [Partial]: 
+2026-05-06 04:48:49,275 - INFO - [Partial]: 
+2026-05-06 04:48:49,539 - INFO - [Final]: 
+2026-05-06 04:48:49,539 - INFO - [Partial]: 
+2026-05-06 04:48:49,795 - INFO - [Partial]: 
+2026-05-06 04:48:50,296 - INFO - [Final]: 
+2026-05-06 04:48:50,296 - INFO - [Partial]: 
+2026-05-06 04:48:50,549 - INFO - [Partial]: 
+2026-05-06 04:48:51,079 - INFO - [Final]: 
+2026-05-06 04:48:51,079 - INFO - [Partial]: 
+2026-05-06 04:48:51,578 - INFO - [Partial]: 
+2026-05-06 04:48:51,852 - INFO - [Final]: 
+2026-05-06 04:48:51,852 - INFO - [Partial]: 
+2026-05-06 04:48:52,103 - INFO - [Partial]: 
+2026-05-06 04:48:52,836 - INFO - [Final]: 
+2026-05-06 04:48:52,836 - INFO - [Partial]: 
+2026-05-06 04:48:52,837 - INFO - [Partial]: 
+2026-05-06 04:48:53,296 - INFO - [Partial]: 
+2026-05-06 04:48:53,593 - INFO - [Partial]: ممكن
+2026-05-06 04:48:54,067 - INFO - [Partial]: ممكن
+2026-05-06 04:48:55,493 - INFO - [Final]: ممكن. 
+2026-05-06 04:48:55,493 - INFO - [Partial]: 
+2026-05-06 04:48:55,493 - INFO - [Partial]: 
+2026-05-06 04:48:55,493 - INFO - [Final]: 
+2026-05-06 04:48:55,493 - INFO - [Partial]: 
+2026-05-06 04:48:55,493 - INFO - [VAD Event]: EndOfUtterance detected
+2026-05-06 04:48:55,493 - INFO - --- Segment Emitted ---: ممكن.
+2026-05-06 04:48:56,181 - INFO - [Partial]: 
+2026-05-06 04:48:56,181 - INFO - [Final]: 
+2026-05-06 04:48:56,181 - INFO - [Partial]: 
+2026-05-06 04:48:56,384 - INFO - [Partial]: 
+2026-05-06 04:48:57,148 - INFO - [Final]: 
+2026-05-06 04:48:57,148 - INFO - [Partial]: 
+2026-05-06 04:48:59,616 - INFO - [Partial]: 
+2026-05-06 04:48:59,616 - INFO - [Final]: 
+2026-05-06 04:48:59,616 - INFO - [Partial]: 
+2026-05-06 04:49:04,411 - INFO - [Partial]: 
+2026-05-06 04:49:04,411 - INFO - [Final]: 
+2026-05-06 04:49:04,411 - INFO - [Partial]: 
+2026-05-06 04:49:05,463 - INFO - Audio transmission finished. Sending EndOfStream...
+2026-05-06 04:49:31,440 - INFO - Connection closed: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-05-06 04:49:31,441 - INFO - 
+==================================================
+2026-05-06 04:49:31,441 - INFO - === FULL TRANSCRIPT SEGMENTS ===
+2026-05-06 04:49:31,441 - INFO - [1] يا هلا.
+2026-05-06 04:49:31,441 - INFO - [2] يا تفضل.
+2026-05-06 04:49:31,441 - INFO - [3] معاك محمد.
+2026-05-06 04:49:31,441 - INFO - [4] يا هلا.
+2026-05-06 04:49:31,441 - INFO - [5] ممكن.
+2026-05-06 04:49:31,441 - INFO - ==================================================
+
+2026-05-06 04:49:31,447 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_test_records.csv

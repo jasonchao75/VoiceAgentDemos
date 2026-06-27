@@ -1,0 +1,32 @@
+2026-04-28 19:07:33,617 - INFO - Starting continuous recognition...
+2026-04-28 19:07:33,617 - INFO - Session started
+2026-04-28 19:07:33,617 - INFO - Starting to push audio data...
+2026-04-28 19:07:36,511 - INFO - First partial result delay: 2.894s
+2026-04-28 19:07:36,511 - INFO - [Partial]: اشتريت
+2026-04-28 19:07:37,008 - INFO - [Partial]: اشتريت سيارة
+2026-04-28 19:07:37,523 - INFO - [Partial]: اشتريت سيارة ي
+2026-04-28 19:07:37,625 - INFO - [Partial]: اشتريت سيارة يارس
+2026-04-28 19:07:39,425 - INFO - [Partial]: اشتريت سيارة يارس 2000
+2026-04-28 19:07:40,138 - INFO - [Partial]: اشتريت سيارة يارس 2000 وإ
+2026-04-28 19:07:40,254 - INFO - [Partial]: اشتريت سيارة يارس 2011
+2026-04-28 19:07:40,940 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:40,940 - INFO - [Final]: اشتريت سيارة يارس 2011.
+2026-04-28 19:07:42,198 - INFO - [Partial]: قيمة
+2026-04-28 19:07:42,554 - INFO - [Partial]: قيمة تقريبا
+2026-04-28 19:07:44,019 - INFO - [Partial]: قيمة تقريبا 50
+2026-04-28 19:07:44,450 - INFO - [Partial]: قيمة تقريبا 50,000
+2026-04-28 19:07:45,244 - INFO - [Partial]: قيمة تقريبا 50,500
+2026-04-28 19:07:46,144 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:46,145 - INFO - [Final]: قيمة تقريبا 50,500.
+2026-04-28 19:07:47,534 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:07:47,534 - INFO - [Final]: Yes.
+2026-04-28 19:07:47,937 - INFO - Audio transmission finished. Closing stream...
+2026-04-28 19:07:48,333 - INFO - Canceled: CancellationReason.EndOfStream
+2026-04-28 19:07:48,333 - INFO - Session stopped
+2026-04-28 19:07:48,355 - INFO - 
+==================================================
+2026-04-28 19:07:48,355 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:07:48,355 - INFO - اشتريت سيارة يارس 2011. قيمة تقريبا 50,500. Yes.
+2026-04-28 19:07:48,355 - INFO - ==================================================
+
+2026-04-28 19:07:48,356 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/azure/azure_test_records.csv

@@ -12,9 +12,9 @@ from .database import (
 
 # Dynamically import the evaluation engine from scripts/vendor/soniox
 # We know backend is at VoiceAgent/demos/realtimeasr-en-arabic/backend
-# and scripts is at VoiceAgent/scripts
+# and scripts is at VoiceAgent/demos/scripts
 BACKEND_DIR = Path(__file__).parent.resolve()
-PROJECT_ROOT = BACKEND_DIR.parent.parent.parent
+PROJECT_ROOT = BACKEND_DIR.parent.parent
 VENDOR_SONIOX_DIR = PROJECT_ROOT / "scripts" / "vendor" / "soniox"
 
 if str(PROJECT_ROOT) not in sys.path:

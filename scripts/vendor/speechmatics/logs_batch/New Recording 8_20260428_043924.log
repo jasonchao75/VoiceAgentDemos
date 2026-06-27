@@ -1,0 +1,11 @@
+2026-04-28 04:39:24,658 - INFO - Starting batch test for file: benchmarks/arabic_audio/New Recording 8.wav
+2026-04-28 04:39:24,658 - INFO - Submitting job with config: {"type": "transcription", "transcription_config": {"language": "ar", "operating_point": "enhanced", "enable_entities": true}}
+2026-04-28 04:39:26,681 - INFO - Job successfully submitted. Job ID: 1p5ibm2hye
+2026-04-28 04:39:31,043 - INFO - Job status: done
+2026-04-28 04:39:32,378 - INFO - 
+==================================================
+2026-04-28 04:39:32,378 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 04:39:32,378 - INFO - ممكن تقولين لي اليوم كم التاريخ؟ أتوقع اليوم تاريخ 28 أبريل 2026.
+2026-04-28 04:39:32,379 - INFO - ==================================================
+
+2026-04-28 04:39:32,380 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/speechmatics/speechmatics_batch_test_records.csv

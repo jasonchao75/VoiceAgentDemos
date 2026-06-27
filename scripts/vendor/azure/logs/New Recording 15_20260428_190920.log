@@ -1,0 +1,43 @@
+2026-04-28 19:09:20,868 - INFO - Starting continuous recognition...
+2026-04-28 19:09:20,868 - INFO - Session started
+2026-04-28 19:09:20,868 - INFO - Starting to push audio data...
+2026-04-28 19:09:23,722 - INFO - First partial result delay: 2.854s
+2026-04-28 19:09:23,722 - INFO - [Partial]: عندنا
+2026-04-28 19:09:23,942 - INFO - [Partial]: عندنا موعد
+2026-04-28 19:09:25,136 - INFO - [Partial]: عندنا موعد بت
+2026-04-28 19:09:25,439 - INFO - [Partial]: عندنا موعد بتاريخ
+2026-04-28 19:09:26,154 - INFO - [Partial]: عندنا موعد بتاريخ 30
+2026-04-28 19:09:26,979 - INFO - [Partial]: عندنا موعد بتاريخ 30 ستة
+2026-04-28 19:09:28,086 - INFO - [Partial]: عندنا موعد بتاريخ 30620
+2026-04-28 19:09:28,908 - INFO - [Partial]: عندنا موعد بتاريخ 306209
+2026-04-28 19:09:29,306 - INFO - [Partial]: عندنا موعد بتاريخ 3062029
+2026-04-28 19:09:30,563 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:09:30,563 - INFO - [Final]: عندنا موعد بتاريخ 3062029.
+2026-04-28 19:09:32,791 - INFO - [Partial]: على
+2026-04-28 19:09:33,086 - INFO - [Partial]: على الساعة
+2026-04-28 19:09:33,495 - INFO - [Partial]: على الساعة تقريبا
+2026-04-28 19:09:34,363 - INFO - [Partial]: على الساعة تقريبا تسعة
+2026-04-28 19:09:35,194 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:09:35,194 - INFO - [Final]: على الساعة تقريبا تسعة.
+2026-04-28 19:09:37,146 - INFO - [Partial]: وخمسة
+2026-04-28 19:09:37,463 - INFO - [Partial]: و45
+2026-04-28 19:09:37,874 - INFO - [Partial]: و45 دقيقة
+2026-04-28 19:09:38,985 - INFO - [Partial]: و45 دقيقة هل هذا
+2026-04-28 19:09:39,376 - INFO - [Partial]: و45 دقيقة هل هذا الوقت
+2026-04-28 19:09:39,717 - INFO - [Partial]: و45 دقيقة هل هذا الوقت ينا
+2026-04-28 19:09:39,792 - INFO - [Partial]: و45 دقيقة هل هذا الوقت يناسب
+2026-04-28 19:09:40,100 - INFO - [Partial]: و45 دقيقة هل هذا الوقت يناسبك
+2026-04-28 19:09:40,599 - INFO - Audio transmission finished. Closing stream...
+2026-04-28 19:09:40,761 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:09:40,761 - INFO - [Final]: و45 دقيقة، هل هذا الوقت يناسبك؟
+2026-04-28 19:09:41,468 - INFO - [VAD Event]: Segment Recognized / Endpoint reached
+2026-04-28 19:09:41,468 - INFO - [Final]: 
+2026-04-28 19:09:41,469 - INFO - Canceled: CancellationReason.EndOfStream
+2026-04-28 19:09:41,469 - INFO - Session stopped
+2026-04-28 19:09:41,533 - INFO - 
+==================================================
+2026-04-28 19:09:41,533 - INFO - === FULL TRANSCRIPT SEGMENT ===
+2026-04-28 19:09:41,533 - INFO - عندنا موعد بتاريخ 3062029. على الساعة تقريبا تسعة. و45 دقيقة، هل هذا الوقت يناسبك؟
+2026-04-28 19:09:41,533 - INFO - ==================================================
+
+2026-04-28 19:09:41,534 - INFO - Test record appended to CSV: /Volumes/work/OpenCode/VoiceAgent/scripts/vendor/azure/azure_test_records.csv
