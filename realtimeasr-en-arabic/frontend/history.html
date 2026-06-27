@@ -44,26 +44,35 @@
             <button class="tab-btn" onclick="switchTab('benchmark')" style="background:none; border:none; font-size:1rem; font-weight:600; cursor:pointer; color:var(--text-secondary);">Benchmark Runs</button>
         </div>
 
-        <div id="demo-section" class="table-container">
-            <table class="history-table">
-                <thead>
-                    <tr>
-                        <th class="col-id">Session ID</th>
-                        <th class="col-lang">Language</th>
-                        <th class="col-text">Transcript Snippet</th>
-                        <th class="col-date">Date</th>
-                        <th class="col-action">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="history-tbody">
-                    <!-- Loaded via JS -->
-                    <tr>
-                        <td colspan="5" style="text-align: center; padding: 3rem;">
-                            <i class="ph ph-spinner-gap" style="animation: spin 1s linear infinite; font-size: 2rem; color: var(--text-tertiary);"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="demo-section">
+            <div id="bulk-actions" style="display: none; padding: 1rem; background: var(--bg-surface-hover); border-radius: 8px; margin-bottom: 1rem; align-items: center; justify-content: space-between; border: 1px solid var(--border-subtle);">
+                <span id="selected-count" style="font-weight: 500; font-size: 0.875rem;">0 selected</span>
+                <button id="export-benchmark-btn" class="primary-button" style="padding: 0.5rem 1rem;">
+                    <i class="ph ph-export"></i> Export to Benchmark
+                </button>
+            </div>
+            <div class="table-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px; padding-left: 1rem;"><input type="checkbox" id="select-all-history"></th>
+                            <th class="col-id">Session ID</th>
+                            <th class="col-lang">Language</th>
+                            <th class="col-text">Transcript Snippet</th>
+                            <th class="col-date">Date</th>
+                            <th class="col-action">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-tbody">
+                        <!-- Loaded via JS -->
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 3rem;">
+                                <i class="ph ph-spinner-gap" style="animation: spin 1s linear infinite; font-size: 2rem; color: var(--text-tertiary);"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div id="benchmark-section" class="table-container" style="display: none;">
@@ -112,6 +121,28 @@
                     <tbody id="benchmark-modal-tbody">
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Export to Benchmark -->
+    <div id="export-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="panel-header transcript-header">
+                <h3>Export to Benchmark</h3>
+                <div class="header-actions">
+                    <button class="text-button" onclick="document.getElementById('export-modal').style.display='none'">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <label class="control-label">Target Folder Name</label>
+                <input type="text" id="export-folder-name" class="hw-input" placeholder="e.g. Test_Cases_01" style="width: 100%; margin-top: 0.5rem; padding: 0.75rem; border: 1px solid var(--border-subtle); border-radius: 8px;">
+            </div>
+            <div class="modal-actions" style="margin-top: 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem;">
+                <button class="secondary-button" onclick="document.getElementById('export-modal').style.display='none'">Cancel</button>
+                <button id="confirm-export-btn" class="primary-button">Export</button>
             </div>
         </div>
     </div>

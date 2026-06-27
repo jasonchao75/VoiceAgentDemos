@@ -137,6 +137,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const snippet = record.final_transcript || "<span style='color: var(--text-tertiary); font-style: italic;'>No speech detected</span>";
 
                 tr.innerHTML = `
+                    <td style="padding-left: 1rem;">
+                        <input type="checkbox" class="history-checkbox" value="${record.session_id}">
+                    </td>
                     <td class="col-id" style="font-family: 'Satoshi', monospace; font-size: 0.8rem; color: var(--text-secondary);">
                         ${record.session_id.substring(0, 8)}...
                     </td>
@@ -165,7 +168,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="5" style="text-align: center; padding: 4rem; color: var(--text-tertiary);">
+                    <td colspan="6" style="text-align: center; padding: 4rem; color: var(--text-tertiary);">
                         <i class="ph ph-folder-open" style="font-size: 3rem; opacity: 0.5; margin-bottom: 1rem; display: block;"></i>
                         No transcription history found in the database.
                     </td>
@@ -176,11 +179,97 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error('Failed to load history:', error);
         tbody.innerHTML = `
             <tr>
-                <td colspan="5" style="text-align: center; padding: 3rem; color: var(--brand-danger);">
+                <td colspan="6" style="text-align: center; padding: 3rem; color: var(--brand-danger);">
                     <i class="ph ph-warning-circle" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
                     Failed to connect to the backend server. Please ensure it is running.
                 </td>
             </tr>
         `;
+    }
+
+    const selectAll = document.getElementById('select-all-history');
+    const bulkActions = document.getElementById('bulk-actions');
+    const selectedCount = document.getElementById('selected-count');
+    const exportBtn = document.getElementById('export-benchmark-btn');
+    const exportModal = document.getElementById('export-modal');
+    const confirmExportBtn = document.getElementById('confirm-export-btn');
+    const folderInput = document.getElementById('export-folder-name');
+
+    function updateBulkActions() {
+        if (!bulkActions) return;
+        const checkboxes = document.querySelectorAll('.history-checkbox');
+        const checked = Array.from(checkboxes).filter(cb => cb.checked);
+        if (checked.length > 0) {
+            bulkActions.style.display = 'flex';
+            selectedCount.textContent = `${checked.length} selected`;
+            if(selectAll) selectAll.checked = checked.length === checkboxes.length;
+        } else {
+            bulkActions.style.display = 'none';
+            if(selectAll) selectAll.checked = false;
+        }
+    }
+
+    if (selectAll) {
+        selectAll.addEventListener('change', (e) => {
+            const checkboxes = document.querySelectorAll('.history-checkbox');
+            checkboxes.forEach(cb => cb.checked = e.target.checked);
+            updateBulkActions();
+        });
+    }
+
+    if (tbody) {
+        tbody.addEventListener('change', (e) => {
+            if (e.target.classList.contains('history-checkbox')) {
+                updateBulkActions();
+            }
+        });
+    }
+
+    if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+            folderInput.value = '';
+            exportModal.style.display = 'flex';
+        });
+    }
+
+    if (confirmExportBtn) {
+        confirmExportBtn.addEventListener('click', async () => {
+            const folderName = folderInput.value.trim();
+            if (!folderName) {
+                alert('Please enter a folder name');
+                return;
+            }
+            const checked = Array.from(document.querySelectorAll('.history-checkbox:checked')).map(cb => cb.value);
+            if (checked.length === 0) return;
+
+            confirmExportBtn.disabled = true;
+            confirmExportBtn.textContent = 'Exporting...';
+
+            try {
+                const response = await fetch(`${apiBaseUrl}/history/export_to_benchmark`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_ids: checked,
+                        target_folder: folderName
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Exported successfully!');
+                    exportModal.style.display = 'none';
+                    document.querySelectorAll('.history-checkbox').forEach(cb => cb.checked = false);
+                    updateBulkActions();
+                } else {
+                    alert('Export failed.');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('Export error.');
+            } finally {
+                confirmExportBtn.disabled = false;
+                confirmExportBtn.textContent = 'Export';
+            }
+        });
     }
 });

@@ -49,6 +49,11 @@ class ProfileCreate(BaseModel):
     replacements: List[Dict[str, str]]
 
 
+class ExportHistoryRequest(BaseModel):
+    session_ids: List[str]
+    target_folder: str
+
+
 class BenchmarkRunRequest(BaseModel):
     run_name: str
     language: str
@@ -113,9 +118,29 @@ async def get_history():
     return JSONResponse(content={"records": records})
 
 
+@app.post("/api/history/export_to_benchmark")
+async def export_history_to_benchmark(req: ExportHistoryRequest):
+    """Copy selected history audio files to benchmark folder."""
+    target_dir = BENCHMARK_DIR / req.target_folder
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    exported_count = 0
+    for session_id in req.session_ids:
+        src_path = STORAGE_DIR / f"{session_id}.wav"
+        if src_path.exists():
+            dest_path = target_dir / f"{session_id}.wav"
+            import shutil
+
+            shutil.copy2(src_path, dest_path)
+            exported_count += 1
+
+    return {"status": "success", "exported": exported_count}
+
+
 import io
 import wave
 from fastapi.responses import Response, FileResponse, JSONResponse
+
 
 @app.get("/api/download/{session_id}")
 async def download_audio(session_id: str):
@@ -132,7 +157,7 @@ async def download_audio(session_id: str):
 
     if framerate == 16000 and sampwidth == 2:
         # Downsample to 8000 by taking every 2nd sample
-        samples = memoryview(frames).cast('h')
+        samples = memoryview(frames).cast("h")
         downsampled = samples[::2].tobytes()
 
         out_buf = io.BytesIO()
@@ -146,7 +171,9 @@ async def download_audio(session_id: str):
         return Response(
             content=out_buf.read(),
             media_type="audio/wav",
-            headers={"Content-Disposition": f"attachment; filename=recording_{session_id}.wav"}
+            headers={
+                "Content-Disposition": f"attachment; filename=recording_{session_id}.wav"
+            },
         )
 
     return FileResponse(
@@ -300,7 +327,9 @@ async def list_benchmark_runs():
 
 @app.websocket("/ws/transcribe")
 async def websocket_endpoint(
-    websocket: WebSocket, language: str = Query(default="ar", regex="^(ar|en|ar_en)$")
+    websocket: WebSocket,
+    language: str = Query(default="ar", regex="^(ar|en|ar_en)$"),
+    profile_id: Optional[int] = Query(default=None),
 ):
     """
     Real-time transcription WebSocket.
@@ -313,9 +342,11 @@ async def websocket_endpoint(
         - Text JSON: {"action": "start", "hotwords": [...]} or {"action": "end"}
         - Binary: PCM s16le mono 16 kHz chunks
     """
-    logger.info(f"New WebSocket connection request with language={language}")
+    logger.info(
+        f"New WebSocket connection request with language={language}, profile_id={profile_id}"
+    )
 
-    handler = WebSocketHandler(websocket, language)
+    handler = WebSocketHandler(websocket, language, profile_id)
     await handler.handle()
 
 

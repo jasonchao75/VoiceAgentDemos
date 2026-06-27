@@ -129,9 +129,15 @@
                 <div class="upload-section">
                     <label class="control-label">Upload Audio Folder (8k/16k WAV)</label>
                     <input type="file" id="folder-upload" webkitdirectory multiple style="display: none;">
-                    <button class="secondary-button" onclick="document.getElementById('folder-upload').click()">
-                        <i class="ph ph-upload-simple"></i> Choose Folder
-                    </button>
+                    <input type="file" id="file-upload" multiple style="display: none;">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="secondary-button" onclick="document.getElementById('folder-upload').click()">
+                            <i class="ph ph-folder"></i> Upload Folder
+                        </button>
+                        <button class="secondary-button" onclick="document.getElementById('file-upload').click()">
+                            <i class="ph ph-file-audio"></i> Upload Files
+                        </button>
+                    </div>
                     <div id="upload-progress" style="font-size: 0.8rem; color: var(--text-secondary); display: none;">Uploading...</div>
                 </div>
 

@@ -112,9 +112,14 @@
             <div class="bento-panel" id="edit-panel">
                 <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center;">
                     <h2 id="editor-title">Create New Profile</h2>
-                    <button id="save-profile-btn" class="primary-button" style="padding: 0.5rem 1rem;">
-                        <i class="ph ph-floppy-disk"></i> Save Profile
-                    </button>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button id="export-json-btn" class="secondary-button" style="padding: 0.5rem 1rem; display: none;">
+                            <i class="ph ph-export"></i> Export JSON
+                        </button>
+                        <button id="save-profile-btn" class="primary-button" style="padding: 0.5rem 1rem;">
+                            <i class="ph ph-floppy-disk"></i> Save Profile
+                        </button>
+                    </div>
                 </div>
 
                 <div class="control-group" style="margin-top: 1.5rem;">

@@ -143,7 +143,10 @@ async function startRecording() {
         source.connect(audioWorkletNode);
         audioWorkletNode.connect(audioContext.destination);
 
-        const wsUrl = `${getTranscribeWebSocketBaseUrl()}/ws/transcribe?language=${currentLanguage}`;
+        let wsUrl = `${getTranscribeWebSocketBaseUrl()}/ws/transcribe?language=${currentLanguage}`;
+        if (currentProfile) {
+            wsUrl += `&profile_id=${currentProfile.id}`;
+        }
         ws = new WebSocket(wsUrl);
 
         ws.onopen = () => {

@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Init
     loadProfiles();
 
+    const exportJsonBtn = document.getElementById('export-json-btn');
+
     // Events
     hwAddBtn.addEventListener('click', addHotword);
     hwWordInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') addHotword(); });
@@ -37,6 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
     repReplaceInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') addReplacement(); });
 
     saveBtn.addEventListener('click', saveProfile);
+
+    exportJsonBtn.addEventListener('click', () => {
+        if (!currentProfile) return;
+        const payload = {
+            name: currentProfile.name,
+            hotwords: hotwordsData,
+            replacements: replacementsData
+        };
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(payload, null, 2));
+        const dlAnchorElem = document.createElement('a');
+        dlAnchorElem.setAttribute("href", dataStr);
+        dlAnchorElem.setAttribute("download", `profile_${currentProfile.name}.json`);
+        dlAnchorElem.click();
+    });
 
     // API URL Helper
     function getApiUrl(path) {
@@ -103,11 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
             profileNameInput.value = p.name;
             hotwordsData = JSON.parse(JSON.stringify(p.hotwords));
             replacementsData = JSON.parse(JSON.stringify(p.replacements));
+            exportJsonBtn.style.display = 'inline-flex';
         } else {
             editorTitle.textContent = 'Create New Profile';
             profileNameInput.value = '';
             hotwordsData = [];
             replacementsData = [];
+            exportJsonBtn.style.display = 'none';
         }
         renderHotwords();
         renderReplacements();

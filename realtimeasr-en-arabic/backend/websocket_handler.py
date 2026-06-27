@@ -14,7 +14,7 @@ from fastapi import WebSocket
 from .speechmatics_client import SpeechmaticsClient
 from .error_mapper import ErrorCode, create_error_message
 from .config import config
-from .database import save_transcription
+from .database import save_transcription, get_dictionary_profiles
 
 logger = logging.getLogger(__name__)
 STORAGE_DIR = Path(__file__).parent / "storage"
@@ -24,7 +24,9 @@ STORAGE_DIR.mkdir(parents=True, exist_ok=True)
 class WebSocketHandler:
     """One client WebSocket plus upstream Speechmatics session."""
 
-    def __init__(self, websocket: WebSocket, language: str):
+    def __init__(
+        self, websocket: WebSocket, language: str, profile_id: Optional[int] = None
+    ):
         """
         Args:
             websocket: FastAPI WebSocket.
@@ -32,6 +34,7 @@ class WebSocketHandler:
         """
         self.websocket = websocket
         self.language = language
+        self.profile_id = profile_id
         self.speechmatics_client: Optional[SpeechmaticsClient] = None
         self.timeout_task: Optional[asyncio.Task] = None
         self.listen_task: Optional[asyncio.Task] = None
@@ -66,6 +69,15 @@ class WebSocketHandler:
                     raise ValueError("Not a start action")
                 hotwords = start_data.get("hotwords", [])
                 replacements = start_data.get("replacements", [])
+
+                if self.profile_id:
+                    profiles = get_dictionary_profiles()
+                    profile = next(
+                        (p for p in profiles if p["id"] == self.profile_id), None
+                    )
+                    if profile:
+                        hotwords.extend(profile.get("hotwords", []))
+                        replacements.extend(profile.get("replacements", []))
             except Exception as e:
                 logger.error(f"Failed to parse start message: {e}")
                 await self._send_error(ErrorCode.INTERNAL_ERROR)

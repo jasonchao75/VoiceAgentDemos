@@ -1,10 +1,16 @@
-const API_BASE = 'http://localhost:8010/api';
+let API_BASE = '/api';
+if (window.location.protocol === 'file:') {
+    API_BASE = 'http://127.0.0.1:8010/api';
+} else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    API_BASE = `http://${window.location.hostname}:8010/api`;
+}
 
 let activeRunId = null;
 let pollInterval = null;
 
 // UI Elements
 const folderUpload = document.getElementById('folder-upload');
+const fileUpload = document.getElementById('file-upload');
 const uploadProgress = document.getElementById('upload-progress');
 const libraryTree = document.getElementById('library-tree');
 const profileSelect = document.getElementById('profile-select');
@@ -52,10 +58,9 @@ async function loadProfiles() {
     }
 }
 
-// Folder Upload
-folderUpload.addEventListener('change', async (e) => {
-    const files = e.target.files;
-    if (files.length === 0) return;
+// Upload handler for both files and folders
+async function handleUpload(files) {
+    if (!files || files.length === 0) return;
 
     uploadProgress.style.display = 'block';
     uploadProgress.textContent = `Preparing ${files.length} files...`;
@@ -76,7 +81,7 @@ folderUpload.addEventListener('change', async (e) => {
         });
         
         if (response.ok) {
-            showToast('Folder uploaded successfully!');
+            showToast('Uploaded successfully!');
             await loadLibrary();
         } else {
             const error = await response.json();
@@ -87,8 +92,14 @@ folderUpload.addEventListener('change', async (e) => {
     } finally {
         uploadProgress.style.display = 'none';
         folderUpload.value = '';
+        if (fileUpload) fileUpload.value = '';
     }
-});
+}
+
+folderUpload.addEventListener('change', (e) => handleUpload(e.target.files));
+if (fileUpload) {
+    fileUpload.addEventListener('change', (e) => handleUpload(e.target.files));
+}
 
 // Load Library
 async function loadLibrary() {
